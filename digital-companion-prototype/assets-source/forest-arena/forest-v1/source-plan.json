@@ -1,0 +1,100 @@
+{
+  "arena": {
+    "ground": {
+      "cellSize": 20,
+      "height": 540,
+      "width": 360
+    },
+    "maxBodyRadius": 16,
+    "obstacles": [
+      {
+        "id": "central-rock",
+        "movement": true,
+        "occlusion": true,
+        "projectile": true,
+        "rect": [
+          150,
+          240,
+          60,
+          60
+        ],
+        "sight": true
+      },
+      {
+        "id": "north-tree-trunk",
+        "movement": true,
+        "occlusion": false,
+        "projectile": true,
+        "rect": [
+          240,
+          65,
+          30,
+          35
+        ],
+        "sight": true
+      },
+      {
+        "id": "north-tree-canopy",
+        "movement": false,
+        "occlusion": true,
+        "projectile": false,
+        "rect": [
+          215,
+          35,
+          80,
+          70
+        ],
+        "sight": false
+      },
+      {
+        "id": "south-shrub",
+        "movement": true,
+        "occlusion": false,
+        "projectile": false,
+        "rect": [
+          75,
+          440,
+          45,
+          25
+        ],
+        "sight": false
+      }
+    ],
+    "projection": "square",
+    "spawns": {
+      "opponent": [
+        280,
+        380
+      ],
+      "player": [
+        80,
+        160
+      ]
+    },
+    "tiles": []
+  },
+  "assetId": "forest-arena",
+  "backgroundSource": "background",
+  "generation": {
+    "brief": "Generate a forest arena background matching the companion pixel-art identity, after approving one composition sample. Ground coordinates 360x540, square-grid projection within a portrait arena; retain large clear fighting and evasion routes around the central rock. Trees and rocks must align with the explicit obstacle footprints. Decorative canopy is overhead only; do not imply additional blocking walls from art. No characters or UI. One unapproved composition sample has been ingested; see REVIEW.md and generation-record.json for alignment issues. Sample art and final background must be ingested separately. The background role remains unbound; no sample or final artwork is approved.",
+    "jobs": []
+  },
+  "keyposes": [
+    "sample"
+  ],
+  "kind": "arena",
+  "provenance": {
+    "kind": "generated",
+    "promptTemplateVersion": "forest-v1",
+    "generationRecord": "generation-record.json"
+  },
+  "provider": "codex-imagegen",
+  "revision": "forest-v1",
+  "schemaVersion": 1,
+  "sources": {
+    "sample": {
+      "path": "sources/c67502d762649ec770338422e6aaf31594ef4362db2b65f39c6285478e3d833e.png",
+      "sha256": "sha256:c67502d762649ec770338422e6aaf31594ef4362db2b65f39c6285478e3d833e"
+    }
+  }
+}

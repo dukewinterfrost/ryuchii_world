@@ -1,0 +1,53 @@
+[gd_resource type="Resource" format=3]
+
+[resource]
+metadata/arena_manifest = {
+"assetId": "arena-rootbound-glade",
+"displayName": "Rootbound Glade",
+"environment": {
+"assetId": "environment-green-shade",
+"contentSha256": "sha256:6d81c7d89fdc03ffcdeccb333b84452d57e752f64b37a7c5b8db7388ada0db29",
+"revision": "2026-09-12.001"
+},
+"ground": {
+"cellSize": 32.0,
+"height": 1152.0,
+"width": 960.0
+},
+"kind": "arena",
+"maxBodyRadius": 16.0,
+"obstacles": [{
+"id": "green-shade-landmark-footprint",
+"movement": true,
+"occlusion": true,
+"projectile": true,
+"rect": [400.0, 240.0, 160.0, 96.0],
+"sight": true
+}],
+"presentation": {
+"staticPlacements": [{
+"groundPosition": [480.0, 288.0],
+"id": "green-shade-landmark-arena",
+"obstacle": "green-shade-landmark-footprint",
+"planeStack": "green-shade-tree.stack",
+"rotationDegrees": 0.0
+}]
+},
+"projection": "square",
+"regionId": "green-shade",
+"revision": "2026-09-12.001",
+"schemaVersion": 1.0,
+"spawns": {
+"opponent": [816.0, 560.0],
+"player": [144.0, 560.0]
+},
+"tiles": []
+}
+metadata/candidate_identity = {
+"assetId": "arena-rootbound-glade",
+"buildIdentity": "sha256:f48bce010a5c89f0a06c7dcf816668f262ece5a213d7df3f28dffa4d183dc307",
+"compilerVersion": "1.3.0",
+"kind": "arena",
+"planSha256": "sha256:4d633019704bc7a84dbe1ccec4e26d068e5805ec67edff86ea7599cab9ae11af",
+"revision": "2026-09-12.001"
+}

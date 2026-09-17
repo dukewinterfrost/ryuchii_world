@@ -1,0 +1,45 @@
+{
+  "schemaVersion": 1,
+  "subjectId": "agumon",
+  "revision": "2026-08-26.002",
+  "status": "passed-with-warnings",
+  "valid": true,
+  "checks": {
+	"atlasDimensions": {
+	  "width": 512,
+	  "height": 640
+	},
+	"atlasSha256": "sha256:33dd1e80a4cc3581ed6cd6d936113340d9f4598db482c769eca24717c5c4e380",
+	"frameCount": 17,
+	"clipCount": 3,
+	"slowWalkCycleMs": 1280,
+	"eatEndpointsMatchIdle": true,
+	"canonicalPaletteSubset": true,
+	"alphaValues": [
+	  0,
+	  36,
+	  183,
+	  207,
+	  255
+	],
+	"errorCount": 0,
+	"warningCount": 3
+  },
+  "issues": [
+	{
+	  "severity": "warning",
+	  "code": "human-art-review-required",
+	  "message": "This revision is a candidate only; identity, anatomy, timing, loop seams, and habitat scale require human approval."
+	},
+	{
+	  "severity": "warning",
+	  "code": "eat-cleanup-review-required",
+	  "message": "Eating frames 3-5 retain the reviewed motion direction but still require close hand, muzzle, eye, and claw inspection."
+	},
+	{
+	  "severity": "warning",
+	  "code": "slow-walk-contact-review-required",
+	  "message": "The new 1280ms canonical slow-walk loop requires foot-contact and root-motion review in the Habitat context."
+	}
+  ]
+}

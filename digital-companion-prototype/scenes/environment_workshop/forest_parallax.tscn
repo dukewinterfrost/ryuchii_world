@@ -1,0 +1,765 @@
+[gd_scene load_steps=7 format=3]
+
+[ext_resource type="PackedScene" path="res://scenes/environment_workshop/forest_boundary.tscn" id="boundary"]
+[ext_resource type="Texture2D" path="res://assets/environment_workshop/forest-bg1/foreground.png" id="bg1_front"]
+
+[ext_resource type="Script" path="res://scripts/environment/forest_parallax.gd" id="1"]
+[ext_resource type="Texture2D" path="res://assets/environment_workshop/forest-bg1/middle.png" id="2"]
+[ext_resource type="Texture2D" path="res://assets/environment_workshop/forest-bg1/distant.png" id="3"]
+[ext_resource type="Texture2D" path="res://assets/environment_workshop/forest-parallax/foliage.png" id="4"]
+
+[node name="ForestParallax" type="Node3D"]
+script = ExtResource("1")
+metadata/review_status = "source-preview-pending-approval"
+metadata/license = "private-prototype-only; supplied background license unverified"
+metadata/edit_help = "Edit this scene directly. Move cards on XZ; Pixel Size controls scale. metadata/parallax controls secondary motion. Zero keeps foliage rooted."
+
+[node name="Boundary" parent="." instance=ExtResource("boundary")]
+
+[node name="MeadowPatch_0" type="Sprite3D" parent="."]
+position = Vector3(7, 0.025, 6)
+texture = ExtResource("4")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+pixel_size = 0.0024
+offset = Vector2(22, 252.5)
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+metadata/parallax = 0.0
+metadata/gameplay = "low traversable ground cover; no collision"
+
+[node name="MeadowPatch_1" type="Sprite3D" parent="."]
+position = Vector3(23, 0.025, 9)
+texture = ExtResource("4")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+pixel_size = 0.0024
+offset = Vector2(22, 252.5)
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+metadata/parallax = 0.0
+metadata/gameplay = "low traversable ground cover; no collision"
+
+[node name="MeadowPatch_2" type="Sprite3D" parent="."]
+position = Vector3(10, 0.025, 27)
+texture = ExtResource("4")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+pixel_size = 0.0024
+offset = Vector2(22, 252.5)
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+metadata/parallax = 0.0
+metadata/gameplay = "low traversable ground cover; no collision"
+
+[node name="MeadowPatch_3" type="Sprite3D" parent="."]
+position = Vector3(22, 0.025, 31)
+texture = ExtResource("4")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+pixel_size = 0.0024
+offset = Vector2(22, 252.5)
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+metadata/parallax = 0.0
+metadata/gameplay = "low traversable ground cover; no collision"
+
+[node name="MeadowPatch_4" type="Sprite3D" parent="."]
+position = Vector3(16, 0.025, 3)
+texture = ExtResource("4")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+pixel_size = 0.0024
+offset = Vector2(22, 252.5)
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+metadata/parallax = 0.0
+metadata/gameplay = "low traversable ground cover; no collision"
+
+[node name="MeadowPatch_5" type="Sprite3D" parent="."]
+position = Vector3(5, 0.025, 33)
+texture = ExtResource("4")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+pixel_size = 0.0024
+offset = Vector2(22, 252.5)
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+metadata/parallax = 0.0
+metadata/gameplay = "low traversable ground cover; no collision"
+
+
+[node name="Sky" type="Sprite3D" parent="."]
+position = Vector3(15, -30, -60)
+texture = ExtResource("3")
+pixel_size = 0.15
+offset = Vector2(0, 408)
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+metadata/parallax = 0.18
+metadata/bg1_sky = true
+
+[node name="ForestVista" type="Sprite3D" parent="."]
+position = Vector3(15, -3, -24)
+texture = ExtResource("2")
+pixel_size = 0.045
+offset = Vector2(0, 395.5)
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+metadata/parallax = 0.08
+
+[node name="ForestVistaLeft" type="Sprite3D" parent="."]
+position = Vector3(-49, -3, -26)
+texture = ExtResource("2")
+pixel_size = 0.045
+offset = Vector2(0, 395.5)
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+metadata/parallax = 0.08
+
+[node name="ForestVistaRight" type="Sprite3D" parent="."]
+position = Vector3(79, -3, -26)
+texture = ExtResource("2")
+pixel_size = 0.045
+offset = Vector2(0, 395.5)
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+metadata/parallax = 0.08
+
+[node name="BackgroundMeadow" type="Sprite3D" parent="."]
+position = Vector3(15, -1, -14)
+texture = ExtResource("bg1_front")
+pixel_size = 0.043
+offset = Vector2(0, 186)
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+metadata/parallax = 0.035
+
+[node name="RearTree_0_0" type="Sprite3D" parent="."]
+position = Vector3(-27, 0.025, -5)
+texture = ExtResource("4")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+pixel_size = 0.013
+offset = Vector2(-23.99999999891997, 268.49999999889)
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+modulate = Color(0.85, 0.95, 0.82, 1)
+metadata/parallax = 0
+metadata/gameplay = "decorative-only; no collision authority"
+
+[node name="RearTree_0_1" type="Sprite3D" parent="."]
+position = Vector3(-16, 0.025, -3.3)
+texture = ExtResource("4")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+pixel_size = 0.015
+offset = Vector2(-23.99999999891997, 268.49999999889)
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+modulate = Color(0.85, 0.95, 0.82, 1)
+metadata/parallax = 0
+metadata/gameplay = "decorative-only; no collision authority"
+
+[node name="RearTree_0_2" type="Sprite3D" parent="."]
+position = Vector3(-5, 0.025, -1.6)
+texture = ExtResource("4")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+pixel_size = 0.017
+offset = Vector2(-23.99999999891997, 268.49999999889)
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+modulate = Color(0.85, 0.95, 0.82, 1)
+metadata/parallax = 0
+metadata/gameplay = "decorative-only; no collision authority"
+
+[node name="RearTree_0_3" type="Sprite3D" parent="."]
+position = Vector3(6, 0.025, -5)
+texture = ExtResource("4")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+pixel_size = 0.019
+offset = Vector2(-23.99999999891997, 268.49999999889)
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+modulate = Color(0.85, 0.95, 0.82, 1)
+metadata/parallax = 0
+metadata/gameplay = "decorative-only; no collision authority"
+
+[node name="RearTree_0_4" type="Sprite3D" parent="."]
+position = Vector3(17, 0.025, -3.3)
+texture = ExtResource("4")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+pixel_size = 0.013
+offset = Vector2(-23.99999999891997, 268.49999999889)
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+modulate = Color(0.85, 0.95, 0.82, 1)
+metadata/parallax = 0
+metadata/gameplay = "decorative-only; no collision authority"
+
+[node name="RearTree_0_5" type="Sprite3D" parent="."]
+position = Vector3(28, 0.025, -1.6)
+texture = ExtResource("4")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+pixel_size = 0.015
+offset = Vector2(-23.99999999891997, 268.49999999889)
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+modulate = Color(0.85, 0.95, 0.82, 1)
+metadata/parallax = 0
+metadata/gameplay = "decorative-only; no collision authority"
+
+[node name="RearTree_0_6" type="Sprite3D" parent="."]
+position = Vector3(39, 0.025, -5)
+texture = ExtResource("4")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+pixel_size = 0.017
+offset = Vector2(-23.99999999891997, 268.49999999889)
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+modulate = Color(0.85, 0.95, 0.82, 1)
+metadata/parallax = 0
+metadata/gameplay = "decorative-only; no collision authority"
+
+[node name="RearTree_0_7" type="Sprite3D" parent="."]
+position = Vector3(50, 0.025, -3.3)
+texture = ExtResource("4")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+pixel_size = 0.019
+offset = Vector2(-23.99999999891997, 268.49999999889)
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+modulate = Color(0.85, 0.95, 0.82, 1)
+metadata/parallax = 0
+metadata/gameplay = "decorative-only; no collision authority"
+
+[node name="RearTree_0_8" type="Sprite3D" parent="."]
+position = Vector3(61, 0.025, -1.6)
+texture = ExtResource("4")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+pixel_size = 0.013
+offset = Vector2(-23.99999999891997, 268.49999999889)
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+modulate = Color(0.85, 0.95, 0.82, 1)
+metadata/parallax = 0
+metadata/gameplay = "decorative-only; no collision authority"
+
+[node name="RearTree_1_0" type="Sprite3D" parent="."]
+position = Vector3(-22, 0.025, -15)
+texture = ExtResource("4")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+pixel_size = 0.018
+offset = Vector2(-23.99999999891997, 268.49999999889)
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+modulate = Color(0.58, 0.73, 0.65, 1)
+metadata/parallax = 0.025
+metadata/gameplay = "decorative-only; no collision authority"
+
+[node name="RearTree_1_1" type="Sprite3D" parent="."]
+position = Vector3(-11, 0.025, -13.3)
+texture = ExtResource("4")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+pixel_size = 0.019999999999999997
+offset = Vector2(-23.99999999891997, 268.49999999889)
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+modulate = Color(0.58, 0.73, 0.65, 1)
+metadata/parallax = 0.025
+metadata/gameplay = "decorative-only; no collision authority"
+
+[node name="RearTree_1_2" type="Sprite3D" parent="."]
+position = Vector3(0, 0.025, -11.6)
+texture = ExtResource("4")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+pixel_size = 0.022
+offset = Vector2(-23.99999999891997, 268.49999999889)
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+modulate = Color(0.58, 0.73, 0.65, 1)
+metadata/parallax = 0.025
+metadata/gameplay = "decorative-only; no collision authority"
+
+[node name="RearTree_1_3" type="Sprite3D" parent="."]
+position = Vector3(11, 0.025, -15)
+texture = ExtResource("4")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+pixel_size = 0.024
+offset = Vector2(-23.99999999891997, 268.49999999889)
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+modulate = Color(0.58, 0.73, 0.65, 1)
+metadata/parallax = 0.025
+metadata/gameplay = "decorative-only; no collision authority"
+
+[node name="RearTree_1_4" type="Sprite3D" parent="."]
+position = Vector3(22, 0.025, -13.3)
+texture = ExtResource("4")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+pixel_size = 0.018
+offset = Vector2(-23.99999999891997, 268.49999999889)
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+modulate = Color(0.58, 0.73, 0.65, 1)
+metadata/parallax = 0.025
+metadata/gameplay = "decorative-only; no collision authority"
+
+[node name="RearTree_1_5" type="Sprite3D" parent="."]
+position = Vector3(33, 0.025, -11.6)
+texture = ExtResource("4")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+pixel_size = 0.019999999999999997
+offset = Vector2(-23.99999999891997, 268.49999999889)
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+modulate = Color(0.58, 0.73, 0.65, 1)
+metadata/parallax = 0.025
+metadata/gameplay = "decorative-only; no collision authority"
+
+[node name="RearTree_1_6" type="Sprite3D" parent="."]
+position = Vector3(44, 0.025, -15)
+texture = ExtResource("4")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+pixel_size = 0.022
+offset = Vector2(-23.99999999891997, 268.49999999889)
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+modulate = Color(0.58, 0.73, 0.65, 1)
+metadata/parallax = 0.025
+metadata/gameplay = "decorative-only; no collision authority"
+
+[node name="RearTree_1_7" type="Sprite3D" parent="."]
+position = Vector3(55, 0.025, -13.3)
+texture = ExtResource("4")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+pixel_size = 0.024
+offset = Vector2(-23.99999999891997, 268.49999999889)
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+modulate = Color(0.58, 0.73, 0.65, 1)
+metadata/parallax = 0.025
+metadata/gameplay = "decorative-only; no collision authority"
+
+[node name="RearTree_1_8" type="Sprite3D" parent="."]
+position = Vector3(66, 0.025, -11.6)
+texture = ExtResource("4")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+pixel_size = 0.018
+offset = Vector2(-23.99999999891997, 268.49999999889)
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+modulate = Color(0.58, 0.73, 0.65, 1)
+metadata/parallax = 0.025
+metadata/gameplay = "decorative-only; no collision authority"
+
+[node name="EdgeTree_L_0" type="Sprite3D" parent="."]
+position = Vector3(-7, 0.025, 5)
+texture = ExtResource("4")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+pixel_size = 0.022
+offset = Vector2(-23.99999999891997, 268.49999999889)
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+modulate = Color(1, 1, 1, 1)
+metadata/parallax = 0
+metadata/gameplay = "decorative-only; no collision authority"
+
+[node name="EdgeTree_L_1" type="Sprite3D" parent="."]
+position = Vector3(-10, 0.025, 13)
+texture = ExtResource("4")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+pixel_size = 0.026
+offset = Vector2(-23.99999999891997, 268.49999999889)
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+modulate = Color(1, 1, 1, 1)
+metadata/parallax = 0
+metadata/gameplay = "decorative-only; no collision authority"
+
+[node name="EdgeTree_L_2" type="Sprite3D" parent="."]
+position = Vector3(-7, 0.025, 21)
+texture = ExtResource("4")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+pixel_size = 0.022
+offset = Vector2(-23.99999999891997, 268.49999999889)
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+modulate = Color(1, 1, 1, 1)
+metadata/parallax = 0
+metadata/gameplay = "decorative-only; no collision authority"
+
+[node name="EdgeTree_L_3" type="Sprite3D" parent="."]
+position = Vector3(-10, 0.025, 29)
+texture = ExtResource("4")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+pixel_size = 0.026
+offset = Vector2(-23.99999999891997, 268.49999999889)
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+modulate = Color(1, 1, 1, 1)
+metadata/parallax = 0
+metadata/gameplay = "decorative-only; no collision authority"
+
+[node name="EdgeTree_L_4" type="Sprite3D" parent="."]
+position = Vector3(-7, 0.025, 37)
+texture = ExtResource("4")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+pixel_size = 0.022
+offset = Vector2(-23.99999999891997, 268.49999999889)
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+modulate = Color(1, 1, 1, 1)
+metadata/parallax = 0
+metadata/gameplay = "decorative-only; no collision authority"
+
+[node name="EdgeTree_R_0" type="Sprite3D" parent="."]
+position = Vector3(37, 0.025, 5)
+texture = ExtResource("4")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+pixel_size = 0.022
+offset = Vector2(-23.99999999891997, 268.49999999889)
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+modulate = Color(1, 1, 1, 1)
+metadata/parallax = 0
+metadata/gameplay = "decorative-only; no collision authority"
+
+[node name="EdgeTree_R_1" type="Sprite3D" parent="."]
+position = Vector3(40, 0.025, 13)
+texture = ExtResource("4")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+pixel_size = 0.026
+offset = Vector2(-23.99999999891997, 268.49999999889)
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+modulate = Color(1, 1, 1, 1)
+metadata/parallax = 0
+metadata/gameplay = "decorative-only; no collision authority"
+
+[node name="EdgeTree_R_2" type="Sprite3D" parent="."]
+position = Vector3(37, 0.025, 21)
+texture = ExtResource("4")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+pixel_size = 0.022
+offset = Vector2(-23.99999999891997, 268.49999999889)
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+modulate = Color(1, 1, 1, 1)
+metadata/parallax = 0
+metadata/gameplay = "decorative-only; no collision authority"
+
+[node name="EdgeTree_R_3" type="Sprite3D" parent="."]
+position = Vector3(40, 0.025, 29)
+texture = ExtResource("4")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+pixel_size = 0.026
+offset = Vector2(-23.99999999891997, 268.49999999889)
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+modulate = Color(1, 1, 1, 1)
+metadata/parallax = 0
+metadata/gameplay = "decorative-only; no collision authority"
+
+[node name="EdgeTree_R_4" type="Sprite3D" parent="."]
+position = Vector3(37, 0.025, 37)
+texture = ExtResource("4")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+pixel_size = 0.022
+offset = Vector2(-23.99999999891997, 268.49999999889)
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+modulate = Color(1, 1, 1, 1)
+metadata/parallax = 0
+metadata/gameplay = "decorative-only; no collision authority"
+
+[node name="Undergrowth_L_0" type="Sprite3D" parent="."]
+position = Vector3(1.2, 0.025, 2)
+texture = ExtResource("4")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+pixel_size = 0.0035
+offset = Vector2(-17.99999999919003, 217.49999999805)
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+modulate = Color(1, 1, 1, 1)
+metadata/parallax = 0
+metadata/gameplay = "decorative-only; no collision authority"
+
+[node name="Undergrowth_L_1" type="Sprite3D" parent="."]
+position = Vector3(1.7, 0.025, 6.6)
+texture = ExtResource("4")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+pixel_size = 0.0045
+offset = Vector2(22.00000000109999, 252.49999999751998)
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+modulate = Color(1, 1, 1, 1)
+metadata/parallax = 0
+metadata/gameplay = "decorative-only; no collision authority"
+
+[node name="Undergrowth_L_2" type="Sprite3D" parent="."]
+position = Vector3(2.2, 0.025, 11.2)
+texture = ExtResource("4")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+pixel_size = 0.0045
+offset = Vector2(22.00000000109999, 252.49999999751998)
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+modulate = Color(1, 1, 1, 1)
+metadata/parallax = 0
+metadata/gameplay = "decorative-only; no collision authority"
+
+[node name="Undergrowth_L_3" type="Sprite3D" parent="."]
+position = Vector3(1.2, 0.025, 15.799999999999999)
+texture = ExtResource("4")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+pixel_size = 0.0035
+offset = Vector2(-17.99999999919003, 217.49999999805)
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+modulate = Color(1, 1, 1, 1)
+metadata/parallax = 0
+metadata/gameplay = "decorative-only; no collision authority"
+
+[node name="Undergrowth_L_4" type="Sprite3D" parent="."]
+position = Vector3(1.7, 0.025, 20.4)
+texture = ExtResource("4")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+pixel_size = 0.0045
+offset = Vector2(22.00000000109999, 252.49999999751998)
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+modulate = Color(1, 1, 1, 1)
+metadata/parallax = 0
+metadata/gameplay = "decorative-only; no collision authority"
+
+[node name="Undergrowth_L_5" type="Sprite3D" parent="."]
+position = Vector3(2.2, 0.025, 25)
+texture = ExtResource("4")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+pixel_size = 0.0045
+offset = Vector2(22.00000000109999, 252.49999999751998)
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+modulate = Color(1, 1, 1, 1)
+metadata/parallax = 0
+metadata/gameplay = "decorative-only; no collision authority"
+
+[node name="Undergrowth_L_6" type="Sprite3D" parent="."]
+position = Vector3(1.2, 0.025, 29.599999999999998)
+texture = ExtResource("4")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+pixel_size = 0.0035
+offset = Vector2(-17.99999999919003, 217.49999999805)
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+modulate = Color(1, 1, 1, 1)
+metadata/parallax = 0
+metadata/gameplay = "decorative-only; no collision authority"
+
+[node name="Undergrowth_L_7" type="Sprite3D" parent="."]
+position = Vector3(1.7, 0.025, 34.199999999999996)
+texture = ExtResource("4")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+pixel_size = 0.0045
+offset = Vector2(22.00000000109999, 252.49999999751998)
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+modulate = Color(1, 1, 1, 1)
+metadata/parallax = 0
+metadata/gameplay = "decorative-only; no collision authority"
+
+[node name="Undergrowth_R_0" type="Sprite3D" parent="."]
+position = Vector3(28.8, 0.025, 2)
+texture = ExtResource("4")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+pixel_size = 0.0035
+offset = Vector2(-17.99999999919003, 217.49999999805)
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+modulate = Color(1, 1, 1, 1)
+metadata/parallax = 0
+metadata/gameplay = "decorative-only; no collision authority"
+
+[node name="Undergrowth_R_1" type="Sprite3D" parent="."]
+position = Vector3(28.3, 0.025, 6.6)
+texture = ExtResource("4")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+pixel_size = 0.0045
+offset = Vector2(22.00000000109999, 252.49999999751998)
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+modulate = Color(1, 1, 1, 1)
+metadata/parallax = 0
+metadata/gameplay = "decorative-only; no collision authority"
+
+[node name="Undergrowth_R_2" type="Sprite3D" parent="."]
+position = Vector3(27.8, 0.025, 11.2)
+texture = ExtResource("4")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+pixel_size = 0.0045
+offset = Vector2(22.00000000109999, 252.49999999751998)
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+modulate = Color(1, 1, 1, 1)
+metadata/parallax = 0
+metadata/gameplay = "decorative-only; no collision authority"
+
+[node name="Undergrowth_R_3" type="Sprite3D" parent="."]
+position = Vector3(28.8, 0.025, 15.799999999999999)
+texture = ExtResource("4")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+pixel_size = 0.0035
+offset = Vector2(-17.99999999919003, 217.49999999805)
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+modulate = Color(1, 1, 1, 1)
+metadata/parallax = 0
+metadata/gameplay = "decorative-only; no collision authority"
+
+[node name="Undergrowth_R_4" type="Sprite3D" parent="."]
+position = Vector3(28.3, 0.025, 20.4)
+texture = ExtResource("4")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+pixel_size = 0.0045
+offset = Vector2(22.00000000109999, 252.49999999751998)
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+modulate = Color(1, 1, 1, 1)
+metadata/parallax = 0
+metadata/gameplay = "decorative-only; no collision authority"
+
+[node name="Undergrowth_R_5" type="Sprite3D" parent="."]
+position = Vector3(27.8, 0.025, 25)
+texture = ExtResource("4")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+pixel_size = 0.0045
+offset = Vector2(22.00000000109999, 252.49999999751998)
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+modulate = Color(1, 1, 1, 1)
+metadata/parallax = 0
+metadata/gameplay = "decorative-only; no collision authority"
+
+[node name="Undergrowth_R_6" type="Sprite3D" parent="."]
+position = Vector3(28.8, 0.025, 29.599999999999998)
+texture = ExtResource("4")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+pixel_size = 0.0035
+offset = Vector2(-17.99999999919003, 217.49999999805)
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+modulate = Color(1, 1, 1, 1)
+metadata/parallax = 0
+metadata/gameplay = "decorative-only; no collision authority"
+
+[node name="Undergrowth_R_7" type="Sprite3D" parent="."]
+position = Vector3(28.3, 0.025, 34.199999999999996)
+texture = ExtResource("4")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+pixel_size = 0.0045
+offset = Vector2(22.00000000109999, 252.49999999751998)
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+modulate = Color(1, 1, 1, 1)
+metadata/parallax = 0
+metadata/gameplay = "decorative-only; no collision authority"

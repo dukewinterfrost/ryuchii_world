@@ -1,0 +1,62 @@
+{
+  "schemaVersion": 1,
+  "assetId": "agumon-direction-reference",
+  "revision": "keypose-review-v1",
+  "status": "unapproved-reference-only",
+  "runtimeEligible": false,
+  "humanApproval": null,
+  "selectedOutput": "direction-reference.png",
+  "selectedOutputSha256": "52c0185fb18f875279294b4b2897ed7aa9173fa6b038735d873d849f8d2932d4",
+  "provider": "codex-built-in-imagegen",
+  "exposedModelVersion": null,
+  "exposedSeed": null,
+  "generationPrompt": "Use case: stylized-concept.\nAsset type: HUMAN-REVIEW-ONLY eight-direction game character turnaround contact sheet, not a finished animation or runtime atlas.\nInput images: Image 1 is the project's canonical Agumon sprite atlas, used ONLY as an identity, silhouette, palette and crisp pixel-art style reference. Image 2 is the canonical original model sheet, also an identity/style reference. Neither input is an edit target; create a NEW turnaround board.\nPrimary request: Exactly eight full-body views of the SAME Agumon, in a precise 4-column by 2-row grid with eight equal-sized cells on one landscape image. Each cell depicts the SAME neutral in-place battle-ready standing pose from a different orientation. Genuinely turn the three-dimensional character to eight distinct facings, rather than repeating or animating the same side view.\nScene/backdrop: Genuinely TRANSPARENT background, empty alpha around every character. No checkerboard pattern, ground plane, cast shadow, scenery, cell borders, labels, text, symbols or watermark.\nSubject identity: Orange bipedal dinosaur with oversized rounded head and snout, green eyes, white hand claws and white toe claws, compact tail, chest/body markings matching the supplied sprites. Keep its original proportions and recognizable head, face, limbs and tail. Do not redesign it, add armor or spikes, change species, add props, fire, effects, glow or extra characters.\nStyle/medium: Crisp low-resolution sprite pixel art, hard dark outlined edges, flat stepped pixel-cluster shading, limited orange/gold/brown/white/green palette faithful to the reference. No smooth vector edges, painterly gradients, airbrushing, blur, glossy3D, or soft shadows. Each character should feel like a small 128x128 game sprite, enlarged with nearest-neighbor clarity for review.\nComposition/framing: Landscape 2:1 contact sheet with 4 equal-width columns and 2 equal-height rows. One centered character in each cell, identical apparent scale, same slight elevated game camera perspective, both feet on the same invisible local ground-contact baseline in each cell. Generous transparent padding around head, claws and tail; never clip or overlap adjacent cells.\nExact order, left to right:\nTOP ROW: N = back view looking away/up, no face visible; NE = rear three-quarter facing upper-right; E = right-facing profile; SE = front three-quarter facing lower-right.\nBOTTOM ROW: S = direct front view facing down/toward camera; SW = front three-quarter facing lower-left; W = left-facing profile; NW = rear three-quarter facing upper-left.\nConstraints: Eight orientations are the only variation. Same anatomy, stance, proportions, palette, neutral expression, eye shape and claw counts across all views. Back views must show the back of the head/body and correct compact tail, not a front face accidentally looking over the shoulder. Keep every orientation separately readable. NO TEXT OR DIRECTION LABELS anywhere in the image. Preserve actual transparency.",
+  "correctionPrompt": "Use case: background-extraction.\nInput image 1 is the EDIT TARGET: the newly generated Agumon 4-by-2 eight-direction turnaround board.\nChange ONLY the background: remove the entire gray/white checkerboard pattern around and between all eight sprites and replace it with actual empty transparent alpha pixels. The image currently contains an opaque painted checkerboard, which is incorrect. Produce a PNG image with a genuine alpha channel; no checkerboard, no white backdrop, no black backdrop, no pattern.\nPreserve every character pixel/silhouette, orange palette, dark outline, green eyes, claws, eight orientations, their exact 4-column/2-row arrangement, proportions, scale, margins, and landscape composition. Keep all eight Agumon sprites unaltered. Do not add text, borders, shadows, scenery, effects or objects. Output only the same eight character cutouts on genuine transparency. This remains an unapproved human-review reference board, not runtime art.",
+  "references": [
+    {
+      "path": "/Users/johncohrn/Documents/ChatGPT/Godot Projects/digital-companion-prototype/assets/companions/agumon/atlas.png",
+      "sha256": "33dd1e80a4cc3581ed6cd6d936113340d9f4598db482c769eca24717c5c4e380",
+      "role": "identity-and-pixel-style-reference"
+    },
+    {
+      "path": "/Users/johncohrn/Documents/ChatGPT/Tomagachi Web App/assets-source/companions/agumon/identity/model-sheet.png",
+      "sha256": "e78833938abaea72aa2a0005773ab1beedf9b4b70da9df63d79ef308ac04fef7",
+      "role": "canonical-identity-reference"
+    }
+  ],
+  "toolResults": [
+    {
+      "role": "selected-reference-board",
+      "output_hint": "Generated images are saved to /Users/johncohrn/.codex/generated_images/01a086fe-bad3-7862-81e0-8f630617396d as /Users/johncohrn/.codex/generated_images/01a086fe-bad3-7862-81e0-8f630617396d/exec-858e9c3c-d84c-4820-a84a-52aa52360cc1.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+    },
+    {
+      "role": "rejected-alpha-correction",
+      "output_hint": "Generated images are saved to /Users/johncohrn/.codex/generated_images/01a086fe-bad3-7862-81e0-8f630617396d as /Users/johncohrn/.codex/generated_images/01a086fe-bad3-7862-81e0-8f630617396d/exec-01b89d6d-e57d-4dea-aa5d-ea21e301e536.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+    }
+  ],
+  "inspection": {
+    "dimensions": [
+      1774,
+      887
+    ],
+    "alphaChannel": false,
+    "paintedCheckerboard": true,
+    "expectedDirections": [
+      "N",
+      "NE",
+      "E",
+      "SE",
+      "S",
+      "SW",
+      "W",
+      "NW"
+    ],
+    "observedDirections": "All eight intended facings present in the requested order.",
+    "issues": [
+      "Both the first generation and the one targeted transparency edit returned opaque RGB PNGs with painted checkerboard backgrounds.",
+      "1774x887 cannot be divided into an integer 4x2 equal-cell runtime grid.",
+      "Identity/proportions, claw consistency, palette fidelity and directional scale still require human art review.",
+      "No individual keyposes have been extracted, ingested, approved, animated, compiled or promoted."
+    ]
+  }
+}

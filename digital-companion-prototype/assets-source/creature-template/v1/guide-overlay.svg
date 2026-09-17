@@ -1,0 +1,141 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+<g fill="none" stroke="#657a80" stroke-width="1">
+<path d="M 0 0 V 1024 M 0 0 H 1024"/>
+<path d="M 128 0 V 1024 M 0 128 H 1024"/>
+<path d="M 256 0 V 1024 M 0 256 H 1024"/>
+<path d="M 384 0 V 1024 M 0 384 H 1024"/>
+<path d="M 512 0 V 1024 M 0 512 H 1024"/>
+<path d="M 640 0 V 1024 M 0 640 H 1024"/>
+<path d="M 768 0 V 1024 M 0 768 H 1024"/>
+<path d="M 896 0 V 1024 M 0 896 H 1024"/>
+<path d="M 1024 0 V 1024 M 0 1024 H 1024"/>
+</g><g font-family="monospace" font-size="12" fill="#657a80">
+<text x="4" y="15">N · 1</text>
+<path d="M 58 120 h 12 M 64 114 v 12" stroke="#d13d85"/>
+<text x="132" y="15">N · 2</text>
+<path d="M 186 120 h 12 M 192 114 v 12" stroke="#d13d85"/>
+<text x="260" y="15">N · 3</text>
+<path d="M 314 120 h 12 M 320 114 v 12" stroke="#d13d85"/>
+<text x="388" y="15">N · 4</text>
+<path d="M 442 120 h 12 M 448 114 v 12" stroke="#d13d85"/>
+<text x="516" y="15">N · 5</text>
+<path d="M 570 120 h 12 M 576 114 v 12" stroke="#d13d85"/>
+<text x="644" y="15">N · 6</text>
+<path d="M 698 120 h 12 M 704 114 v 12" stroke="#d13d85"/>
+<text x="772" y="15">N · 7</text>
+<path d="M 826 120 h 12 M 832 114 v 12" stroke="#d13d85"/>
+<text x="900" y="15">N · 8</text>
+<path d="M 954 120 h 12 M 960 114 v 12" stroke="#d13d85"/>
+<text x="4" y="143">NE · 1</text>
+<path d="M 58 248 h 12 M 64 242 v 12" stroke="#d13d85"/>
+<text x="132" y="143">NE · 2</text>
+<path d="M 186 248 h 12 M 192 242 v 12" stroke="#d13d85"/>
+<text x="260" y="143">NE · 3</text>
+<path d="M 314 248 h 12 M 320 242 v 12" stroke="#d13d85"/>
+<text x="388" y="143">NE · 4</text>
+<path d="M 442 248 h 12 M 448 242 v 12" stroke="#d13d85"/>
+<text x="516" y="143">NE · 5</text>
+<path d="M 570 248 h 12 M 576 242 v 12" stroke="#d13d85"/>
+<text x="644" y="143">NE · 6</text>
+<path d="M 698 248 h 12 M 704 242 v 12" stroke="#d13d85"/>
+<text x="772" y="143">NE · 7</text>
+<path d="M 826 248 h 12 M 832 242 v 12" stroke="#d13d85"/>
+<text x="900" y="143">NE · 8</text>
+<path d="M 954 248 h 12 M 960 242 v 12" stroke="#d13d85"/>
+<text x="4" y="271">E · 1</text>
+<path d="M 58 376 h 12 M 64 370 v 12" stroke="#d13d85"/>
+<text x="132" y="271">E · 2</text>
+<path d="M 186 376 h 12 M 192 370 v 12" stroke="#d13d85"/>
+<text x="260" y="271">E · 3</text>
+<path d="M 314 376 h 12 M 320 370 v 12" stroke="#d13d85"/>
+<text x="388" y="271">E · 4</text>
+<path d="M 442 376 h 12 M 448 370 v 12" stroke="#d13d85"/>
+<text x="516" y="271">E · 5</text>
+<path d="M 570 376 h 12 M 576 370 v 12" stroke="#d13d85"/>
+<text x="644" y="271">E · 6</text>
+<path d="M 698 376 h 12 M 704 370 v 12" stroke="#d13d85"/>
+<text x="772" y="271">E · 7</text>
+<path d="M 826 376 h 12 M 832 370 v 12" stroke="#d13d85"/>
+<text x="900" y="271">E · 8</text>
+<path d="M 954 376 h 12 M 960 370 v 12" stroke="#d13d85"/>
+<text x="4" y="399">SE · 1</text>
+<path d="M 58 504 h 12 M 64 498 v 12" stroke="#d13d85"/>
+<text x="132" y="399">SE · 2</text>
+<path d="M 186 504 h 12 M 192 498 v 12" stroke="#d13d85"/>
+<text x="260" y="399">SE · 3</text>
+<path d="M 314 504 h 12 M 320 498 v 12" stroke="#d13d85"/>
+<text x="388" y="399">SE · 4</text>
+<path d="M 442 504 h 12 M 448 498 v 12" stroke="#d13d85"/>
+<text x="516" y="399">SE · 5</text>
+<path d="M 570 504 h 12 M 576 498 v 12" stroke="#d13d85"/>
+<text x="644" y="399">SE · 6</text>
+<path d="M 698 504 h 12 M 704 498 v 12" stroke="#d13d85"/>
+<text x="772" y="399">SE · 7</text>
+<path d="M 826 504 h 12 M 832 498 v 12" stroke="#d13d85"/>
+<text x="900" y="399">SE · 8</text>
+<path d="M 954 504 h 12 M 960 498 v 12" stroke="#d13d85"/>
+<text x="4" y="527">S · 1</text>
+<path d="M 58 632 h 12 M 64 626 v 12" stroke="#d13d85"/>
+<text x="132" y="527">S · 2</text>
+<path d="M 186 632 h 12 M 192 626 v 12" stroke="#d13d85"/>
+<text x="260" y="527">S · 3</text>
+<path d="M 314 632 h 12 M 320 626 v 12" stroke="#d13d85"/>
+<text x="388" y="527">S · 4</text>
+<path d="M 442 632 h 12 M 448 626 v 12" stroke="#d13d85"/>
+<text x="516" y="527">S · 5</text>
+<path d="M 570 632 h 12 M 576 626 v 12" stroke="#d13d85"/>
+<text x="644" y="527">S · 6</text>
+<path d="M 698 632 h 12 M 704 626 v 12" stroke="#d13d85"/>
+<text x="772" y="527">S · 7</text>
+<path d="M 826 632 h 12 M 832 626 v 12" stroke="#d13d85"/>
+<text x="900" y="527">S · 8</text>
+<path d="M 954 632 h 12 M 960 626 v 12" stroke="#d13d85"/>
+<text x="4" y="655">SW · 1</text>
+<path d="M 58 760 h 12 M 64 754 v 12" stroke="#d13d85"/>
+<text x="132" y="655">SW · 2</text>
+<path d="M 186 760 h 12 M 192 754 v 12" stroke="#d13d85"/>
+<text x="260" y="655">SW · 3</text>
+<path d="M 314 760 h 12 M 320 754 v 12" stroke="#d13d85"/>
+<text x="388" y="655">SW · 4</text>
+<path d="M 442 760 h 12 M 448 754 v 12" stroke="#d13d85"/>
+<text x="516" y="655">SW · 5</text>
+<path d="M 570 760 h 12 M 576 754 v 12" stroke="#d13d85"/>
+<text x="644" y="655">SW · 6</text>
+<path d="M 698 760 h 12 M 704 754 v 12" stroke="#d13d85"/>
+<text x="772" y="655">SW · 7</text>
+<path d="M 826 760 h 12 M 832 754 v 12" stroke="#d13d85"/>
+<text x="900" y="655">SW · 8</text>
+<path d="M 954 760 h 12 M 960 754 v 12" stroke="#d13d85"/>
+<text x="4" y="783">W · 1</text>
+<path d="M 58 888 h 12 M 64 882 v 12" stroke="#d13d85"/>
+<text x="132" y="783">W · 2</text>
+<path d="M 186 888 h 12 M 192 882 v 12" stroke="#d13d85"/>
+<text x="260" y="783">W · 3</text>
+<path d="M 314 888 h 12 M 320 882 v 12" stroke="#d13d85"/>
+<text x="388" y="783">W · 4</text>
+<path d="M 442 888 h 12 M 448 882 v 12" stroke="#d13d85"/>
+<text x="516" y="783">W · 5</text>
+<path d="M 570 888 h 12 M 576 882 v 12" stroke="#d13d85"/>
+<text x="644" y="783">W · 6</text>
+<path d="M 698 888 h 12 M 704 882 v 12" stroke="#d13d85"/>
+<text x="772" y="783">W · 7</text>
+<path d="M 826 888 h 12 M 832 882 v 12" stroke="#d13d85"/>
+<text x="900" y="783">W · 8</text>
+<path d="M 954 888 h 12 M 960 882 v 12" stroke="#d13d85"/>
+<text x="4" y="911">NW · 1</text>
+<path d="M 58 1016 h 12 M 64 1010 v 12" stroke="#d13d85"/>
+<text x="132" y="911">NW · 2</text>
+<path d="M 186 1016 h 12 M 192 1010 v 12" stroke="#d13d85"/>
+<text x="260" y="911">NW · 3</text>
+<path d="M 314 1016 h 12 M 320 1010 v 12" stroke="#d13d85"/>
+<text x="388" y="911">NW · 4</text>
+<path d="M 442 1016 h 12 M 448 1010 v 12" stroke="#d13d85"/>
+<text x="516" y="911">NW · 5</text>
+<path d="M 570 1016 h 12 M 576 1010 v 12" stroke="#d13d85"/>
+<text x="644" y="911">NW · 6</text>
+<path d="M 698 1016 h 12 M 704 1010 v 12" stroke="#d13d85"/>
+<text x="772" y="911">NW · 7</text>
+<path d="M 826 1016 h 12 M 832 1010 v 12" stroke="#d13d85"/>
+<text x="900" y="911">NW · 8</text>
+<path d="M 954 1016 h 12 M 960 1010 v 12" stroke="#d13d85"/>
+</g></svg>

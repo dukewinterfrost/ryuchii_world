@@ -1,0 +1,14 @@
+#!/bin/sh
+# No implicit dependency downloads. See docs/SPRITE_PIPELINE.md for setup.
+set -eu
+sprite_tools_dir=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)
+sprite_project_dir=$(dirname -- "$sprite_tools_dir")
+if [ -n "${SPRITE_PYTHON:-}" ]; then
+    sprite_interpreter=$SPRITE_PYTHON
+elif [ -x "$sprite_project_dir/.venv-sprites/bin/python" ]; then
+    sprite_interpreter="$sprite_project_dir/.venv-sprites/bin/python"
+else
+    sprite_interpreter=python3
+fi
+export PYTHONPATH="$sprite_tools_dir${PYTHONPATH:+:$PYTHONPATH}"
+exec "$sprite_interpreter" -m sprite_pipeline.cli "$@"

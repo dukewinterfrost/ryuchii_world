@@ -1,0 +1,543 @@
+[
+  {
+    "key": "agumon-basic-attack",
+    "nodeId": "84:212",
+    "path": "/Users/johncohrn/Documents/ChatGPT/Godot Projects/design-workshop/animation-review/2026-09-13-v1/review/agumon-basic-attack-sheet.png",
+    "meta": {
+      "action": "basic_attack",
+      "actualFrameCount": 12,
+      "character": "agumon",
+      "curation": null,
+      "facing": "E",
+      "frameDurationMs": 60,
+      "frames": [
+        {
+          "durationMs": 60,
+          "index": 0,
+          "path": "frames/agumon-basic-attack/frame-0000.png",
+          "sha256": "sha256:9f049e10fdb36fa5cdd9d33a2e7d30ab68fbc47ce8331679690d16c6241f21f3"
+        },
+        {
+          "durationMs": 60,
+          "index": 1,
+          "path": "frames/agumon-basic-attack/frame-0001.png",
+          "sha256": "sha256:5d7e3c237c8eae5dd0ae2c49cc529a1d854ae4cb25c8f3b4e3a509e9efd4c921"
+        },
+        {
+          "durationMs": 60,
+          "index": 2,
+          "path": "frames/agumon-basic-attack/frame-0002.png",
+          "sha256": "sha256:883914ff290525c5e97de8de53752c0750b0c7a9dcef94b1b8fe99a3bdab1509"
+        },
+        {
+          "durationMs": 60,
+          "index": 3,
+          "path": "frames/agumon-basic-attack/frame-0003.png",
+          "sha256": "sha256:cbe26d61b27cf0e5554c96fd9456334ec81e3abd417b8f487c7206cdcda94057"
+        },
+        {
+          "durationMs": 60,
+          "index": 4,
+          "path": "frames/agumon-basic-attack/frame-0004.png",
+          "sha256": "sha256:bcefa7b50ad02a73b3161e4e8a8004f31e43c46345abf9f382850c989b894298"
+        },
+        {
+          "durationMs": 60,
+          "index": 5,
+          "path": "frames/agumon-basic-attack/frame-0005.png",
+          "sha256": "sha256:21c0c715ba68fcd8966e5c00eb0aecccf84c106403bbdc4375056e9f04eb1b8a"
+        },
+        {
+          "durationMs": 60,
+          "index": 6,
+          "path": "frames/agumon-basic-attack/frame-0006.png",
+          "sha256": "sha256:1415b9fbc451261622b9a0ed9e49d2efd47c47478b4c41deb8964ad1f1b4ef6f"
+        },
+        {
+          "durationMs": 60,
+          "index": 7,
+          "path": "frames/agumon-basic-attack/frame-0007.png",
+          "sha256": "sha256:affd53cec417ef6f72a9443d0d393dbda76e93ee0cc30b3c78dd3672ccca67ac"
+        },
+        {
+          "durationMs": 60,
+          "index": 8,
+          "path": "frames/agumon-basic-attack/frame-0008.png",
+          "sha256": "sha256:b0e9995c6d5ddca0a80cce0a8bb177903fd787199baf31375c687dad6fb51cb3"
+        },
+        {
+          "durationMs": 60,
+          "index": 9,
+          "path": "frames/agumon-basic-attack/frame-0009.png",
+          "sha256": "sha256:78af78021e6e7f97051f2fad37ff81342064a5723f00958b1832e8205b65d6b8"
+        },
+        {
+          "durationMs": 60,
+          "index": 10,
+          "path": "frames/agumon-basic-attack/frame-0010.png",
+          "sha256": "sha256:7a9835e9c38e90285c76f65213db239c912192f50b642a8be8a0bdfc2b2aae81"
+        },
+        {
+          "durationMs": 60,
+          "index": 11,
+          "path": "frames/agumon-basic-attack/frame-0011.png",
+          "sha256": "sha256:9f049e10fdb36fa5cdd9d33a2e7d30ab68fbc47ce8331679690d16c6241f21f3"
+        }
+      ],
+      "key": "agumon-basic-attack",
+      "loop": false,
+      "motionApproval": "pending",
+      "rawFrameCount": 12,
+      "removedIdenticalSegmentSeams": 0,
+      "segments": [
+        "agumon-basic-attack-out-v3",
+        "agumon-basic-attack-back-v2"
+      ],
+      "sheetColumns": 6,
+      "sheetRows": 2,
+      "totalDurationMs": 720
+    }
+  },
+  {
+    "key": "agumon-guard",
+    "nodeId": "84:222",
+    "path": "/Users/johncohrn/Documents/ChatGPT/Godot Projects/design-workshop/animation-review/2026-09-13-v1/review/agumon-guard-sheet.png",
+    "meta": {
+      "action": "guard",
+      "actualFrameCount": 5,
+      "character": "agumon",
+      "curation": null,
+      "facing": "E",
+      "frameDurationMs": 180,
+      "frames": [
+        {
+          "durationMs": 180,
+          "index": 0,
+          "path": "frames/agumon-guard/frame-0000.png",
+          "sha256": "sha256:6f51f67f782605dca4c6e9605fcfeb1512303bb5251ea041a61458f88548df49"
+        },
+        {
+          "durationMs": 180,
+          "index": 1,
+          "path": "frames/agumon-guard/frame-0001.png",
+          "sha256": "sha256:14e66adb720f67913e20b08017ef1904e0309de481aa38b502aee906339b535b"
+        },
+        {
+          "durationMs": 180,
+          "index": 2,
+          "path": "frames/agumon-guard/frame-0002.png",
+          "sha256": "sha256:20108f8a972a28dec021a6c74e5257fe8150ae60d89b3693e35bfdb1d56a51c4"
+        },
+        {
+          "durationMs": 180,
+          "index": 3,
+          "path": "frames/agumon-guard/frame-0003.png",
+          "sha256": "sha256:0e1c1c0cde1a241f9fc5bbb12cc35d291d96f007c8ec50f7819398c6c393055a"
+        },
+        {
+          "durationMs": 180,
+          "index": 4,
+          "path": "frames/agumon-guard/frame-0004.png",
+          "sha256": "sha256:f4b62c66ff6ec68af0c3924b77eabcafe99788456af35bdfc9d95a8888f0fcf9"
+        }
+      ],
+      "key": "agumon-guard",
+      "loop": true,
+      "motionApproval": "pending",
+      "rawFrameCount": 5,
+      "removedIdenticalSegmentSeams": 0,
+      "segments": [
+        "agumon-guard-loop-v2"
+      ],
+      "sheetColumns": 5,
+      "sheetRows": 1,
+      "totalDurationMs": 900
+    }
+  },
+  {
+    "key": "agumon-happy",
+    "nodeId": "84:202",
+    "path": "/Users/johncohrn/Documents/ChatGPT/Godot Projects/design-workshop/animation-review/2026-09-13-v1/review/agumon-happy-sheet.png",
+    "meta": {
+      "action": "happy",
+      "actualFrameCount": 12,
+      "character": "agumon",
+      "curation": {
+        "frames": [
+          {
+            "index": 0,
+            "job": "agumon-happy-out",
+            "sha256": "sha256:24f0f85d63d54e2b35d37641d8403e42b6973b4e386ad1512b442ce12094f015"
+          },
+          {
+            "index": 1,
+            "job": "agumon-happy-out",
+            "sha256": "sha256:a961a22cdbffa28c6d99e2e0ba7395650483e35fee98b7d44c2aeecb9e12ceeb"
+          },
+          {
+            "index": 2,
+            "job": "agumon-happy-out",
+            "sha256": "sha256:7df8cd4d697277a9b866a9b83bce34f25ea85f11714d1bc503bcb450c9c3bb94"
+          },
+          {
+            "index": 3,
+            "job": "agumon-happy-out-v2",
+            "sha256": "sha256:dc7a949a274428c0c9e121f146dc4db989030231173fcca8d092a77b6d817bf7"
+          },
+          {
+            "index": 4,
+            "job": "agumon-happy-out-v2",
+            "sha256": "sha256:d1e22ea5a2d318940bf26f627f4d1d63687567d5fd62dde46d7d8cc776cf16d5"
+          },
+          {
+            "index": 0,
+            "job": "agumon-happy-back",
+            "sha256": "sha256:5dc93a56bd07f4ed1611e0b59c491350cc3346bf22f3ff0139c232e541d8ff1c"
+          },
+          {
+            "index": 1,
+            "job": "agumon-happy-back",
+            "sha256": "sha256:dfb538f9f5362778e1973adc573c5fe08dfe279a80a40a789d5364fd7246f1af"
+          },
+          {
+            "index": 2,
+            "job": "agumon-happy-back",
+            "sha256": "sha256:31c2828e3370681c15779a1a4fcc3fb8a7379c893db12ea66a7b12e7ffb8be46"
+          },
+          {
+            "index": 3,
+            "job": "agumon-happy-back",
+            "sha256": "sha256:158119d0c7a766da3bd015d10f6f678c96e52f16729d1d183dc72300e4fda5da"
+          },
+          {
+            "index": 4,
+            "job": "agumon-happy-back",
+            "sha256": "sha256:523f688f473d63bbed0a6d51515fdb2c2da7f9e7fcf5f19b16b475ee9c1b8727"
+          },
+          {
+            "index": 5,
+            "job": "agumon-happy-back",
+            "sha256": "sha256:362ea16107b74a7edad5bd65ea9826e3d88264733a70961bb86d01af80e3be77"
+          },
+          {
+            "index": 6,
+            "job": "agumon-happy-back",
+            "sha256": "sha256:c5d01d771cb947f50b3b9b5ef98a8645bf60c6296941a96e6cfe18fe95c0bb39"
+          }
+        ],
+        "reason": "Retain the clean anticipation from the first take and clean peak/recovery from subsequent takes; omit frames with invented head appendages. Every selected frame is actual PixelLab output, with detached overlays separated where recorded."
+      },
+      "facing": "E",
+      "frameDurationMs": 90,
+      "frames": [
+        {
+          "durationMs": 90,
+          "index": 0,
+          "path": "frames/agumon-happy/frame-0000.png",
+          "sha256": "sha256:33d4459493421c7a52052ca81c45d3046dfa7ef5f1bfd79e5ef331dc88f1fd53"
+        },
+        {
+          "durationMs": 90,
+          "index": 1,
+          "path": "frames/agumon-happy/frame-0001.png",
+          "sha256": "sha256:e7e0eaa96ca852b2f381ae079509cfa3a8aaaed704bcad8b33850223bf704f77"
+        },
+        {
+          "durationMs": 90,
+          "index": 2,
+          "path": "frames/agumon-happy/frame-0002.png",
+          "sha256": "sha256:f0530ea3d65ad1716b24ac1d6715caf305e4e578966084f5e231d90c02982a82"
+        },
+        {
+          "durationMs": 90,
+          "index": 3,
+          "path": "frames/agumon-happy/frame-0003.png",
+          "sha256": "sha256:667eb8a7c9da008c2635b97b82e1c17c13f9fa35d2d14c9757ab9659fae62e8d"
+        },
+        {
+          "durationMs": 90,
+          "index": 4,
+          "path": "frames/agumon-happy/frame-0004.png",
+          "sha256": "sha256:e803af0c2b10eed793de02698ade38a2d718131a9529f6a26c1fbfb8ee9489cf"
+        },
+        {
+          "durationMs": 90,
+          "index": 5,
+          "path": "frames/agumon-happy/frame-0005.png",
+          "sha256": "sha256:3ab3c0a97d1d3332d271dffd8892909b6570766ba00f9d6dd9e1509125184452"
+        },
+        {
+          "durationMs": 90,
+          "index": 6,
+          "path": "frames/agumon-happy/frame-0006.png",
+          "sha256": "sha256:5dc9d5eca60472c84f5d3b0f235f29cfce978c0c504c858067161bbae1a0d046"
+        },
+        {
+          "durationMs": 90,
+          "index": 7,
+          "path": "frames/agumon-happy/frame-0007.png",
+          "sha256": "sha256:f8a343f6e309da04a72f42d9c6154c04cc20e7be24a324088de7667031f4051f"
+        },
+        {
+          "durationMs": 90,
+          "index": 8,
+          "path": "frames/agumon-happy/frame-0008.png",
+          "sha256": "sha256:7fde286c93d034ac60b6de6031d816bf53fb197d2179bf85aedf2f15f9b73dfc"
+        },
+        {
+          "durationMs": 90,
+          "index": 9,
+          "path": "frames/agumon-happy/frame-0009.png",
+          "sha256": "sha256:47589f49966fc3761534f0ae9783ee733a6e667687a4ded37ce219ff36e1be0d"
+        },
+        {
+          "durationMs": 90,
+          "index": 10,
+          "path": "frames/agumon-happy/frame-0010.png",
+          "sha256": "sha256:10a7eb4067070c5a52f0dcfb5ba49602cc3a30b656fc6b2818e1103c3abe720a"
+        },
+        {
+          "durationMs": 90,
+          "index": 11,
+          "path": "frames/agumon-happy/frame-0011.png",
+          "sha256": "sha256:bca196b272d167cd09e62aee42a6e7a4cd079cffd4c99f7f7bb298f011fafa86"
+        }
+      ],
+      "key": "agumon-happy",
+      "loop": false,
+      "motionApproval": "pending",
+      "rawFrameCount": 19,
+      "removedIdenticalSegmentSeams": 0,
+      "segments": [
+        "agumon-happy-out-v2",
+        "agumon-happy-back"
+      ],
+      "sheetColumns": 6,
+      "sheetRows": 2,
+      "totalDurationMs": 1080
+    }
+  },
+  {
+    "key": "botamon-happy",
+    "nodeId": "84:167",
+    "path": "/Users/johncohrn/Documents/ChatGPT/Godot Projects/design-workshop/animation-review/2026-09-13-v1/review/botamon-happy-sheet.png",
+    "meta": {
+      "action": "happy",
+      "actualFrameCount": 11,
+      "character": "botamon",
+      "curation": null,
+      "facing": "E",
+      "frameDurationMs": 90,
+      "frames": [
+        {
+          "durationMs": 90,
+          "index": 0,
+          "path": "frames/botamon-happy/frame-0000.png",
+          "sha256": "sha256:ddcca4607b9bbaaf3bb15497c94c506167cef8abdf917ca4c67ca87ff132edf1"
+        },
+        {
+          "durationMs": 90,
+          "index": 1,
+          "path": "frames/botamon-happy/frame-0001.png",
+          "sha256": "sha256:c2ca06a09f630922a93c9e033786536ddb6a93edee83bb6b19061b39d223911c"
+        },
+        {
+          "durationMs": 90,
+          "index": 2,
+          "path": "frames/botamon-happy/frame-0002.png",
+          "sha256": "sha256:5ac869dddaafd3f7126f572f54d6f2136a8c23d49402cd088f359010e7b4ca96"
+        },
+        {
+          "durationMs": 90,
+          "index": 3,
+          "path": "frames/botamon-happy/frame-0003.png",
+          "sha256": "sha256:635819b558d07d369f26c2820ac3e4a1cd2335bc593864c4be77477e9bbd7567"
+        },
+        {
+          "durationMs": 90,
+          "index": 4,
+          "path": "frames/botamon-happy/frame-0004.png",
+          "sha256": "sha256:90305ff3582b214eaacdc182632d02c56d4cb964b57f70c6fdb1fdc90ad90fb5"
+        },
+        {
+          "durationMs": 90,
+          "index": 5,
+          "path": "frames/botamon-happy/frame-0005.png",
+          "sha256": "sha256:e0d37da62dbdb8e285c5f2f21d2b815eb411a9a420cbdd3a2aa74b5aec9ad9b8"
+        },
+        {
+          "durationMs": 90,
+          "index": 6,
+          "path": "frames/botamon-happy/frame-0006.png",
+          "sha256": "sha256:1266aa7decc079544e688aa9ed554ac1440f1b54396f587bd039886e257e2e6c"
+        },
+        {
+          "durationMs": 90,
+          "index": 7,
+          "path": "frames/botamon-happy/frame-0007.png",
+          "sha256": "sha256:17be2db35d27273e6a9bc3300e37a20caedaa87e0ec926f6ef7bb66610ae05a4"
+        },
+        {
+          "durationMs": 90,
+          "index": 8,
+          "path": "frames/botamon-happy/frame-0008.png",
+          "sha256": "sha256:94b5a66fb217440f86450f83f4440c8547378a76d9a4faf587b23b2371fc7958"
+        },
+        {
+          "durationMs": 90,
+          "index": 9,
+          "path": "frames/botamon-happy/frame-0009.png",
+          "sha256": "sha256:7810e70a39f3e5e06252bf89296a621869d5cb3865fda3727b9b9ec45d4e6546"
+        },
+        {
+          "durationMs": 90,
+          "index": 10,
+          "path": "frames/botamon-happy/frame-0010.png",
+          "sha256": "sha256:ddcca4607b9bbaaf3bb15497c94c506167cef8abdf917ca4c67ca87ff132edf1"
+        }
+      ],
+      "key": "botamon-happy",
+      "loop": false,
+      "motionApproval": "pending",
+      "rawFrameCount": 12,
+      "removedIdenticalSegmentSeams": 1,
+      "segments": [
+        "botamon-happy-out-v2",
+        "botamon-happy-back"
+      ],
+      "sheetColumns": 6,
+      "sheetRows": 2,
+      "totalDurationMs": 990
+    }
+  },
+  {
+    "key": "botamon-move",
+    "nodeId": "84:162",
+    "path": "/Users/johncohrn/Documents/ChatGPT/Godot Projects/design-workshop/animation-review/2026-09-13-v1/review/botamon-move-sheet.png",
+    "meta": {
+      "action": "move",
+      "actualFrameCount": 4,
+      "character": "botamon",
+      "curation": {
+        "frames": [
+          {
+            "index": 0,
+            "job": "botamon-move-loop-v2",
+            "sha256": "sha256:dfd3e8a990cd75c586d97016ec7082fef9749653258e6476e42f14167b131f65"
+          },
+          {
+            "index": 1,
+            "job": "botamon-move-loop-v2",
+            "sha256": "sha256:1c2fbc3cb694b2fe1f3aed845158961eefde7199aa485b1a10a570292dfc64f8"
+          },
+          {
+            "index": 3,
+            "job": "botamon-move-loop-v2",
+            "sha256": "sha256:263ae1b64e047b0a7b152493ad45ba363ae9f5a52d81718a678d804c08ac2a2f"
+          },
+          {
+            "index": 4,
+            "job": "botamon-move-loop-v2",
+            "sha256": "sha256:dfd3e8a990cd75c586d97016ec7082fef9749653258e6476e42f14167b131f65"
+          }
+        ],
+        "reason": "Omit the single frame that elongated the short head points; keep the genuine compact hop poses and loop endpoints."
+      },
+      "facing": "E",
+      "frameDurationMs": 110,
+      "frames": [
+        {
+          "durationMs": 110,
+          "index": 0,
+          "path": "frames/botamon-move/frame-0000.png",
+          "sha256": "sha256:bedd71c186a75f07631e833c8561fd39963103fb930678f895c209f8f70c4bfd"
+        },
+        {
+          "durationMs": 110,
+          "index": 1,
+          "path": "frames/botamon-move/frame-0001.png",
+          "sha256": "sha256:16e591b6c715d9392b740ddfa0a1d4ff4a9e62da7e4be9eb7cda507d90a10c47"
+        },
+        {
+          "durationMs": 110,
+          "index": 2,
+          "path": "frames/botamon-move/frame-0002.png",
+          "sha256": "sha256:0ead935f387a827244c8db9a30fbc812f969e6f3e7f7acfb473b6ef469eeb6af"
+        },
+        {
+          "durationMs": 110,
+          "index": 3,
+          "path": "frames/botamon-move/frame-0003.png",
+          "sha256": "sha256:bedd71c186a75f07631e833c8561fd39963103fb930678f895c209f8f70c4bfd"
+        }
+      ],
+      "key": "botamon-move",
+      "loop": true,
+      "motionApproval": "pending",
+      "rawFrameCount": 5,
+      "removedIdenticalSegmentSeams": 0,
+      "segments": [
+        "botamon-move-loop-v2"
+      ],
+      "sheetColumns": 4,
+      "sheetRows": 1,
+      "totalDurationMs": 440
+    }
+  },
+  {
+    "key": "koromon-move",
+    "nodeId": "84:182",
+    "path": "/Users/johncohrn/Documents/ChatGPT/Godot Projects/design-workshop/animation-review/2026-09-13-v1/review/koromon-move-sheet.png",
+    "meta": {
+      "action": "move",
+      "actualFrameCount": 5,
+      "character": "koromon",
+      "curation": null,
+      "facing": "E",
+      "frameDurationMs": 110,
+      "frames": [
+        {
+          "durationMs": 110,
+          "index": 0,
+          "path": "frames/koromon-move/frame-0000.png",
+          "sha256": "sha256:ac9a94fcf7e8492235af90d02db434533adfc096b471b6905c8f04689699892d"
+        },
+        {
+          "durationMs": 110,
+          "index": 1,
+          "path": "frames/koromon-move/frame-0001.png",
+          "sha256": "sha256:61dd88ad6f1c4565b6e461bd45d927c5e0752a2c69fb319ceee05491cabe7105"
+        },
+        {
+          "durationMs": 110,
+          "index": 2,
+          "path": "frames/koromon-move/frame-0002.png",
+          "sha256": "sha256:8303bc52a94766cbbfe9ad690beefd84b81bba210601c78e882f3ac7ac756d5a"
+        },
+        {
+          "durationMs": 110,
+          "index": 3,
+          "path": "frames/koromon-move/frame-0003.png",
+          "sha256": "sha256:5e43dd16cbab08f9c5e2bd7a780eb602758e776cbfade59a2a6b8fbab8dc9499"
+        },
+        {
+          "durationMs": 110,
+          "index": 4,
+          "path": "frames/koromon-move/frame-0004.png",
+          "sha256": "sha256:ff1f93a8726416c1dabc490aaf05ad608d6ad35fa70c2e2b7d2de68497adf1b3"
+        }
+      ],
+      "key": "koromon-move",
+      "loop": true,
+      "motionApproval": "pending",
+      "rawFrameCount": 5,
+      "removedIdenticalSegmentSeams": 0,
+      "segments": [
+        "koromon-move-loop-v2"
+      ],
+      "sheetColumns": 5,
+      "sheetRows": 1,
+      "totalDurationMs": 550
+    }
+  }
+]

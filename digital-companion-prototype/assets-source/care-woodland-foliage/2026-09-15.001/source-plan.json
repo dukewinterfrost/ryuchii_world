@@ -1,0 +1,88 @@
+{
+  "assetId": "care-woodland-foliage",
+  "entries": {
+    "tree": {
+      "source": "foliage-sheet",
+      "rect": [
+        0,
+        0,
+        627,
+        627
+      ],
+      "pivot": {
+        "x": 0.5382775119617225,
+        "y": 0.9282296650717703
+      }
+    },
+    "hedge": {
+      "source": "foliage-sheet",
+      "rect": [
+        627,
+        0,
+        627,
+        627
+      ],
+      "pivot": {
+        "x": 0.4649122807017544,
+        "y": 0.9027113237639554
+      }
+    },
+    "reeds": {
+      "source": "foliage-sheet",
+      "rect": [
+        0,
+        627,
+        627,
+        627
+      ],
+      "pivot": {
+        "x": 0.5287081339712919,
+        "y": 0.84688995215311
+      }
+    },
+    "rock": {
+      "source": "foliage-sheet",
+      "rect": [
+        627,
+        627,
+        627,
+        627
+      ],
+      "pivot": {
+        "x": 0.45454545454545453,
+        "y": 0.7671451355661882
+      }
+    }
+  },
+  "extrudePx": 1,
+  "generation": {
+    "brief": "Use case: stylized-concept.\nAsset type: one production 2D game environment prop atlas, 1024 by 1024, true transparent RGBA background.\nCreate FOUR separate original lush woodland props in a precise equal 2x2 atlas. Each quadrant is 512x512; all art stays at least 24 pixels inside its quadrant, with completely transparent gutters. No labels, no grid lines, no cast shadows, no ground plane, no scene backdrop.\nTop-left quadrant: one broad, irregular deciduous tree, complete crown and rooted twisting trunk, asymmetrical layered clusters of deep emerald and moss-green leaves, dark brown branching trunk, small visible roots at bottom center.\nTop-right: a low wide, irregular berry-and-fern hedge cluster; varied layered green foliage with a few small coral-red berries and tiny cream flowers, bottom-center rooted, no pot.\nBottom-left: a tall but narrow lush fern and reed cluster, fan-shaped leaves with organically varied heights, entirely green with a few gold tips, rooted at bottom center.\nBottom-right: one low mossy rock outcrop, two uneven warm-gray rocks with green moss caps, small grass tufts, compact grounded silhouette, no enclosing patch of ground.\nStyle: polished hand-painted pixel-art woodland props for a sprite-in-3D cozy creature-care game. Crisp stepped contour, restrained dark green/brown outlines, chunky readable leaf clusters, controlled shading, warm upper-left light and cooler green recesses. Rich foliage like a lush HD-2D adventure game, not low-poly primitive spheres and not photorealistic. Each quadrant should read as a roughly 128x128 pixel-art sprite enlarged 4x with crisp pixel blocks, no blur. The four props belong to the SAME visual kit.\nView: camera-facing illustrated cards, slight 3/4 overhead artwork perspective with visible foliage tops, consistent direction across all four props. NOT isometric diamonds. Original designs only; no recognizable franchise characters, logos, UI, text, borders or watermarks. Preserve true alpha transparency.",
+    "jobs": [],
+    "packingCorrection": "Edit this game prop atlas only to fix packing. Preserve the same four illustrated props, colors, pixel-art shading and layout, and preserve TRUE ALPHA transparency. Keep the square 2x2 layout. Scale each prop down inside its own quadrant so every prop is fully contained with at least 36 transparent pixels on ALL FOUR sides of its quadrant. In particular, restore the FULL round irregular top silhouette of the top-left tree crown: no leaves or branches should touch the top edge. None of the four props may touch an image edge or cross a quadrant midline. Do not add anything else. No text, grids, backdrop, shadows, labels or new props. Keep all four objects complete and comfortably separated."
+  },
+  "keyposes": [
+    "sample"
+  ],
+  "kind": "atlas",
+  "paddingPx": 2,
+  "provenance": {
+    "kind": "generated"
+  },
+  "provider": "codex-imagegen",
+  "revision": "2026-09-15.001",
+  "schemaVersion": 1,
+  "sources": {
+    "foliage-sheet": {
+      "path": "sources/ee0ed7a9f64646e8205801b671ba06591fa587f7dc79efc1ede5efb390c9743f.png",
+      "sha256": "sha256:ee0ed7a9f64646e8205801b671ba06591fa587f7dc79efc1ede5efb390c9743f"
+    },
+    "sample": {
+      "path": "sources/ee0ed7a9f64646e8205801b671ba06591fa587f7dc79efc1ede5efb390c9743f.png",
+      "sha256": "sha256:ee0ed7a9f64646e8205801b671ba06591fa587f7dc79efc1ede5efb390c9743f"
+    }
+  },
+  "license": {
+    "classification": "private-prototype-only",
+    "notice": "Original built-in generated foliage, review-only. No external source-game image pixels were used in generation. Not approved for production or public distribution."
+  }
+}

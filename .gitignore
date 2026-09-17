@@ -1,0 +1,29 @@
+# macOS metadata
+.DS_Store
+._*
+
+# Godot-generated cache and private export credentials
+.godot/
+.mono/
+export_credentials.cfg
+
+# Local Python environments and generated files
+.venv/
+.venv-*/
+__pycache__/
+*.py[cod]
+*.tmp
+*.log
+
+# Local secrets; keep shareable examples available
+.env
+.env.*
+!.env.example
+!.env.sample
+
+# Local game exports and player save copies
+/digital-companion-prototype/build/
+/digital-companion-prototype/dist/
+/digital-companion-prototype/exports/
+companion-save.json
+companion-save.json.*

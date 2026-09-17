@@ -1,0 +1,394 @@
+[
+  {
+    "name": "mismatched-full-polygon-small-footprint",
+    "expectedValid": true,
+    "manifest": {
+      "projection": "square",
+      "tileSize": [
+        32,
+        32
+      ],
+      "tiles": [
+        {
+          "atlas": [
+            0,
+            0
+          ],
+          "alternative": 0,
+          "collision": [
+            [
+              [
+                -16,
+                -16
+              ],
+              [
+                16,
+                -16
+              ],
+              [
+                16,
+                16
+              ],
+              [
+                -16,
+                16
+              ]
+            ]
+          ],
+          "combat": {
+            "cellSize": 20,
+            "rect": [
+              0,
+              0,
+              1,
+              1
+            ],
+            "movement": true,
+            "projectile": true,
+            "sight": false,
+            "occlusion": false
+          }
+        }
+      ],
+      "terrains": [],
+      "customDataLayers": []
+    },
+    "expectedCollision": [
+      [
+        [
+          -16,
+          -16
+        ],
+        [
+          -14.4,
+          -16
+        ],
+        [
+          -14.4,
+          -14.4
+        ],
+        [
+          -16,
+          -14.4
+        ]
+      ]
+    ]
+  },
+  {
+    "name": "square-inset-footprint",
+    "expectedValid": true,
+    "manifest": {
+      "projection": "square",
+      "tileSize": [
+        32,
+        32
+      ],
+      "tiles": [
+        {
+          "atlas": [
+            0,
+            0
+          ],
+          "alternative": 0,
+          "collision": [
+            [
+              [
+                -16,
+                -16
+              ],
+              [
+                16,
+                -16
+              ],
+              [
+                16,
+                16
+              ],
+              [
+                -16,
+                16
+              ]
+            ]
+          ],
+          "combat": {
+            "cellSize": 20,
+            "rect": [
+              5,
+              5,
+              10,
+              10
+            ],
+            "movement": true,
+            "projectile": true,
+            "sight": false,
+            "occlusion": false
+          }
+        }
+      ],
+      "terrains": [],
+      "customDataLayers": []
+    },
+    "expectedCollision": [
+      [
+        [
+          -8,
+          -8
+        ],
+        [
+          8,
+          -8
+        ],
+        [
+          8,
+          8
+        ],
+        [
+          -8,
+          8
+        ]
+      ]
+    ]
+  },
+  {
+    "name": "isometric-inset-footprint",
+    "expectedValid": true,
+    "manifest": {
+      "projection": "isometric",
+      "tileSize": [
+        64,
+        32
+      ],
+      "tiles": [
+        {
+          "atlas": [
+            0,
+            0
+          ],
+          "alternative": 0,
+          "collision": [
+            [
+              [
+                -16,
+                -16
+              ],
+              [
+                16,
+                -16
+              ],
+              [
+                16,
+                16
+              ],
+              [
+                -16,
+                16
+              ]
+            ]
+          ],
+          "combat": {
+            "cellSize": 20,
+            "rect": [
+              5,
+              5,
+              10,
+              10
+            ],
+            "movement": true,
+            "projectile": true,
+            "sight": false,
+            "occlusion": false
+          }
+        }
+      ],
+      "terrains": [],
+      "customDataLayers": []
+    },
+    "expectedCollision": [
+      [
+        [
+          0,
+          -8
+        ],
+        [
+          16,
+          0
+        ],
+        [
+          0,
+          8
+        ],
+        [
+          -16,
+          0
+        ]
+      ]
+    ]
+  },
+  {
+    "name": "movement-false-removes-native-collision",
+    "expectedValid": true,
+    "manifest": {
+      "projection": "square",
+      "tileSize": [
+        32,
+        32
+      ],
+      "tiles": [
+        {
+          "atlas": [
+            0,
+            0
+          ],
+          "alternative": 0,
+          "collision": [
+            [
+              [
+                -16,
+                -16
+              ],
+              [
+                16,
+                -16
+              ],
+              [
+                16,
+                16
+              ],
+              [
+                -16,
+                16
+              ]
+            ]
+          ],
+          "combat": {
+            "cellSize": 20,
+            "rect": [
+              0,
+              0,
+              20,
+              20
+            ],
+            "movement": false,
+            "projectile": true,
+            "sight": false,
+            "occlusion": false
+          }
+        }
+      ],
+      "terrains": [],
+      "customDataLayers": []
+    },
+    "expectedCollision": []
+  },
+  {
+    "name": "missing-ground-cell-size",
+    "expectedValid": false,
+    "manifest": {
+      "projection": "square",
+      "tileSize": [
+        32,
+        32
+      ],
+      "tiles": [
+        {
+          "atlas": [
+            0,
+            0
+          ],
+          "alternative": 0,
+          "collision": [
+            [
+              [
+                -16,
+                -16
+              ],
+              [
+                16,
+                -16
+              ],
+              [
+                16,
+                16
+              ],
+              [
+                -16,
+                16
+              ]
+            ]
+          ],
+          "combat": {
+            "rect": [
+              0,
+              0,
+              20,
+              20
+            ],
+            "movement": true,
+            "projectile": true,
+            "sight": false,
+            "occlusion": false
+          }
+        }
+      ],
+      "terrains": [],
+      "customDataLayers": []
+    },
+    "expectedCollision": []
+  },
+  {
+    "name": "footprint-outside-declared-cell",
+    "expectedValid": false,
+    "manifest": {
+      "projection": "square",
+      "tileSize": [
+        32,
+        32
+      ],
+      "tiles": [
+        {
+          "atlas": [
+            0,
+            0
+          ],
+          "alternative": 0,
+          "collision": [
+            [
+              [
+                -16,
+                -16
+              ],
+              [
+                16,
+                -16
+              ],
+              [
+                16,
+                16
+              ],
+              [
+                -16,
+                16
+              ]
+            ]
+          ],
+          "combat": {
+            "cellSize": 20,
+            "rect": [
+              15,
+              15,
+              10,
+              10
+            ],
+            "movement": true,
+            "projectile": true,
+            "sight": false,
+            "occlusion": false
+          }
+        }
+      ],
+      "terrains": [],
+      "customDataLayers": []
+    },
+    "expectedCollision": []
+  }
+]

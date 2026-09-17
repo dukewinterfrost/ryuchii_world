@@ -1,0 +1,25 @@
+{
+  "uploads": [
+    {
+      "key": "botamon-move",
+      "source": "/Users/johncohrn/.codex/generated_images/01a096c8-8e58-72f1-94fc-a84a5be49c90/exec-6b930ee3-9333-4486-a91b-441dffdcbf46.png",
+      "path": "/Users/johncohrn/Documents/ChatGPT/Godot Projects/design-workshop/keyframe-review/2026-09-12-v1/botamon-move.png",
+      "nodeId": "55:206",
+      "submitUrl": "https://mcp.figma.com/mcp/upload/3373f8b4-9351-4086-b4cf-ae6463c685ba/submit?scaleMode=FIT"
+    },
+    {
+      "key": "botamon-happy",
+      "source": "/Users/johncohrn/.codex/generated_images/01a096c8-8e58-72f1-94fc-a84a5be49c90/exec-f716747a-86fc-467f-93b0-303410f61a82.png",
+      "path": "/Users/johncohrn/Documents/ChatGPT/Godot Projects/design-workshop/keyframe-review/2026-09-12-v1/botamon-happy.png",
+      "nodeId": "55:207",
+      "submitUrl": "https://mcp.figma.com/mcp/upload/9e28bdf2-5967-4320-862c-1b7877ccea8b/submit?scaleMode=FIT"
+    },
+    {
+      "key": "botamon-eat",
+      "source": "/Users/johncohrn/.codex/generated_images/01a096c8-8e58-72f1-94fc-a84a5be49c90/exec-5245d599-b999-48f3-98f0-119636ba2150.png",
+      "path": "/Users/johncohrn/Documents/ChatGPT/Godot Projects/design-workshop/keyframe-review/2026-09-12-v1/botamon-eat.png",
+      "nodeId": "55:208",
+      "submitUrl": "https://mcp.figma.com/mcp/upload/6976fb22-0dba-4680-ba7b-de900c84d9eb/submit?scaleMode=FIT"
+    }
+  ]
+}

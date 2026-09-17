@@ -1,0 +1,211 @@
+{
+	"displayServer": "macOS",
+	"environmentContentSha256": "sha256:5aefb250b9c41f62bf2acea7445bbceb4263d75f608ba3830dc5da63027565da",
+	"kind": "environment-native-capture-run",
+	"performance": {
+		"averageDrawCalls": 11.0,
+		"averageFrameMs": 8.38938333333334,
+		"environmentInstrumentation": {
+			"activePin": {},
+			"averageFrameMs": 8.42567777777779,
+			"cameraMode": "review",
+			"drawCallEstimate": 10,
+			"frameSamples": 120,
+			"lastLoadError": "",
+			"maximumFrameMs": 19.789,
+			"nodes": 18,
+			"portraitTarget": [
+				430,
+				932
+			],
+			"textures": 5,
+			"withinRuntimeBounds": true
+		},
+		"maximumDrawCalls": 11,
+		"maximumFrameMs": 25.21,
+		"maximumTextureMemoryBytes": 23356071,
+		"sampleFrames": 180
+	},
+	"presentationProfile": {
+		"fovDegrees": 28.0,
+		"id": "sprite-in-3d-portrait-v1",
+		"keepAspect": "width",
+		"pitchDegrees": 50.0,
+		"pixelsPerMeter": 32.0,
+		"spriteTiltDegrees": 8.0,
+		"version": 1.0
+	},
+	"regionId": "mechatropolis",
+	"reviewerBuildSha256": "sha256:200382e383479d69b5e1544f698024a3b17c8909fa091ddc016e3a3e17b17716",
+	"samples": {
+		"behindActor": "BehindLandmarkActor",
+		"frontActor": "FrontLandmarkActor",
+		"opaqueVfx": "OpaqueReviewVFX",
+		"translucentVfx": "TranslucentReviewVFX"
+	},
+	"schemaVersion": 1,
+	"shimmerSweep": {
+		"000": {
+			"file": "shimmer-000.png",
+			"fractionPx": 0.0
+		},
+		"025": {
+			"file": "shimmer-025.png",
+			"fractionPx": 0.25
+		},
+		"050": {
+			"file": "shimmer-050.png",
+			"fractionPx": 0.5
+		},
+		"075": {
+			"file": "shimmer-075.png",
+			"fractionPx": 0.75
+		},
+		"100": {
+			"file": "shimmer-100.png",
+			"fractionPx": 1.0
+		}
+	},
+	"targetSize": [
+		430,
+		932
+	],
+	"videoAdapter": "Apple M5",
+	"viewpoints": {
+		"center": {
+			"actorBounds": {
+				"behind": {
+					"fullyVisible": true,
+					"maximum": [
+						313.067840576172,
+						355.475128173828
+					],
+					"minimum": [
+						116.932167053223,
+						197.427490234375
+					]
+				},
+				"front": {
+					"fullyVisible": true,
+					"maximum": [
+						346.786010742188,
+						606.813598632812
+					],
+					"minimum": [
+						83.2139892578125,
+						458.424285888672
+					]
+				}
+			},
+			"file": "center.png"
+		},
+		"far": {
+			"actorBounds": {
+				"behind": {
+					"fullyVisible": true,
+					"maximum": [
+						288.201477050781,
+						380.027496337891
+					],
+					"minimum": [
+						141.798538208008,
+						265.527465820312
+					]
+				},
+				"front": {
+					"fullyVisible": true,
+					"maximum": [
+						305.481628417969,
+						569.247314453125
+					],
+					"minimum": [
+						124.518363952637,
+						460.798614501953
+					]
+				}
+			},
+			"file": "far.png"
+		},
+		"left": {
+			"actorBounds": {
+				"behind": {
+					"fullyVisible": true,
+					"maximum": [
+						362.101745605469,
+						355.475128173828
+					],
+					"minimum": [
+						165.966079711914,
+						197.427490234375
+					]
+				},
+				"front": {
+					"fullyVisible": true,
+					"maximum": [
+						412.679016113281,
+						606.813598632812
+					],
+					"minimum": [
+						149.106994628906,
+						458.424285888672
+					]
+				}
+			},
+			"file": "left.png"
+		},
+		"near": {
+			"actorBounds": {
+				"behind": {
+					"fullyVisible": true,
+					"maximum": [
+						342.949432373047,
+						328.473236083984
+					],
+					"minimum": [
+						87.0505523681641,
+						115.592430114746
+					]
+				},
+				"front": {
+					"fullyVisible": true,
+					"maximum": [
+						407.063110351562,
+						653.787719726562
+					],
+					"minimum": [
+						22.9368991851807,
+						454.959197998047
+					]
+				}
+			},
+			"file": "near.png"
+		},
+		"right": {
+			"actorBounds": {
+				"behind": {
+					"fullyVisible": true,
+					"maximum": [
+						264.033905029297,
+						355.475128173828
+					],
+					"minimum": [
+						67.8982467651367,
+						197.427490234375
+					]
+				},
+				"front": {
+					"fullyVisible": true,
+					"maximum": [
+						280.893005371094,
+						606.813598632812
+					],
+					"minimum": [
+						17.3209705352783,
+						458.424285888672
+					]
+				}
+			},
+			"file": "right.png"
+		}
+	}
+}

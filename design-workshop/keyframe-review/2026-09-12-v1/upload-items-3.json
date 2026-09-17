@@ -1,0 +1,38 @@
+[
+  {
+    "key": "agumon-basic-attack",
+    "source": "/Users/johncohrn/.codex/generated_images/01a096c8-8e58-72f1-94fc-a84a5be49c90/exec-58d23434-253b-4b77-80b2-e56e50d3d9c4.png",
+    "path": "/Users/johncohrn/Documents/ChatGPT/Godot Projects/design-workshop/keyframe-review/2026-09-12-v1/agumon-basic-attack.png",
+    "nodeId": "55:217"
+  },
+  {
+    "key": "agumon-pepper-breath",
+    "source": "/Users/johncohrn/.codex/generated_images/01a096c8-8e58-72f1-94fc-a84a5be49c90/exec-1c9e2ce5-b468-4d41-be67-b213fee9c4c0.png",
+    "path": "/Users/johncohrn/Documents/ChatGPT/Godot Projects/design-workshop/keyframe-review/2026-09-12-v1/agumon-pepper-breath.png",
+    "nodeId": "55:218"
+  },
+  {
+    "key": "agumon-guard",
+    "source": "/Users/johncohrn/.codex/generated_images/01a096c8-8e58-72f1-94fc-a84a5be49c90/exec-be0cc749-3334-4ed4-9d69-3b1f236d03c3.png",
+    "path": "/Users/johncohrn/Documents/ChatGPT/Godot Projects/design-workshop/keyframe-review/2026-09-12-v1/agumon-guard.png",
+    "nodeId": "55:219"
+  },
+  {
+    "key": "agumon-evade",
+    "source": "/Users/johncohrn/.codex/generated_images/01a096c8-8e58-72f1-94fc-a84a5be49c90/exec-9cf75261-4c0b-4e5a-8911-3d451d729093.png",
+    "path": "/Users/johncohrn/Documents/ChatGPT/Godot Projects/design-workshop/keyframe-review/2026-09-12-v1/agumon-evade.png",
+    "nodeId": "55:220"
+  },
+  {
+    "key": "agumon-hit",
+    "source": "/Users/johncohrn/.codex/generated_images/01a096c8-8e58-72f1-94fc-a84a5be49c90/exec-7424c351-617e-4f3b-aa4e-9d4ec0fb0a92.png",
+    "path": "/Users/johncohrn/Documents/ChatGPT/Godot Projects/design-workshop/keyframe-review/2026-09-12-v1/agumon-hit.png",
+    "nodeId": "55:221"
+  },
+  {
+    "key": "agumon-defeat",
+    "source": "/Users/johncohrn/.codex/generated_images/01a096c8-8e58-72f1-94fc-a84a5be49c90/exec-43f83641-84f1-4258-87d1-ae88c7694e7e.png",
+    "path": "/Users/johncohrn/Documents/ChatGPT/Godot Projects/design-workshop/keyframe-review/2026-09-12-v1/agumon-defeat.png",
+    "nodeId": "55:222"
+  }
+]

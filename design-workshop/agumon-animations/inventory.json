@@ -1,0 +1,423 @@
+{
+  "clips": [
+    {
+      "key": "current-idle",
+      "title": "Idle",
+      "n": 4,
+      "cell": 128,
+      "durations": [
+        360,
+        360,
+        360,
+        360
+      ],
+      "totalMs": 1440,
+      "group": "current",
+      "source": "/Users/johncohrn/Documents/ChatGPT/Tomagachi Web App/assets-source/companions/agumon/mvp/2026-08-27.001",
+      "status": "CANDIDATE \u00b7 27 AUG 2026",
+      "notes": "Also present in Godot revision 26 Aug. Loops in place.",
+      "events": [],
+      "strip": "/Users/johncohrn/Documents/ChatGPT/Godot Projects/design-workshop/agumon-animations/current-idle-strip.png",
+      "gif": "/Users/johncohrn/Documents/ChatGPT/Godot Projects/design-workshop/agumon-animations/current-idle-preview.gif",
+      "hashes": [
+        "5c78bbcf8cd7875813823f9f3461e0809e03a601e7558529001dcb437a5a0a29",
+        "26b5775706a3669e00c01997a531691f9ac8d0d62cf73298a8e1174f6ade4b1b",
+        "5c78bbcf8cd7875813823f9f3461e0809e03a601e7558529001dcb437a5a0a29",
+        "26b5775706a3669e00c01997a531691f9ac8d0d62cf73298a8e1174f6ade4b1b"
+      ]
+    },
+    {
+      "key": "current-move",
+      "title": "Walk",
+      "n": 4,
+      "cell": 128,
+      "durations": [
+        320,
+        320,
+        320,
+        320
+      ],
+      "totalMs": 1280,
+      "group": "current",
+      "source": "/Users/johncohrn/Documents/ChatGPT/Tomagachi Web App/assets-source/companions/agumon/mvp/2026-08-27.001",
+      "status": "CANDIDATE \u00b7 27 AUG 2026",
+      "notes": "Also present in Godot revision 26 Aug. Host controls travel across the field.",
+      "events": [],
+      "strip": "/Users/johncohrn/Documents/ChatGPT/Godot Projects/design-workshop/agumon-animations/current-move-strip.png",
+      "gif": "/Users/johncohrn/Documents/ChatGPT/Godot Projects/design-workshop/agumon-animations/current-move-preview.gif",
+      "hashes": [
+        "5c78bbcf8cd7875813823f9f3461e0809e03a601e7558529001dcb437a5a0a29",
+        "af06a67c954b7cdc4e4bc2a9248d54e15f3b0778b41190c25a26abc74bf34ef4",
+        "26b5775706a3669e00c01997a531691f9ac8d0d62cf73298a8e1174f6ade4b1b",
+        "99de5bc18b95ce3374e7118d43db675937369167a54707f37d2487330c0a81d6"
+      ]
+    },
+    {
+      "key": "current-eat",
+      "title": "Eat",
+      "n": 9,
+      "cell": 128,
+      "durations": [
+        180,
+        110,
+        90,
+        90,
+        100,
+        110,
+        120,
+        130,
+        180
+      ],
+      "totalMs": 1110,
+      "group": "current",
+      "source": "/Users/johncohrn/Documents/ChatGPT/Tomagachi Web App/assets-source/companions/agumon/mvp/2026-08-27.001",
+      "status": "CANDIDATE \u00b7 27 AUG 2026",
+      "notes": "Also present in Godot revision 26 Aug. Same frames as the cleanup draft; art review remains open.",
+      "events": [
+        {
+          "frame": 3,
+          "name": "bite"
+        },
+        {
+          "frame": 8,
+          "name": "eat-finished"
+        }
+      ],
+      "strip": "/Users/johncohrn/Documents/ChatGPT/Godot Projects/design-workshop/agumon-animations/current-eat-strip.png",
+      "gif": "/Users/johncohrn/Documents/ChatGPT/Godot Projects/design-workshop/agumon-animations/current-eat-preview.gif",
+      "hashes": [
+        "5c78bbcf8cd7875813823f9f3461e0809e03a601e7558529001dcb437a5a0a29",
+        "8b92048b34bef953e86650240340c930a9f7ac1b86594182a60191e1e9b79306",
+        "1ff998608f6624a87f86a75dbdd77511c5133d685b226baec681f902c8ff3c6c",
+        "6ff5a7b7bd744040da72b9b9f038d50bb6a8231f69e6f0e78c98dcdaccb19e0e",
+        "7a9f53c5881f8789b9103be76673273953bc102560fb0777782eea09eb663f1e",
+        "ab4d7318fcdcfa7942c2094ea0a0739253ca2fee85fcfa54a499ad2993a1c266",
+        "42fc8c856c62612f42d03f2a50339a07b1b34a8c4d2a324338dd0a85fdb2160c",
+        "b828fd8e9a0aff83b4d2613f2195d1194785b1852d7c8b862593da4afd42b929",
+        "5c78bbcf8cd7875813823f9f3461e0809e03a601e7558529001dcb437a5a0a29"
+      ]
+    },
+    {
+      "key": "current-pepper-breath",
+      "title": "Pepper Breath",
+      "n": 13,
+      "cell": 128,
+      "durations": [
+        180,
+        140,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        140,
+        180
+      ],
+      "totalMs": 1360,
+      "group": "current",
+      "source": "/Users/johncohrn/Documents/ChatGPT/Tomagachi Web App/assets-source/companions/agumon/mvp/2026-08-27.001",
+      "status": "CANDIDATE \u00b7 27 AUG 2026",
+      "notes": "Newest attack candidate; not present in the current Godot atlas. Character pose sequence; projectile source is in column 3.",
+      "events": [
+        {
+          "frame": 2,
+          "name": "pepper-breath-release"
+        },
+        {
+          "frame": 12,
+          "name": "attack-finished"
+        }
+      ],
+      "strip": "/Users/johncohrn/Documents/ChatGPT/Godot Projects/design-workshop/agumon-animations/current-pepper-breath-strip.png",
+      "gif": "/Users/johncohrn/Documents/ChatGPT/Godot Projects/design-workshop/agumon-animations/current-pepper-breath-preview.gif",
+      "hashes": [
+        "5c78bbcf8cd7875813823f9f3461e0809e03a601e7558529001dcb437a5a0a29",
+        "af06a67c954b7cdc4e4bc2a9248d54e15f3b0778b41190c25a26abc74bf34ef4",
+        "ecd2b792f1a4cb15daa7f6f6f0f1df7b423ab9ca36be1e7474627cfa2f29eacd",
+        "486a1a86a151a3db01b4f720fd65defd1351677f26a7eceb1711a3b0ec46e7f2",
+        "938186ee4cea5e419b7e36d4527ff2f4050793d660033509fe64e1e178147741",
+        "21ffc9e37690432754224409201e0a07dfddae7eb9bfa0aad5109dfd7369f84d",
+        "e21436e110828496a9aa2e4a771ef01cf63fc7476d0d1169be13c4b2629be38d",
+        "6f792c600720a8a2756dd23fd005e6a347abefd67761c8d0aa08d93cfbeb0de1",
+        "05d0c4abc14110b0293c0425528770498999fd2ba388cc4e7728abe55c4cced8",
+        "9e19e43d12d7cd72aea5e9ae06ae7456832f110f56541b49d6be7cd3cb2950aa",
+        "ba333132d424d21519956feac822538df0e31c483c543d589627e1ede6094a6e",
+        "99de5bc18b95ce3374e7118d43db675937369167a54707f37d2487330c0a81d6",
+        "5c78bbcf8cd7875813823f9f3461e0809e03a601e7558529001dcb437a5a0a29"
+      ]
+    },
+    {
+      "key": "early-idle",
+      "title": "Earlier idle",
+      "n": 4,
+      "cell": 128,
+      "durations": [
+        280,
+        200,
+        160,
+        200
+      ],
+      "totalMs": 840,
+      "group": "archive",
+      "source": "/Users/johncohrn/Documents/ChatGPT/Tomagachi Web App/public/assets/promoted/digital-companion/agumon/animation-set/2026-08-21.001",
+      "status": "EARLIER SET \u00b7 21 AUG 2026",
+      "notes": "Earlier generated identity treatment; retained for comparison.",
+      "events": [],
+      "strip": "/Users/johncohrn/Documents/ChatGPT/Godot Projects/design-workshop/agumon-animations/early-idle-strip.png",
+      "gif": "/Users/johncohrn/Documents/ChatGPT/Godot Projects/design-workshop/agumon-animations/early-idle-preview.gif",
+      "hashes": [
+        "85e10d1295e1a42bdfdc629f5934a288aaa96b90871efd54e1ff5995c9b962e7",
+        "1683bec564337dca1f1fd78e09e7c0aff890d6b32e32460f41225c833ba74a1f",
+        "de05eb958f170910afd57fff5e1aa3ce37c5e4bf688b3a9d830807784b563bf2",
+        "d28e5540e3e7a8771ec13f38639a078142f8ebab3375a2ef209572e20e38edec"
+      ]
+    },
+    {
+      "key": "early-eat",
+      "title": "Earlier eat",
+      "n": 8,
+      "cell": 128,
+      "durations": [
+        160,
+        120,
+        100,
+        100,
+        180,
+        160,
+        200,
+        240
+      ],
+      "totalMs": 1260,
+      "group": "archive",
+      "source": "/Users/johncohrn/Documents/ChatGPT/Tomagachi Web App/public/assets/promoted/digital-companion/agumon/animation-set/2026-08-21.001",
+      "status": "EARLIER SET \u00b7 21 AUG 2026",
+      "notes": "Earlier eight-frame eating treatment; retained for comparison.",
+      "events": [
+        {
+          "frame": 3,
+          "name": "bite"
+        },
+        {
+          "frame": 7,
+          "name": "eat-finished"
+        }
+      ],
+      "strip": "/Users/johncohrn/Documents/ChatGPT/Godot Projects/design-workshop/agumon-animations/early-eat-strip.png",
+      "gif": "/Users/johncohrn/Documents/ChatGPT/Godot Projects/design-workshop/agumon-animations/early-eat-preview.gif",
+      "hashes": [
+        "f8874d62061c241ec107e0ddeaff02d755f095f4ad1cace077a25ae9329790ef",
+        "449578407d555847336c897a1c663a57c602215bac98d0cce39d0a0e2844c283",
+        "62f6c3a8a213bf9ee80e61ff3398f9fbfddbe95ff655e18d2785792fd2d332c7",
+        "f3d02e25a1ff5ebafc25138618a8fbc9d415f6a15104df0b9024f50ccde22542",
+        "d8b5c67ad965e898e5baf52a1b130b9167a8ce2b880e07e252f77fc1baddea3e",
+        "0f02900d1bc400415083455b70d2d1a145f011955f153a423639e3bd95b0df24",
+        "144cac0dd7e91be4b97e056f3a31bf1de0d99385d7dbac98ec0426c0c75ad583",
+        "85e10d1295e1a42bdfdc629f5934a288aaa96b90871efd54e1ff5995c9b962e7"
+      ]
+    },
+    {
+      "key": "pixellab-eat",
+      "title": "PixelLab eating experiment",
+      "n": 9,
+      "cell": 128,
+      "durations": [
+        140,
+        140,
+        140,
+        140,
+        140,
+        140,
+        140,
+        140,
+        140
+      ],
+      "totalMs": 1260,
+      "group": "archive",
+      "source": "/Users/johncohrn/Documents/ChatGPT/Tomagachi Web App/work/animation-generation/agumon/eat/2026-08-25.002/pixellab-v3",
+      "status": "RAW EXPERIMENT \u00b7 25 AUG 2026",
+      "notes": "Source metadata marks this candidate invalid. Motion comparison only; cleanup version appears as Eat in column 1.",
+      "events": [],
+      "strip": "/Users/johncohrn/Documents/ChatGPT/Godot Projects/design-workshop/agumon-animations/pixellab-eat-strip.png",
+      "gif": "/Users/johncohrn/Documents/ChatGPT/Godot Projects/design-workshop/agumon-animations/pixellab-eat-preview.gif",
+      "hashes": [
+        "5babcec7981a9628f965e1316512c7a184474053602a098fb0fc84ea153895d2",
+        "0b636bc7878e676a09480a5dc7747c0c28d923bfe1686a8609f895e767f2ccc9",
+        "d286d1a44741289c6c3c6876bdd8f4730a4655b585d5889fb4266a2c74e43785",
+        "1d05036a999f50ae33e111b36efe653698e66a6baef0653861df5a6097f92c02",
+        "5b4ae7e937fbc273d4b77c0dbc168b8dd7033c2c98afe41d357e7a4161a7668d",
+        "0f67b885e11d03effbc4cbe48e990c21506bbe2f417599e8d4b5b1bf43fc1ad8",
+        "6eea4231558e0f7e0e3c7788ddd4cbed9c959805984aa4733e83611ae2f2ad70",
+        "ebc0bd29b27104a3b70614f5dbe69b4eb983c19c08ee10f7654ad83bc980d00b",
+        "5babcec7981a9628f965e1316512c7a184474053602a098fb0fc84ea153895d2"
+      ]
+    },
+    {
+      "key": "legacy-idle",
+      "title": "Legacy Idle",
+      "n": 4,
+      "cell": 96,
+      "durations": [
+        400,
+        400,
+        400,
+        400
+      ],
+      "totalMs": 1600,
+      "group": "legacy",
+      "source": "/Users/johncohrn/Documents/ChatGPT/Tomagachi Web App/public/assets/companions/agumon.png",
+      "status": "ORIGINAL WEB FALLBACK",
+      "notes": "Runtime order [6, 7, 6, 7]. Looping two-pose animation. Timing comes from HabitatScene.tsx; GIF preview rounds to 10 ms.",
+      "events": [],
+      "strip": "/Users/johncohrn/Documents/ChatGPT/Godot Projects/design-workshop/agumon-animations/legacy-idle-strip.png",
+      "gif": "/Users/johncohrn/Documents/ChatGPT/Godot Projects/design-workshop/agumon-animations/legacy-idle-preview.gif",
+      "hashes": [
+        "2b8f66fdaacbb74b4ddec760d91755cbe2f842f1a94505cbc96880d40333673b",
+        "3e074f61e1f9df07982c9b7546d3f6f0d7c6ce2132eee43b40feb8e64e943033",
+        "2b8f66fdaacbb74b4ddec760d91755cbe2f842f1a94505cbc96880d40333673b",
+        "3e074f61e1f9df07982c9b7546d3f6f0d7c6ce2132eee43b40feb8e64e943033"
+      ]
+    },
+    {
+      "key": "legacy-roam",
+      "title": "Legacy Roam",
+      "n": 4,
+      "cell": 96,
+      "durations": [
+        167,
+        167,
+        167,
+        167
+      ],
+      "totalMs": 668,
+      "group": "legacy",
+      "source": "/Users/johncohrn/Documents/ChatGPT/Tomagachi Web App/public/assets/companions/agumon.png",
+      "status": "ORIGINAL WEB FALLBACK",
+      "notes": "Runtime order [6, 7, 6, 7]. Looping two-pose animation. Timing comes from HabitatScene.tsx; GIF preview rounds to 10 ms.",
+      "events": [],
+      "strip": "/Users/johncohrn/Documents/ChatGPT/Godot Projects/design-workshop/agumon-animations/legacy-roam-strip.png",
+      "gif": "/Users/johncohrn/Documents/ChatGPT/Godot Projects/design-workshop/agumon-animations/legacy-roam-preview.gif",
+      "hashes": [
+        "2b8f66fdaacbb74b4ddec760d91755cbe2f842f1a94505cbc96880d40333673b",
+        "3e074f61e1f9df07982c9b7546d3f6f0d7c6ce2132eee43b40feb8e64e943033",
+        "2b8f66fdaacbb74b4ddec760d91755cbe2f842f1a94505cbc96880d40333673b",
+        "3e074f61e1f9df07982c9b7546d3f6f0d7c6ce2132eee43b40feb8e64e943033"
+      ]
+    },
+    {
+      "key": "legacy-happy",
+      "title": "Legacy Happy",
+      "n": 4,
+      "cell": 96,
+      "durations": [
+        143,
+        143,
+        143,
+        143
+      ],
+      "totalMs": 572,
+      "group": "legacy",
+      "source": "/Users/johncohrn/Documents/ChatGPT/Tomagachi Web App/public/assets/companions/agumon.png",
+      "status": "ORIGINAL WEB FALLBACK",
+      "notes": "Runtime order [7, 6, 7, 6]. Plays twice per happy reaction. Timing comes from HabitatScene.tsx; GIF preview rounds to 10 ms.",
+      "events": [],
+      "strip": "/Users/johncohrn/Documents/ChatGPT/Godot Projects/design-workshop/agumon-animations/legacy-happy-strip.png",
+      "gif": "/Users/johncohrn/Documents/ChatGPT/Godot Projects/design-workshop/agumon-animations/legacy-happy-preview.gif",
+      "hashes": [
+        "3e074f61e1f9df07982c9b7546d3f6f0d7c6ce2132eee43b40feb8e64e943033",
+        "2b8f66fdaacbb74b4ddec760d91755cbe2f842f1a94505cbc96880d40333673b",
+        "3e074f61e1f9df07982c9b7546d3f6f0d7c6ce2132eee43b40feb8e64e943033",
+        "2b8f66fdaacbb74b4ddec760d91755cbe2f842f1a94505cbc96880d40333673b"
+      ]
+    },
+    {
+      "key": "projectile",
+      "title": "Pepper Breath projectile",
+      "n": 9,
+      "cell": 80,
+      "durations": [
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80
+      ],
+      "totalMs": 720,
+      "group": "source",
+      "source": "/Users/johncohrn/Documents/Digimon/Digimon Up Assets/Texture2D/Fx_Agumon_Attack_Projectile.png",
+      "status": "DIGIMON UP \u00b7 9-FRAME EFFECT",
+      "notes": "Frame order and 80 ms timing come from the 27 Aug source plan. Review preview loops this effect independently.",
+      "events": [],
+      "strip": "/Users/johncohrn/Documents/ChatGPT/Godot Projects/design-workshop/agumon-animations/projectile-strip.png",
+      "gif": "/Users/johncohrn/Documents/ChatGPT/Godot Projects/design-workshop/agumon-animations/projectile-preview.gif",
+      "hashes": [
+        "c5cd21e173af24b645f306cd549f5d3bebfedede2af74419333e03b1bc226006",
+        "e9d98986d1c9c0ba9931ec3b90743526f72b0f8b8c9ec7fae119d95164f4e894",
+        "83034a0cda80a84922e47e02cda213953fef38771a3b28097d54aca513a8db31",
+        "3aa297a9365cfa3e71bae28480d50c506b33cc62060ed1ebddf98fc754d3f81d",
+        "de92fdd634eeb6571a3046ef8c246555516e29e2baf182484e65e9642677b1af",
+        "c5b83fd79f3372fd2b41cb348abd8a462dfcae556c924fe805ad7450ab3d1658",
+        "fb3f3c227d331c92a9e970e0cc5faf70eb0c9f0df3732d24064f2905ec72192d",
+        "2b2cb50477002a767f32c2a8c8c186eba90e23bd58b15233432af3a1c63499cf",
+        "9d5825b26d3e03b4db89d2c450de8897bd63d57adccb867cf6c3fedf3e84f951"
+      ]
+    }
+  ],
+  "raw": [
+    {
+      "key": "source-Agumon",
+      "title": "Agumon \u00b7 original atlas",
+      "path": "/Users/johncohrn/Documents/Digimon/Digimon Up Assets/Texture2D/Agumon.png",
+      "width": 310,
+      "height": 310,
+      "notes": "Packed poses and effects. Original frame boundaries and animation timing were not included in the downloaded texture."
+    },
+    {
+      "key": "source-Agumon_Adventure",
+      "title": "Agumon Adventure \u00b7 alternate atlas",
+      "path": "/Users/johncohrn/Documents/Digimon/Digimon Up Assets/Texture2D/Agumon_Adventure.png",
+      "width": 324,
+      "height": 324,
+      "notes": "Alternate packed pose/effect set. Preserve as source reference; no inferred clip order."
+    },
+    {
+      "key": "source-Eat_Agumon",
+      "title": "Eating \u00b7 parts atlas",
+      "path": "/Users/johncohrn/Documents/Digimon/Digimon Up Assets/Texture2D/Eat_Agumon.png",
+      "width": 172,
+      "height": 172,
+      "notes": "Mouths, food, body parts and props for assembly. This is a parts texture, not a timed animation strip."
+    },
+    {
+      "key": "source-Fx_Agumon_Attack_Projectile_Hit",
+      "title": "Pepper Breath \u00b7 impact texture",
+      "path": "/Users/johncohrn/Documents/Digimon/Digimon Up Assets/Texture2D/Fx_Agumon_Attack_Projectile_Hit.png",
+      "width": 300,
+      "height": 200,
+      "notes": "Downloaded impact effect sheet. Original timing was not found."
+    },
+    {
+      "key": "keyposes",
+      "title": "Eating \u00b7 key pose study",
+      "path": "/Users/johncohrn/Documents/ChatGPT/Tomagachi Web App/work/animation-generation/agumon/eat/2026-08-23.001/key-pose-contact-sheet.png",
+      "width": 1296,
+      "height": 474,
+      "notes": "Earlier still-pose experiment. No animation timing is assigned."
+    },
+    {
+      "key": "bite-candidates",
+      "title": "Bite contact \u00b7 four candidates",
+      "path": "/Users/johncohrn/Documents/ChatGPT/Tomagachi Web App/work/animation-generation/agumon/eat/2026-08-24.001/pixellab/bite-contact/contact-sheet-x1.png",
+      "width": 552,
+      "height": 162,
+      "notes": "Earlier still-pose experiment. No animation timing is assigned."
+    }
+  ]
+}

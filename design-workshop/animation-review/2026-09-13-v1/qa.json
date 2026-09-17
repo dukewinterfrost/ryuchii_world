@@ -1,0 +1,36 @@
+{
+  "preparedInputs": 18,
+  "allInputsRGBA128": true,
+  "edgeClipping": false,
+  "requestPayloadsValidated": 28,
+  "completedJobs": 28,
+  "completedClips": 18,
+  "pendingClips": 0,
+  "actualPilotFrames": 5,
+  "pilotDurationMs": 1000,
+  "figmaScreenshot": "All three character columns visually reviewed; all 18 image instances populated and no text overflow.",
+  "browserPlayback": "All 18 images loaded; advancing motion observed; per-action stepping, character filtering, approved-pose comparison, half-speed playback and one-shot terminal hold verified. Repeat preview restored at 1x with all characters visible.",
+  "skillValidation": "passed",
+  "zeroBalanceOfflineCheck": "GET balance only; no POST",
+  "motionApproval": "pending",
+  "runtimePromoted": false,
+  "retainedProviderJobs": 36,
+  "deliveredFrames": 175,
+  "sourcePixelExtractions": 19,
+  "curatedClips": [
+    "agumon-happy",
+    "botamon-move"
+  ],
+  "allExportFrameHashesValidated": true,
+  "gifDurationsMatchMetadata": true,
+  "figmaImageInstances": {
+    "botamon": 4,
+    "koromon": 4,
+    "agumon": 10
+  },
+  "figmaTextOverflow": false,
+  "archiveFiles": 249,
+  "archiveCRC": "passed",
+  "generationsUsed": 58,
+  "generationsRemaining": 1942
+}

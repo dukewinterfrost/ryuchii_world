@@ -1,0 +1,175 @@
+{
+  "fileKey": "syQM2pShfeCTfXms0HmzTB",
+  "pageId": "68:459",
+  "pageName": "05 \u00b7 Animation review",
+  "boardId": "68:460",
+  "pilotId": "68:465",
+  "queueId": "68:466",
+  "stripId": "68:493",
+  "stripImageHash": "85992722dbd59300dd4ba9da56492479b70a3d5d",
+  "keyframeApprovalCaptionId": "59:208",
+  "createdNodeIds": [
+    "68:459",
+    "68:460",
+    "68:461",
+    "68:462",
+    "68:463",
+    "68:464",
+    "68:465",
+    "68:466",
+    "68:491",
+    "68:492",
+    "68:493",
+    "68:494",
+    "68:495",
+    "68:496",
+    "68:497",
+    "68:498",
+    "68:499",
+    "69:204",
+    "69:205",
+    "69:206",
+    "69:207",
+    "69:208"
+  ],
+  "columns": {
+    "botamon": "77:150",
+    "koromon": "77:153",
+    "agumon": "77:156"
+  },
+  "componentBank": "80:153",
+  "componentSet": "82:158",
+  "variants": {
+    "1": "80:154",
+    "2": "82:150",
+    "3": "82:154"
+  },
+  "titleProp": "Title#82:0",
+  "timingProp": "Timing#82:1",
+  "clips": {
+    "agumon-idle": {
+      "instanceId": "82:159",
+      "imageId": "I82:159;80:156",
+      "rows": 1
+    },
+    "botamon-idle": {
+      "instanceId": "84:153",
+      "imageId": "I84:153;80:156",
+      "uploadId": "84:157",
+      "rows": 1,
+      "imageHash": "e47994e545ed7c291d1ecce14179917d068e663d"
+    },
+    "botamon-move": {
+      "instanceId": "84:158",
+      "imageId": "I84:158;80:156",
+      "uploadId": "84:162",
+      "rows": 1,
+      "imageHash": "df8619cfaf6771d80b8038d7c87bfd222ab8b9c1"
+    },
+    "botamon-happy": {
+      "instanceId": "84:163",
+      "imageId": "I84:163;82:152",
+      "uploadId": "84:167",
+      "rows": 2,
+      "imageHash": "685980fd843e0b24462903ccebc06417d1a84be6"
+    },
+    "botamon-eat": {
+      "instanceId": "84:168",
+      "imageId": "I84:168;82:156",
+      "uploadId": "84:172",
+      "rows": 3,
+      "imageHash": "d9610be274f2b90b6e5ccfc8588674a4e995dc67"
+    },
+    "koromon-idle": {
+      "instanceId": "84:173",
+      "imageId": "I84:173;80:156",
+      "uploadId": "84:177",
+      "rows": 1,
+      "imageHash": "10f961e7a9ae46d83c9e885943fd994d38d13568"
+    },
+    "koromon-move": {
+      "instanceId": "84:178",
+      "imageId": "I84:178;80:156",
+      "uploadId": "84:182",
+      "rows": 1,
+      "imageHash": "3d663d082f4bbf069cf37ecc60706186619bd7bd"
+    },
+    "koromon-happy": {
+      "instanceId": "84:183",
+      "imageId": "I84:183;82:156",
+      "uploadId": "84:187",
+      "rows": 3,
+      "imageHash": "40aeac1002f01b6d65e33966d3272ae5429db363"
+    },
+    "koromon-eat": {
+      "instanceId": "84:188",
+      "imageId": "I84:188;82:156",
+      "uploadId": "84:192",
+      "rows": 3,
+      "imageHash": "eaef8f4f513b04343a9d9c3b7ffa3ad4ce8f09fa"
+    },
+    "agumon-move": {
+      "instanceId": "84:193",
+      "imageId": "I84:193;82:152",
+      "uploadId": "84:197",
+      "rows": 2,
+      "imageHash": "a496a6eb9ab7c66b53f0f3e15bce480aebda871e"
+    },
+    "agumon-happy": {
+      "instanceId": "84:198",
+      "imageId": "I84:198;82:152",
+      "uploadId": "84:202",
+      "rows": 2,
+      "imageHash": "11e75562cd6c1536ba5478c17482bb37f1440627"
+    },
+    "agumon-eat": {
+      "instanceId": "84:203",
+      "imageId": "I84:203;82:156",
+      "uploadId": "84:207",
+      "rows": 3,
+      "imageHash": "b57bf96aae5bb7247281fcfc0f3e413eb25b63de"
+    },
+    "agumon-basic-attack": {
+      "instanceId": "84:208",
+      "imageId": "I84:208;82:152",
+      "uploadId": "84:212",
+      "rows": 2,
+      "imageHash": "7746959d163a075105abdf5645076cb4c6b4dfc8"
+    },
+    "agumon-pepper-breath": {
+      "instanceId": "84:213",
+      "imageId": "I84:213;82:156",
+      "uploadId": "84:217",
+      "rows": 3,
+      "imageHash": "c8f6807a832f39d55c6d7379bab11a6fa5924616"
+    },
+    "agumon-guard": {
+      "instanceId": "84:218",
+      "imageId": "I84:218;80:156",
+      "uploadId": "84:222",
+      "rows": 1,
+      "imageHash": "31f9cb0c09e7916e4ef2a49852b3c5b28dc77776"
+    },
+    "agumon-evade": {
+      "instanceId": "84:223",
+      "imageId": "I84:223;82:152",
+      "uploadId": "84:227",
+      "rows": 2,
+      "imageHash": "5897492fd9fa7bf4110502a3db9cdf06c66776ad"
+    },
+    "agumon-hit": {
+      "instanceId": "84:228",
+      "imageId": "I84:228;82:152",
+      "uploadId": "84:232",
+      "rows": 2,
+      "imageHash": "0a2ed673e31a28f0f20b975c0ed95a3718832f37"
+    },
+    "agumon-defeat": {
+      "instanceId": "84:233",
+      "imageId": "I84:233;82:152",
+      "uploadId": "84:237",
+      "rows": 2,
+      "imageHash": "6baac825d21cdb30aa63f47f5ffbd6840d490f7e"
+    }
+  }
+}

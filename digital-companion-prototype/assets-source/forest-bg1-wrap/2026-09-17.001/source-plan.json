@@ -1,0 +1,57 @@
+{
+  "assetId": "forest-bg1-wrap",
+  "entries": {
+    "distant": {
+      "source": "distant"
+    },
+    "middle": {
+      "source": "middle"
+    },
+    "foreground": {
+      "source": "foreground"
+    }
+  },
+  "extrudePx": 1,
+  "generation": {
+    "brief": "BG-1 surround and clock-driven tint study using unchanged supplied layers. No billable generation.",
+    "jobs": []
+  },
+  "keyposes": [
+    "sample",
+    "distant",
+    "middle",
+    "foreground"
+  ],
+  "kind": "atlas",
+  "paddingPx": 2,
+  "provenance": {
+    "kind": "source-derived",
+    "sourceFolder": "generic/bg_1",
+    "archiveSha256": "4898fd2eaaf696f5b945c7abae783f9183eb04e1324fd5edb9db1d8736951a5f"
+  },
+  "provider": "manual",
+  "revision": "2026-09-17.001",
+  "schemaVersion": 1,
+  "sources": {
+    "distant": {
+      "path": "sources/537f2a74f01cdcf16c8bfa23bdc9854869717134ccdef3a2d6d1cde0d94a1f63.png",
+      "sha256": "sha256:537f2a74f01cdcf16c8bfa23bdc9854869717134ccdef3a2d6d1cde0d94a1f63"
+    },
+    "foreground": {
+      "path": "sources/e6b4f554fafec70e5f1971695ff49cef8f22099936351cbcaf8ceeb9bd5fd2c7.png",
+      "sha256": "sha256:e6b4f554fafec70e5f1971695ff49cef8f22099936351cbcaf8ceeb9bd5fd2c7"
+    },
+    "middle": {
+      "path": "sources/7e699e3662a89787c75df7a020881e73a767f29e240cf2c1973c6ee3704c93a6.png",
+      "sha256": "sha256:7e699e3662a89787c75df7a020881e73a767f29e240cf2c1973c6ee3704c93a6"
+    },
+    "sample": {
+      "path": "sources/371b65b3612683184030affcb8bdfe190df533ff78034ddcdc91099e6826da19.png",
+      "sha256": "sha256:371b65b3612683184030affcb8bdfe190df533ff78034ddcdc91099e6826da19"
+    }
+  },
+  "license": {
+    "classification": "private-prototype-only",
+    "notice": "User-supplied Backgrounds.zip has no license file; not cleared for public or commercial distribution."
+  }
+}

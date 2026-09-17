@@ -1,0 +1,50 @@
+[gd_resource type="Resource" format=3]
+
+[resource]
+metadata/habitat_manifest = {
+"assetId": "habitat-cloudfall-sanctuary",
+"blockers": [{
+"id": "nephelis-abyss-landmark-footprint",
+"rect": [2.0, 5.0, 17.0, 3.0]
+}],
+"decorationZones": [{
+"id": "main",
+"rect": [2.0, 10.0, 36.0, 31.0]
+}, {
+"id": "entry",
+"rect": [15.0, 41.0, 10.0, 5.0]
+}],
+"displayName": "Cloudfall Sanctuary",
+"environment": {
+"assetId": "environment-nephelis-abyss",
+"contentSha256": "sha256:fe6f89a7bd50a275ed5acb00aa3f29567bcf8265f60eb170d6e0a039b97f1300",
+"revision": "2026-09-12.001"
+},
+"grid": {
+"cellSize": 32.0,
+"columns": 40.0,
+"rows": 48.0
+},
+"kind": "habitat",
+"regionId": "nephelis-abyss",
+"revision": "2026-09-12.001",
+"schemaVersion": 1.0,
+"spawn": [20.0, 24.0],
+"staticPlacements": [{
+"blocker": "nephelis-abyss-landmark-footprint",
+"cell": [10.0, 6.0],
+"id": "nephelis-abyss-landmark-home",
+"persistent": true,
+"planeStack": "nephelis-abyss-landmark.stack",
+"rotationQuarterTurns": 0.0
+}],
+"wasteAnchors": [[6.0, 38.0], [20.0, 34.0], [34.0, 38.0]]
+}
+metadata/candidate_identity = {
+"assetId": "habitat-cloudfall-sanctuary",
+"buildIdentity": "sha256:5673f11ceab5b0082be2ea612860b58fac07da350c3fedcd611820a9ee5f19cd",
+"compilerVersion": "1.3.0",
+"kind": "habitat",
+"planSha256": "sha256:53c68c54e725351a680b1155e8f73e5e6146c3289fbda7c0199fbdaa5f3a0ec8",
+"revision": "2026-09-12.001"
+}

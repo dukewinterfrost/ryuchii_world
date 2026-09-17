@@ -1,0 +1,829 @@
+[
+  {
+    "key": "agumon-defeat",
+    "nodeId": "84:237",
+    "path": "/Users/johncohrn/Documents/ChatGPT/Godot Projects/design-workshop/animation-review/2026-09-13-v1/review/agumon-defeat-sheet.png",
+    "meta": {
+      "action": "defeat",
+      "actualFrameCount": 9,
+      "character": "agumon",
+      "facing": "E",
+      "frameDurationMs": 120,
+      "frames": [
+        {
+          "durationMs": 120,
+          "index": 0
+        },
+        {
+          "durationMs": 120,
+          "index": 1
+        },
+        {
+          "durationMs": 120,
+          "index": 2
+        },
+        {
+          "durationMs": 120,
+          "index": 3
+        },
+        {
+          "durationMs": 120,
+          "index": 4
+        },
+        {
+          "durationMs": 120,
+          "index": 5
+        },
+        {
+          "durationMs": 120,
+          "index": 6
+        },
+        {
+          "durationMs": 120,
+          "index": 7
+        },
+        {
+          "durationMs": 120,
+          "index": 8
+        }
+      ],
+      "key": "agumon-defeat",
+      "loop": false,
+      "motionApproval": "pending",
+      "rawFrameCount": 9,
+      "removedIdenticalSegmentSeams": 0,
+      "segments": [
+        "agumon-defeat-out"
+      ],
+      "sheetColumns": 6,
+      "sheetRows": 2,
+      "totalDurationMs": 1080
+    }
+  },
+  {
+    "key": "agumon-eat",
+    "nodeId": "84:207",
+    "path": "/Users/johncohrn/Documents/ChatGPT/Godot Projects/design-workshop/animation-review/2026-09-13-v1/review/agumon-eat-sheet.png",
+    "meta": {
+      "action": "eat",
+      "actualFrameCount": 14,
+      "character": "agumon",
+      "facing": "E",
+      "frameDurationMs": 90,
+      "frames": [
+        {
+          "durationMs": 90,
+          "index": 0
+        },
+        {
+          "durationMs": 90,
+          "index": 1
+        },
+        {
+          "durationMs": 90,
+          "index": 2
+        },
+        {
+          "durationMs": 90,
+          "index": 3
+        },
+        {
+          "durationMs": 90,
+          "index": 4
+        },
+        {
+          "durationMs": 90,
+          "index": 5
+        },
+        {
+          "durationMs": 90,
+          "index": 6
+        },
+        {
+          "durationMs": 90,
+          "index": 7
+        },
+        {
+          "durationMs": 90,
+          "index": 8
+        },
+        {
+          "durationMs": 90,
+          "index": 9
+        },
+        {
+          "durationMs": 90,
+          "index": 10
+        },
+        {
+          "durationMs": 90,
+          "index": 11
+        },
+        {
+          "durationMs": 90,
+          "index": 12
+        },
+        {
+          "durationMs": 90,
+          "index": 13
+        }
+      ],
+      "key": "agumon-eat",
+      "loop": false,
+      "motionApproval": "pending",
+      "rawFrameCount": 14,
+      "removedIdenticalSegmentSeams": 0,
+      "segments": [
+        "agumon-eat-out",
+        "agumon-eat-back"
+      ],
+      "sheetColumns": 6,
+      "sheetRows": 3,
+      "totalDurationMs": 1260
+    }
+  },
+  {
+    "key": "agumon-evade",
+    "nodeId": "84:227",
+    "path": "/Users/johncohrn/Documents/ChatGPT/Godot Projects/design-workshop/animation-review/2026-09-13-v1/review/agumon-evade-sheet.png",
+    "meta": {
+      "action": "evade",
+      "actualFrameCount": 10,
+      "character": "agumon",
+      "facing": "E",
+      "frameDurationMs": 60,
+      "frames": [
+        {
+          "durationMs": 60,
+          "index": 0
+        },
+        {
+          "durationMs": 60,
+          "index": 1
+        },
+        {
+          "durationMs": 60,
+          "index": 2
+        },
+        {
+          "durationMs": 60,
+          "index": 3
+        },
+        {
+          "durationMs": 60,
+          "index": 4
+        },
+        {
+          "durationMs": 60,
+          "index": 5
+        },
+        {
+          "durationMs": 60,
+          "index": 6
+        },
+        {
+          "durationMs": 60,
+          "index": 7
+        },
+        {
+          "durationMs": 60,
+          "index": 8
+        },
+        {
+          "durationMs": 60,
+          "index": 9
+        }
+      ],
+      "key": "agumon-evade",
+      "loop": false,
+      "motionApproval": "pending",
+      "rawFrameCount": 10,
+      "removedIdenticalSegmentSeams": 0,
+      "segments": [
+        "agumon-evade-out",
+        "agumon-evade-back"
+      ],
+      "sheetColumns": 6,
+      "sheetRows": 2,
+      "totalDurationMs": 600
+    }
+  },
+  {
+    "key": "agumon-hit",
+    "nodeId": "84:232",
+    "path": "/Users/johncohrn/Documents/ChatGPT/Godot Projects/design-workshop/animation-review/2026-09-13-v1/review/agumon-hit-sheet.png",
+    "meta": {
+      "action": "hit",
+      "actualFrameCount": 9,
+      "character": "agumon",
+      "facing": "E",
+      "frameDurationMs": 80,
+      "frames": [
+        {
+          "durationMs": 80,
+          "index": 0
+        },
+        {
+          "durationMs": 80,
+          "index": 1
+        },
+        {
+          "durationMs": 80,
+          "index": 2
+        },
+        {
+          "durationMs": 80,
+          "index": 3
+        },
+        {
+          "durationMs": 80,
+          "index": 4
+        },
+        {
+          "durationMs": 80,
+          "index": 5
+        },
+        {
+          "durationMs": 80,
+          "index": 6
+        },
+        {
+          "durationMs": 80,
+          "index": 7
+        },
+        {
+          "durationMs": 80,
+          "index": 8
+        }
+      ],
+      "key": "agumon-hit",
+      "loop": false,
+      "motionApproval": "pending",
+      "rawFrameCount": 10,
+      "removedIdenticalSegmentSeams": 1,
+      "segments": [
+        "agumon-hit-out",
+        "agumon-hit-back"
+      ],
+      "sheetColumns": 6,
+      "sheetRows": 2,
+      "totalDurationMs": 720
+    }
+  },
+  {
+    "key": "agumon-move",
+    "nodeId": "84:197",
+    "path": "/Users/johncohrn/Documents/ChatGPT/Godot Projects/design-workshop/animation-review/2026-09-13-v1/review/agumon-move-sheet.png",
+    "meta": {
+      "action": "move",
+      "actualFrameCount": 9,
+      "character": "agumon",
+      "facing": "E",
+      "frameDurationMs": 110,
+      "frames": [
+        {
+          "durationMs": 110,
+          "index": 0
+        },
+        {
+          "durationMs": 110,
+          "index": 1
+        },
+        {
+          "durationMs": 110,
+          "index": 2
+        },
+        {
+          "durationMs": 110,
+          "index": 3
+        },
+        {
+          "durationMs": 110,
+          "index": 4
+        },
+        {
+          "durationMs": 110,
+          "index": 5
+        },
+        {
+          "durationMs": 110,
+          "index": 6
+        },
+        {
+          "durationMs": 110,
+          "index": 7
+        },
+        {
+          "durationMs": 110,
+          "index": 8
+        }
+      ],
+      "key": "agumon-move",
+      "loop": true,
+      "motionApproval": "pending",
+      "rawFrameCount": 9,
+      "removedIdenticalSegmentSeams": 0,
+      "segments": [
+        "agumon-move-loop"
+      ],
+      "sheetColumns": 6,
+      "sheetRows": 2,
+      "totalDurationMs": 990
+    }
+  },
+  {
+    "key": "agumon-pepper-breath",
+    "nodeId": "84:217",
+    "path": "/Users/johncohrn/Documents/ChatGPT/Godot Projects/design-workshop/animation-review/2026-09-13-v1/review/agumon-pepper-breath-sheet.png",
+    "meta": {
+      "action": "special_attack",
+      "actualFrameCount": 18,
+      "character": "agumon",
+      "facing": "E",
+      "frameDurationMs": 70,
+      "frames": [
+        {
+          "durationMs": 70,
+          "index": 0
+        },
+        {
+          "durationMs": 70,
+          "index": 1
+        },
+        {
+          "durationMs": 70,
+          "index": 2
+        },
+        {
+          "durationMs": 70,
+          "index": 3
+        },
+        {
+          "durationMs": 70,
+          "index": 4
+        },
+        {
+          "durationMs": 70,
+          "index": 5
+        },
+        {
+          "durationMs": 70,
+          "index": 6
+        },
+        {
+          "durationMs": 70,
+          "index": 7
+        },
+        {
+          "durationMs": 70,
+          "index": 8
+        },
+        {
+          "durationMs": 70,
+          "index": 9
+        },
+        {
+          "durationMs": 70,
+          "index": 10
+        },
+        {
+          "durationMs": 70,
+          "index": 11
+        },
+        {
+          "durationMs": 70,
+          "index": 12
+        },
+        {
+          "durationMs": 70,
+          "index": 13
+        },
+        {
+          "durationMs": 70,
+          "index": 14
+        },
+        {
+          "durationMs": 70,
+          "index": 15
+        },
+        {
+          "durationMs": 70,
+          "index": 16
+        },
+        {
+          "durationMs": 70,
+          "index": 17
+        }
+      ],
+      "key": "agumon-pepper-breath",
+      "loop": false,
+      "motionApproval": "pending",
+      "rawFrameCount": 18,
+      "removedIdenticalSegmentSeams": 0,
+      "segments": [
+        "agumon-pepper-breath-out",
+        "agumon-pepper-breath-back"
+      ],
+      "sheetColumns": 6,
+      "sheetRows": 3,
+      "totalDurationMs": 1260
+    }
+  },
+  {
+    "key": "botamon-eat",
+    "nodeId": "84:172",
+    "path": "/Users/johncohrn/Documents/ChatGPT/Godot Projects/design-workshop/animation-review/2026-09-13-v1/review/botamon-eat-sheet.png",
+    "meta": {
+      "action": "eat",
+      "actualFrameCount": 14,
+      "character": "botamon",
+      "facing": "E",
+      "frameDurationMs": 90,
+      "frames": [
+        {
+          "durationMs": 90,
+          "index": 0
+        },
+        {
+          "durationMs": 90,
+          "index": 1
+        },
+        {
+          "durationMs": 90,
+          "index": 2
+        },
+        {
+          "durationMs": 90,
+          "index": 3
+        },
+        {
+          "durationMs": 90,
+          "index": 4
+        },
+        {
+          "durationMs": 90,
+          "index": 5
+        },
+        {
+          "durationMs": 90,
+          "index": 6
+        },
+        {
+          "durationMs": 90,
+          "index": 7
+        },
+        {
+          "durationMs": 90,
+          "index": 8
+        },
+        {
+          "durationMs": 90,
+          "index": 9
+        },
+        {
+          "durationMs": 90,
+          "index": 10
+        },
+        {
+          "durationMs": 90,
+          "index": 11
+        },
+        {
+          "durationMs": 90,
+          "index": 12
+        },
+        {
+          "durationMs": 90,
+          "index": 13
+        }
+      ],
+      "key": "botamon-eat",
+      "loop": false,
+      "motionApproval": "pending",
+      "rawFrameCount": 14,
+      "removedIdenticalSegmentSeams": 0,
+      "segments": [
+        "botamon-eat-out",
+        "botamon-eat-back"
+      ],
+      "sheetColumns": 6,
+      "sheetRows": 3,
+      "totalDurationMs": 1260
+    }
+  },
+  {
+    "key": "botamon-idle",
+    "nodeId": "84:157",
+    "path": "/Users/johncohrn/Documents/ChatGPT/Godot Projects/design-workshop/animation-review/2026-09-13-v1/review/botamon-idle-sheet.png",
+    "meta": {
+      "action": "idle",
+      "actualFrameCount": 5,
+      "character": "botamon",
+      "facing": "E",
+      "frameDurationMs": 200,
+      "frames": [
+        {
+          "durationMs": 200,
+          "index": 0
+        },
+        {
+          "durationMs": 200,
+          "index": 1
+        },
+        {
+          "durationMs": 200,
+          "index": 2
+        },
+        {
+          "durationMs": 200,
+          "index": 3
+        },
+        {
+          "durationMs": 200,
+          "index": 4
+        }
+      ],
+      "key": "botamon-idle",
+      "loop": true,
+      "motionApproval": "pending",
+      "rawFrameCount": 5,
+      "removedIdenticalSegmentSeams": 0,
+      "segments": [
+        "botamon-idle-loop"
+      ],
+      "sheetColumns": 5,
+      "sheetRows": 1,
+      "totalDurationMs": 1000
+    }
+  },
+  {
+    "key": "koromon-eat",
+    "nodeId": "84:192",
+    "path": "/Users/johncohrn/Documents/ChatGPT/Godot Projects/design-workshop/animation-review/2026-09-13-v1/review/koromon-eat-sheet.png",
+    "meta": {
+      "action": "eat",
+      "actualFrameCount": 14,
+      "character": "koromon",
+      "facing": "E",
+      "frameDurationMs": 90,
+      "frames": [
+        {
+          "durationMs": 90,
+          "index": 0
+        },
+        {
+          "durationMs": 90,
+          "index": 1
+        },
+        {
+          "durationMs": 90,
+          "index": 2
+        },
+        {
+          "durationMs": 90,
+          "index": 3
+        },
+        {
+          "durationMs": 90,
+          "index": 4
+        },
+        {
+          "durationMs": 90,
+          "index": 5
+        },
+        {
+          "durationMs": 90,
+          "index": 6
+        },
+        {
+          "durationMs": 90,
+          "index": 7
+        },
+        {
+          "durationMs": 90,
+          "index": 8
+        },
+        {
+          "durationMs": 90,
+          "index": 9
+        },
+        {
+          "durationMs": 90,
+          "index": 10
+        },
+        {
+          "durationMs": 90,
+          "index": 11
+        },
+        {
+          "durationMs": 90,
+          "index": 12
+        },
+        {
+          "durationMs": 90,
+          "index": 13
+        }
+      ],
+      "key": "koromon-eat",
+      "loop": false,
+      "motionApproval": "pending",
+      "rawFrameCount": 14,
+      "removedIdenticalSegmentSeams": 0,
+      "segments": [
+        "koromon-eat-out",
+        "koromon-eat-back"
+      ],
+      "sheetColumns": 6,
+      "sheetRows": 3,
+      "totalDurationMs": 1260
+    }
+  },
+  {
+    "key": "koromon-happy",
+    "nodeId": "84:187",
+    "path": "/Users/johncohrn/Documents/ChatGPT/Godot Projects/design-workshop/animation-review/2026-09-13-v1/review/koromon-happy-sheet.png",
+    "meta": {
+      "action": "happy",
+      "actualFrameCount": 14,
+      "character": "koromon",
+      "facing": "E",
+      "frameDurationMs": 90,
+      "frames": [
+        {
+          "durationMs": 90,
+          "index": 0
+        },
+        {
+          "durationMs": 90,
+          "index": 1
+        },
+        {
+          "durationMs": 90,
+          "index": 2
+        },
+        {
+          "durationMs": 90,
+          "index": 3
+        },
+        {
+          "durationMs": 90,
+          "index": 4
+        },
+        {
+          "durationMs": 90,
+          "index": 5
+        },
+        {
+          "durationMs": 90,
+          "index": 6
+        },
+        {
+          "durationMs": 90,
+          "index": 7
+        },
+        {
+          "durationMs": 90,
+          "index": 8
+        },
+        {
+          "durationMs": 90,
+          "index": 9
+        },
+        {
+          "durationMs": 90,
+          "index": 10
+        },
+        {
+          "durationMs": 90,
+          "index": 11
+        },
+        {
+          "durationMs": 90,
+          "index": 12
+        },
+        {
+          "durationMs": 90,
+          "index": 13
+        }
+      ],
+      "key": "koromon-happy",
+      "loop": false,
+      "motionApproval": "pending",
+      "rawFrameCount": 14,
+      "removedIdenticalSegmentSeams": 0,
+      "segments": [
+        "koromon-happy-out",
+        "koromon-happy-back"
+      ],
+      "sheetColumns": 6,
+      "sheetRows": 3,
+      "totalDurationMs": 1260
+    }
+  },
+  {
+    "key": "koromon-idle",
+    "nodeId": "84:177",
+    "path": "/Users/johncohrn/Documents/ChatGPT/Godot Projects/design-workshop/animation-review/2026-09-13-v1/review/koromon-idle-sheet.png",
+    "meta": {
+      "action": "idle",
+      "actualFrameCount": 5,
+      "character": "koromon",
+      "facing": "E",
+      "frameDurationMs": 200,
+      "frames": [
+        {
+          "durationMs": 200,
+          "index": 0
+        },
+        {
+          "durationMs": 200,
+          "index": 1
+        },
+        {
+          "durationMs": 200,
+          "index": 2
+        },
+        {
+          "durationMs": 200,
+          "index": 3
+        },
+        {
+          "durationMs": 200,
+          "index": 4
+        }
+      ],
+      "key": "koromon-idle",
+      "loop": true,
+      "motionApproval": "pending",
+      "rawFrameCount": 5,
+      "removedIdenticalSegmentSeams": 0,
+      "segments": [
+        "koromon-idle-loop"
+      ],
+      "sheetColumns": 5,
+      "sheetRows": 1,
+      "totalDurationMs": 1000
+    }
+  },
+  {
+    "key": "koromon-move",
+    "nodeId": "84:182",
+    "path": "/Users/johncohrn/Documents/ChatGPT/Godot Projects/design-workshop/animation-review/2026-09-13-v1/review/koromon-move-sheet.png",
+    "meta": {
+      "action": "move",
+      "actualFrameCount": 9,
+      "character": "koromon",
+      "facing": "E",
+      "frameDurationMs": 110,
+      "frames": [
+        {
+          "durationMs": 110,
+          "index": 0
+        },
+        {
+          "durationMs": 110,
+          "index": 1
+        },
+        {
+          "durationMs": 110,
+          "index": 2
+        },
+        {
+          "durationMs": 110,
+          "index": 3
+        },
+        {
+          "durationMs": 110,
+          "index": 4
+        },
+        {
+          "durationMs": 110,
+          "index": 5
+        },
+        {
+          "durationMs": 110,
+          "index": 6
+        },
+        {
+          "durationMs": 110,
+          "index": 7
+        },
+        {
+          "durationMs": 110,
+          "index": 8
+        }
+      ],
+      "key": "koromon-move",
+      "loop": true,
+      "motionApproval": "pending",
+      "rawFrameCount": 9,
+      "removedIdenticalSegmentSeams": 0,
+      "segments": [
+        "koromon-move-loop"
+      ],
+      "sheetColumns": 6,
+      "sheetRows": 2,
+      "totalDurationMs": 990
+    }
+  }
+]

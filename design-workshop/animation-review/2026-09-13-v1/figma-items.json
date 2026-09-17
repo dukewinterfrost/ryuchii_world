@@ -1,0 +1,146 @@
+[
+  {
+    "key": "botamon-idle",
+    "species": "botamon",
+    "order": 0,
+    "title": "01 / Idle",
+    "rows": 1,
+    "path": "/Users/johncohrn/Documents/ChatGPT/Godot Projects/design-workshop/animation-review/2026-09-13-v1/review/botamon-idle-sheet.png"
+  },
+  {
+    "key": "botamon-move",
+    "species": "botamon",
+    "order": 1,
+    "title": "02 / Hop",
+    "rows": 2,
+    "path": "/Users/johncohrn/Documents/ChatGPT/Godot Projects/design-workshop/animation-review/2026-09-13-v1/review/botamon-move-sheet.png"
+  },
+  {
+    "key": "botamon-happy",
+    "species": "botamon",
+    "order": 2,
+    "title": "03 / Happy",
+    "rows": 3,
+    "path": "/Users/johncohrn/Documents/ChatGPT/Godot Projects/design-workshop/animation-review/2026-09-13-v1/review/botamon-happy-sheet.png"
+  },
+  {
+    "key": "botamon-eat",
+    "species": "botamon",
+    "order": 3,
+    "title": "04 / Eat",
+    "rows": 3,
+    "path": "/Users/johncohrn/Documents/ChatGPT/Godot Projects/design-workshop/animation-review/2026-09-13-v1/review/botamon-eat-sheet.png"
+  },
+  {
+    "key": "koromon-idle",
+    "species": "koromon",
+    "order": 0,
+    "title": "01 / Idle",
+    "rows": 1,
+    "path": "/Users/johncohrn/Documents/ChatGPT/Godot Projects/design-workshop/animation-review/2026-09-13-v1/review/koromon-idle-sheet.png"
+  },
+  {
+    "key": "koromon-move",
+    "species": "koromon",
+    "order": 1,
+    "title": "02 / Hop",
+    "rows": 2,
+    "path": "/Users/johncohrn/Documents/ChatGPT/Godot Projects/design-workshop/animation-review/2026-09-13-v1/review/koromon-move-sheet.png"
+  },
+  {
+    "key": "koromon-happy",
+    "species": "koromon",
+    "order": 2,
+    "title": "03 / Happy",
+    "rows": 3,
+    "path": "/Users/johncohrn/Documents/ChatGPT/Godot Projects/design-workshop/animation-review/2026-09-13-v1/review/koromon-happy-sheet.png"
+  },
+  {
+    "key": "koromon-eat",
+    "species": "koromon",
+    "order": 3,
+    "title": "04 / Eat",
+    "rows": 3,
+    "path": "/Users/johncohrn/Documents/ChatGPT/Godot Projects/design-workshop/animation-review/2026-09-13-v1/review/koromon-eat-sheet.png"
+  },
+  {
+    "key": "agumon-idle",
+    "species": "agumon",
+    "order": 0,
+    "title": "01 / Idle",
+    "rows": 1,
+    "path": "/Users/johncohrn/Documents/ChatGPT/Godot Projects/design-workshop/animation-review/2026-09-13-v1/review/agumon-idle-sheet.png"
+  },
+  {
+    "key": "agumon-move",
+    "species": "agumon",
+    "order": 1,
+    "title": "02 / Walk",
+    "rows": 2,
+    "path": "/Users/johncohrn/Documents/ChatGPT/Godot Projects/design-workshop/animation-review/2026-09-13-v1/review/agumon-move-sheet.png"
+  },
+  {
+    "key": "agumon-happy",
+    "species": "agumon",
+    "order": 2,
+    "title": "03 / Happy",
+    "rows": 3,
+    "path": "/Users/johncohrn/Documents/ChatGPT/Godot Projects/design-workshop/animation-review/2026-09-13-v1/review/agumon-happy-sheet.png"
+  },
+  {
+    "key": "agumon-eat",
+    "species": "agumon",
+    "order": 3,
+    "title": "04 / Eat",
+    "rows": 3,
+    "path": "/Users/johncohrn/Documents/ChatGPT/Godot Projects/design-workshop/animation-review/2026-09-13-v1/review/agumon-eat-sheet.png"
+  },
+  {
+    "key": "agumon-basic-attack",
+    "species": "agumon",
+    "order": 4,
+    "title": "05 / Claw strike",
+    "rows": 3,
+    "path": "/Users/johncohrn/Documents/ChatGPT/Godot Projects/design-workshop/animation-review/2026-09-13-v1/review/agumon-basic-attack-sheet.png"
+  },
+  {
+    "key": "agumon-pepper-breath",
+    "species": "agumon",
+    "order": 5,
+    "title": "06 / Pepper Breath",
+    "rows": 3,
+    "path": "/Users/johncohrn/Documents/ChatGPT/Godot Projects/design-workshop/animation-review/2026-09-13-v1/review/agumon-pepper-breath-sheet.png"
+  },
+  {
+    "key": "agumon-guard",
+    "species": "agumon",
+    "order": 6,
+    "title": "07 / Guard",
+    "rows": 1,
+    "path": "/Users/johncohrn/Documents/ChatGPT/Godot Projects/design-workshop/animation-review/2026-09-13-v1/review/agumon-guard-sheet.png"
+  },
+  {
+    "key": "agumon-evade",
+    "species": "agumon",
+    "order": 7,
+    "title": "08 / Dodge",
+    "rows": 2,
+    "path": "/Users/johncohrn/Documents/ChatGPT/Godot Projects/design-workshop/animation-review/2026-09-13-v1/review/agumon-evade-sheet.png"
+  },
+  {
+    "key": "agumon-hit",
+    "species": "agumon",
+    "order": 8,
+    "title": "09 / Hit reaction",
+    "rows": 2,
+    "path": "/Users/johncohrn/Documents/ChatGPT/Godot Projects/design-workshop/animation-review/2026-09-13-v1/review/agumon-hit-sheet.png"
+  },
+  {
+    "key": "agumon-defeat",
+    "species": "agumon",
+    "order": 9,
+    "title": "10 / Defeat",
+    "rows": 2,
+    "path": "/Users/johncohrn/Documents/ChatGPT/Godot Projects/design-workshop/animation-review/2026-09-13-v1/review/agumon-defeat-sheet.png"
+  }
+]

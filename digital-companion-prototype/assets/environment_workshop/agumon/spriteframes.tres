@@ -1,0 +1,145 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://rc7huwp26ldj"]
+
+[ext_resource type="Texture2D" uid="uid://e0vfdljporpk" path="res://assets/environment_workshop/agumon/atlas.png" id="1"]
+
+[sub_resource type="AtlasTexture" id="Frame9"]
+atlas = ExtResource("1")
+region = Rect2(0, 256, 128, 128)
+
+[sub_resource type="AtlasTexture" id="Frame10"]
+atlas = ExtResource("1")
+region = Rect2(128, 256, 128, 128)
+
+[sub_resource type="AtlasTexture" id="Frame11"]
+atlas = ExtResource("1")
+region = Rect2(256, 256, 128, 128)
+
+[sub_resource type="AtlasTexture" id="Frame12"]
+atlas = ExtResource("1")
+region = Rect2(384, 256, 128, 128)
+
+[sub_resource type="AtlasTexture" id="Frame13"]
+atlas = ExtResource("1")
+region = Rect2(0, 384, 128, 128)
+
+[sub_resource type="AtlasTexture" id="Frame14"]
+atlas = ExtResource("1")
+region = Rect2(128, 384, 128, 128)
+
+[sub_resource type="AtlasTexture" id="Frame15"]
+atlas = ExtResource("1")
+region = Rect2(256, 384, 128, 128)
+
+[sub_resource type="AtlasTexture" id="Frame16"]
+atlas = ExtResource("1")
+region = Rect2(384, 384, 128, 128)
+
+[sub_resource type="AtlasTexture" id="Frame17"]
+atlas = ExtResource("1")
+region = Rect2(0, 512, 128, 128)
+
+[sub_resource type="AtlasTexture" id="Frame1"]
+atlas = ExtResource("1")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="Frame2"]
+atlas = ExtResource("1")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="Frame3"]
+atlas = ExtResource("1")
+region = Rect2(256, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="Frame4"]
+atlas = ExtResource("1")
+region = Rect2(384, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="Frame5"]
+atlas = ExtResource("1")
+region = Rect2(0, 128, 128, 128)
+
+[sub_resource type="AtlasTexture" id="Frame6"]
+atlas = ExtResource("1")
+region = Rect2(128, 128, 128, 128)
+
+[sub_resource type="AtlasTexture" id="Frame7"]
+atlas = ExtResource("1")
+region = Rect2(256, 128, 128, 128)
+
+[sub_resource type="AtlasTexture" id="Frame8"]
+atlas = ExtResource("1")
+region = Rect2(384, 128, 128, 128)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 180.0,
+"texture": SubResource("Frame9")
+}, {
+"duration": 110.0,
+"texture": SubResource("Frame10")
+}, {
+"duration": 90.0,
+"texture": SubResource("Frame11")
+}, {
+"duration": 90.0,
+"texture": SubResource("Frame12")
+}, {
+"duration": 100.0,
+"texture": SubResource("Frame13")
+}, {
+"duration": 110.0,
+"texture": SubResource("Frame14")
+}, {
+"duration": 120.0,
+"texture": SubResource("Frame15")
+}, {
+"duration": 130.0,
+"texture": SubResource("Frame16")
+}, {
+"duration": 180.0,
+"texture": SubResource("Frame17")
+}],
+"loop": 0,
+"name": &"eat.default",
+"speed": 1000.0
+}, {
+"frames": [{
+"duration": 360.0,
+"texture": SubResource("Frame1")
+}, {
+"duration": 360.0,
+"texture": SubResource("Frame2")
+}, {
+"duration": 360.0,
+"texture": SubResource("Frame3")
+}, {
+"duration": 360.0,
+"texture": SubResource("Frame4")
+}],
+"loop": 1,
+"name": &"idle.default",
+"speed": 1000.0
+}, {
+"frames": [{
+"duration": 320.0,
+"texture": SubResource("Frame5")
+}, {
+"duration": 320.0,
+"texture": SubResource("Frame6")
+}, {
+"duration": 320.0,
+"texture": SubResource("Frame7")
+}, {
+"duration": 320.0,
+"texture": SubResource("Frame8")
+}],
+"loop": 1,
+"name": &"move.default",
+"speed": 1000.0
+}]
+metadata/workshop_pivots = {
+"eat.default": [Vector2(0.496094, 0.9375), Vector2(0.496094, 0.9375), Vector2(0.496094, 0.9375), Vector2(0.496094, 0.9375), Vector2(0.496094, 0.9375), Vector2(0.496094, 0.9375), Vector2(0.496094, 0.9375), Vector2(0.496094, 0.9375), Vector2(0.496094, 0.9375)],
+"idle.default": [Vector2(0.496094, 0.9375), Vector2(0.5, 0.9375), Vector2(0.496094, 0.9375), Vector2(0.5, 0.9375)],
+"move.default": [Vector2(0.496094, 0.9375), Vector2(0.5, 0.9375), Vector2(0.5, 0.9375), Vector2(0.496094, 0.9375)]
+}

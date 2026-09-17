@@ -1,0 +1,4 @@
+interface:
+  display_name: "Sprite Generator Workflow"
+  short_description: "Approved keyframes to consistent sprite animations"
+  default_prompt: "Use $sprite-generator-workflow to prepare approved character keyframes, generate their animations, and assemble a reviewable sprite set."

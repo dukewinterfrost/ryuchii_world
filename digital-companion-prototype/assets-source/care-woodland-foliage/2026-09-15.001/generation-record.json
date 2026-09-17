@@ -1,0 +1,43 @@
+{
+  "version": 1,
+  "provider": "codex-built-in-imagegen",
+  "status": "pending-human-sample-review",
+  "sourceSha256": "sha256:ee0ed7a9f64646e8205801b671ba06591fa587f7dc79efc1ede5efb390c9743f",
+  "source": "sources/ee0ed7a9f64646e8205801b671ba06591fa587f7dc79efc1ede5efb390c9743f.png",
+  "sourceSize": [
+    1254,
+    1254
+  ],
+  "tileSize": [
+    627,
+    627
+  ],
+  "alphaCut": 0.5,
+  "opaqueBoundsAtAlpha128": {
+    "tree": [
+      91,
+      80,
+      584,
+      582
+    ],
+    "hedge": [
+      59,
+      244,
+      524,
+      566
+    ],
+    "reeds": [
+      130,
+      49,
+      533,
+      531
+    ],
+    "rock": [
+      40,
+      136,
+      530,
+      481
+    ]
+  },
+  "notes": "Initial generation was edited with the built-in tool to restore complete silhouettes and transparent gutters. Source bytes are unchanged; review uses texture regions, not rewritten/cropped PNGs."
+}

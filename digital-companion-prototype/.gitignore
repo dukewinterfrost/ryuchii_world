@@ -1,0 +1,10 @@
+.godot/
+*.tmp
+*.log
+
+.venv-sprites/
+work/sprites/
+__pycache__/
+*.pyc
+assets/.runtime-catalog.lock
+.env.pixellab.local

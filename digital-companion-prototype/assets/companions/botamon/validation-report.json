@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "subjectId": "botamon",
+  "revision": "2026-08-26.001",
+  "status": "passed-with-warnings",
+  "checks": {
+    "frameWidth": 96,
+    "frameHeight": 96,
+    "frameCount": 8,
+    "clipCount": 3,
+    "sourceSha256": "sha256:cf9f26202767de297ed43fa8cf4f588a5fd31292c41e985c25c8d7aff36a4bf5",
+    "errorCount": 0,
+    "warningCount": 1
+  },
+  "issues": [
+    {
+      "severity": "warning",
+      "code": "legacy-animation-human-review-required",
+      "message": "Legacy grid timing, pivots, anchors, transparency, and action labels require human review before promotion."
+    }
+  ]
+}

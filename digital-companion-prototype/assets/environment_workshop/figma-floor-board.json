@@ -1,0 +1,90 @@
+{
+  "version": 1,
+  "fileKey": "syQM2pShfeCTfXms0HmzTB",
+  "pageNodeId": "66:150",
+  "url": "https://www.figma.com/design/syQM2pShfeCTfXms0HmzTB?node-id=66-150",
+  "licensing": "private-prototype-only",
+  "workflow": "Export crop PNG at 1x to the matching editableFloorFile; no automatic synchronization. Native-resolution originals stay locked.",
+  "regions": [
+    {
+      "region": "green-shade",
+      "sourceNodeId": "68:153",
+      "cropNodeId": "68:154",
+      "shuffleNodeId": "68:155",
+      "patchNodeIds": [
+        "73:150",
+        "73:151",
+        "73:152",
+        "73:153"
+      ],
+      "sourceFile": "assets/environment_workshop/green-shade/ground.png",
+      "editableFloorFile": "assets/environment_workshop/green-shade/floor.png",
+      "sourceImageHash": "efe0028b42485870daba9b0be49188eb9c0f0f45",
+      "floorImageHash": "aa037a10885e1bb0bc47034f25ba3a917c8a692e"
+    },
+    {
+      "region": "shellfish-beach",
+      "sourceNodeId": "68:470",
+      "cropNodeId": "68:471",
+      "shuffleNodeId": "68:472",
+      "patchNodeIds": [
+        "73:154",
+        "73:155",
+        "73:156",
+        "73:157"
+      ],
+      "sourceFile": "assets/environment_workshop/shellfish-beach/ground.png",
+      "editableFloorFile": "assets/environment_workshop/shellfish-beach/floor.png",
+      "sourceImageHash": "c6e5369475998682e8c80f7e235cb806be1b52b7",
+      "floorImageHash": "e91e39f0bbe4b69e56b67a016279fed0db4ad714"
+    },
+    {
+      "region": "toy-maze",
+      "sourceNodeId": "68:476",
+      "cropNodeId": "68:477",
+      "shuffleNodeId": "68:478",
+      "patchNodeIds": [
+        "73:158",
+        "73:159",
+        "73:160",
+        "73:161"
+      ],
+      "sourceFile": "assets/environment_workshop/toy-maze/ground.png",
+      "editableFloorFile": "assets/environment_workshop/toy-maze/floor.png",
+      "sourceImageHash": "0707b92f28ea56b1ea20df47766553549684ed1c",
+      "floorImageHash": "8c9c20cd7373137d5fd5909d0a2074eb5bb97459"
+    },
+    {
+      "region": "mechatropolis",
+      "sourceNodeId": "68:482",
+      "cropNodeId": "68:483",
+      "shuffleNodeId": "68:484",
+      "patchNodeIds": [
+        "73:166",
+        "73:167",
+        "73:168",
+        "73:169"
+      ],
+      "sourceFile": "assets/environment_workshop/mechatropolis/ground.png",
+      "editableFloorFile": "assets/environment_workshop/mechatropolis/floor.png",
+      "sourceImageHash": "68b2d925353156a45c673d02e0be01b656e89f12",
+      "floorImageHash": "c2eb530080212c9bcb347989babe100df30786b4"
+    },
+    {
+      "region": "nephelis-abyss",
+      "sourceNodeId": "68:488",
+      "cropNodeId": "68:489",
+      "shuffleNodeId": "68:490",
+      "patchNodeIds": [
+        "73:162",
+        "73:163",
+        "73:164",
+        "73:165"
+      ],
+      "sourceFile": "assets/environment_workshop/nephelis-abyss/ground.png",
+      "editableFloorFile": "assets/environment_workshop/nephelis-abyss/floor.png",
+      "sourceImageHash": "09c00dc2cdcc8ae8ce10a045d6e9c4580194a410",
+      "floorImageHash": "b46875e3c5d1648a9ef7afb4ae539741fd899286"
+    }
+  ]
+}

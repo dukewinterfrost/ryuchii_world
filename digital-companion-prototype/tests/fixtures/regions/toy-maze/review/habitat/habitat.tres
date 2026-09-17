@@ -1,0 +1,50 @@
+[gd_resource type="Resource" format=3]
+
+[resource]
+metadata/habitat_manifest = {
+"assetId": "habitat-wind-up-plaza",
+"blockers": [{
+"id": "toy-maze-landmark-footprint",
+"rect": [12.0, 5.0, 15.0, 3.0]
+}],
+"decorationZones": [{
+"id": "main",
+"rect": [2.0, 10.0, 36.0, 31.0]
+}, {
+"id": "entry",
+"rect": [15.0, 41.0, 10.0, 5.0]
+}],
+"displayName": "Wind-Up Plaza",
+"environment": {
+"assetId": "environment-toy-maze",
+"contentSha256": "sha256:84e4d90d49ee20f8f86896cc339c3fc2721224d72511cfb98d88b312a1892496",
+"revision": "2026-09-12.001"
+},
+"grid": {
+"cellSize": 32.0,
+"columns": 40.0,
+"rows": 48.0
+},
+"kind": "habitat",
+"regionId": "toy-maze",
+"revision": "2026-09-12.001",
+"schemaVersion": 1.0,
+"spawn": [20.0, 24.0],
+"staticPlacements": [{
+"blocker": "toy-maze-landmark-footprint",
+"cell": [19.0, 6.0],
+"id": "toy-maze-landmark-home",
+"persistent": true,
+"planeStack": "toy-maze-landmark.stack",
+"rotationQuarterTurns": 0.0
+}],
+"wasteAnchors": [[6.0, 38.0], [20.0, 34.0], [34.0, 38.0]]
+}
+metadata/candidate_identity = {
+"assetId": "habitat-wind-up-plaza",
+"buildIdentity": "sha256:be03de2af0fe0a0422f836a5184d59f3ef902bee8fea8b9e717cacd2e517aab9",
+"compilerVersion": "1.3.0",
+"kind": "habitat",
+"planSha256": "sha256:7ec5a32d6a86386d17d2f155a485ad9defef0dca241bb7f56fa9b9d2553f287f",
+"revision": "2026-09-12.001"
+}

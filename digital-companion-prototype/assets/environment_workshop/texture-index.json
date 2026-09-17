@@ -1,0 +1,122 @@
+[
+  {
+    "region": "green-shade",
+    "role": "ground",
+    "source": "res://tests/fixtures/regions/green-shade/environment/textures/ground.png",
+    "sourceSha256": "sha256:8697886e9bab1bd9fbc3e71916f7aafd0ab0302fc6db1ad006b4584055f111c9",
+    "workingTexture": "res://assets/environment_workshop/green-shade/ground.png",
+    "size": [
+      2048,
+      1319
+    ],
+    "license": "private-prototype-only"
+  },
+  {
+    "region": "green-shade",
+    "role": "terrain.green-shade-ground",
+    "source": "res://tests/fixtures/regions/green-shade/environment/textures/terrain.green-shade-ground.png",
+    "sourceSha256": "sha256:ffdfb0a5a7701d97d0bf68aa3bb8bc62786533248ae3f8178a38412ab897337e",
+    "workingTexture": "res://assets/environment_workshop/green-shade/floor.png",
+    "size": [
+      2048,
+      390
+    ],
+    "license": "private-prototype-only"
+  },
+  {
+    "region": "shellfish-beach",
+    "role": "ground",
+    "source": "res://tests/fixtures/regions/shellfish-beach/environment/textures/ground.png",
+    "sourceSha256": "sha256:e4adf13337326fb76bbd021aa13967db86304492aa388e0fb5313731f386296b",
+    "workingTexture": "res://assets/environment_workshop/shellfish-beach/ground.png",
+    "size": [
+      2048,
+      879
+    ],
+    "license": "private-prototype-only"
+  },
+  {
+    "region": "shellfish-beach",
+    "role": "terrain.shellfish-beach-ground",
+    "source": "res://tests/fixtures/regions/shellfish-beach/environment/textures/terrain.shellfish-beach-ground.png",
+    "sourceSha256": "sha256:bf8aa3e8495865a58dde9ab3da398ce408663102fa07cdd27f63140f0c155a5f",
+    "workingTexture": "res://assets/environment_workshop/shellfish-beach/floor.png",
+    "size": [
+      2048,
+      550
+    ],
+    "license": "private-prototype-only"
+  },
+  {
+    "region": "toy-maze",
+    "role": "ground",
+    "source": "res://tests/fixtures/regions/toy-maze/environment/textures/ground.png",
+    "sourceSha256": "sha256:49ad21ab4993e00508ffcd48f43cf72ef27b5d3b23e2e4d252f729d73d0399bb",
+    "workingTexture": "res://assets/environment_workshop/toy-maze/ground.png",
+    "size": [
+      1655,
+      1288
+    ],
+    "license": "private-prototype-only"
+  },
+  {
+    "region": "toy-maze",
+    "role": "terrain.toy-maze-ground",
+    "source": "res://tests/fixtures/regions/toy-maze/environment/textures/terrain.toy-maze-ground.png",
+    "sourceSha256": "sha256:701d0876a639b6270402a84e57733a170df76fb97040538e15a1cf3fc2cff363",
+    "workingTexture": "res://assets/environment_workshop/toy-maze/floor.png",
+    "size": [
+      1655,
+      500
+    ],
+    "license": "private-prototype-only"
+  },
+  {
+    "region": "mechatropolis",
+    "role": "ground",
+    "source": "res://tests/fixtures/regions/mechatropolis/environment/textures/ground.png",
+    "sourceSha256": "sha256:67fd2bf3f8801b96eff920b974f0f8161726747ef78e7015da987dfbe4b21219",
+    "workingTexture": "res://assets/environment_workshop/mechatropolis/ground.png",
+    "size": [
+      2048,
+      950
+    ],
+    "license": "private-prototype-only"
+  },
+  {
+    "region": "mechatropolis",
+    "role": "terrain.mechatropolis-ground",
+    "source": "res://tests/fixtures/regions/mechatropolis/environment/textures/terrain.mechatropolis-ground.png",
+    "sourceSha256": "sha256:e2d21d5f7d942e16cdd7b201c7f1c32c8182d7be9c09e64d5398fdaac2d28223",
+    "workingTexture": "res://assets/environment_workshop/mechatropolis/floor.png",
+    "size": [
+      2048,
+      350
+    ],
+    "license": "private-prototype-only"
+  },
+  {
+    "region": "nephelis-abyss",
+    "role": "ground",
+    "source": "res://tests/fixtures/regions/nephelis-abyss/environment/textures/ground.png",
+    "sourceSha256": "sha256:11efdf86077f25fd4787dbc3b46df8c1ca128dba5ddba0fd84e1d3b0c328ef28",
+    "workingTexture": "res://assets/environment_workshop/nephelis-abyss/ground.png",
+    "size": [
+      1431,
+      1253
+    ],
+    "license": "private-prototype-only"
+  },
+  {
+    "region": "nephelis-abyss",
+    "role": "terrain.nephelis-abyss-ground",
+    "source": "res://tests/fixtures/regions/nephelis-abyss/environment/textures/terrain.nephelis-abyss-ground.png",
+    "sourceSha256": "sha256:b1d51e5e73522b8c75aac342cf1f582df9fe16dae666885e93c831ce22eb2f6b",
+    "workingTexture": "res://assets/environment_workshop/nephelis-abyss/floor.png",
+    "size": [
+      1431,
+      700
+    ],
+    "license": "private-prototype-only"
+  }
+]

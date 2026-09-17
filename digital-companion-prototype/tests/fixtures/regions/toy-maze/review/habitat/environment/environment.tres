@@ -1,0 +1,177 @@
+[gd_resource type="Resource" format=3]
+
+[resource]
+metadata/environment_manifest = {
+"ambientColor": "#ffffff",
+"ambientEnergy": 1.0,
+"ambientPlanes": [],
+"assetId": "environment-toy-maze",
+"backgroundColor": "#b9ebef",
+"camera": {
+"dollyBounds": [2.0, 60.0],
+"far": 200.0,
+"fovDegrees": 28.0,
+"groundDistance": 12.0,
+"keepAspect": "width",
+"movementBounds": [0.0, 0.0, 1280.0, 1536.0],
+"near": 0.1,
+"pitchDegrees": 50.0,
+"projection": "perspective",
+"smoothingSpeed": 5.0,
+"spriteTiltDegrees": 8.0
+},
+"developmentStatus": "source-derived-kit-pending-human-review",
+"displayName": "Toy Maze",
+"groundFootprints": [{
+"id": "toy-maze-landmark.footprint",
+"rect": [-240.0, -48.0, 480.0, 96.0]
+}],
+"kind": "environment",
+"license": {
+"classification": "private-prototype-only",
+"notice": "Private prototype only; do not redistribute or publish DigimonUP-derived art."
+},
+"navigationProfiles": [{
+"decoration": true,
+"id": "solid",
+"movement": true,
+"waste": true
+}],
+"planeStacks": [{
+"groundFootprint": "toy-maze-landmark.footprint",
+"id": "toy-maze-landmark.stack",
+"navigation": "solid",
+"planes": ["toy-maze-landmark.facade", "toy-maze-landmark.interior", "toy-maze-landmark.roof"]
+}],
+"presentationProfile": {
+"fovDegrees": 28.0,
+"id": "sprite-in-3d-portrait-v1",
+"keepAspect": "width",
+"pitchDegrees": 50.0,
+"pixelsPerMeter": 32.0,
+"spriteTiltDegrees": 8.0,
+"version": 1.0
+},
+"provenance": {
+"compilerVersion": "1.3.0",
+"generator": "manual",
+"kind": "source-derived",
+"sourceHashes": {
+"feature_facade": "sha256:b8690651b56cf650f67ecff3afbb3dbb7032f4adbe035ef5f5d494d6877d71a0",
+"feature_interior": "sha256:d2941f48731281b521fd33bbbca35342d65aaa9eae310505ffb00d10c36bde41",
+"feature_original": "sha256:7fabc01d3071c247fd9564775c450315f2dfb1709e611d5a1969a201deb8bf0f",
+"feature_roof": "sha256:7554dcb60ed9672c82c9d1a694b6afb6b875c6d8f938cf53e901cf7ece89a1f6",
+"ground": "sha256:49ad21ab4993e00508ffcd48f43cf72ef27b5d3b23e2e4d252f729d73d0399bb",
+"sample": "sha256:0906718f9f27534f275c1c987d61073032d44df25f414dbb1dc2287c1fae82fc",
+"top": "sha256:0906718f9f27534f275c1c987d61073032d44df25f414dbb1dc2287c1fae82fc"
+}
+},
+"provider": "manual",
+"regionId": "toy-maze",
+"reviewViewpoints": [{
+"id": "center",
+"lookAt": [20.0, 0.0, 24.0],
+"position": [20.0, 26.0, 38.0]
+}, {
+"id": "left",
+"lookAt": [20.0, 0.0, 24.0],
+"position": [14.0, 26.0, 38.0]
+}, {
+"id": "right",
+"lookAt": [20.0, 0.0, 24.0],
+"position": [26.0, 26.0, 38.0]
+}, {
+"id": "near",
+"lookAt": [20.0, 0.0, 20.0],
+"position": [20.0, 21.0, 33.0]
+}, {
+"id": "far",
+"lookAt": [20.0, 0.0, 24.0],
+"position": [20.0, 31.0, 45.0]
+}],
+"revision": "2026-09-12.001",
+"schemaVersion": 1.0,
+"spritePlanes": [{
+"alphaMode": "alpha-cut",
+"authoringStatus": "hash-bound-source-derived-card",
+"depthBehavior": "write",
+"id": "toy-maze-landmark.facade",
+"localPosition": [0.0, 0.0, 0.08],
+"pivot": {
+"x": 0.5,
+"y": 1.0
+},
+"pixelSize": 0.016,
+"rotationDegrees": [0.0, 0.0, 0.0],
+"source": "feature_facade"
+}, {
+"alphaMode": "alpha-cut",
+"authoringStatus": "hash-bound-source-derived-card",
+"depthBehavior": "write",
+"id": "toy-maze-landmark.interior",
+"localPosition": [0.0, 0.0, 0.0],
+"pivot": {
+"x": 0.5,
+"y": 1.0
+},
+"pixelSize": 0.016,
+"rotationDegrees": [0.0, 0.0, 0.0],
+"source": "feature_interior"
+}, {
+"alphaMode": "alpha-cut",
+"authoringStatus": "hash-bound-source-derived-card",
+"depthBehavior": "write",
+"id": "toy-maze-landmark.roof",
+"localPosition": [0.0, 0.1, -0.08],
+"pivot": {
+"x": 0.5,
+"y": 1.0
+},
+"pixelSize": 0.016,
+"rotationDegrees": [0.0, 0.0, 0.0],
+"source": "feature_roof"
+}],
+"terrainChunks": [{
+"alphaMode": "opaque",
+"depthBehavior": "write",
+"elevation": 0.0,
+"groundRect": [-512.0, -512.0, 2304.0, 2560.0],
+"id": "toy-maze-ground",
+"source": "ground",
+"sourceRegionPx": [0.0, 100.0, 1655.0, 500.0],
+"subdivisions": [18.0, 20.0],
+"textureBinding": "terrain.toy-maze-ground"
+}],
+"textures": {
+"feature_facade": "textures/feature_facade.png",
+"feature_interior": "textures/feature_interior.png",
+"feature_roof": "textures/feature_roof.png",
+"ground": "textures/ground.png",
+"terrain.toy-maze-ground": "textures/terrain.toy-maze-ground.png"
+},
+"worldScale": {
+"pixelsPerUnit": 32.0
+}
+}
+metadata/environment_texture_paths = {
+"feature_facade": "textures/feature_facade.png",
+"feature_interior": "textures/feature_interior.png",
+"feature_roof": "textures/feature_roof.png",
+"ground": "textures/ground.png",
+"terrain.toy-maze-ground": "textures/terrain.toy-maze-ground.png"
+}
+metadata/environment_texture_hashes = {
+"textures/feature_facade.png": "sha256:b8690651b56cf650f67ecff3afbb3dbb7032f4adbe035ef5f5d494d6877d71a0",
+"textures/feature_interior.png": "sha256:d2941f48731281b521fd33bbbca35342d65aaa9eae310505ffb00d10c36bde41",
+"textures/feature_roof.png": "sha256:7554dcb60ed9672c82c9d1a694b6afb6b875c6d8f938cf53e901cf7ece89a1f6",
+"textures/ground.png": "sha256:49ad21ab4993e00508ffcd48f43cf72ef27b5d3b23e2e4d252f729d73d0399bb",
+"textures/terrain.toy-maze-ground.png": "sha256:701d0876a639b6270402a84e57733a170df76fb97040538e15a1cf3fc2cff363"
+}
+metadata/candidate_identity = {
+"assetId": "environment-toy-maze",
+"buildIdentity": "sha256:433c90f76ae9dcd1514a573f3d4b843c7b2c27eeedca32c9075a22a85a4a80d6",
+"compilerVersion": "1.3.0",
+"kind": "environment",
+"planSha256": "sha256:3857fa1c8ed44c84fbcb9e5a35d8b73a3990f98fb1f699d9babfa699a8072c1d",
+"revision": "2026-09-12.001"
+}

@@ -1,0 +1,2685 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="Texture2D" path="res://assets/environment_workshop/forest-parallax/foliage.png" id="1"]
+[ext_resource type="Texture2D" path="res://assets/environment_workshop/forest-bg1/foreground.png" id="2"]
+
+[node name="Boundary" type="Node3D"]
+metadata/gameplay = "Outside 30x36 map; scales with 40x48 home. No collision, navigation, or random generation."
+metadata/edit_help = "Two irregular overlapping foliage belts hide all four ground boundaries. Trees sit outside the playable grid."
+
+[node name="South_Forest_0_0" type="Sprite3D" parent="."]
+position = Vector3(-23, -2, 49)
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+offset = Vector2(-24, 268.5)
+pixel_size = 0.024
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+modulate = Color(0.72, 0.84, 0.72, 1)
+metadata/boundary_side = "South"
+metadata/outside_gameplay = true
+
+[node name="South_Forest_0_1" type="Sprite3D" parent="."]
+position = Vector3(-16, -2, 49.9)
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+offset = Vector2(-24, 268.5)
+pixel_size = 0.026000000000000002
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+modulate = Color(0.72, 0.84, 0.72, 1)
+metadata/boundary_side = "South"
+metadata/outside_gameplay = true
+
+[node name="South_Forest_0_2" type="Sprite3D" parent="."]
+position = Vector3(-9, -2, 50.8)
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+offset = Vector2(-24, 268.5)
+pixel_size = 0.028
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+modulate = Color(0.72, 0.84, 0.72, 1)
+metadata/boundary_side = "South"
+metadata/outside_gameplay = true
+
+[node name="South_Forest_0_3" type="Sprite3D" parent="."]
+position = Vector3(-2, -2, 49)
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+offset = Vector2(-24, 268.5)
+pixel_size = 0.03
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+modulate = Color(0.72, 0.84, 0.72, 1)
+metadata/boundary_side = "South"
+metadata/outside_gameplay = true
+
+[node name="South_Forest_0_4" type="Sprite3D" parent="."]
+position = Vector3(5, -2, 49.9)
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+offset = Vector2(-24, 268.5)
+pixel_size = 0.024
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+modulate = Color(0.72, 0.84, 0.72, 1)
+metadata/boundary_side = "South"
+metadata/outside_gameplay = true
+
+[node name="South_Forest_0_5" type="Sprite3D" parent="."]
+position = Vector3(12, -2, 50.8)
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+offset = Vector2(-24, 268.5)
+pixel_size = 0.026000000000000002
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+modulate = Color(0.72, 0.84, 0.72, 1)
+metadata/boundary_side = "South"
+metadata/outside_gameplay = true
+
+[node name="South_Forest_0_6" type="Sprite3D" parent="."]
+position = Vector3(19, -2, 49)
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+offset = Vector2(-24, 268.5)
+pixel_size = 0.028
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+modulate = Color(0.72, 0.84, 0.72, 1)
+metadata/boundary_side = "South"
+metadata/outside_gameplay = true
+
+[node name="South_Forest_0_7" type="Sprite3D" parent="."]
+position = Vector3(26, -2, 49.9)
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+offset = Vector2(-24, 268.5)
+pixel_size = 0.03
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+modulate = Color(0.72, 0.84, 0.72, 1)
+metadata/boundary_side = "South"
+metadata/outside_gameplay = true
+
+[node name="South_Forest_0_8" type="Sprite3D" parent="."]
+position = Vector3(33, -2, 50.8)
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+offset = Vector2(-24, 268.5)
+pixel_size = 0.024
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+modulate = Color(0.72, 0.84, 0.72, 1)
+metadata/boundary_side = "South"
+metadata/outside_gameplay = true
+
+[node name="South_Forest_0_9" type="Sprite3D" parent="."]
+position = Vector3(40, -2, 49)
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+offset = Vector2(-24, 268.5)
+pixel_size = 0.026000000000000002
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+modulate = Color(0.72, 0.84, 0.72, 1)
+metadata/boundary_side = "South"
+metadata/outside_gameplay = true
+
+[node name="South_Forest_0_10" type="Sprite3D" parent="."]
+position = Vector3(47, -2, 49.9)
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+offset = Vector2(-24, 268.5)
+pixel_size = 0.028
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+modulate = Color(0.72, 0.84, 0.72, 1)
+metadata/boundary_side = "South"
+metadata/outside_gameplay = true
+
+[node name="South_Forest_0_11" type="Sprite3D" parent="."]
+position = Vector3(54, -2, 50.8)
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+offset = Vector2(-24, 268.5)
+pixel_size = 0.03
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+modulate = Color(0.72, 0.84, 0.72, 1)
+metadata/boundary_side = "South"
+metadata/outside_gameplay = true
+
+[node name="South_Forest_1_0" type="Sprite3D" parent="."]
+position = Vector3(-19.5, -2, 57.5)
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+offset = Vector2(-24, 268.5)
+pixel_size = 0.024
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+modulate = Color(0.72, 0.84, 0.72, 1)
+metadata/boundary_side = "South"
+metadata/outside_gameplay = true
+
+[node name="South_Forest_1_1" type="Sprite3D" parent="."]
+position = Vector3(-12.5, -2, 58.4)
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+offset = Vector2(-24, 268.5)
+pixel_size = 0.026000000000000002
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+modulate = Color(0.72, 0.84, 0.72, 1)
+metadata/boundary_side = "South"
+metadata/outside_gameplay = true
+
+[node name="South_Forest_1_2" type="Sprite3D" parent="."]
+position = Vector3(-5.5, -2, 59.3)
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+offset = Vector2(-24, 268.5)
+pixel_size = 0.028
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+modulate = Color(0.72, 0.84, 0.72, 1)
+metadata/boundary_side = "South"
+metadata/outside_gameplay = true
+
+[node name="South_Forest_1_3" type="Sprite3D" parent="."]
+position = Vector3(1.5, -2, 57.5)
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+offset = Vector2(-24, 268.5)
+pixel_size = 0.03
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+modulate = Color(0.72, 0.84, 0.72, 1)
+metadata/boundary_side = "South"
+metadata/outside_gameplay = true
+
+[node name="South_Forest_1_4" type="Sprite3D" parent="."]
+position = Vector3(8.5, -2, 58.4)
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+offset = Vector2(-24, 268.5)
+pixel_size = 0.024
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+modulate = Color(0.72, 0.84, 0.72, 1)
+metadata/boundary_side = "South"
+metadata/outside_gameplay = true
+
+[node name="South_Forest_1_5" type="Sprite3D" parent="."]
+position = Vector3(15.5, -2, 59.3)
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+offset = Vector2(-24, 268.5)
+pixel_size = 0.026000000000000002
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+modulate = Color(0.72, 0.84, 0.72, 1)
+metadata/boundary_side = "South"
+metadata/outside_gameplay = true
+
+[node name="South_Forest_1_6" type="Sprite3D" parent="."]
+position = Vector3(22.5, -2, 57.5)
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+offset = Vector2(-24, 268.5)
+pixel_size = 0.028
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+modulate = Color(0.72, 0.84, 0.72, 1)
+metadata/boundary_side = "South"
+metadata/outside_gameplay = true
+
+[node name="South_Forest_1_7" type="Sprite3D" parent="."]
+position = Vector3(29.5, -2, 58.4)
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+offset = Vector2(-24, 268.5)
+pixel_size = 0.03
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+modulate = Color(0.72, 0.84, 0.72, 1)
+metadata/boundary_side = "South"
+metadata/outside_gameplay = true
+
+[node name="South_Forest_1_8" type="Sprite3D" parent="."]
+position = Vector3(36.5, -2, 59.3)
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+offset = Vector2(-24, 268.5)
+pixel_size = 0.024
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+modulate = Color(0.72, 0.84, 0.72, 1)
+metadata/boundary_side = "South"
+metadata/outside_gameplay = true
+
+[node name="South_Forest_1_9" type="Sprite3D" parent="."]
+position = Vector3(43.5, -2, 57.5)
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+offset = Vector2(-24, 268.5)
+pixel_size = 0.026000000000000002
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+modulate = Color(0.72, 0.84, 0.72, 1)
+metadata/boundary_side = "South"
+metadata/outside_gameplay = true
+
+[node name="South_Forest_1_10" type="Sprite3D" parent="."]
+position = Vector3(50.5, -2, 58.4)
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+offset = Vector2(-24, 268.5)
+pixel_size = 0.028
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+modulate = Color(0.72, 0.84, 0.72, 1)
+metadata/boundary_side = "South"
+metadata/outside_gameplay = true
+
+[node name="South_Forest_1_11" type="Sprite3D" parent="."]
+position = Vector3(57.5, -2, 59.3)
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+offset = Vector2(-24, 268.5)
+pixel_size = 0.03
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+modulate = Color(0.72, 0.84, 0.72, 1)
+metadata/boundary_side = "South"
+metadata/outside_gameplay = true
+
+[node name="South_Forest_2_0" type="Sprite3D" parent="."]
+position = Vector3(-23, -2, 66)
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+offset = Vector2(-24, 268.5)
+pixel_size = 0.024
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+modulate = Color(0.72, 0.84, 0.72, 1)
+metadata/boundary_side = "South"
+metadata/outside_gameplay = true
+
+[node name="South_Forest_2_1" type="Sprite3D" parent="."]
+position = Vector3(-16, -2, 66.9)
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+offset = Vector2(-24, 268.5)
+pixel_size = 0.026000000000000002
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+modulate = Color(0.72, 0.84, 0.72, 1)
+metadata/boundary_side = "South"
+metadata/outside_gameplay = true
+
+[node name="South_Forest_2_2" type="Sprite3D" parent="."]
+position = Vector3(-9, -2, 67.8)
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+offset = Vector2(-24, 268.5)
+pixel_size = 0.028
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+modulate = Color(0.72, 0.84, 0.72, 1)
+metadata/boundary_side = "South"
+metadata/outside_gameplay = true
+
+[node name="South_Forest_2_3" type="Sprite3D" parent="."]
+position = Vector3(-2, -2, 66)
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+offset = Vector2(-24, 268.5)
+pixel_size = 0.03
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+modulate = Color(0.72, 0.84, 0.72, 1)
+metadata/boundary_side = "South"
+metadata/outside_gameplay = true
+
+[node name="South_Forest_2_4" type="Sprite3D" parent="."]
+position = Vector3(5, -2, 66.9)
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+offset = Vector2(-24, 268.5)
+pixel_size = 0.024
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+modulate = Color(0.72, 0.84, 0.72, 1)
+metadata/boundary_side = "South"
+metadata/outside_gameplay = true
+
+[node name="South_Forest_2_5" type="Sprite3D" parent="."]
+position = Vector3(12, -2, 67.8)
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+offset = Vector2(-24, 268.5)
+pixel_size = 0.026000000000000002
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+modulate = Color(0.72, 0.84, 0.72, 1)
+metadata/boundary_side = "South"
+metadata/outside_gameplay = true
+
+[node name="South_Forest_2_6" type="Sprite3D" parent="."]
+position = Vector3(19, -2, 66)
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+offset = Vector2(-24, 268.5)
+pixel_size = 0.028
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+modulate = Color(0.72, 0.84, 0.72, 1)
+metadata/boundary_side = "South"
+metadata/outside_gameplay = true
+
+[node name="South_Forest_2_7" type="Sprite3D" parent="."]
+position = Vector3(26, -2, 66.9)
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+offset = Vector2(-24, 268.5)
+pixel_size = 0.03
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+modulate = Color(0.72, 0.84, 0.72, 1)
+metadata/boundary_side = "South"
+metadata/outside_gameplay = true
+
+[node name="South_Forest_2_8" type="Sprite3D" parent="."]
+position = Vector3(33, -2, 67.8)
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+offset = Vector2(-24, 268.5)
+pixel_size = 0.024
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+modulate = Color(0.72, 0.84, 0.72, 1)
+metadata/boundary_side = "South"
+metadata/outside_gameplay = true
+
+[node name="South_Forest_2_9" type="Sprite3D" parent="."]
+position = Vector3(40, -2, 66)
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+offset = Vector2(-24, 268.5)
+pixel_size = 0.026000000000000002
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+modulate = Color(0.72, 0.84, 0.72, 1)
+metadata/boundary_side = "South"
+metadata/outside_gameplay = true
+
+[node name="South_Forest_2_10" type="Sprite3D" parent="."]
+position = Vector3(47, -2, 66.9)
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+offset = Vector2(-24, 268.5)
+pixel_size = 0.028
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+modulate = Color(0.72, 0.84, 0.72, 1)
+metadata/boundary_side = "South"
+metadata/outside_gameplay = true
+
+[node name="South_Forest_2_11" type="Sprite3D" parent="."]
+position = Vector3(54, -2, 67.8)
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+offset = Vector2(-24, 268.5)
+pixel_size = 0.03
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+modulate = Color(0.72, 0.84, 0.72, 1)
+metadata/boundary_side = "South"
+metadata/outside_gameplay = true
+
+[node name="South_Forest_3_0" type="Sprite3D" parent="."]
+position = Vector3(-19.5, -2, 74.5)
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+offset = Vector2(-24, 268.5)
+pixel_size = 0.024
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+modulate = Color(0.72, 0.84, 0.72, 1)
+metadata/boundary_side = "South"
+metadata/outside_gameplay = true
+
+[node name="South_Forest_3_1" type="Sprite3D" parent="."]
+position = Vector3(-12.5, -2, 75.4)
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+offset = Vector2(-24, 268.5)
+pixel_size = 0.026000000000000002
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+modulate = Color(0.72, 0.84, 0.72, 1)
+metadata/boundary_side = "South"
+metadata/outside_gameplay = true
+
+[node name="South_Forest_3_2" type="Sprite3D" parent="."]
+position = Vector3(-5.5, -2, 76.3)
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+offset = Vector2(-24, 268.5)
+pixel_size = 0.028
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+modulate = Color(0.72, 0.84, 0.72, 1)
+metadata/boundary_side = "South"
+metadata/outside_gameplay = true
+
+[node name="South_Forest_3_3" type="Sprite3D" parent="."]
+position = Vector3(1.5, -2, 74.5)
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+offset = Vector2(-24, 268.5)
+pixel_size = 0.03
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+modulate = Color(0.72, 0.84, 0.72, 1)
+metadata/boundary_side = "South"
+metadata/outside_gameplay = true
+
+[node name="South_Forest_3_4" type="Sprite3D" parent="."]
+position = Vector3(8.5, -2, 75.4)
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+offset = Vector2(-24, 268.5)
+pixel_size = 0.024
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+modulate = Color(0.72, 0.84, 0.72, 1)
+metadata/boundary_side = "South"
+metadata/outside_gameplay = true
+
+[node name="South_Forest_3_5" type="Sprite3D" parent="."]
+position = Vector3(15.5, -2, 76.3)
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+offset = Vector2(-24, 268.5)
+pixel_size = 0.026000000000000002
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+modulate = Color(0.72, 0.84, 0.72, 1)
+metadata/boundary_side = "South"
+metadata/outside_gameplay = true
+
+[node name="South_Forest_3_6" type="Sprite3D" parent="."]
+position = Vector3(22.5, -2, 74.5)
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+offset = Vector2(-24, 268.5)
+pixel_size = 0.028
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+modulate = Color(0.72, 0.84, 0.72, 1)
+metadata/boundary_side = "South"
+metadata/outside_gameplay = true
+
+[node name="South_Forest_3_7" type="Sprite3D" parent="."]
+position = Vector3(29.5, -2, 75.4)
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+offset = Vector2(-24, 268.5)
+pixel_size = 0.03
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+modulate = Color(0.72, 0.84, 0.72, 1)
+metadata/boundary_side = "South"
+metadata/outside_gameplay = true
+
+[node name="South_Forest_3_8" type="Sprite3D" parent="."]
+position = Vector3(36.5, -2, 76.3)
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+offset = Vector2(-24, 268.5)
+pixel_size = 0.024
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+modulate = Color(0.72, 0.84, 0.72, 1)
+metadata/boundary_side = "South"
+metadata/outside_gameplay = true
+
+[node name="South_Forest_3_9" type="Sprite3D" parent="."]
+position = Vector3(43.5, -2, 74.5)
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+offset = Vector2(-24, 268.5)
+pixel_size = 0.026000000000000002
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+modulate = Color(0.72, 0.84, 0.72, 1)
+metadata/boundary_side = "South"
+metadata/outside_gameplay = true
+
+[node name="South_Forest_3_10" type="Sprite3D" parent="."]
+position = Vector3(50.5, -2, 75.4)
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+offset = Vector2(-24, 268.5)
+pixel_size = 0.028
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+modulate = Color(0.72, 0.84, 0.72, 1)
+metadata/boundary_side = "South"
+metadata/outside_gameplay = true
+
+[node name="South_Forest_3_11" type="Sprite3D" parent="."]
+position = Vector3(57.5, -2, 76.3)
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+offset = Vector2(-24, 268.5)
+pixel_size = 0.03
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+modulate = Color(0.72, 0.84, 0.72, 1)
+metadata/boundary_side = "South"
+metadata/outside_gameplay = true
+
+[node name="South_Forest_4_0" type="Sprite3D" parent="."]
+position = Vector3(-23, -2, 83)
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+offset = Vector2(-24, 268.5)
+pixel_size = 0.024
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+modulate = Color(0.72, 0.84, 0.72, 1)
+metadata/boundary_side = "South"
+metadata/outside_gameplay = true
+
+[node name="South_Forest_4_1" type="Sprite3D" parent="."]
+position = Vector3(-16, -2, 83.9)
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+offset = Vector2(-24, 268.5)
+pixel_size = 0.026000000000000002
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+modulate = Color(0.72, 0.84, 0.72, 1)
+metadata/boundary_side = "South"
+metadata/outside_gameplay = true
+
+[node name="South_Forest_4_2" type="Sprite3D" parent="."]
+position = Vector3(-9, -2, 84.8)
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+offset = Vector2(-24, 268.5)
+pixel_size = 0.028
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+modulate = Color(0.72, 0.84, 0.72, 1)
+metadata/boundary_side = "South"
+metadata/outside_gameplay = true
+
+[node name="South_Forest_4_3" type="Sprite3D" parent="."]
+position = Vector3(-2, -2, 83)
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+offset = Vector2(-24, 268.5)
+pixel_size = 0.03
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+modulate = Color(0.72, 0.84, 0.72, 1)
+metadata/boundary_side = "South"
+metadata/outside_gameplay = true
+
+[node name="South_Forest_4_4" type="Sprite3D" parent="."]
+position = Vector3(5, -2, 83.9)
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+offset = Vector2(-24, 268.5)
+pixel_size = 0.024
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+modulate = Color(0.72, 0.84, 0.72, 1)
+metadata/boundary_side = "South"
+metadata/outside_gameplay = true
+
+[node name="South_Forest_4_5" type="Sprite3D" parent="."]
+position = Vector3(12, -2, 84.8)
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+offset = Vector2(-24, 268.5)
+pixel_size = 0.026000000000000002
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+modulate = Color(0.72, 0.84, 0.72, 1)
+metadata/boundary_side = "South"
+metadata/outside_gameplay = true
+
+[node name="South_Forest_4_6" type="Sprite3D" parent="."]
+position = Vector3(19, -2, 83)
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+offset = Vector2(-24, 268.5)
+pixel_size = 0.028
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+modulate = Color(0.72, 0.84, 0.72, 1)
+metadata/boundary_side = "South"
+metadata/outside_gameplay = true
+
+[node name="South_Forest_4_7" type="Sprite3D" parent="."]
+position = Vector3(26, -2, 83.9)
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+offset = Vector2(-24, 268.5)
+pixel_size = 0.03
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+modulate = Color(0.72, 0.84, 0.72, 1)
+metadata/boundary_side = "South"
+metadata/outside_gameplay = true
+
+[node name="South_Forest_4_8" type="Sprite3D" parent="."]
+position = Vector3(33, -2, 84.8)
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+offset = Vector2(-24, 268.5)
+pixel_size = 0.024
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+modulate = Color(0.72, 0.84, 0.72, 1)
+metadata/boundary_side = "South"
+metadata/outside_gameplay = true
+
+[node name="South_Forest_4_9" type="Sprite3D" parent="."]
+position = Vector3(40, -2, 83)
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+offset = Vector2(-24, 268.5)
+pixel_size = 0.026000000000000002
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+modulate = Color(0.72, 0.84, 0.72, 1)
+metadata/boundary_side = "South"
+metadata/outside_gameplay = true
+
+[node name="South_Forest_4_10" type="Sprite3D" parent="."]
+position = Vector3(47, -2, 83.9)
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+offset = Vector2(-24, 268.5)
+pixel_size = 0.028
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+modulate = Color(0.72, 0.84, 0.72, 1)
+metadata/boundary_side = "South"
+metadata/outside_gameplay = true
+
+[node name="South_Forest_4_11" type="Sprite3D" parent="."]
+position = Vector3(54, -2, 84.8)
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+offset = Vector2(-24, 268.5)
+pixel_size = 0.03
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+modulate = Color(0.72, 0.84, 0.72, 1)
+metadata/boundary_side = "South"
+metadata/outside_gameplay = true
+
+[node name="South_Forest_5_0" type="Sprite3D" parent="."]
+position = Vector3(-19.5, -2, 91.5)
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+offset = Vector2(-24, 268.5)
+pixel_size = 0.024
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+modulate = Color(0.72, 0.84, 0.72, 1)
+metadata/boundary_side = "South"
+metadata/outside_gameplay = true
+
+[node name="South_Forest_5_1" type="Sprite3D" parent="."]
+position = Vector3(-12.5, -2, 92.4)
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+offset = Vector2(-24, 268.5)
+pixel_size = 0.026000000000000002
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+modulate = Color(0.72, 0.84, 0.72, 1)
+metadata/boundary_side = "South"
+metadata/outside_gameplay = true
+
+[node name="South_Forest_5_2" type="Sprite3D" parent="."]
+position = Vector3(-5.5, -2, 93.3)
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+offset = Vector2(-24, 268.5)
+pixel_size = 0.028
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+modulate = Color(0.72, 0.84, 0.72, 1)
+metadata/boundary_side = "South"
+metadata/outside_gameplay = true
+
+[node name="South_Forest_5_3" type="Sprite3D" parent="."]
+position = Vector3(1.5, -2, 91.5)
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+offset = Vector2(-24, 268.5)
+pixel_size = 0.03
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+modulate = Color(0.72, 0.84, 0.72, 1)
+metadata/boundary_side = "South"
+metadata/outside_gameplay = true
+
+[node name="South_Forest_5_4" type="Sprite3D" parent="."]
+position = Vector3(8.5, -2, 92.4)
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+offset = Vector2(-24, 268.5)
+pixel_size = 0.024
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+modulate = Color(0.72, 0.84, 0.72, 1)
+metadata/boundary_side = "South"
+metadata/outside_gameplay = true
+
+[node name="South_Forest_5_5" type="Sprite3D" parent="."]
+position = Vector3(15.5, -2, 93.3)
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+offset = Vector2(-24, 268.5)
+pixel_size = 0.026000000000000002
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+modulate = Color(0.72, 0.84, 0.72, 1)
+metadata/boundary_side = "South"
+metadata/outside_gameplay = true
+
+[node name="South_Forest_5_6" type="Sprite3D" parent="."]
+position = Vector3(22.5, -2, 91.5)
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+offset = Vector2(-24, 268.5)
+pixel_size = 0.028
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+modulate = Color(0.72, 0.84, 0.72, 1)
+metadata/boundary_side = "South"
+metadata/outside_gameplay = true
+
+[node name="South_Forest_5_7" type="Sprite3D" parent="."]
+position = Vector3(29.5, -2, 92.4)
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+offset = Vector2(-24, 268.5)
+pixel_size = 0.03
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+modulate = Color(0.72, 0.84, 0.72, 1)
+metadata/boundary_side = "South"
+metadata/outside_gameplay = true
+
+[node name="South_Forest_5_8" type="Sprite3D" parent="."]
+position = Vector3(36.5, -2, 93.3)
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+offset = Vector2(-24, 268.5)
+pixel_size = 0.024
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+modulate = Color(0.72, 0.84, 0.72, 1)
+metadata/boundary_side = "South"
+metadata/outside_gameplay = true
+
+[node name="South_Forest_5_9" type="Sprite3D" parent="."]
+position = Vector3(43.5, -2, 91.5)
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+offset = Vector2(-24, 268.5)
+pixel_size = 0.026000000000000002
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+modulate = Color(0.72, 0.84, 0.72, 1)
+metadata/boundary_side = "South"
+metadata/outside_gameplay = true
+
+[node name="South_Forest_5_10" type="Sprite3D" parent="."]
+position = Vector3(50.5, -2, 92.4)
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+offset = Vector2(-24, 268.5)
+pixel_size = 0.028
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+modulate = Color(0.72, 0.84, 0.72, 1)
+metadata/boundary_side = "South"
+metadata/outside_gameplay = true
+
+[node name="South_Forest_5_11" type="Sprite3D" parent="."]
+position = Vector3(57.5, -2, 93.3)
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+offset = Vector2(-24, 268.5)
+pixel_size = 0.03
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+modulate = Color(0.72, 0.84, 0.72, 1)
+metadata/boundary_side = "South"
+metadata/outside_gameplay = true
+
+
+[node name="North_0_0" type="Sprite3D" parent="."]
+position = Vector3(-8, 0, -2)
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.013
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+metadata/boundary_side = "North"
+metadata/outside_gameplay = true
+
+[node name="South_0_0" type="Sprite3D" parent="."]
+position = Vector3(-8, 0, 38)
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.01
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+metadata/boundary_side = "South"
+metadata/outside_gameplay = true
+
+[node name="North_0_1" type="Sprite3D" parent="."]
+position = Vector3(-3.9000000000000004, 0, -2.5)
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.014499999999999999
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+metadata/boundary_side = "North"
+metadata/outside_gameplay = true
+
+[node name="South_0_1" type="Sprite3D" parent="."]
+position = Vector3(-3.9000000000000004, 0, 38.5)
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.011
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+metadata/boundary_side = "South"
+metadata/outside_gameplay = true
+
+[node name="North_0_2" type="Sprite3D" parent="."]
+position = Vector3(0.1999999999999993, 0, -3)
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.016
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+metadata/boundary_side = "North"
+metadata/outside_gameplay = true
+
+[node name="South_0_2" type="Sprite3D" parent="."]
+position = Vector3(0.1999999999999993, 0, 39)
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.012
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+metadata/boundary_side = "South"
+metadata/outside_gameplay = true
+
+[node name="North_0_3" type="Sprite3D" parent="."]
+position = Vector3(4.299999999999999, 0, -2)
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.013
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+metadata/boundary_side = "North"
+metadata/outside_gameplay = true
+
+[node name="South_0_3" type="Sprite3D" parent="."]
+position = Vector3(4.299999999999999, 0, 38)
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.01
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+metadata/boundary_side = "South"
+metadata/outside_gameplay = true
+
+[node name="North_0_4" type="Sprite3D" parent="."]
+position = Vector3(8.399999999999999, 0, -2.5)
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.014499999999999999
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+metadata/boundary_side = "North"
+metadata/outside_gameplay = true
+
+[node name="South_0_4" type="Sprite3D" parent="."]
+position = Vector3(8.399999999999999, 0, 38.5)
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.011
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+metadata/boundary_side = "South"
+metadata/outside_gameplay = true
+
+[node name="North_0_5" type="Sprite3D" parent="."]
+position = Vector3(12.5, 0, -3)
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.016
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+metadata/boundary_side = "North"
+metadata/outside_gameplay = true
+
+[node name="South_0_5" type="Sprite3D" parent="."]
+position = Vector3(12.5, 0, 39)
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.012
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+metadata/boundary_side = "South"
+metadata/outside_gameplay = true
+
+[node name="North_0_6" type="Sprite3D" parent="."]
+position = Vector3(16.599999999999998, 0, -2)
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.013
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+metadata/boundary_side = "North"
+metadata/outside_gameplay = true
+
+[node name="South_0_6" type="Sprite3D" parent="."]
+position = Vector3(16.599999999999998, 0, 38)
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.01
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+metadata/boundary_side = "South"
+metadata/outside_gameplay = true
+
+[node name="North_0_7" type="Sprite3D" parent="."]
+position = Vector3(20.699999999999996, 0, -2.5)
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.014499999999999999
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+metadata/boundary_side = "North"
+metadata/outside_gameplay = true
+
+[node name="South_0_7" type="Sprite3D" parent="."]
+position = Vector3(20.699999999999996, 0, 38.5)
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.011
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+metadata/boundary_side = "South"
+metadata/outside_gameplay = true
+
+[node name="North_0_8" type="Sprite3D" parent="."]
+position = Vector3(24.799999999999997, 0, -3)
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.016
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+metadata/boundary_side = "North"
+metadata/outside_gameplay = true
+
+[node name="South_0_8" type="Sprite3D" parent="."]
+position = Vector3(24.799999999999997, 0, 39)
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.012
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+metadata/boundary_side = "South"
+metadata/outside_gameplay = true
+
+[node name="North_0_9" type="Sprite3D" parent="."]
+position = Vector3(28.9, 0, -2)
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.013
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+metadata/boundary_side = "North"
+metadata/outside_gameplay = true
+
+[node name="South_0_9" type="Sprite3D" parent="."]
+position = Vector3(28.9, 0, 38)
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.01
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+metadata/boundary_side = "South"
+metadata/outside_gameplay = true
+
+[node name="North_0_10" type="Sprite3D" parent="."]
+position = Vector3(33, 0, -2.5)
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.014499999999999999
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+metadata/boundary_side = "North"
+metadata/outside_gameplay = true
+
+[node name="South_0_10" type="Sprite3D" parent="."]
+position = Vector3(33, 0, 38.5)
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.011
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+metadata/boundary_side = "South"
+metadata/outside_gameplay = true
+
+[node name="North_0_11" type="Sprite3D" parent="."]
+position = Vector3(37.099999999999994, 0, -3)
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.016
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+metadata/boundary_side = "North"
+metadata/outside_gameplay = true
+
+[node name="South_0_11" type="Sprite3D" parent="."]
+position = Vector3(37.099999999999994, 0, 39)
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.012
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+metadata/boundary_side = "South"
+metadata/outside_gameplay = true
+
+[node name="North_1_0" type="Sprite3D" parent="."]
+position = Vector3(-6.2, 0, -7)
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.013
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+metadata/boundary_side = "North"
+metadata/outside_gameplay = true
+
+[node name="South_1_0" type="Sprite3D" parent="."]
+position = Vector3(-6.2, 0, 43)
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.01
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+metadata/boundary_side = "South"
+metadata/outside_gameplay = true
+
+[node name="North_1_1" type="Sprite3D" parent="."]
+position = Vector3(-2.1000000000000005, 0, -7.5)
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.014499999999999999
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+metadata/boundary_side = "North"
+metadata/outside_gameplay = true
+
+[node name="South_1_1" type="Sprite3D" parent="."]
+position = Vector3(-2.1000000000000005, 0, 43.5)
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.011
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+metadata/boundary_side = "South"
+metadata/outside_gameplay = true
+
+[node name="North_1_2" type="Sprite3D" parent="."]
+position = Vector3(1.9999999999999993, 0, -8)
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.016
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+metadata/boundary_side = "North"
+metadata/outside_gameplay = true
+
+[node name="South_1_2" type="Sprite3D" parent="."]
+position = Vector3(1.9999999999999993, 0, 44)
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.012
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+metadata/boundary_side = "South"
+metadata/outside_gameplay = true
+
+[node name="North_1_3" type="Sprite3D" parent="."]
+position = Vector3(6.099999999999999, 0, -7)
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.013
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+metadata/boundary_side = "North"
+metadata/outside_gameplay = true
+
+[node name="South_1_3" type="Sprite3D" parent="."]
+position = Vector3(6.099999999999999, 0, 43)
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.01
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+metadata/boundary_side = "South"
+metadata/outside_gameplay = true
+
+[node name="North_1_4" type="Sprite3D" parent="."]
+position = Vector3(10.2, 0, -7.5)
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.014499999999999999
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+metadata/boundary_side = "North"
+metadata/outside_gameplay = true
+
+[node name="South_1_4" type="Sprite3D" parent="."]
+position = Vector3(10.2, 0, 43.5)
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.011
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+metadata/boundary_side = "South"
+metadata/outside_gameplay = true
+
+[node name="North_1_5" type="Sprite3D" parent="."]
+position = Vector3(14.3, 0, -8)
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.016
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+metadata/boundary_side = "North"
+metadata/outside_gameplay = true
+
+[node name="South_1_5" type="Sprite3D" parent="."]
+position = Vector3(14.3, 0, 44)
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.012
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+metadata/boundary_side = "South"
+metadata/outside_gameplay = true
+
+[node name="North_1_6" type="Sprite3D" parent="."]
+position = Vector3(18.4, 0, -7)
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.013
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+metadata/boundary_side = "North"
+metadata/outside_gameplay = true
+
+[node name="South_1_6" type="Sprite3D" parent="."]
+position = Vector3(18.4, 0, 43)
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.01
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+metadata/boundary_side = "South"
+metadata/outside_gameplay = true
+
+[node name="North_1_7" type="Sprite3D" parent="."]
+position = Vector3(22.499999999999996, 0, -7.5)
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.014499999999999999
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+metadata/boundary_side = "North"
+metadata/outside_gameplay = true
+
+[node name="South_1_7" type="Sprite3D" parent="."]
+position = Vector3(22.499999999999996, 0, 43.5)
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.011
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+metadata/boundary_side = "South"
+metadata/outside_gameplay = true
+
+[node name="North_1_8" type="Sprite3D" parent="."]
+position = Vector3(26.599999999999998, 0, -8)
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.016
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+metadata/boundary_side = "North"
+metadata/outside_gameplay = true
+
+[node name="South_1_8" type="Sprite3D" parent="."]
+position = Vector3(26.599999999999998, 0, 44)
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.012
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+metadata/boundary_side = "South"
+metadata/outside_gameplay = true
+
+[node name="North_1_9" type="Sprite3D" parent="."]
+position = Vector3(30.7, 0, -7)
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.013
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+metadata/boundary_side = "North"
+metadata/outside_gameplay = true
+
+[node name="South_1_9" type="Sprite3D" parent="."]
+position = Vector3(30.7, 0, 43)
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.01
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+metadata/boundary_side = "South"
+metadata/outside_gameplay = true
+
+[node name="North_1_10" type="Sprite3D" parent="."]
+position = Vector3(34.8, 0, -7.5)
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.014499999999999999
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+metadata/boundary_side = "North"
+metadata/outside_gameplay = true
+
+[node name="South_1_10" type="Sprite3D" parent="."]
+position = Vector3(34.8, 0, 43.5)
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.011
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+metadata/boundary_side = "South"
+metadata/outside_gameplay = true
+
+[node name="North_1_11" type="Sprite3D" parent="."]
+position = Vector3(38.89999999999999, 0, -8)
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.016
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+metadata/boundary_side = "North"
+metadata/outside_gameplay = true
+
+[node name="South_1_11" type="Sprite3D" parent="."]
+position = Vector3(38.89999999999999, 0, 44)
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.012
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+metadata/boundary_side = "South"
+metadata/outside_gameplay = true
+
+[node name="West_0_0" type="Sprite3D" parent="."]
+position = Vector3(-2.5, 0, -6)
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.011
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+metadata/boundary_side = "West"
+metadata/outside_gameplay = true
+
+[node name="East_0_0" type="Sprite3D" parent="."]
+position = Vector3(32.5, 0, -6)
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.011
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+metadata/boundary_side = "East"
+metadata/outside_gameplay = true
+
+[node name="West_0_1" type="Sprite3D" parent="."]
+position = Vector3(-3, 0, -1.9000000000000004)
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.012
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+metadata/boundary_side = "West"
+metadata/outside_gameplay = true
+
+[node name="East_0_1" type="Sprite3D" parent="."]
+position = Vector3(33, 0, -1.9000000000000004)
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.012
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+metadata/boundary_side = "East"
+metadata/outside_gameplay = true
+
+[node name="West_0_2" type="Sprite3D" parent="."]
+position = Vector3(-3.5, 0, 2.1999999999999993)
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.013
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+metadata/boundary_side = "West"
+metadata/outside_gameplay = true
+
+[node name="East_0_2" type="Sprite3D" parent="."]
+position = Vector3(33.5, 0, 2.1999999999999993)
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.013
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+metadata/boundary_side = "East"
+metadata/outside_gameplay = true
+
+[node name="West_0_3" type="Sprite3D" parent="."]
+position = Vector3(-2.5, 0, 6.299999999999999)
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.011
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+metadata/boundary_side = "West"
+metadata/outside_gameplay = true
+
+[node name="East_0_3" type="Sprite3D" parent="."]
+position = Vector3(32.5, 0, 6.299999999999999)
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.011
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+metadata/boundary_side = "East"
+metadata/outside_gameplay = true
+
+[node name="West_0_4" type="Sprite3D" parent="."]
+position = Vector3(-3, 0, 10.399999999999999)
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.012
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+metadata/boundary_side = "West"
+metadata/outside_gameplay = true
+
+[node name="East_0_4" type="Sprite3D" parent="."]
+position = Vector3(33, 0, 10.399999999999999)
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.012
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+metadata/boundary_side = "East"
+metadata/outside_gameplay = true
+
+[node name="West_0_5" type="Sprite3D" parent="."]
+position = Vector3(-3.5, 0, 14.5)
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.013
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+metadata/boundary_side = "West"
+metadata/outside_gameplay = true
+
+[node name="East_0_5" type="Sprite3D" parent="."]
+position = Vector3(33.5, 0, 14.5)
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.013
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+metadata/boundary_side = "East"
+metadata/outside_gameplay = true
+
+[node name="West_0_6" type="Sprite3D" parent="."]
+position = Vector3(-2.5, 0, 18.599999999999998)
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.011
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+metadata/boundary_side = "West"
+metadata/outside_gameplay = true
+
+[node name="East_0_6" type="Sprite3D" parent="."]
+position = Vector3(32.5, 0, 18.599999999999998)
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.011
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+metadata/boundary_side = "East"
+metadata/outside_gameplay = true
+
+[node name="West_0_7" type="Sprite3D" parent="."]
+position = Vector3(-3, 0, 22.699999999999996)
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.012
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+metadata/boundary_side = "West"
+metadata/outside_gameplay = true
+
+[node name="East_0_7" type="Sprite3D" parent="."]
+position = Vector3(33, 0, 22.699999999999996)
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.012
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+metadata/boundary_side = "East"
+metadata/outside_gameplay = true
+
+[node name="West_0_8" type="Sprite3D" parent="."]
+position = Vector3(-3.5, 0, 26.799999999999997)
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.013
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+metadata/boundary_side = "West"
+metadata/outside_gameplay = true
+
+[node name="East_0_8" type="Sprite3D" parent="."]
+position = Vector3(33.5, 0, 26.799999999999997)
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.013
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+metadata/boundary_side = "East"
+metadata/outside_gameplay = true
+
+[node name="West_0_9" type="Sprite3D" parent="."]
+position = Vector3(-2.5, 0, 30.9)
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.011
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+metadata/boundary_side = "West"
+metadata/outside_gameplay = true
+
+[node name="East_0_9" type="Sprite3D" parent="."]
+position = Vector3(32.5, 0, 30.9)
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.011
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+metadata/boundary_side = "East"
+metadata/outside_gameplay = true
+
+[node name="West_0_10" type="Sprite3D" parent="."]
+position = Vector3(-3, 0, 35)
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.012
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+metadata/boundary_side = "West"
+metadata/outside_gameplay = true
+
+[node name="East_0_10" type="Sprite3D" parent="."]
+position = Vector3(33, 0, 35)
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.012
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+metadata/boundary_side = "East"
+metadata/outside_gameplay = true
+
+[node name="West_0_11" type="Sprite3D" parent="."]
+position = Vector3(-3.5, 0, 39.099999999999994)
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.013
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+metadata/boundary_side = "West"
+metadata/outside_gameplay = true
+
+[node name="East_0_11" type="Sprite3D" parent="."]
+position = Vector3(33.5, 0, 39.099999999999994)
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.013
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+metadata/boundary_side = "East"
+metadata/outside_gameplay = true
+
+[node name="West_0_12" type="Sprite3D" parent="."]
+position = Vector3(-2.5, 0, 43.199999999999996)
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.011
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+metadata/boundary_side = "West"
+metadata/outside_gameplay = true
+
+[node name="East_0_12" type="Sprite3D" parent="."]
+position = Vector3(32.5, 0, 43.199999999999996)
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.011
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+metadata/boundary_side = "East"
+metadata/outside_gameplay = true
+
+[node name="West_1_0" type="Sprite3D" parent="."]
+position = Vector3(-7.5, 0, -4.7)
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.011
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+metadata/boundary_side = "West"
+metadata/outside_gameplay = true
+
+[node name="East_1_0" type="Sprite3D" parent="."]
+position = Vector3(37.5, 0, -4.7)
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.011
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+metadata/boundary_side = "East"
+metadata/outside_gameplay = true
+
+[node name="West_1_1" type="Sprite3D" parent="."]
+position = Vector3(-8, 0, -0.6000000000000003)
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.012
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+metadata/boundary_side = "West"
+metadata/outside_gameplay = true
+
+[node name="East_1_1" type="Sprite3D" parent="."]
+position = Vector3(38, 0, -0.6000000000000003)
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.012
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+metadata/boundary_side = "East"
+metadata/outside_gameplay = true
+
+[node name="West_1_2" type="Sprite3D" parent="."]
+position = Vector3(-8.5, 0, 3.499999999999999)
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.013
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+metadata/boundary_side = "West"
+metadata/outside_gameplay = true
+
+[node name="East_1_2" type="Sprite3D" parent="."]
+position = Vector3(38.5, 0, 3.499999999999999)
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.013
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+metadata/boundary_side = "East"
+metadata/outside_gameplay = true
+
+[node name="West_1_3" type="Sprite3D" parent="."]
+position = Vector3(-7.5, 0, 7.599999999999999)
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.011
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+metadata/boundary_side = "West"
+metadata/outside_gameplay = true
+
+[node name="East_1_3" type="Sprite3D" parent="."]
+position = Vector3(37.5, 0, 7.599999999999999)
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.011
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+metadata/boundary_side = "East"
+metadata/outside_gameplay = true
+
+[node name="West_1_4" type="Sprite3D" parent="."]
+position = Vector3(-8, 0, 11.7)
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.012
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+metadata/boundary_side = "West"
+metadata/outside_gameplay = true
+
+[node name="East_1_4" type="Sprite3D" parent="."]
+position = Vector3(38, 0, 11.7)
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.012
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+metadata/boundary_side = "East"
+metadata/outside_gameplay = true
+
+[node name="West_1_5" type="Sprite3D" parent="."]
+position = Vector3(-8.5, 0, 15.8)
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.013
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+metadata/boundary_side = "West"
+metadata/outside_gameplay = true
+
+[node name="East_1_5" type="Sprite3D" parent="."]
+position = Vector3(38.5, 0, 15.8)
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.013
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+metadata/boundary_side = "East"
+metadata/outside_gameplay = true
+
+[node name="West_1_6" type="Sprite3D" parent="."]
+position = Vector3(-7.5, 0, 19.9)
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.011
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+metadata/boundary_side = "West"
+metadata/outside_gameplay = true
+
+[node name="East_1_6" type="Sprite3D" parent="."]
+position = Vector3(37.5, 0, 19.9)
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.011
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+metadata/boundary_side = "East"
+metadata/outside_gameplay = true
+
+[node name="West_1_7" type="Sprite3D" parent="."]
+position = Vector3(-8, 0, 23.999999999999996)
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.012
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+metadata/boundary_side = "West"
+metadata/outside_gameplay = true
+
+[node name="East_1_7" type="Sprite3D" parent="."]
+position = Vector3(38, 0, 23.999999999999996)
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.012
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+metadata/boundary_side = "East"
+metadata/outside_gameplay = true
+
+[node name="West_1_8" type="Sprite3D" parent="."]
+position = Vector3(-8.5, 0, 28.099999999999998)
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.013
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+metadata/boundary_side = "West"
+metadata/outside_gameplay = true
+
+[node name="East_1_8" type="Sprite3D" parent="."]
+position = Vector3(38.5, 0, 28.099999999999998)
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.013
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+metadata/boundary_side = "East"
+metadata/outside_gameplay = true
+
+[node name="West_1_9" type="Sprite3D" parent="."]
+position = Vector3(-7.5, 0, 32.199999999999996)
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.011
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+metadata/boundary_side = "West"
+metadata/outside_gameplay = true
+
+[node name="East_1_9" type="Sprite3D" parent="."]
+position = Vector3(37.5, 0, 32.199999999999996)
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.011
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+metadata/boundary_side = "East"
+metadata/outside_gameplay = true
+
+[node name="West_1_10" type="Sprite3D" parent="."]
+position = Vector3(-8, 0, 36.3)
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.012
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+metadata/boundary_side = "West"
+metadata/outside_gameplay = true
+
+[node name="East_1_10" type="Sprite3D" parent="."]
+position = Vector3(38, 0, 36.3)
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.012
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+metadata/boundary_side = "East"
+metadata/outside_gameplay = true
+
+[node name="West_1_11" type="Sprite3D" parent="."]
+position = Vector3(-8.5, 0, 40.39999999999999)
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.013
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+metadata/boundary_side = "West"
+metadata/outside_gameplay = true
+
+[node name="East_1_11" type="Sprite3D" parent="."]
+position = Vector3(38.5, 0, 40.39999999999999)
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.013
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+metadata/boundary_side = "East"
+metadata/outside_gameplay = true
+
+[node name="West_1_12" type="Sprite3D" parent="."]
+position = Vector3(-7.5, 0, 44.49999999999999)
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.011
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+metadata/boundary_side = "West"
+metadata/outside_gameplay = true
+
+[node name="East_1_12" type="Sprite3D" parent="."]
+position = Vector3(37.5, 0, 44.49999999999999)
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.011
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+metadata/boundary_side = "East"
+metadata/outside_gameplay = true
+
+[node name="West_OuterTree_0" type="Sprite3D" parent="."]
+position = Vector3(-12, 0, -8)
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+offset = Vector2(-24, 268.5)
+pixel_size = 0.017
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+metadata/boundary_side = "West"
+metadata/outside_gameplay = true
+
+[node name="West_OuterTree_1" type="Sprite3D" parent="."]
+position = Vector3(-15, 0, 1)
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+offset = Vector2(-24, 268.5)
+pixel_size = 0.02
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+metadata/boundary_side = "West"
+metadata/outside_gameplay = true
+
+[node name="West_OuterTree_2" type="Sprite3D" parent="."]
+position = Vector3(-18, 0, 10)
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+offset = Vector2(-24, 268.5)
+pixel_size = 0.023
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+metadata/boundary_side = "West"
+metadata/outside_gameplay = true
+
+[node name="West_OuterTree_3" type="Sprite3D" parent="."]
+position = Vector3(-12, 0, 19)
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+offset = Vector2(-24, 268.5)
+pixel_size = 0.026000000000000002
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+metadata/boundary_side = "West"
+metadata/outside_gameplay = true
+
+[node name="West_OuterTree_4" type="Sprite3D" parent="."]
+position = Vector3(-15, 0, 28)
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+offset = Vector2(-24, 268.5)
+pixel_size = 0.017
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+metadata/boundary_side = "West"
+metadata/outside_gameplay = true
+
+[node name="West_OuterTree_5" type="Sprite3D" parent="."]
+position = Vector3(-18, 0, 37)
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+offset = Vector2(-24, 268.5)
+pixel_size = 0.02
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+metadata/boundary_side = "West"
+metadata/outside_gameplay = true
+
+[node name="West_OuterTree_6" type="Sprite3D" parent="."]
+position = Vector3(-12, 0, 46)
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+offset = Vector2(-24, 268.5)
+pixel_size = 0.023
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+metadata/boundary_side = "West"
+metadata/outside_gameplay = true
+
+[node name="East_OuterTree_0" type="Sprite3D" parent="."]
+position = Vector3(42, 0, -8)
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+offset = Vector2(-24, 268.5)
+pixel_size = 0.017
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+metadata/boundary_side = "East"
+metadata/outside_gameplay = true
+
+[node name="East_OuterTree_1" type="Sprite3D" parent="."]
+position = Vector3(45, 0, 1)
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+offset = Vector2(-24, 268.5)
+pixel_size = 0.02
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+metadata/boundary_side = "East"
+metadata/outside_gameplay = true
+
+[node name="East_OuterTree_2" type="Sprite3D" parent="."]
+position = Vector3(48, 0, 10)
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+offset = Vector2(-24, 268.5)
+pixel_size = 0.023
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+metadata/boundary_side = "East"
+metadata/outside_gameplay = true
+
+[node name="East_OuterTree_3" type="Sprite3D" parent="."]
+position = Vector3(42, 0, 19)
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+offset = Vector2(-24, 268.5)
+pixel_size = 0.026000000000000002
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+metadata/boundary_side = "East"
+metadata/outside_gameplay = true
+
+[node name="East_OuterTree_4" type="Sprite3D" parent="."]
+position = Vector3(45, 0, 28)
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+offset = Vector2(-24, 268.5)
+pixel_size = 0.017
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+metadata/boundary_side = "East"
+metadata/outside_gameplay = true
+
+[node name="East_OuterTree_5" type="Sprite3D" parent="."]
+position = Vector3(48, 0, 37)
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+offset = Vector2(-24, 268.5)
+pixel_size = 0.02
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+metadata/boundary_side = "East"
+metadata/outside_gameplay = true
+
+[node name="East_OuterTree_6" type="Sprite3D" parent="."]
+position = Vector3(42, 0, 46)
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+offset = Vector2(-24, 268.5)
+pixel_size = 0.023
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+metadata/boundary_side = "East"
+metadata/outside_gameplay = true

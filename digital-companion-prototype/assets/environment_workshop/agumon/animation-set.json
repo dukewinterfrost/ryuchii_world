@@ -1,0 +1,461 @@
+{
+  "$schema": "../../../../../schemas/animation-set.schema.json",
+  "schemaVersion": 1,
+  "subjectId": "agumon",
+  "revision": "2026-08-26.002",
+  "status": "candidate",
+  "provenance": {
+    "kind": "hand-authored",
+    "author": "John Cohran",
+    "tool": "canonical-source compositor with PixelLab motion cleanup",
+    "compilerVersion": "1.0.0",
+    "referenceHashes": [
+      "sha256:e78833938abaea72aa2a0005773ab1beedf9b4b70da9df63d79ef308ac04fef7"
+    ],
+    "sourceHashes": {
+      "source-plan": "sha256:742fccf712baad056fbb0c396ce6689f588bb0505d82adbb0971b13d1f63fe45",
+      "identity-model-sheet": "sha256:e78833938abaea72aa2a0005773ab1beedf9b4b70da9df63d79ef308ac04fef7",
+      "eat-source-00": "sha256:edb1ff8a696f61b8584a3f870495e8d73861cfc20c4a151072866b1b3ea90957",
+      "eat-source-01": "sha256:87436e1689e9586a14a427cea4a10410424cb918e4907ef13259f4c1c7f1c5ed",
+      "eat-source-02": "sha256:781bb22c0784149abfc98611d24e3e4da2f3868796cd315fe1bc539526107a39",
+      "eat-source-03": "sha256:e53d206dc65d204b97e71381a3d4a426059e54c971ac27da5061aee9067f5b94",
+      "eat-source-04": "sha256:a714264714e237212a2ee7634fde09f553664114d83335b7a3d6b73ed11fd7da",
+      "eat-source-05": "sha256:97a302f6fd00f6d6288ac6c7e7a7a37b3388c6cf9fdbeb549148d62a0a83ee89",
+      "eat-source-06": "sha256:4189e38a1363da3d5feeb5b166cea39bf84de8bb977bc174486f462afe62ac65",
+      "eat-source-07": "sha256:bff777b721fad003de121f8571e82377c8e4f5c6887e596da57809b009e5edb5",
+      "eat-source-08": "sha256:edb1ff8a696f61b8584a3f870495e8d73861cfc20c4a151072866b1b3ea90957"
+    },
+    "outputSha256": "sha256:33dd1e80a4cc3581ed6cd6d936113340d9f4598db482c769eca24717c5c4e380"
+  },
+  "atlas": {
+    "image": "atlas.png",
+    "data": "atlas.json",
+    "paddingPx": 0,
+    "extrudePx": 0
+  },
+  "motionProfile": {
+    "morphology": "biped",
+    "locomotion": "grounded",
+    "rootPolicy": "in-place",
+    "facing": "right",
+    "requiredAnchors": [
+      "root",
+      "foot-left",
+      "foot-right"
+    ]
+  },
+  "clips": {
+    "idle.default": {
+      "semanticAction": "idle",
+      "kind": "loop",
+      "frames": [
+        {
+          "atlasFrame": "agumon.idle.default.f0000",
+          "durationMs": 360,
+          "pivot": {
+            "x": 0.496094,
+            "y": 0.9375
+          },
+          "anchors": {
+            "root": {
+              "x": 0.496094,
+              "y": 0.9375
+            },
+            "foot-left": {
+              "x": 0.389453,
+              "y": 0.929688
+            },
+            "foot-right": {
+              "x": 0.602734,
+              "y": 0.929688
+            }
+          }
+        },
+        {
+          "atlasFrame": "agumon.idle.default.f0001",
+          "durationMs": 360,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9375
+          },
+          "anchors": {
+            "root": {
+              "x": 0.5,
+              "y": 0.9375
+            },
+            "foot-left": {
+              "x": 0.3875,
+              "y": 0.929688
+            },
+            "foot-right": {
+              "x": 0.6125,
+              "y": 0.929688
+            }
+          }
+        },
+        {
+          "atlasFrame": "agumon.idle.default.f0002",
+          "durationMs": 360,
+          "pivot": {
+            "x": 0.496094,
+            "y": 0.9375
+          },
+          "anchors": {
+            "root": {
+              "x": 0.496094,
+              "y": 0.9375
+            },
+            "foot-left": {
+              "x": 0.389453,
+              "y": 0.929688
+            },
+            "foot-right": {
+              "x": 0.602734,
+              "y": 0.929688
+            }
+          }
+        },
+        {
+          "atlasFrame": "agumon.idle.default.f0003",
+          "durationMs": 360,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9375
+          },
+          "anchors": {
+            "root": {
+              "x": 0.5,
+              "y": 0.9375
+            },
+            "foot-left": {
+              "x": 0.3875,
+              "y": 0.929688
+            },
+            "foot-right": {
+              "x": 0.6125,
+              "y": 0.929688
+            }
+          }
+        }
+      ],
+      "events": [],
+      "qualityProfile": "biped-canonical-idle-loop"
+    },
+    "move.default": {
+      "semanticAction": "move",
+      "kind": "loop",
+      "frames": [
+        {
+          "atlasFrame": "agumon.move.default.f0000",
+          "durationMs": 320,
+          "pivot": {
+            "x": 0.496094,
+            "y": 0.9375
+          },
+          "anchors": {
+            "root": {
+              "x": 0.496094,
+              "y": 0.9375
+            },
+            "foot-left": {
+              "x": 0.389453,
+              "y": 0.929688
+            },
+            "foot-right": {
+              "x": 0.602734,
+              "y": 0.929688
+            }
+          }
+        },
+        {
+          "atlasFrame": "agumon.move.default.f0001",
+          "durationMs": 320,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9375
+          },
+          "anchors": {
+            "root": {
+              "x": 0.5,
+              "y": 0.9375
+            },
+            "foot-left": {
+              "x": 0.3875,
+              "y": 0.929688
+            },
+            "foot-right": {
+              "x": 0.6125,
+              "y": 0.929688
+            }
+          }
+        },
+        {
+          "atlasFrame": "agumon.move.default.f0002",
+          "durationMs": 320,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9375
+          },
+          "anchors": {
+            "root": {
+              "x": 0.5,
+              "y": 0.9375
+            },
+            "foot-left": {
+              "x": 0.3875,
+              "y": 0.929688
+            },
+            "foot-right": {
+              "x": 0.6125,
+              "y": 0.929688
+            }
+          }
+        },
+        {
+          "atlasFrame": "agumon.move.default.f0003",
+          "durationMs": 320,
+          "pivot": {
+            "x": 0.496094,
+            "y": 0.9375
+          },
+          "anchors": {
+            "root": {
+              "x": 0.496094,
+              "y": 0.9375
+            },
+            "foot-left": {
+              "x": 0.387109,
+              "y": 0.929688
+            },
+            "foot-right": {
+              "x": 0.605078,
+              "y": 0.929688
+            }
+          }
+        }
+      ],
+      "events": [],
+      "qualityProfile": "biped-slow-walk-loop"
+    },
+    "eat.default": {
+      "semanticAction": "eat",
+      "kind": "one-shot",
+      "frames": [
+        {
+          "atlasFrame": "agumon.eat.default.f0000",
+          "durationMs": 180,
+          "pivot": {
+            "x": 0.496094,
+            "y": 0.9375
+          },
+          "anchors": {
+            "root": {
+              "x": 0.496094,
+              "y": 0.9375
+            },
+            "foot-left": {
+              "x": 0.389453,
+              "y": 0.929688
+            },
+            "foot-right": {
+              "x": 0.602734,
+              "y": 0.929688
+            }
+          }
+        },
+        {
+          "atlasFrame": "agumon.eat.default.f0001",
+          "durationMs": 110,
+          "pivot": {
+            "x": 0.496094,
+            "y": 0.9375
+          },
+          "anchors": {
+            "root": {
+              "x": 0.496094,
+              "y": 0.9375
+            },
+            "foot-left": {
+              "x": 0.389453,
+              "y": 0.929688
+            },
+            "foot-right": {
+              "x": 0.602734,
+              "y": 0.929688
+            }
+          }
+        },
+        {
+          "atlasFrame": "agumon.eat.default.f0002",
+          "durationMs": 90,
+          "pivot": {
+            "x": 0.496094,
+            "y": 0.9375
+          },
+          "anchors": {
+            "root": {
+              "x": 0.496094,
+              "y": 0.9375
+            },
+            "foot-left": {
+              "x": 0.389453,
+              "y": 0.929688
+            },
+            "foot-right": {
+              "x": 0.602734,
+              "y": 0.929688
+            }
+          }
+        },
+        {
+          "atlasFrame": "agumon.eat.default.f0003",
+          "durationMs": 90,
+          "pivot": {
+            "x": 0.496094,
+            "y": 0.9375
+          },
+          "anchors": {
+            "root": {
+              "x": 0.496094,
+              "y": 0.9375
+            },
+            "foot-left": {
+              "x": 0.389453,
+              "y": 0.929688
+            },
+            "foot-right": {
+              "x": 0.602734,
+              "y": 0.929688
+            }
+          }
+        },
+        {
+          "atlasFrame": "agumon.eat.default.f0004",
+          "durationMs": 100,
+          "pivot": {
+            "x": 0.496094,
+            "y": 0.9375
+          },
+          "anchors": {
+            "root": {
+              "x": 0.496094,
+              "y": 0.9375
+            },
+            "foot-left": {
+              "x": 0.389453,
+              "y": 0.929688
+            },
+            "foot-right": {
+              "x": 0.602734,
+              "y": 0.929688
+            }
+          }
+        },
+        {
+          "atlasFrame": "agumon.eat.default.f0005",
+          "durationMs": 110,
+          "pivot": {
+            "x": 0.496094,
+            "y": 0.9375
+          },
+          "anchors": {
+            "root": {
+              "x": 0.496094,
+              "y": 0.9375
+            },
+            "foot-left": {
+              "x": 0.389453,
+              "y": 0.929688
+            },
+            "foot-right": {
+              "x": 0.602734,
+              "y": 0.929688
+            }
+          }
+        },
+        {
+          "atlasFrame": "agumon.eat.default.f0006",
+          "durationMs": 120,
+          "pivot": {
+            "x": 0.496094,
+            "y": 0.9375
+          },
+          "anchors": {
+            "root": {
+              "x": 0.496094,
+              "y": 0.9375
+            },
+            "foot-left": {
+              "x": 0.389453,
+              "y": 0.929688
+            },
+            "foot-right": {
+              "x": 0.602734,
+              "y": 0.929688
+            }
+          }
+        },
+        {
+          "atlasFrame": "agumon.eat.default.f0007",
+          "durationMs": 130,
+          "pivot": {
+            "x": 0.496094,
+            "y": 0.9375
+          },
+          "anchors": {
+            "root": {
+              "x": 0.496094,
+              "y": 0.9375
+            },
+            "foot-left": {
+              "x": 0.389453,
+              "y": 0.929688
+            },
+            "foot-right": {
+              "x": 0.602734,
+              "y": 0.929688
+            }
+          }
+        },
+        {
+          "atlasFrame": "agumon.eat.default.f0008",
+          "durationMs": 180,
+          "pivot": {
+            "x": 0.496094,
+            "y": 0.9375
+          },
+          "anchors": {
+            "root": {
+              "x": 0.496094,
+              "y": 0.9375
+            },
+            "foot-left": {
+              "x": 0.389453,
+              "y": 0.929688
+            },
+            "foot-right": {
+              "x": 0.602734,
+              "y": 0.929688
+            }
+          }
+        }
+      ],
+      "events": [
+        {
+          "frame": 3,
+          "name": "bite"
+        },
+        {
+          "frame": 8,
+          "name": "eat-finished"
+        }
+      ],
+      "qualityProfile": "biped-eating-cleanup-candidate"
+    }
+  },
+  "fallbacks": {
+    "listen": "idle.default",
+    "happy": "idle.default",
+    "celebrate": "idle.default"
+  }
+}

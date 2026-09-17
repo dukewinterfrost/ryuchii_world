@@ -1,0 +1,53 @@
+[gd_resource type="Resource" format=3]
+
+[resource]
+metadata/arena_manifest = {
+"assetId": "arena-rift-platform",
+"displayName": "Rift Platform",
+"environment": {
+"assetId": "environment-nephelis-abyss",
+"contentSha256": "sha256:fe6f89a7bd50a275ed5acb00aa3f29567bcf8265f60eb170d6e0a039b97f1300",
+"revision": "2026-09-12.001"
+},
+"ground": {
+"cellSize": 32.0,
+"height": 1152.0,
+"width": 960.0
+},
+"kind": "arena",
+"maxBodyRadius": 16.0,
+"obstacles": [{
+"id": "nephelis-abyss-landmark-footprint",
+"movement": true,
+"occlusion": true,
+"projectile": true,
+"rect": [208.0, 192.0, 544.0, 96.0],
+"sight": true
+}],
+"presentation": {
+"staticPlacements": [{
+"groundPosition": [480.0, 240.0],
+"id": "nephelis-abyss-landmark-arena",
+"obstacle": "nephelis-abyss-landmark-footprint",
+"planeStack": "nephelis-abyss-landmark.stack",
+"rotationDegrees": 0.0
+}]
+},
+"projection": "square",
+"regionId": "nephelis-abyss",
+"revision": "2026-09-12.001",
+"schemaVersion": 1.0,
+"spawns": {
+"opponent": [816.0, 560.0],
+"player": [144.0, 560.0]
+},
+"tiles": []
+}
+metadata/candidate_identity = {
+"assetId": "arena-rift-platform",
+"buildIdentity": "sha256:328a47649cf720e0a9dc6df8a8160ad504d9ba1fca31cfa65cf5186fe640945a",
+"compilerVersion": "1.3.0",
+"kind": "arena",
+"planSha256": "sha256:cfd2c71e9c71fe8c03b66a561f19e599aea4bf9219366ed509ac419f40b4e80e",
+"revision": "2026-09-12.001"
+}

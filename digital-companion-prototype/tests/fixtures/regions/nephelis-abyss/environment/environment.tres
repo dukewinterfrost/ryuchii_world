@@ -1,0 +1,177 @@
+[gd_resource type="Resource" format=3]
+
+[resource]
+metadata/environment_manifest = {
+"ambientColor": "#ffffff",
+"ambientEnergy": 1.0,
+"ambientPlanes": [],
+"assetId": "environment-nephelis-abyss",
+"backgroundColor": "#17335d",
+"camera": {
+"dollyBounds": [2.0, 60.0],
+"far": 200.0,
+"fovDegrees": 28.0,
+"groundDistance": 12.0,
+"keepAspect": "width",
+"movementBounds": [0.0, 0.0, 1280.0, 1536.0],
+"near": 0.1,
+"pitchDegrees": 50.0,
+"projection": "perspective",
+"smoothingSpeed": 5.0,
+"spriteTiltDegrees": 8.0
+},
+"developmentStatus": "source-derived-kit-pending-human-review",
+"displayName": "Nephelis Abyss",
+"groundFootprints": [{
+"id": "nephelis-abyss-landmark.footprint",
+"rect": [-272.0, -48.0, 544.0, 96.0]
+}],
+"kind": "environment",
+"license": {
+"classification": "private-prototype-only",
+"notice": "Private prototype only; do not redistribute or publish DigimonUP-derived art."
+},
+"navigationProfiles": [{
+"decoration": true,
+"id": "solid",
+"movement": true,
+"waste": true
+}],
+"planeStacks": [{
+"groundFootprint": "nephelis-abyss-landmark.footprint",
+"id": "nephelis-abyss-landmark.stack",
+"navigation": "solid",
+"planes": ["nephelis-abyss-landmark.facade", "nephelis-abyss-landmark.interior", "nephelis-abyss-landmark.roof"]
+}],
+"presentationProfile": {
+"fovDegrees": 28.0,
+"id": "sprite-in-3d-portrait-v1",
+"keepAspect": "width",
+"pitchDegrees": 50.0,
+"pixelsPerMeter": 32.0,
+"spriteTiltDegrees": 8.0,
+"version": 1.0
+},
+"provenance": {
+"compilerVersion": "1.3.0",
+"generator": "manual",
+"kind": "source-derived",
+"sourceHashes": {
+"feature_facade": "sha256:3f0cfdd442dfdf667410c9f58bc59ae2499c062a9b5a622da153e764f05367ca",
+"feature_interior": "sha256:abca008fb6d41f851de9aa92a68aaaa21535f74ea3317fde88de8a0fe630491f",
+"feature_original": "sha256:9e6bfda1579eec0e74e5593c1bc2fe7f8da2294a78ab888616de6f5827e96c6d",
+"feature_roof": "sha256:9170de72f402dc1f4b2f09573935c15358a442e5689a6a6c8b0af7585de67fdc",
+"ground": "sha256:11efdf86077f25fd4787dbc3b46df8c1ca128dba5ddba0fd84e1d3b0c328ef28",
+"sample": "sha256:a8e193044454c53314b67ae9aecd475929e14561cf3cf524dfb3796d28674089",
+"top": "sha256:a8e193044454c53314b67ae9aecd475929e14561cf3cf524dfb3796d28674089"
+}
+},
+"provider": "manual",
+"regionId": "nephelis-abyss",
+"reviewViewpoints": [{
+"id": "center",
+"lookAt": [20.0, 0.0, 24.0],
+"position": [20.0, 26.0, 38.0]
+}, {
+"id": "left",
+"lookAt": [20.0, 0.0, 24.0],
+"position": [14.0, 26.0, 38.0]
+}, {
+"id": "right",
+"lookAt": [20.0, 0.0, 24.0],
+"position": [26.0, 26.0, 38.0]
+}, {
+"id": "near",
+"lookAt": [20.0, 0.0, 20.0],
+"position": [20.0, 21.0, 33.0]
+}, {
+"id": "far",
+"lookAt": [20.0, 0.0, 24.0],
+"position": [20.0, 31.0, 45.0]
+}],
+"revision": "2026-09-12.001",
+"schemaVersion": 1.0,
+"spritePlanes": [{
+"alphaMode": "alpha-cut",
+"authoringStatus": "hash-bound-source-derived-card",
+"depthBehavior": "write",
+"id": "nephelis-abyss-landmark.facade",
+"localPosition": [0.0, 0.0, 0.08],
+"pivot": {
+"x": 0.5,
+"y": 1.0
+},
+"pixelSize": 0.017,
+"rotationDegrees": [0.0, 0.0, 0.0],
+"source": "feature_facade"
+}, {
+"alphaMode": "alpha-cut",
+"authoringStatus": "hash-bound-source-derived-card",
+"depthBehavior": "write",
+"id": "nephelis-abyss-landmark.interior",
+"localPosition": [0.0, 0.0, 0.0],
+"pivot": {
+"x": 0.5,
+"y": 1.0
+},
+"pixelSize": 0.017,
+"rotationDegrees": [0.0, 0.0, 0.0],
+"source": "feature_interior"
+}, {
+"alphaMode": "alpha-cut",
+"authoringStatus": "hash-bound-source-derived-card",
+"depthBehavior": "write",
+"id": "nephelis-abyss-landmark.roof",
+"localPosition": [0.0, 0.12, -0.08],
+"pivot": {
+"x": 0.5,
+"y": 1.0
+},
+"pixelSize": 0.017,
+"rotationDegrees": [0.0, 0.0, 0.0],
+"source": "feature_roof"
+}],
+"terrainChunks": [{
+"alphaMode": "opaque",
+"depthBehavior": "write",
+"elevation": 0.0,
+"groundRect": [-512.0, -512.0, 2304.0, 2560.0],
+"id": "nephelis-abyss-ground",
+"source": "ground",
+"sourceRegionPx": [0.0, 156.0, 1431.0, 700.0],
+"subdivisions": [18.0, 20.0],
+"textureBinding": "terrain.nephelis-abyss-ground"
+}],
+"textures": {
+"feature_facade": "textures/feature_facade.png",
+"feature_interior": "textures/feature_interior.png",
+"feature_roof": "textures/feature_roof.png",
+"ground": "textures/ground.png",
+"terrain.nephelis-abyss-ground": "textures/terrain.nephelis-abyss-ground.png"
+},
+"worldScale": {
+"pixelsPerUnit": 32.0
+}
+}
+metadata/environment_texture_paths = {
+"feature_facade": "textures/feature_facade.png",
+"feature_interior": "textures/feature_interior.png",
+"feature_roof": "textures/feature_roof.png",
+"ground": "textures/ground.png",
+"terrain.nephelis-abyss-ground": "textures/terrain.nephelis-abyss-ground.png"
+}
+metadata/environment_texture_hashes = {
+"textures/feature_facade.png": "sha256:3f0cfdd442dfdf667410c9f58bc59ae2499c062a9b5a622da153e764f05367ca",
+"textures/feature_interior.png": "sha256:abca008fb6d41f851de9aa92a68aaaa21535f74ea3317fde88de8a0fe630491f",
+"textures/feature_roof.png": "sha256:9170de72f402dc1f4b2f09573935c15358a442e5689a6a6c8b0af7585de67fdc",
+"textures/ground.png": "sha256:11efdf86077f25fd4787dbc3b46df8c1ca128dba5ddba0fd84e1d3b0c328ef28",
+"textures/terrain.nephelis-abyss-ground.png": "sha256:b1d51e5e73522b8c75aac342cf1f582df9fe16dae666885e93c831ce22eb2f6b"
+}
+metadata/candidate_identity = {
+"assetId": "environment-nephelis-abyss",
+"buildIdentity": "sha256:635a96dc0ecbb91456d3d3eb69ddf3d63c6687bf020d044480f0d6f47121be07",
+"compilerVersion": "1.3.0",
+"kind": "environment",
+"planSha256": "sha256:186ad5032b977b8781459be63c68cc558f91a1a029bc7cca9e5bdb9556ea76ae",
+"revision": "2026-09-12.001"
+}

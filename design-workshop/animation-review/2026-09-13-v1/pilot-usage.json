@@ -1,0 +1,13 @@
+{
+  "status": "completed",
+  "jobUsage": {
+    "type": "generations",
+    "generations": 1.0
+  },
+  "resultUsage": {
+    "usd": 0.0,
+    "type": "generations",
+    "generations": 1,
+    "cost_if_paid": 0.020139279266198476
+  }
+}

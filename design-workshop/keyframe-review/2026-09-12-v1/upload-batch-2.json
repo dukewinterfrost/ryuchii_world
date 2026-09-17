@@ -1,0 +1,53 @@
+{
+  "uploads": [
+    {
+      "key": "koromon-move",
+      "source": "/Users/johncohrn/.codex/generated_images/01a096c8-8e58-72f1-94fc-a84a5be49c90/exec-b35f0cc5-470d-4ee8-8db2-e544baba8037.png",
+      "path": "/Users/johncohrn/Documents/ChatGPT/Godot Projects/design-workshop/keyframe-review/2026-09-12-v1/koromon-move.png",
+      "nodeId": "55:210",
+      "submitUrl": "https://mcp.figma.com/mcp/upload/c4d07636-5c62-4f29-85ab-55570da12e35/submit?scaleMode=FIT"
+    },
+    {
+      "key": "koromon-happy",
+      "source": "/Users/johncohrn/.codex/generated_images/01a096c8-8e58-72f1-94fc-a84a5be49c90/exec-7bd844cd-eb31-4797-bef0-21b404e42c0a.png",
+      "path": "/Users/johncohrn/Documents/ChatGPT/Godot Projects/design-workshop/keyframe-review/2026-09-12-v1/koromon-happy.png",
+      "nodeId": "55:211",
+      "submitUrl": "https://mcp.figma.com/mcp/upload/b530f12b-8128-46cd-b19d-fc3d3bd7d894/submit?scaleMode=FIT"
+    },
+    {
+      "key": "koromon-eat",
+      "source": "/Users/johncohrn/.codex/generated_images/01a096c8-8e58-72f1-94fc-a84a5be49c90/exec-edf49372-5e6b-4edb-a6f9-0d24511d9c78.png",
+      "path": "/Users/johncohrn/Documents/ChatGPT/Godot Projects/design-workshop/keyframe-review/2026-09-12-v1/koromon-eat.png",
+      "nodeId": "55:212",
+      "submitUrl": "https://mcp.figma.com/mcp/upload/c91bee27-b01c-4989-8a11-31eedfca1a8d/submit?scaleMode=FIT"
+    },
+    {
+      "key": "agumon-move",
+      "source": "/Users/johncohrn/.codex/generated_images/01a096c8-8e58-72f1-94fc-a84a5be49c90/exec-e752011a-c459-48cd-b529-cd64a8a6b6b7.png",
+      "path": "/Users/johncohrn/Documents/ChatGPT/Godot Projects/design-workshop/keyframe-review/2026-09-12-v1/agumon-move.png",
+      "nodeId": "55:214",
+      "submitUrl": "https://mcp.figma.com/mcp/upload/72e9423d-f155-46be-abe6-196a35cb3ee7/submit?scaleMode=FIT"
+    },
+    {
+      "key": "agumon-happy",
+      "source": "/Users/johncohrn/.codex/generated_images/01a096c8-8e58-72f1-94fc-a84a5be49c90/exec-24b05975-d8f1-42a2-8faf-805d54d9f1fa.png",
+      "path": "/Users/johncohrn/Documents/ChatGPT/Godot Projects/design-workshop/keyframe-review/2026-09-12-v1/agumon-happy.png",
+      "nodeId": "55:215",
+      "submitUrl": "https://mcp.figma.com/mcp/upload/08056bc8-f065-46ce-84de-be3ca2bed1ce/submit?scaleMode=FIT"
+    },
+    {
+      "key": "agumon-eat",
+      "source": "/Users/johncohrn/.codex/generated_images/01a096c8-8e58-72f1-94fc-a84a5be49c90/exec-1f05512b-e43c-4b4f-8c06-17758bc99489.png",
+      "path": "/Users/johncohrn/Documents/ChatGPT/Godot Projects/design-workshop/keyframe-review/2026-09-12-v1/agumon-eat.png",
+      "nodeId": "55:216",
+      "submitUrl": "https://mcp.figma.com/mcp/upload/c1fd5876-bf02-4e88-b6e2-88b57427047b/submit?scaleMode=FIT"
+    },
+    {
+      "key": "botamon-idle",
+      "source": "/Users/johncohrn/.codex/generated_images/01a096c8-8e58-72f1-94fc-a84a5be49c90/exec-11c92e97-868f-4a4d-93c9-7892e0de550d.png",
+      "path": "/Users/johncohrn/Documents/ChatGPT/Godot Projects/design-workshop/keyframe-review/2026-09-12-v1/botamon-idle.png",
+      "nodeId": "55:205",
+      "submitUrl": "https://mcp.figma.com/mcp/upload/d9ffc240-ff7f-4b6c-9826-8bac9245756b/submit?scaleMode=FIT"
+    }
+  ]
+}

@@ -1,0 +1,558 @@
+[gd_scene load_steps=47 format=3]
+
+[ext_resource type="Script" path="res://scripts/environment/workshop_camera_rig.gd" id="1"]
+
+[ext_resource type="Script" path="res://scripts/environment/workshop_floor.gd" id="2"]
+
+[ext_resource type="Script" path="res://scripts/environment/workshop_actor.gd" id="3"]
+
+[ext_resource type="SpriteFrames" path="res://assets/environment_workshop/agumon/spriteframes.tres" id="4"]
+
+[ext_resource type="Texture2D" path="res://assets/environment_workshop/mechatropolis/feature_facade.png" id="5"]
+
+[ext_resource type="Texture2D" path="res://assets/environment_workshop/mechatropolis/feature_interior.png" id="6"]
+
+[ext_resource type="Texture2D" path="res://assets/environment_workshop/mechatropolis/feature_roof.png" id="7"]
+
+[ext_resource type="Texture2D" path="res://assets/environment_workshop/mechatropolis/ground.png" id="8"]
+
+[ext_resource type="Texture2D" path="res://assets/environment_workshop/mechatropolis/floor.png" id="9"]
+
+[sub_resource type="Environment" id="Resource1"]
+background_mode = 1
+background_color = Color(0.1568627450980392, 0.20392156862745098, 0.23529411764705882, 1)
+
+
+[sub_resource type="StandardMaterial3D" id="Resource2"]
+resource_local_to_scene = true
+shading_mode = 0
+cull_mode = 2
+texture_filter = 0
+albedo_texture = ExtResource("9")
+uv1_scale = Vector3(0.5625, 3.6571429, 1)
+uv1_offset = Vector3(-0.5, -2.9257143, 0)
+
+
+[sub_resource type="PlaneMesh" id="Resource3"]
+resource_local_to_scene = true
+size = Vector2(18, 20)
+subdivide_width = 4
+subdivide_depth = 4
+
+
+[sub_resource type="StandardMaterial3D" id="Resource4"]
+resource_local_to_scene = true
+shading_mode = 0
+cull_mode = 2
+texture_filter = 0
+albedo_texture = ExtResource("9")
+uv1_scale = Vector3(0.5625, 3.6571429, 1)
+uv1_offset = Vector3(0.0625, -2.9257143, 0)
+
+
+[sub_resource type="PlaneMesh" id="Resource5"]
+resource_local_to_scene = true
+size = Vector2(18, 20)
+subdivide_width = 4
+subdivide_depth = 4
+
+
+[sub_resource type="StandardMaterial3D" id="Resource6"]
+resource_local_to_scene = true
+shading_mode = 0
+cull_mode = 2
+texture_filter = 0
+albedo_texture = ExtResource("9")
+uv1_scale = Vector3(0.5625, 3.6571429, 1)
+uv1_offset = Vector3(0.625, -2.9257143, 0)
+
+
+[sub_resource type="PlaneMesh" id="Resource7"]
+resource_local_to_scene = true
+size = Vector2(18, 20)
+subdivide_width = 4
+subdivide_depth = 4
+
+
+[sub_resource type="StandardMaterial3D" id="Resource8"]
+resource_local_to_scene = true
+shading_mode = 0
+cull_mode = 2
+texture_filter = 0
+albedo_texture = ExtResource("9")
+uv1_scale = Vector3(0.5625, 3.6571429, 1)
+uv1_offset = Vector3(1.1875, -2.9257143, 0)
+
+
+[sub_resource type="PlaneMesh" id="Resource9"]
+resource_local_to_scene = true
+size = Vector2(18, 20)
+subdivide_width = 4
+subdivide_depth = 4
+
+
+[sub_resource type="StandardMaterial3D" id="Resource10"]
+resource_local_to_scene = true
+shading_mode = 0
+cull_mode = 2
+texture_filter = 0
+albedo_texture = ExtResource("9")
+uv1_scale = Vector3(0.5625, 3.6571429, 1)
+uv1_offset = Vector3(-0.5, 0.73142857, 0)
+
+
+[sub_resource type="PlaneMesh" id="Resource11"]
+resource_local_to_scene = true
+size = Vector2(18, 20)
+subdivide_width = 4
+subdivide_depth = 4
+
+
+[sub_resource type="StandardMaterial3D" id="Resource12"]
+resource_local_to_scene = true
+shading_mode = 0
+cull_mode = 2
+texture_filter = 0
+albedo_texture = ExtResource("9")
+uv1_scale = Vector3(0.5625, 3.6571429, 1)
+uv1_offset = Vector3(0.0625, 0.73142857, 0)
+
+
+[sub_resource type="PlaneMesh" id="Resource13"]
+resource_local_to_scene = true
+size = Vector2(18, 20)
+subdivide_width = 4
+subdivide_depth = 4
+
+
+[sub_resource type="StandardMaterial3D" id="Resource14"]
+resource_local_to_scene = true
+shading_mode = 0
+cull_mode = 2
+texture_filter = 0
+albedo_texture = ExtResource("9")
+uv1_scale = Vector3(0.5625, 3.6571429, 1)
+uv1_offset = Vector3(0.625, 0.73142857, 0)
+
+
+[sub_resource type="PlaneMesh" id="Resource15"]
+resource_local_to_scene = true
+size = Vector2(18, 20)
+subdivide_width = 4
+subdivide_depth = 4
+
+
+[sub_resource type="StandardMaterial3D" id="Resource16"]
+resource_local_to_scene = true
+shading_mode = 0
+cull_mode = 2
+texture_filter = 0
+albedo_texture = ExtResource("9")
+uv1_scale = Vector3(0.5625, 3.6571429, 1)
+uv1_offset = Vector3(1.1875, 0.73142857, 0)
+
+
+[sub_resource type="PlaneMesh" id="Resource17"]
+resource_local_to_scene = true
+size = Vector2(18, 20)
+subdivide_width = 4
+subdivide_depth = 4
+
+
+[sub_resource type="StandardMaterial3D" id="Resource18"]
+resource_local_to_scene = true
+shading_mode = 0
+cull_mode = 2
+texture_filter = 0
+albedo_texture = ExtResource("9")
+uv1_scale = Vector3(0.5625, 3.6571429, 1)
+uv1_offset = Vector3(-0.5, 4.3885714, 0)
+
+
+[sub_resource type="PlaneMesh" id="Resource19"]
+resource_local_to_scene = true
+size = Vector2(18, 20)
+subdivide_width = 4
+subdivide_depth = 4
+
+
+[sub_resource type="StandardMaterial3D" id="Resource20"]
+resource_local_to_scene = true
+shading_mode = 0
+cull_mode = 2
+texture_filter = 0
+albedo_texture = ExtResource("9")
+uv1_scale = Vector3(0.5625, 3.6571429, 1)
+uv1_offset = Vector3(0.0625, 4.3885714, 0)
+
+
+[sub_resource type="PlaneMesh" id="Resource21"]
+resource_local_to_scene = true
+size = Vector2(18, 20)
+subdivide_width = 4
+subdivide_depth = 4
+
+
+[sub_resource type="StandardMaterial3D" id="Resource22"]
+resource_local_to_scene = true
+shading_mode = 0
+cull_mode = 2
+texture_filter = 0
+albedo_texture = ExtResource("9")
+uv1_scale = Vector3(0.5625, 3.6571429, 1)
+uv1_offset = Vector3(0.625, 4.3885714, 0)
+
+
+[sub_resource type="PlaneMesh" id="Resource23"]
+resource_local_to_scene = true
+size = Vector2(18, 20)
+subdivide_width = 4
+subdivide_depth = 4
+
+
+[sub_resource type="StandardMaterial3D" id="Resource24"]
+resource_local_to_scene = true
+shading_mode = 0
+cull_mode = 2
+texture_filter = 0
+albedo_texture = ExtResource("9")
+uv1_scale = Vector3(0.5625, 3.6571429, 1)
+uv1_offset = Vector3(1.1875, 4.3885714, 0)
+
+
+[sub_resource type="PlaneMesh" id="Resource25"]
+resource_local_to_scene = true
+size = Vector2(18, 20)
+subdivide_width = 4
+subdivide_depth = 4
+
+
+[sub_resource type="StandardMaterial3D" id="Resource26"]
+resource_local_to_scene = true
+shading_mode = 0
+cull_mode = 2
+texture_filter = 0
+albedo_texture = ExtResource("9")
+uv1_scale = Vector3(0.5625, 3.6571429, 1)
+uv1_offset = Vector3(-0.5, 8.0457143, 0)
+
+
+[sub_resource type="PlaneMesh" id="Resource27"]
+resource_local_to_scene = true
+size = Vector2(18, 20)
+subdivide_width = 4
+subdivide_depth = 4
+
+
+[sub_resource type="StandardMaterial3D" id="Resource28"]
+resource_local_to_scene = true
+shading_mode = 0
+cull_mode = 2
+texture_filter = 0
+albedo_texture = ExtResource("9")
+uv1_scale = Vector3(0.5625, 3.6571429, 1)
+uv1_offset = Vector3(0.0625, 8.0457143, 0)
+
+
+[sub_resource type="PlaneMesh" id="Resource29"]
+resource_local_to_scene = true
+size = Vector2(18, 20)
+subdivide_width = 4
+subdivide_depth = 4
+
+
+[sub_resource type="StandardMaterial3D" id="Resource30"]
+resource_local_to_scene = true
+shading_mode = 0
+cull_mode = 2
+texture_filter = 0
+albedo_texture = ExtResource("9")
+uv1_scale = Vector3(0.5625, 3.6571429, 1)
+uv1_offset = Vector3(0.625, 8.0457143, 0)
+
+
+[sub_resource type="PlaneMesh" id="Resource31"]
+resource_local_to_scene = true
+size = Vector2(18, 20)
+subdivide_width = 4
+subdivide_depth = 4
+
+
+[sub_resource type="StandardMaterial3D" id="Resource32"]
+resource_local_to_scene = true
+shading_mode = 0
+cull_mode = 2
+texture_filter = 0
+albedo_texture = ExtResource("9")
+uv1_scale = Vector3(0.5625, 3.6571429, 1)
+uv1_offset = Vector3(1.1875, 8.0457143, 0)
+
+
+[sub_resource type="PlaneMesh" id="Resource33"]
+resource_local_to_scene = true
+size = Vector2(18, 20)
+subdivide_width = 4
+subdivide_depth = 4
+
+
+[sub_resource type="StandardMaterial3D" id="Resource34"]
+shading_mode = 0
+transparency = 1
+albedo_color = Color(0.08, 0.09, 0.08, 0.24)
+
+
+[sub_resource type="CylinderMesh" id="Resource35"]
+top_radius = 1.0
+bottom_radius = 1.0
+height = 0.001
+radial_segments = 32
+
+
+[sub_resource type="StandardMaterial3D" id="Resource36"]
+shading_mode = 0
+transparency = 1
+albedo_color = Color(0.08, 0.09, 0.08, 0.24)
+
+
+[sub_resource type="CylinderMesh" id="Resource37"]
+top_radius = 1.0
+bottom_radius = 1.0
+height = 0.001
+radial_segments = 32
+
+
+[node name="ReactorCauseway" type="Node3D"]
+metadata/workshop = true
+metadata/license = "private-prototype-only"
+metadata/source_manifest = "res://tests/fixtures/regions/mechatropolis/review/arena/arena.json"
+metadata/note = "Editable presentation study. Visual edits are saved here; gameplay footprints remain in the source manifest."
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Resource1")
+
+[node name="Floor" type="Node3D" parent="."]
+script = ExtResource("2")
+floor_texture = ExtResource("9")
+pixels_per_meter = 64.0
+metadata/edit_help = "Select a patch to replace its material texture, move it, or change UV1 scale/offset. Select Floor for global density."
+
+[node name="Patch_1_1" type="MeshInstance3D" parent="Floor"]
+position = Vector3(-7, 0, -6)
+mesh = SubResource("Resource3")
+material_override = SubResource("Resource2")
+
+
+[node name="Patch_1_2" type="MeshInstance3D" parent="Floor"]
+position = Vector3(11, 0, -6)
+mesh = SubResource("Resource5")
+material_override = SubResource("Resource4")
+
+
+[node name="Patch_1_3" type="MeshInstance3D" parent="Floor"]
+position = Vector3(29, 0, -6)
+mesh = SubResource("Resource7")
+material_override = SubResource("Resource6")
+
+
+[node name="Patch_1_4" type="MeshInstance3D" parent="Floor"]
+position = Vector3(47, 0, -6)
+mesh = SubResource("Resource9")
+material_override = SubResource("Resource8")
+
+
+[node name="Patch_2_1" type="MeshInstance3D" parent="Floor"]
+position = Vector3(-7, 0, 14)
+mesh = SubResource("Resource11")
+material_override = SubResource("Resource10")
+
+
+[node name="Patch_2_2" type="MeshInstance3D" parent="Floor"]
+position = Vector3(11, 0, 14)
+mesh = SubResource("Resource13")
+material_override = SubResource("Resource12")
+
+
+[node name="Patch_2_3" type="MeshInstance3D" parent="Floor"]
+position = Vector3(29, 0, 14)
+mesh = SubResource("Resource15")
+material_override = SubResource("Resource14")
+
+
+[node name="Patch_2_4" type="MeshInstance3D" parent="Floor"]
+position = Vector3(47, 0, 14)
+mesh = SubResource("Resource17")
+material_override = SubResource("Resource16")
+
+
+[node name="Patch_3_1" type="MeshInstance3D" parent="Floor"]
+position = Vector3(-7, 0, 34)
+mesh = SubResource("Resource19")
+material_override = SubResource("Resource18")
+
+
+[node name="Patch_3_2" type="MeshInstance3D" parent="Floor"]
+position = Vector3(11, 0, 34)
+mesh = SubResource("Resource21")
+material_override = SubResource("Resource20")
+
+
+[node name="Patch_3_3" type="MeshInstance3D" parent="Floor"]
+position = Vector3(29, 0, 34)
+mesh = SubResource("Resource23")
+material_override = SubResource("Resource22")
+
+
+[node name="Patch_3_4" type="MeshInstance3D" parent="Floor"]
+position = Vector3(47, 0, 34)
+mesh = SubResource("Resource25")
+material_override = SubResource("Resource24")
+
+
+[node name="Patch_4_1" type="MeshInstance3D" parent="Floor"]
+position = Vector3(-7, 0, 54)
+mesh = SubResource("Resource27")
+material_override = SubResource("Resource26")
+
+
+[node name="Patch_4_2" type="MeshInstance3D" parent="Floor"]
+position = Vector3(11, 0, 54)
+mesh = SubResource("Resource29")
+material_override = SubResource("Resource28")
+
+
+[node name="Patch_4_3" type="MeshInstance3D" parent="Floor"]
+position = Vector3(29, 0, 54)
+mesh = SubResource("Resource31")
+material_override = SubResource("Resource30")
+
+
+[node name="Patch_4_4" type="MeshInstance3D" parent="Floor"]
+position = Vector3(47, 0, 54)
+mesh = SubResource("Resource33")
+material_override = SubResource("Resource32")
+
+
+[node name="Landmarks" type="Node3D" parent="."]
+
+
+[node name="Landmark_1" type="Node3D" parent="Landmarks"]
+position = Vector3(15, 0, 7.5)
+metadata/source_placement = "mechatropolis-landmark-arena"
+
+[node name="mechatropolis_landmark_facade" type="Sprite3D" parent="Landmarks/Landmark_1"]
+texture = ExtResource("5")
+position = Vector3(0, 0, 0.08)
+rotation = Vector3(0, 0, 0)
+offset = Vector2(0, 64)
+pixel_size = 0.018
+texture_filter = 0
+shaded = false
+billboard = 1
+alpha_cut = 1
+render_priority = 0
+
+
+[node name="mechatropolis_landmark_interior" type="Sprite3D" parent="Landmarks/Landmark_1"]
+texture = ExtResource("6")
+position = Vector3(0, 0, 0)
+rotation = Vector3(0, 0, 0)
+offset = Vector2(0, 64)
+pixel_size = 0.018
+texture_filter = 0
+shaded = false
+billboard = 1
+alpha_cut = 1
+render_priority = 0
+
+
+[node name="mechatropolis_landmark_roof" type="Sprite3D" parent="Landmarks/Landmark_1"]
+texture = ExtResource("7")
+position = Vector3(0, 0.12, -0.08)
+rotation = Vector3(0, 0, 0)
+offset = Vector2(0, 64)
+pixel_size = 0.018
+texture_filter = 0
+shaded = false
+billboard = 1
+alpha_cut = 1
+render_priority = 0
+
+
+[node name="Ambient" type="Node3D" parent="."]
+
+
+[node name="Characters" type="Node3D" parent="."]
+
+
+[node name="Opponent" type="Node3D" parent="Characters"]
+position = Vector3(25.5, 0, 17.5)
+metadata/edit_help = "Move this root on XZ. Scale this root to resize the character. AnimatedSprite3D exposes clips and Pixel Size."
+
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="Characters/Opponent"]
+position = Vector3(0, 0.02, 0)
+script = ExtResource("3")
+sprite_frames = ExtResource("4")
+animation = &"idle.default"
+pixel_size = 0.025
+texture_filter = 0
+alpha_cut = 1
+shaded = false
+billboard = 1
+flip_h = true
+
+
+[node name="ContactShadow" type="MeshInstance3D" parent="Characters/Opponent"]
+position = Vector3(0, 0.012, 0)
+scale = Vector3(1, 1, 0.45)
+mesh = SubResource("Resource35")
+material_override = SubResource("Resource34")
+
+[node name="Player" type="Node3D" parent="Characters"]
+position = Vector3(4.5, 0, 17.5)
+metadata/edit_help = "Move this root on XZ. Scale this root to resize the character. AnimatedSprite3D exposes clips and Pixel Size."
+
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="Characters/Player"]
+position = Vector3(0, 0.02, 0)
+script = ExtResource("3")
+sprite_frames = ExtResource("4")
+animation = &"idle.default"
+pixel_size = 0.025
+texture_filter = 0
+alpha_cut = 1
+shaded = false
+billboard = 1
+flip_h = false
+
+
+[node name="ContactShadow" type="MeshInstance3D" parent="Characters/Player"]
+position = Vector3(0, 0.012, 0)
+scale = Vector3(1, 1, 0.45)
+mesh = SubResource("Resource37")
+material_override = SubResource("Resource36")
+
+[node name="CameraRig" type="Node3D" parent="."]
+position = Vector3(15, 1.2, 12.5)
+rotation = Vector3(-0.52359878, 0, 0)
+script = ExtResource("1")
+pitch_degrees = 30.0
+distance = 60.16171400
+metadata/edit_help = "Pitch Degrees controls floor angle (30 default, previous 50). Distance zooms. Transform Position pans. Camera3D FOV is editable."
+
+[node name="Camera3D" type="Camera3D" parent="CameraRig"]
+position = Vector3(0, 0, 60.16171400)
+current = true
+keep_aspect = 0
+fov = 28.0
+near = 0.1
+far = 400.0
+
+
+[node name="LayoutGuides" type="Node3D" parent="."]
+visible = false
+metadata/edit_help = "Reference markers only, never physics. Source manifest remains authoritative for gameplay."
+
+[node name="OpponentSpawn" type="Marker3D" parent="LayoutGuides"]
+position = Vector3(25.5, 0, 17.5)
+
+[node name="PlayerSpawn" type="Marker3D" parent="LayoutGuides"]
+position = Vector3(4.5, 0, 17.5)

@@ -1,0 +1,46 @@
+{
+  "assetId": "forest-parallax",
+  "entries": {
+    "panorama": {
+      "source": "panorama"
+    },
+    "sky": {
+      "source": "sky"
+    }
+  },
+  "extrudePx": 1,
+  "generation": {
+    "brief": "Supplied forest panorama and sky, unchanged bytes, isolated native scene source review.",
+    "jobs": []
+  },
+  "keyposes": [
+    "panorama",
+    "sky"
+  ],
+  "kind": "atlas",
+  "paddingPx": 2,
+  "provenance": {
+    "kind": "hand-authored",
+    "archive": "Backgrounds.zip",
+    "archiveSha256": "4898fd2eaaf696f5b945c7abae783f9183eb04e1324fd5edb9db1d8736951a5f",
+    "panoramaMember": "generic/bg_2/bg_2.png",
+    "skyMember": "generic/bg_2/bg_2_0004_Layer-3.png"
+  },
+  "provider": "manual",
+  "revision": "2026-09-16.001",
+  "schemaVersion": 1,
+  "sources": {
+    "panorama": {
+      "path": "sources/d387a7fed284f1fed691546dae6ca1235af148f86ecf63eec10dd72d7fa2f4a6.png",
+      "sha256": "sha256:d387a7fed284f1fed691546dae6ca1235af148f86ecf63eec10dd72d7fa2f4a6"
+    },
+    "sky": {
+      "path": "sources/84748c7233ee9465fd2931578e726ed92d546e3505a3fa4b40da8c939368ce10.png",
+      "sha256": "sha256:84748c7233ee9465fd2931578e726ed92d546e3505a3fa4b40da8c939368ce10"
+    }
+  },
+  "license": {
+    "classification": "private-prototype-only",
+    "notice": "User-supplied Backgrounds.zip contains no license file. Rights unverified; not cleared for public or commercial use."
+  }
+}

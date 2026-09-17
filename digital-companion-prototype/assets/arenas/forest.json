@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "kind": "arena",
+  "assetId": "forest",
+  "revision": "1",
+  "projection": "square",
+  "ground": {"width": 360, "height": 540, "cellSize": 20},
+  "maxBodyRadius": 16,
+  "spawns": {"player": [80, 160], "opponent": [280, 380]},
+  "obstacles": [
+	{"id": "central-rock", "rect": [150, 240, 60, 60], "movement": true, "projectile": true, "sight": true, "occlusion": true},
+	{"id": "north-tree-trunk", "rect": [240, 65, 30, 35], "movement": true, "projectile": true, "sight": true, "occlusion": false},
+	{"id": "north-tree-canopy", "rect": [215, 35, 80, 70], "movement": false, "projectile": false, "sight": false, "occlusion": true},
+	{"id": "south-shrub", "rect": [75, 440, 45, 25], "movement": true, "projectile": false, "sight": false, "occlusion": false}
+  ],
+  "tiles": []
+}

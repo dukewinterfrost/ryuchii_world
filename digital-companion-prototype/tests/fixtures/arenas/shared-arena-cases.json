@@ -1,0 +1,260 @@
+[
+  {
+    "name": "square-open",
+    "expectedValid": true,
+    "arena": {
+      "schemaVersion": 1,
+      "kind": "arena",
+      "assetId": "shared-graybox",
+      "revision": "v1",
+      "projection": "square",
+      "ground": {
+        "width": 640,
+        "height": 480,
+        "cellSize": 20
+      },
+      "maxBodyRadius": 16,
+      "spawns": {
+        "player": [
+          100,
+          240
+        ],
+        "opponent": [
+          540,
+          240
+        ]
+      },
+      "obstacles": [],
+      "tiles": []
+    }
+  },
+  {
+    "name": "isometric-open",
+    "expectedValid": true,
+    "arena": {
+      "schemaVersion": 1,
+      "kind": "arena",
+      "assetId": "shared-graybox",
+      "revision": "v1",
+      "projection": "isometric",
+      "ground": {
+        "width": 640,
+        "height": 480,
+        "cellSize": 20
+      },
+      "maxBodyRadius": 16,
+      "spawns": {
+        "player": [
+          100,
+          240
+        ],
+        "opponent": [
+          540,
+          240
+        ]
+      },
+      "obstacles": [],
+      "tiles": []
+    }
+  },
+  {
+    "name": "canopy-is-not-a-wall",
+    "expectedValid": true,
+    "arena": {
+      "schemaVersion": 1,
+      "kind": "arena",
+      "assetId": "shared-graybox",
+      "revision": "v1",
+      "projection": "square",
+      "ground": {
+        "width": 640,
+        "height": 480,
+        "cellSize": 20
+      },
+      "maxBodyRadius": 16,
+      "spawns": {
+        "player": [
+          100,
+          240
+        ],
+        "opponent": [
+          540,
+          240
+        ]
+      },
+      "obstacles": [
+        {
+          "id": "canopy",
+          "rect": [
+            310,
+            0,
+            20,
+            480
+          ],
+          "movement": false,
+          "projectile": false,
+          "sight": false,
+          "occlusion": true
+        }
+      ],
+      "tiles": []
+    }
+  },
+  {
+    "name": "thin-separating-wall",
+    "expectedValid": false,
+    "arena": {
+      "schemaVersion": 1,
+      "kind": "arena",
+      "assetId": "shared-graybox",
+      "revision": "v1",
+      "projection": "square",
+      "ground": {
+        "width": 640,
+        "height": 480,
+        "cellSize": 20
+      },
+      "maxBodyRadius": 16,
+      "spawns": {
+        "player": [
+          100,
+          240
+        ],
+        "opponent": [
+          540,
+          240
+        ]
+      },
+      "obstacles": [
+        {
+          "id": "wall",
+          "rect": [
+            320,
+            0,
+            1,
+            480
+          ],
+          "movement": true,
+          "projectile": true,
+          "sight": true,
+          "occlusion": true
+        }
+      ],
+      "tiles": []
+    }
+  },
+  {
+    "name": "overlapping-spawns",
+    "expectedValid": false,
+    "arena": {
+      "schemaVersion": 1,
+      "kind": "arena",
+      "assetId": "shared-graybox",
+      "revision": "v1",
+      "projection": "square",
+      "ground": {
+        "width": 640,
+        "height": 480,
+        "cellSize": 20
+      },
+      "maxBodyRadius": 16,
+      "spawns": {
+        "player": [
+          100,
+          240
+        ],
+        "opponent": [
+          100,
+          240
+        ]
+      },
+      "obstacles": [],
+      "tiles": []
+    }
+  },
+  {
+    "name": "blocked-player-spawn",
+    "expectedValid": false,
+    "arena": {
+      "schemaVersion": 1,
+      "kind": "arena",
+      "assetId": "shared-graybox",
+      "revision": "v1",
+      "projection": "square",
+      "ground": {
+        "width": 640,
+        "height": 480,
+        "cellSize": 20
+      },
+      "maxBodyRadius": 16,
+      "spawns": {
+        "player": [
+          100,
+          240
+        ],
+        "opponent": [
+          540,
+          240
+        ]
+      },
+      "obstacles": [
+        {
+          "id": "rock",
+          "rect": [
+            90,
+            230,
+            20,
+            20
+          ],
+          "movement": true,
+          "projectile": false,
+          "sight": false,
+          "occlusion": false
+        }
+      ],
+      "tiles": []
+    }
+  },
+  {
+    "name": "missing-movement-flag",
+    "expectedValid": false,
+    "arena": {
+      "schemaVersion": 1,
+      "kind": "arena",
+      "assetId": "shared-graybox",
+      "revision": "v1",
+      "projection": "square",
+      "ground": {
+        "width": 640,
+        "height": 480,
+        "cellSize": 20
+      },
+      "maxBodyRadius": 16,
+      "spawns": {
+        "player": [
+          100,
+          240
+        ],
+        "opponent": [
+          540,
+          240
+        ]
+      },
+      "obstacles": [
+        {
+          "id": "rock",
+          "rect": [
+            300,
+            230,
+            20,
+            20
+          ],
+          "projectile": true,
+          "sight": false,
+          "occlusion": false
+        }
+      ],
+      "tiles": []
+    }
+  }
+]

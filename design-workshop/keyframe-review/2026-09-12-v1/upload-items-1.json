@@ -1,0 +1,32 @@
+[
+  {
+    "key": "botamon-reference",
+    "source": "/Users/johncohrn/Documents/Digimon/Digimon Up Assets/Texture2D/Botamon.png",
+    "path": "/Users/johncohrn/Documents/ChatGPT/Godot Projects/design-workshop/keyframe-review/2026-09-12-v1/botamon-reference.png",
+    "nodeId": "51:154"
+  },
+  {
+    "key": "koromon-reference",
+    "source": "/Users/johncohrn/Documents/Digimon/Digimon Up Assets/Texture2D/Koromon.png",
+    "path": "/Users/johncohrn/Documents/ChatGPT/Godot Projects/design-workshop/keyframe-review/2026-09-12-v1/koromon-reference.png",
+    "nodeId": "51:410"
+  },
+  {
+    "key": "agumon-reference",
+    "source": "/Users/johncohrn/Documents/Digimon/Digimon Up Assets/Texture2D/Agumon.png",
+    "path": "/Users/johncohrn/Documents/ChatGPT/Godot Projects/design-workshop/keyframe-review/2026-09-12-v1/agumon-reference.png",
+    "nodeId": "51:417"
+  },
+  {
+    "key": "koromon-idle",
+    "source": "/Users/johncohrn/.codex/generated_images/01a096c8-8e58-72f1-94fc-a84a5be49c90/exec-06a8fc54-eb21-4758-8321-a80fdad5daad.png",
+    "path": "/Users/johncohrn/Documents/ChatGPT/Godot Projects/design-workshop/keyframe-review/2026-09-12-v1/koromon-idle.png",
+    "nodeId": "I53:162;25:167"
+  },
+  {
+    "key": "agumon-idle",
+    "source": "/Users/johncohrn/.codex/generated_images/01a096c8-8e58-72f1-94fc-a84a5be49c90/exec-63768cd9-11c5-43ad-8d63-63840e19cfce.png",
+    "path": "/Users/johncohrn/Documents/ChatGPT/Godot Projects/design-workshop/keyframe-review/2026-09-12-v1/agumon-idle.png",
+    "nodeId": "I54:174;25:167"
+  }
+]

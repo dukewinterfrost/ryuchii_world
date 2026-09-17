@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 1,
+  "assetId": "forest-arena",
+  "revision": "forest-v1",
+  "status": "unapproved-composition-sample",
+  "runtimeEligible": false,
+  "humanApproval": null,
+  "provider": "codex-built-in-imagegen",
+  "toolMode": "built-in-generate",
+  "exposedModelVersion": null,
+  "exposedSeed": null,
+  "requestedCalls": 1,
+  "completedCalls": 1,
+  "referenceImages": [],
+  "sourcePlanBeforeIngestSha256": "sha256:e9319e559a1b82bd6fe93ee4ca6844f899ae360b075cd39a307222bac3cfc133",
+  "generationPrompt": "Use case: stylized-concept\nAsset type: one forest arena composition sample for a 2D companion auto-battler, pending human review; not a finished TileSet or collision map.\nPrimary request: create one portrait 2:3 retro pixel-art forest clearing, with crisp pixel clusters and a restrained 16-bit game look. The entire image is the playable ground area. The ground is a rectangular square-grid coordinate system 360 units wide by 540 units high, viewed from above, with slight three-quarter shading on objects but no isometric diamond, no perspective shrinkage, no tilt, no crop, and no margins.\nScene/backdrop: softly lit green grass and flat forest-floor texture, with gentle terrain color transitions. Keep the floor legible and mostly open for autonomous movement, circling and physical dodges.\nObject layout: coordinates below are ground coordinates from the image's upper-left; x increases rightward and y downward. Scale all coordinates uniformly to the output canvas.\n1. Exactly one central low rock, with its ground-contact footprint inside x=150..210, y=240..300; centered at 50% width and 50% height. Its footprint is 60 by 60 ground units, about one-sixth of the image width. Keep its silhouette close to this footprint.\n2. Exactly one northern tree: its visible trunk contacts the ground in x=240..270, y=65..100. Its leafy overhead canopy is contained within x=215..295, y=35..105. The canopy is overhead foliage, not a wall or a bush on the ground. Keep it small and confined to the upper-right part of the clearing.\n3. Exactly one southern low shrub, grounded in x=75..120, y=440..465, about the lower-left fifth of the image.\nClearance: the ground around (80,160), at 22% width / 30% height, and (280,380), at 78% width / 70% height, must be visibly clear and suitable for creature spawns. Leave broad connected routes on both sides of the central rock and plenty of open evasion space. Do not draw spawn markers.\nConstraints: these are the only solid-looking objects. Grass, moss, fallen leaves, and ground shading must remain flat decorative texture and must not imply extra collision. No additional trees, boulders, hedges, logs, fences, cliffs, rivers, walls, border barriers, or impassable patches. No characters, creatures, text, numbers, labels, coordinate guides, grid lines, diagrams, UI, frames, logos, or watermark. Fill the full portrait canvas with the arena composition. This is an opaque background sample, not a transparent cutout.",
+  "promptFile": "composition-prompt.txt",
+  "promptFileSha256": "sha256:1a9a7e598bdb8354ead094fa52a5bc2f45ae70f8767f9bacf2f6fd776e4db439",
+  "generatedBetweenUtc": [
+    "2026-09-09T17:19:38Z",
+    "2026-09-09T17:20:49Z"
+  ],
+  "originalOutput": "/Users/johncohrn/.codex/generated_images/01a086fe-4aea-7481-834c-4da2f25e9c95/exec-53111c15-d10e-48e3-88a8-77b1954672d3.png",
+  "selectedOutput": "sources/c67502d762649ec770338422e6aaf31594ef4362db2b65f39c6285478e3d833e.png",
+  "selectedOutputSha256": "sha256:c67502d762649ec770338422e6aaf31594ef4362db2b65f39c6285478e3d833e",
+  "sourceRole": "sample",
+  "finalBackgroundRoleBound": false,
+  "ingestCommand": "./tools/sprites ingest --plan assets-source/forest-arena/forest-v1/source-plan.json --input /Users/johncohrn/.codex/generated_images/01a086fe-4aea-7481-834c-4da2f25e9c95/exec-53111c15-d10e-48e3-88a8-77b1954672d3.png --role sample",
+  "inspection": {
+    "dimensions": [
+      1024,
+      1536
+    ],
+    "format": "PNG",
+    "colorSpace": "RGB",
+    "alphaChannel": false,
+    "aspectRatio": "2:3",
+    "requestedGroundUnits": [
+      360,
+      540
+    ],
+    "bytesAltered": false,
+    "classification": "Composition reference only, not technically approved final artwork.",
+    "positives": [
+      "Correct portrait aspect ratio with one tree, one principal rock and one shrub.",
+      "No characters, text, coordinate markers, grid, HUD or border barriers.",
+      "Broad visually open routes around the central rock and clear intended spawn neighborhoods."
+    ],
+    "issues": [
+      "Northern tree and southern shrub appear shifted left relative to the explicit layout; the shrub is also higher than the specified footprint. Ground-contact alignment for all objects requires a review overlay and correction before final artwork.",
+      "Raised grass clusters and the small pebble beside the rock create visual ambiguity about what blocks movement; final art should distinguish flat decoration from explicit blocking geometry.",
+      "The 1024x1536 image is not a 360x540 native-pixel background or an integer upscale thereof; decide the final pixel grid and layering before compilation.",
+      "The canopy is flattened into the same opaque image as the ground and trunk. Final layering and depth/occlusion behavior remain unverified.",
+      "Human style/composition approval is pending; no collision footprint was inferred from this image."
+    ]
+  }
+}

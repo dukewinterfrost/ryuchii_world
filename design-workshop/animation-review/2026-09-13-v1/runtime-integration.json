@@ -1,0 +1,38 @@
+{
+  "decision": "John requested integration of the displayed animation set: \"Can you update the animations in the app\" (2026-09-15). This receipt records that integration decision, not a separate review of the compiled atlas.",
+  "assets": [
+    {
+      "ok": true,
+      "candidate": "/Users/johncohrn/Documents/ChatGPT/Godot Projects/digital-companion-prototype/work/sprites/botamon/2026-09-15.001/c11759fdd7817122",
+      "kind": "animation",
+      "contentSha256": "sha256:f585b7510e4af58422efa4407eae8a6136c9672e0efac383f925f18675a1a277",
+      "nativeResources": true,
+      "promoted": "/Users/johncohrn/Documents/ChatGPT/Godot Projects/digital-companion-prototype/assets/generated/botamon/2026-09-15.001",
+      "catalog": "/Users/johncohrn/Documents/ChatGPT/Godot Projects/digital-companion-prototype/assets/runtime-catalog.json",
+      "assetId": "botamon",
+      "revision": "2026-09-15.001"
+    },
+    {
+      "ok": true,
+      "candidate": "/Users/johncohrn/Documents/ChatGPT/Godot Projects/digital-companion-prototype/work/sprites/koromon/2026-09-15.001/970e4ab046a9e4d8",
+      "kind": "animation",
+      "contentSha256": "sha256:f59a2be663e0a923c5b8c980cc339b2786bbbdf30d25c60b3e15413d32f91b58",
+      "nativeResources": true,
+      "promoted": "/Users/johncohrn/Documents/ChatGPT/Godot Projects/digital-companion-prototype/assets/generated/koromon/2026-09-15.001",
+      "catalog": "/Users/johncohrn/Documents/ChatGPT/Godot Projects/digital-companion-prototype/assets/runtime-catalog.json",
+      "assetId": "koromon",
+      "revision": "2026-09-15.001"
+    },
+    {
+      "ok": true,
+      "candidate": "/Users/johncohrn/Documents/ChatGPT/Godot Projects/digital-companion-prototype/work/sprites/agumon/2026-09-15.001/917fc0911b43c0f6",
+      "kind": "animation",
+      "contentSha256": "sha256:23187530e8d844936ee859e7c7269cb8c8e4dbe4bba284c22dbd519ce3721d7c",
+      "nativeResources": true,
+      "promoted": "/Users/johncohrn/Documents/ChatGPT/Godot Projects/digital-companion-prototype/assets/generated/agumon/2026-09-15.001",
+      "catalog": "/Users/johncohrn/Documents/ChatGPT/Godot Projects/digital-companion-prototype/assets/runtime-catalog.json",
+      "assetId": "agumon",
+      "revision": "2026-09-15.001"
+    }
+  ]
+}

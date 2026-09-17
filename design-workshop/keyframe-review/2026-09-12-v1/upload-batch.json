@@ -1,0 +1,39 @@
+{
+  "uploads": [
+    {
+      "key": "botamon-reference",
+      "source": "/Users/johncohrn/Documents/Digimon/Digimon Up Assets/Texture2D/Botamon.png",
+      "path": "/Users/johncohrn/Documents/ChatGPT/Godot Projects/design-workshop/keyframe-review/2026-09-12-v1/botamon-reference.png",
+      "nodeId": "51:154",
+      "submitUrl": "https://mcp.figma.com/mcp/upload/dbd25533-c806-4c19-a68e-7a465899a967/submit?scaleMode=FIT"
+    },
+    {
+      "key": "koromon-reference",
+      "source": "/Users/johncohrn/Documents/Digimon/Digimon Up Assets/Texture2D/Koromon.png",
+      "path": "/Users/johncohrn/Documents/ChatGPT/Godot Projects/design-workshop/keyframe-review/2026-09-12-v1/koromon-reference.png",
+      "nodeId": "51:410",
+      "submitUrl": "https://mcp.figma.com/mcp/upload/1a68bb24-52c1-405f-9ebc-3e61ab6f4dcd/submit?scaleMode=FIT"
+    },
+    {
+      "key": "agumon-reference",
+      "source": "/Users/johncohrn/Documents/Digimon/Digimon Up Assets/Texture2D/Agumon.png",
+      "path": "/Users/johncohrn/Documents/ChatGPT/Godot Projects/design-workshop/keyframe-review/2026-09-12-v1/agumon-reference.png",
+      "nodeId": "51:417",
+      "submitUrl": "https://mcp.figma.com/mcp/upload/c28048a8-f471-4a7e-b357-8f8acaf5fee5/submit?scaleMode=FIT"
+    },
+    {
+      "key": "koromon-idle",
+      "source": "/Users/johncohrn/.codex/generated_images/01a096c8-8e58-72f1-94fc-a84a5be49c90/exec-06a8fc54-eb21-4758-8321-a80fdad5daad.png",
+      "path": "/Users/johncohrn/Documents/ChatGPT/Godot Projects/design-workshop/keyframe-review/2026-09-12-v1/koromon-idle.png",
+      "nodeId": "55:209",
+      "submitUrl": "https://mcp.figma.com/mcp/upload/3ad7c0df-3e38-4d69-9e1a-14b4a8924cee/submit?scaleMode=FIT"
+    },
+    {
+      "key": "agumon-idle",
+      "source": "/Users/johncohrn/.codex/generated_images/01a096c8-8e58-72f1-94fc-a84a5be49c90/exec-63768cd9-11c5-43ad-8d63-63840e19cfce.png",
+      "path": "/Users/johncohrn/Documents/ChatGPT/Godot Projects/design-workshop/keyframe-review/2026-09-12-v1/agumon-idle.png",
+      "nodeId": "55:213",
+      "submitUrl": "https://mcp.figma.com/mcp/upload/7f638b83-c891-414d-839d-9119d5d135b5/submit?scaleMode=FIT"
+    }
+  ]
+}

@@ -1,0 +1,116 @@
+{
+  "clips": [
+    {
+      "key": "agumon-basic-attack",
+      "frames": 12,
+      "durationMs": 720,
+      "loop": false
+    },
+    {
+      "key": "agumon-defeat",
+      "frames": 9,
+      "durationMs": 1080,
+      "loop": false
+    },
+    {
+      "key": "agumon-eat",
+      "frames": 14,
+      "durationMs": 1260,
+      "loop": false
+    },
+    {
+      "key": "agumon-evade",
+      "frames": 10,
+      "durationMs": 600,
+      "loop": false
+    },
+    {
+      "key": "agumon-guard",
+      "frames": 5,
+      "durationMs": 900,
+      "loop": true
+    },
+    {
+      "key": "agumon-happy",
+      "frames": 12,
+      "durationMs": 1080,
+      "loop": false
+    },
+    {
+      "key": "agumon-hit",
+      "frames": 9,
+      "durationMs": 720,
+      "loop": false
+    },
+    {
+      "key": "agumon-idle",
+      "frames": 5,
+      "durationMs": 1000,
+      "loop": true
+    },
+    {
+      "key": "agumon-move",
+      "frames": 9,
+      "durationMs": 990,
+      "loop": true
+    },
+    {
+      "key": "agumon-pepper-breath",
+      "frames": 18,
+      "durationMs": 1260,
+      "loop": false
+    },
+    {
+      "key": "botamon-eat",
+      "frames": 14,
+      "durationMs": 1260,
+      "loop": false
+    },
+    {
+      "key": "botamon-happy",
+      "frames": 11,
+      "durationMs": 990,
+      "loop": false
+    },
+    {
+      "key": "botamon-idle",
+      "frames": 5,
+      "durationMs": 1000,
+      "loop": true
+    },
+    {
+      "key": "botamon-move",
+      "frames": 4,
+      "durationMs": 440,
+      "loop": true
+    },
+    {
+      "key": "koromon-eat",
+      "frames": 14,
+      "durationMs": 1260,
+      "loop": false
+    },
+    {
+      "key": "koromon-happy",
+      "frames": 14,
+      "durationMs": 1260,
+      "loop": false
+    },
+    {
+      "key": "koromon-idle",
+      "frames": 5,
+      "durationMs": 1000,
+      "loop": true
+    },
+    {
+      "key": "koromon-move",
+      "frames": 5,
+      "durationMs": 550,
+      "loop": true
+    }
+  ],
+  "deliveredFrames": 175,
+  "generationsUsed": 58.0,
+  "generationsRemaining": 1942.0,
+  "motionApproval": "pending"
+}

@@ -1,0 +1,63 @@
+{
+  "schemaVersion": 1,
+  "scope": "private-prototype-only",
+  "distributionStatus": "not-cleared",
+  "sourceProject": "Tomagachi Web App",
+  "notice": "Digimon character art, names, and related audio are not approved for public or commercial distribution.",
+  "assets": [
+    {
+      "runtimePath": "assets/companions/botamon",
+      "sourceRelativePath": "assets-source/companions/botamon/legacy/2026-08-26.001",
+      "revision": "2026-08-26.001",
+      "atlasSha256": "cf9f26202767de297ed43fa8cf4f588a5fd31292c41e985c25c8d7aff36a4bf5",
+      "reviewStatus": "legacy-passed-with-warnings",
+      "details": "animation-set.json"
+    },
+    {
+      "runtimePath": "assets/companions/koromon",
+      "sourceRelativePath": "assets-source/companions/koromon/legacy/2026-08-26.001",
+      "revision": "2026-08-26.001",
+      "atlasSha256": "99a32c901897feb037f0830b3def8d200eb13dfa4688140543cc3cb2cee4bb25",
+      "reviewStatus": "legacy-passed-with-warnings",
+      "details": "animation-set.json"
+    },
+    {
+      "runtimePath": "assets/companions/agumon",
+      "sourceRelativePath": "assets-source/companions/agumon/mvp/2026-08-26.002",
+      "revision": "2026-08-26.002",
+      "atlasSha256": "33dd1e80a4cc3581ed6cd6d936113340d9f4598db482c769eca24717c5c4e380",
+      "reviewStatus": "candidate-passed-with-warnings",
+      "details": "animation-set.json"
+    },
+    {
+      "runtimePath": "assets/habitat/verdant-field.png",
+      "sourceRelativePath": "public/assets/habitat/verdant-field.png",
+      "sha256": "de7c406e27c32e50023068d6b4dc5ce67146fbbe5ff967a1f903641c23699f87",
+      "reviewStatus": "private-prototype"
+    },
+    {
+      "runtimePath": "assets/audio/eat.wav",
+      "sourceRelativePath": "public/assets/audio/eat.wav",
+      "sha256": "17f1845d93ef5b819f1290d2bcf720743c7831ddbc191fb9ef209c6465a622e5",
+      "reviewStatus": "private-prototype"
+    },
+    {
+      "runtimePath": "assets/audio/eat-done.wav",
+      "sourceRelativePath": "public/assets/audio/eat-done.wav",
+      "sha256": "a8485650742f91b49cec55d5b221e32af5f2eda87f73b3ade70c5b50bb81448d",
+      "reviewStatus": "private-prototype"
+    },
+    {
+      "runtimePath": "assets/audio/evolution.wav",
+      "sourceRelativePath": "public/assets/audio/evolution.wav",
+      "sha256": "e846bf4f7bdc2e03bcba8f6335558246f9501cbea716f2214660b9d349fdffb5",
+      "reviewStatus": "private-prototype"
+    },
+    {
+      "runtimePath": "assets/ui/tools.svg",
+      "sourceRelativePath": "Godot prototype original UI asset",
+      "sha256": "e5bc01a6462183a6cbcb2c4e1245f70a23499fc042a057b1898dc46e87c20371",
+      "reviewStatus": "original-project-art"
+    }
+  ]
+}

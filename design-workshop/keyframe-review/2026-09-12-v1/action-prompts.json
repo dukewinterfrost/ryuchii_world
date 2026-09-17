@@ -1,0 +1,171 @@
+{
+  "mode": "built-in image_gen",
+  "status": "candidate awaiting user review",
+  "actions": [
+    {
+      "key": "botamon-move",
+      "species": "Botamon",
+      "action": "move",
+      "title": "Hop",
+      "prompt": "Use case: identity-preserve. Asset: ONE pixel-art digital pet action keyframe for Figma review.\nImage 1 is the NEW candidate identity pose: preserve its exact face, palette, head/body proportions, outline weight, pixel-cluster scale and character design. Image 2 is original sprite-sheet anatomy and acting reference. Change only the character pose/expression for the specified action. ONE full-body character, single isolated pose in a square canvas, same right-facing slightly three-quarter orthographic view and camera size as image 1. Maintain source-style coarse, crisp square pixels; no smooth illustration, anti-aliased outlines, gradients or 3D.\nOutput TRUE transparent alpha outside the character. Do NOT draw a checkerboard, white background, backdrop, shadow, labels, grid, border, effects, props, food, motion streaks or multiple frames. Full character including extremities entirely in frame.\nAction: At the apex of a gentle grounded hop: body slightly stretched vertically, entire blob lifted off the resting baseline, ear-like bumps and soft fur contour trailing slightly. Yellow eyes open. No limbs or mouth.",
+      "refs": [
+        "/Users/johncohrn/.codex/generated_images/01a096c8-8e58-72f1-94fc-a84a5be49c90/exec-8a3fcc97-c88f-447a-ae85-31cb8e6e7a8e.png",
+        "/Users/johncohrn/Documents/Digimon/Digimon Up Assets/Texture2D/Botamon.png"
+      ]
+    },
+    {
+      "key": "botamon-happy",
+      "species": "Botamon",
+      "action": "happy",
+      "title": "Happy",
+      "prompt": "Use case: identity-preserve. Asset: ONE pixel-art digital pet action keyframe for Figma review.\nImage 1 is the NEW candidate identity pose: preserve its exact face, palette, head/body proportions, outline weight, pixel-cluster scale and character design. Image 2 is original sprite-sheet anatomy and acting reference. Change only the character pose/expression for the specified action. ONE full-body character, single isolated pose in a square canvas, same right-facing slightly three-quarter orthographic view and camera size as image 1. Maintain source-style coarse, crisp square pixels; no smooth illustration, anti-aliased outlines, gradients or 3D.\nOutput TRUE transparent alpha outside the character. Do NOT draw a checkerboard, white background, backdrop, shadow, labels, grid, border, effects, props, food, motion streaks or multiple frames. Full character including extremities entirely in frame.\nAction: Joyful happy bounce at its most expressive moment: body slightly lifted and wide, yellow eyes narrowed into joyful upward crescents. Keep no visible mouth and no limbs; acting comes from soft body squash and eyes.",
+      "refs": [
+        "/Users/johncohrn/.codex/generated_images/01a096c8-8e58-72f1-94fc-a84a5be49c90/exec-8a3fcc97-c88f-447a-ae85-31cb8e6e7a8e.png",
+        "/Users/johncohrn/Documents/Digimon/Digimon Up Assets/Texture2D/Botamon.png"
+      ]
+    },
+    {
+      "key": "botamon-eat",
+      "species": "Botamon",
+      "action": "eat",
+      "title": "Eat",
+      "prompt": "Use case: identity-preserve. Asset: ONE pixel-art digital pet action keyframe for Figma review.\nImage 1 is the NEW candidate identity pose: preserve its exact face, palette, head/body proportions, outline weight, pixel-cluster scale and character design. Image 2 is original sprite-sheet anatomy and acting reference. Change only the character pose/expression for the specified action. ONE full-body character, single isolated pose in a square canvas, same right-facing slightly three-quarter orthographic view and camera size as image 1. Maintain source-style coarse, crisp square pixels; no smooth illustration, anti-aliased outlines, gradients or 3D.\nOutput TRUE transparent alpha outside the character. Do NOT draw a checkerboard, white background, backdrop, shadow, labels, grid, border, effects, props, food, motion streaks or multiple frames. Full character including extremities entirely in frame.\nAction: Eating / chewing key pose: squashed plump body with subtle bulged cheek on the right, yellow eyes narrowed contentedly. Botamon has no visible mouth in the source, so imply chewing through cheek and body squash without adding lips, teeth, limbs or food.",
+      "refs": [
+        "/Users/johncohrn/.codex/generated_images/01a096c8-8e58-72f1-94fc-a84a5be49c90/exec-8a3fcc97-c88f-447a-ae85-31cb8e6e7a8e.png",
+        "/Users/johncohrn/Documents/Digimon/Digimon Up Assets/Texture2D/Botamon.png"
+      ]
+    },
+    {
+      "key": "koromon-move",
+      "species": "Koromon",
+      "action": "move",
+      "title": "Hop",
+      "prompt": "Use case: identity-preserve. Asset: ONE pixel-art digital pet action keyframe for Figma review.\nImage 1 is the NEW candidate identity pose: preserve its exact face, palette, head/body proportions, outline weight, pixel-cluster scale and character design. Image 2 is original sprite-sheet anatomy and acting reference. Change only the character pose/expression for the specified action. ONE full-body character, single isolated pose in a square canvas, same right-facing slightly three-quarter orthographic view and camera size as image 1. Maintain source-style coarse, crisp square pixels; no smooth illustration, anti-aliased outlines, gradients or 3D.\nOutput TRUE transparent alpha outside the character. Do NOT draw a checkerboard, white background, backdrop, shadow, labels, grid, border, effects, props, food, motion streaks or multiple frames. Full character including extremities entirely in frame.\nAction: At the apex of a forward hop toward the right, rounded body slightly elongated upward, both long narrow ears bending back to the left with the motion; eyes alert, small happy mouth. No limbs or feet.",
+      "refs": [
+        "/Users/johncohrn/.codex/generated_images/01a096c8-8e58-72f1-94fc-a84a5be49c90/exec-06a8fc54-eb21-4758-8321-a80fdad5daad.png",
+        "/Users/johncohrn/Documents/Digimon/Digimon Up Assets/Texture2D/Koromon.png"
+      ]
+    },
+    {
+      "key": "koromon-happy",
+      "species": "Koromon",
+      "action": "happy",
+      "title": "Happy",
+      "prompt": "Use case: identity-preserve. Asset: ONE pixel-art digital pet action keyframe for Figma review.\nImage 1 is the NEW candidate identity pose: preserve its exact face, palette, head/body proportions, outline weight, pixel-cluster scale and character design. Image 2 is original sprite-sheet anatomy and acting reference. Change only the character pose/expression for the specified action. ONE full-body character, single isolated pose in a square canvas, same right-facing slightly three-quarter orthographic view and camera size as image 1. Maintain source-style coarse, crisp square pixels; no smooth illustration, anti-aliased outlines, gradients or 3D.\nOutput TRUE transparent alpha outside the character. Do NOT draw a checkerboard, white background, backdrop, shadow, labels, grid, border, effects, props, food, motion streaks or multiple frames. Full character including extremities entirely in frame.\nAction: Joyful reaction: rounded body lifted in a small bounce, both long narrow ribbon ears perked high and curling, eyes closed into happy crescents, broad open smiling mouth with small source-style triangular teeth. No limbs.",
+      "refs": [
+        "/Users/johncohrn/.codex/generated_images/01a096c8-8e58-72f1-94fc-a84a5be49c90/exec-06a8fc54-eb21-4758-8321-a80fdad5daad.png",
+        "/Users/johncohrn/Documents/Digimon/Digimon Up Assets/Texture2D/Koromon.png"
+      ]
+    },
+    {
+      "key": "koromon-eat",
+      "species": "Koromon",
+      "action": "eat",
+      "title": "Eat",
+      "prompt": "Use case: identity-preserve. Asset: ONE pixel-art digital pet action keyframe for Figma review.\nImage 1 is the NEW candidate identity pose: preserve its exact face, palette, head/body proportions, outline weight, pixel-cluster scale and character design. Image 2 is original sprite-sheet anatomy and acting reference. Change only the character pose/expression for the specified action. ONE full-body character, single isolated pose in a square canvas, same right-facing slightly three-quarter orthographic view and camera size as image 1. Maintain source-style coarse, crisp square pixels; no smooth illustration, anti-aliased outlines, gradients or 3D.\nOutput TRUE transparent alpha outside the character. Do NOT draw a checkerboard, white background, backdrop, shadow, labels, grid, border, effects, props, food, motion streaks or multiple frames. Full character including extremities entirely in frame.\nAction: Big representative chewing/bite pose, mouth open toward the right showing small source-style triangular teeth, cheeks plumped and eyes contentedly half closed; grounded squashed blob, long ribbon ears relaxed. No food and no limbs.",
+      "refs": [
+        "/Users/johncohrn/.codex/generated_images/01a096c8-8e58-72f1-94fc-a84a5be49c90/exec-06a8fc54-eb21-4758-8321-a80fdad5daad.png",
+        "/Users/johncohrn/Documents/Digimon/Digimon Up Assets/Texture2D/Koromon.png"
+      ]
+    },
+    {
+      "key": "agumon-move",
+      "species": "Agumon",
+      "action": "move",
+      "title": "Walk",
+      "prompt": "Use case: identity-preserve. Asset: ONE pixel-art digital pet action keyframe for Figma review.\nImage 1 is the NEW candidate identity pose: preserve its exact face, palette, head/body proportions, outline weight, pixel-cluster scale and character design. Image 2 is original sprite-sheet anatomy and acting reference. Change only the character pose/expression for the specified action. ONE full-body character, single isolated pose in a square canvas, same right-facing slightly three-quarter orthographic view and camera size as image 1. Maintain source-style coarse, crisp square pixels; no smooth illustration, anti-aliased outlines, gradients or 3D.\nOutput TRUE transparent alpha outside the character. Do NOT draw a checkerboard, white background, backdrop, shadow, labels, grid, border, effects, props, food, motion streaks or multiple frames. Full character including extremities entirely in frame.\nAction: Clear walk contact key pose: right-facing stride with one foot extended forward, other foot pushing back, arms naturally counter-swung, tail balances the stride. Friendly focused expression. Preserve exactly two arms and two legs, three claws on each hand and foot.",
+      "refs": [
+        "/Users/johncohrn/.codex/generated_images/01a096c8-8e58-72f1-94fc-a84a5be49c90/exec-63768cd9-11c5-43ad-8d63-63840e19cfce.png",
+        "/Users/johncohrn/Documents/Digimon/Digimon Up Assets/Texture2D/Agumon.png"
+      ]
+    },
+    {
+      "key": "agumon-happy",
+      "species": "Agumon",
+      "action": "happy",
+      "title": "Happy",
+      "prompt": "Use case: identity-preserve. Asset: ONE pixel-art digital pet action keyframe for Figma review.\nImage 1 is the NEW candidate identity pose: preserve its exact face, palette, head/body proportions, outline weight, pixel-cluster scale and character design. Image 2 is original sprite-sheet anatomy and acting reference. Change only the character pose/expression for the specified action. ONE full-body character, single isolated pose in a square canvas, same right-facing slightly three-quarter orthographic view and camera size as image 1. Maintain source-style coarse, crisp square pixels; no smooth illustration, anti-aliased outlines, gradients or 3D.\nOutput TRUE transparent alpha outside the character. Do NOT draw a checkerboard, white background, backdrop, shadow, labels, grid, border, effects, props, food, motion streaks or multiple frames. Full character including extremities entirely in frame.\nAction: Delighted happy reaction key pose: both arms lifted in excitement, happy crescent eyes and a broad open toothy smile; small celebratory bounce with both feet visible and slightly raised. Keep compact dinosaur anatomy and three claws per hand and foot.",
+      "refs": [
+        "/Users/johncohrn/.codex/generated_images/01a096c8-8e58-72f1-94fc-a84a5be49c90/exec-63768cd9-11c5-43ad-8d63-63840e19cfce.png",
+        "/Users/johncohrn/Documents/Digimon/Digimon Up Assets/Texture2D/Agumon.png"
+      ]
+    },
+    {
+      "key": "agumon-eat",
+      "species": "Agumon",
+      "action": "eat",
+      "title": "Eat",
+      "prompt": "Use case: identity-preserve. Asset: ONE pixel-art digital pet action keyframe for Figma review.\nImage 1 is the NEW candidate identity pose: preserve its exact face, palette, head/body proportions, outline weight, pixel-cluster scale and character design. Image 2 is original sprite-sheet anatomy and acting reference. Change only the character pose/expression for the specified action. ONE full-body character, single isolated pose in a square canvas, same right-facing slightly three-quarter orthographic view and camera size as image 1. Maintain source-style coarse, crisp square pixels; no smooth illustration, anti-aliased outlines, gradients or 3D.\nOutput TRUE transparent alpha outside the character. Do NOT draw a checkerboard, white background, backdrop, shadow, labels, grid, border, effects, props, food, motion streaks or multiple frames. Full character including extremities entirely in frame.\nAction: Representative eating bite: head tipped slightly down and forward, jaws wide open for one eager bite, elbows bent and both EMPTY hands near chest, knees comfortably bent. Teeth visible, green eyes content. No food or utensils.",
+      "refs": [
+        "/Users/johncohrn/.codex/generated_images/01a096c8-8e58-72f1-94fc-a84a5be49c90/exec-63768cd9-11c5-43ad-8d63-63840e19cfce.png",
+        "/Users/johncohrn/Documents/Digimon/Digimon Up Assets/Texture2D/Agumon.png"
+      ]
+    },
+    {
+      "key": "agumon-basic-attack",
+      "species": "Agumon",
+      "action": "basic-attack",
+      "title": "Basic attack",
+      "prompt": "Use case: identity-preserve. Asset: ONE pixel-art digital pet action keyframe for Figma review.\nImage 1 is the NEW candidate identity pose: preserve its exact face, palette, head/body proportions, outline weight, pixel-cluster scale and character design. Image 2 is original sprite-sheet anatomy and acting reference. Change only the character pose/expression for the specified action. ONE full-body character, single isolated pose in a square canvas, same right-facing slightly three-quarter orthographic view and camera size as image 1. Maintain source-style coarse, crisp square pixels; no smooth illustration, anti-aliased outlines, gradients or 3D.\nOutput TRUE transparent alpha outside the character. Do NOT draw a checkerboard, white background, backdrop, shadow, labels, grid, border, effects, props, food, motion streaks or multiple frames. Full character including extremities entirely in frame.\nAction: Peak of a short melee claw swipe toward the right: near arm extended forward across body with its three claws spread, far arm tucked, torso twisted, front knee bent, rear foot driving forward, tail counterbalancing. Determined green eyes, no effects.",
+      "refs": [
+        "/Users/johncohrn/.codex/generated_images/01a096c8-8e58-72f1-94fc-a84a5be49c90/exec-63768cd9-11c5-43ad-8d63-63840e19cfce.png",
+        "/Users/johncohrn/Documents/Digimon/Digimon Up Assets/Texture2D/Agumon.png"
+      ]
+    },
+    {
+      "key": "agumon-pepper-breath",
+      "species": "Agumon",
+      "action": "pepper-breath",
+      "title": "Pepper Breath",
+      "prompt": "Use case: identity-preserve. Asset: ONE pixel-art digital pet action keyframe for Figma review.\nImage 1 is the NEW candidate identity pose: preserve its exact face, palette, head/body proportions, outline weight, pixel-cluster scale and character design. Image 2 is original sprite-sheet anatomy and acting reference. Change only the character pose/expression for the specified action. ONE full-body character, single isolated pose in a square canvas, same right-facing slightly three-quarter orthographic view and camera size as image 1. Maintain source-style coarse, crisp square pixels; no smooth illustration, anti-aliased outlines, gradients or 3D.\nOutput TRUE transparent alpha outside the character. Do NOT draw a checkerboard, white background, backdrop, shadow, labels, grid, border, effects, props, food, motion streaks or multiple frames. Full character including extremities entirely in frame.\nAction: Peak fire-breath RELEASE body pose toward the right: feet braced wide, torso leaning forward, head thrust forward, jaws wide open aimed horizontally right, cheeks slightly tense, arms held outward and back for balance. This is the BODY keyframe only: NO fire, particles, glow, smoke or projectile.",
+      "refs": [
+        "/Users/johncohrn/.codex/generated_images/01a096c8-8e58-72f1-94fc-a84a5be49c90/exec-63768cd9-11c5-43ad-8d63-63840e19cfce.png",
+        "/Users/johncohrn/Documents/Digimon/Digimon Up Assets/Texture2D/Agumon.png"
+      ]
+    },
+    {
+      "key": "agumon-guard",
+      "species": "Agumon",
+      "action": "guard",
+      "title": "Guard",
+      "prompt": "Use case: identity-preserve. Asset: ONE pixel-art digital pet action keyframe for Figma review.\nImage 1 is the NEW candidate identity pose: preserve its exact face, palette, head/body proportions, outline weight, pixel-cluster scale and character design. Image 2 is original sprite-sheet anatomy and acting reference. Change only the character pose/expression for the specified action. ONE full-body character, single isolated pose in a square canvas, same right-facing slightly three-quarter orthographic view and camera size as image 1. Maintain source-style coarse, crisp square pixels; no smooth illustration, anti-aliased outlines, gradients or 3D.\nOutput TRUE transparent alpha outside the character. Do NOT draw a checkerboard, white background, backdrop, shadow, labels, grid, border, effects, props, food, motion streaks or multiple frames. Full character including extremities entirely in frame.\nAction: Protective guard key pose: crouch slightly, both forearms up crossed in front of chest and lower snout, claws outward; feet braced and knees bent, wary focused green eye looking right. Head remains fully readable. No shield.",
+      "refs": [
+        "/Users/johncohrn/.codex/generated_images/01a096c8-8e58-72f1-94fc-a84a5be49c90/exec-63768cd9-11c5-43ad-8d63-63840e19cfce.png",
+        "/Users/johncohrn/Documents/Digimon/Digimon Up Assets/Texture2D/Agumon.png"
+      ]
+    },
+    {
+      "key": "agumon-evade",
+      "species": "Agumon",
+      "action": "evade",
+      "title": "Dodge",
+      "prompt": "Use case: identity-preserve. Asset: ONE pixel-art digital pet action keyframe for Figma review.\nImage 1 is the NEW candidate identity pose: preserve its exact face, palette, head/body proportions, outline weight, pixel-cluster scale and character design. Image 2 is original sprite-sheet anatomy and acting reference. Change only the character pose/expression for the specified action. ONE full-body character, single isolated pose in a square canvas, same right-facing slightly three-quarter orthographic view and camera size as image 1. Maintain source-style coarse, crisp square pixels; no smooth illustration, anti-aliased outlines, gradients or 3D.\nOutput TRUE transparent alpha outside the character. Do NOT draw a checkerboard, white background, backdrop, shadow, labels, grid, border, effects, props, food, motion streaks or multiple frames. Full character including extremities entirely in frame.\nAction: Evasive sidestep / backward dodge key pose: low lean backward to the left away from a threat at the right, one leg planted bent, other pulled back, head still watching right, arms tucked for balance, tail swept with the body. No motion lines.",
+      "refs": [
+        "/Users/johncohrn/.codex/generated_images/01a096c8-8e58-72f1-94fc-a84a5be49c90/exec-63768cd9-11c5-43ad-8d63-63840e19cfce.png",
+        "/Users/johncohrn/Documents/Digimon/Digimon Up Assets/Texture2D/Agumon.png"
+      ]
+    },
+    {
+      "key": "agumon-hit",
+      "species": "Agumon",
+      "action": "hit",
+      "title": "Hit reaction",
+      "prompt": "Use case: identity-preserve. Asset: ONE pixel-art digital pet action keyframe for Figma review.\nImage 1 is the NEW candidate identity pose: preserve its exact face, palette, head/body proportions, outline weight, pixel-cluster scale and character design. Image 2 is original sprite-sheet anatomy and acting reference. Change only the character pose/expression for the specified action. ONE full-body character, single isolated pose in a square canvas, same right-facing slightly three-quarter orthographic view and camera size as image 1. Maintain source-style coarse, crisp square pixels; no smooth illustration, anti-aliased outlines, gradients or 3D.\nOutput TRUE transparent alpha outside the character. Do NOT draw a checkerboard, white background, backdrop, shadow, labels, grid, border, effects, props, food, motion streaks or multiple frames. Full character including extremities entirely in frame.\nAction: Non-graphic hit reaction: recoiling backward left with torso arched, shoulders raised, one eye squeezed shut, mouth open in surprise, arms drawn inward, one foot lifted slightly. No blood, wounds, particles or damage marks. Still the exact same character.",
+      "refs": [
+        "/Users/johncohrn/.codex/generated_images/01a096c8-8e58-72f1-94fc-a84a5be49c90/exec-63768cd9-11c5-43ad-8d63-63840e19cfce.png",
+        "/Users/johncohrn/Documents/Digimon/Digimon Up Assets/Texture2D/Agumon.png"
+      ]
+    },
+    {
+      "key": "agumon-defeat",
+      "species": "Agumon",
+      "action": "defeat",
+      "title": "Defeat",
+      "prompt": "Use case: identity-preserve. Asset: ONE pixel-art digital pet action keyframe for Figma review.\nImage 1 is the NEW candidate identity pose: preserve its exact face, palette, head/body proportions, outline weight, pixel-cluster scale and character design. Image 2 is original sprite-sheet anatomy and acting reference. Change only the character pose/expression for the specified action. ONE full-body character, single isolated pose in a square canvas, same right-facing slightly three-quarter orthographic view and camera size as image 1. Maintain source-style coarse, crisp square pixels; no smooth illustration, anti-aliased outlines, gradients or 3D.\nOutput TRUE transparent alpha outside the character. Do NOT draw a checkerboard, white background, backdrop, shadow, labels, grid, border, effects, props, food, motion streaks or multiple frames. Full character including extremities entirely in frame.\nAction: Harmless exhausted defeat pose: sitting/slumped on the ground with head bowed forward to the right, eyes peacefully closed, shoulders and arms drooping, both legs and clawed feet visible, short tail resting behind. Looks tired and temporarily knocked out; no injury, X eyes, tears, or effects.",
+      "refs": [
+        "/Users/johncohrn/.codex/generated_images/01a096c8-8e58-72f1-94fc-a84a5be49c90/exec-63768cd9-11c5-43ad-8d63-63840e19cfce.png",
+        "/Users/johncohrn/Documents/Digimon/Digimon Up Assets/Texture2D/Agumon.png"
+      ]
+    }
+  ]
+}

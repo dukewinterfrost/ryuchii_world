@@ -1,0 +1,62 @@
+{
+  "$schema": "../../../../../schemas/animation-set.schema.json",
+  "schemaVersion": 1,
+  "subjectId": "koromon",
+  "revision": "2026-08-26.001",
+  "status": "legacy",
+  "provenance": {
+    "kind": "legacy",
+    "source": "public/assets/companions/koromon.png",
+    "compilerVersion": "legacy-grid-wrapper-1.0.0",
+    "referenceHashes": [],
+    "sourceHashes": { "legacy-sheet": "sha256:99a32c901897feb037f0830b3def8d200eb13dfa4688140543cc3cb2cee4bb25" },
+    "outputSha256": "sha256:99a32c901897feb037f0830b3def8d200eb13dfa4688140543cc3cb2cee4bb25"
+  },
+  "atlas": { "image": "atlas.png", "data": "atlas.json", "paddingPx": 0, "extrudePx": 0 },
+  "motionProfile": {
+    "morphology": "limbed-blob",
+    "locomotion": "grounded-hop",
+    "rootPolicy": "in-place",
+    "facing": "right",
+    "requiredAnchors": ["root"]
+  },
+  "clips": {
+    "idle.default": {
+      "semanticAction": "idle",
+      "kind": "loop",
+      "frames": [
+        { "atlasFrame": "koromon.legacy.default.f0000", "durationMs": 400, "pivot": { "x": 0.5, "y": 0.9 }, "anchors": { "root": { "x": 0.5, "y": 0.9 } } },
+        { "atlasFrame": "koromon.legacy.default.f0001", "durationMs": 400, "pivot": { "x": 0.5, "y": 0.9 }, "anchors": { "root": { "x": 0.5, "y": 0.9 } } },
+        { "atlasFrame": "koromon.legacy.default.f0000", "durationMs": 400, "pivot": { "x": 0.5, "y": 0.9 }, "anchors": { "root": { "x": 0.5, "y": 0.9 } } },
+        { "atlasFrame": "koromon.legacy.default.f0002", "durationMs": 400, "pivot": { "x": 0.5, "y": 0.9 }, "anchors": { "root": { "x": 0.5, "y": 0.9 } } }
+      ],
+      "events": [],
+      "qualityProfile": "legacy-blob-idle"
+    },
+    "move.default": {
+      "semanticAction": "move",
+      "kind": "loop",
+      "frames": [
+        { "atlasFrame": "koromon.legacy.default.f0003", "durationMs": 167, "pivot": { "x": 0.5, "y": 0.9 }, "anchors": { "root": { "x": 0.5, "y": 0.9 } } },
+        { "atlasFrame": "koromon.legacy.default.f0004", "durationMs": 167, "pivot": { "x": 0.5, "y": 0.9 }, "anchors": { "root": { "x": 0.5, "y": 0.9 } } },
+        { "atlasFrame": "koromon.legacy.default.f0005", "durationMs": 167, "pivot": { "x": 0.5, "y": 0.9 }, "anchors": { "root": { "x": 0.5, "y": 0.9 } } },
+        { "atlasFrame": "koromon.legacy.default.f0004", "durationMs": 167, "pivot": { "x": 0.5, "y": 0.9 }, "anchors": { "root": { "x": 0.5, "y": 0.9 } } }
+      ],
+      "events": [],
+      "qualityProfile": "legacy-blob-roam"
+    },
+    "happy.default": {
+      "semanticAction": "happy",
+      "kind": "one-shot",
+      "frames": [
+        { "atlasFrame": "koromon.legacy.default.f0006", "durationMs": 143, "pivot": { "x": 0.5, "y": 0.9 }, "anchors": { "root": { "x": 0.5, "y": 0.9 } } },
+        { "atlasFrame": "koromon.legacy.default.f0007", "durationMs": 143, "pivot": { "x": 0.5, "y": 0.9 }, "anchors": { "root": { "x": 0.5, "y": 0.9 } } },
+        { "atlasFrame": "koromon.legacy.default.f0006", "durationMs": 143, "pivot": { "x": 0.5, "y": 0.9 }, "anchors": { "root": { "x": 0.5, "y": 0.9 } } },
+        { "atlasFrame": "koromon.legacy.default.f0000", "durationMs": 220, "pivot": { "x": 0.5, "y": 0.9 }, "anchors": { "root": { "x": 0.5, "y": 0.9 } } }
+      ],
+      "events": [],
+      "qualityProfile": "legacy-blob-reaction"
+    }
+  },
+  "fallbacks": { "listen": "idle.default", "play": "happy.default", "celebrate": "happy.default" }
+}

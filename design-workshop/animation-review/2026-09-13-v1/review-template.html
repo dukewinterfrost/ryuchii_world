@@ -1,0 +1,36 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Digital Companion · Animation Review</title>
+<style>
+:root{color:#173e30;background:#f5efe2;font-family:ui-monospace,monospace}*{box-sizing:border-box}body{max-width:1460px;margin:auto;padding:40px 28px}header{background:#174d3a;color:#fffdf7;padding:32px;margin-bottom:24px;border-radius:12px}h1{font-size:34px;margin:8px 0 16px}p{line-height:1.6;max-width:850px}small{letter-spacing:2px;text-transform:uppercase}.controls{display:flex;flex-wrap:wrap;gap:16px;align-items:center;margin:24px 0}button,select{font:inherit;border:1px solid #174d3a;border-radius:6px;padding:10px 16px;background:#fffdf7;color:#174d3a;cursor:pointer}button:focus-visible,select:focus-visible{outline:3px solid #cf782d;outline-offset:3px}button[aria-pressed=true]{background:#174d3a;color:#fffdf7}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}article{background:#fffdf7;border:1px solid #d7d9bf;border-radius:10px;overflow:hidden}article h2{font-size:18px;margin:20px 20px 8px}.viewport{height:288px;display:grid;place-items:center;background:conic-gradient(#eee8d9 25%,#f5efe2 0 50%,#eee8d9 0 75%,#f5efe2 0);background-size:24px 24px}.viewport img{width:256px;height:256px;image-rendering:pixelated}.tag{margin:0 20px 20px;line-height:1.5;font-size:12px}.ready .tag{color:#176e48}.ready{border:2px solid #438860}footer{margin-top:32px;font-size:12px;line-height:1.8}
+.clip-controls{padding:0 18px 18px;display:flex;flex-wrap:wrap;gap:8px;align-items:center}.clip-controls button{font-size:12px;padding:8px}.clip-controls label{width:100%;font-size:11px}.clip-controls input{width:100%;accent-color:#174d3a}.downloads{display:flex;gap:12px;font-size:11px}a{color:inherit}.note{font-size:12px;color:#80501f;margin:0 20px 18px}article h2{text-transform:capitalize}</style>
+<header><small>Digital Companion / Motion workshop</small><h1>First motion pass</h1><p id="summary"></p><p>Compare each action with its approved pose. Check the eyes, silhouette, movement and timing. Loops repeat; one-shot actions finish and hold. Use Replay to watch an action again, or keep Repeat previews enabled.</p></header>
+<div class="controls"><button id="play" aria-pressed="true">Pause all</button><button id="replay">Replay all</button><label for="speed">Speed</label><select id="speed"><option value="0.5">0.5×</option><option value="1" selected>1×</option><option value="2">2×</option></select><label for="filter">Character</label><select id="filter"><option value="all">All three</option><option value="agumon">Agumon</option><option value="botamon">Botamon</option><option value="koromon">Koromon</option></select><label><input id="repeat" type="checkbox" checked> Repeat previews</label><label><input id="reference" type="checkbox"> Show approved poses</label></div>
+<div id="grid" class="grid"></div><footer>128 × 128 source cells · Fixed species registration · Nearest-neighbor display<br>All motion is awaiting your review. Individual frames, transparent strips, sheets and timing metadata are saved with this review.</footer>
+<script>
+const clips=__DATA__,views=[],reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;let speed=1,last=performance.now(),reference=false,repeat=true;
+const ready=clips.filter(c=>c.ready).length;
+document.querySelector('#summary').textContent=ready+' of '+clips.length+' animations ready for motion review. '+(ready===clips.length?'Botamon and Koromon each have four care actions; Agumon has ten care and battle actions.':(clips.length-ready)+' animations are still in the generation queue.');
+for(const c of clips){
+ const el=document.createElement('article');el.className=c.ready?'ready':'';el.dataset.character=c.character;
+ const title=c.key.replaceAll('-',' ');el.innerHTML='<h2>'+title+'</h2><div class="viewport"><img alt="'+title+'"></div><p class="tag"></p>';
+ const v={c,el,img:el.querySelector('img'),tag:el.querySelector('.tag'),elapsed:0,index:0,playing:c.ready&&!reduced};
+ if(c.ready){
+  const controls=document.createElement('div');controls.className='clip-controls';
+  controls.innerHTML='<button class="replay" aria-label="Replay '+title+'">Replay</button><button class="step" aria-label="Next frame of '+title+'">Next frame</button><label>Frame <input type="range" min="0" max="'+(c.images.length-1)+'" value="0" aria-label="Frame of '+title+'"></label><div class="downloads"><a href="'+c.key+'.gif">GIF</a><a href="'+c.key+'-strip.png">Strip</a><a href="'+c.key+'.json">Timing</a></div>';
+  v.slider=controls.querySelector('input');controls.querySelector('.replay').onclick=()=>{v.elapsed=0;v.playing=true;show();button()};
+  controls.querySelector('.step').onclick=()=>{v.playing=false;v.elapsed=((v.index+1)%c.images.length)*c.frameDurationMs;show();button()};
+  v.slider.oninput=e=>{v.playing=false;v.elapsed=Number(e.target.value)*c.frameDurationMs;show();button()};el.append(controls);
+ }
+ if(c.reviewNote){const note=document.createElement('p');note.className='note';note.textContent=c.reviewNote;el.append(note)}
+ document.querySelector('#grid').append(el);views.push(v);
+}
+function show(){for(const v of views){const frame=Math.floor(v.elapsed/v.c.frameDurationMs);v.index=v.c.ready?(v.c.loop?frame%v.c.images.length:Math.min(frame,v.c.images.length-1)):0;v.img.src=reference?v.c.approvedImage:v.c.images[v.index];v.tag.textContent=reference?'APPROVED POSE · Animation reference':v.c.ready?(v.c.loop?'LOOP':'ONE SHOT')+' · Frame '+(v.index+1)+'/'+v.c.images.length+' · '+v.c.frameDurationMs+' ms/frame · Motion review pending':'PREPARED · Animation queued';if(v.slider)v.slider.value=v.index;}}
+function button(){const playing=views.some(v=>v.playing);document.querySelector('#play').textContent=playing?'Pause all':'Play all';document.querySelector('#play').setAttribute('aria-pressed',String(playing));}
+document.querySelector('#play').onclick=()=>{const play=!views.some(v=>v.playing);for(const v of views){if(play&&!v.c.loop&&v.elapsed>=v.c.images.length*v.c.frameDurationMs)v.elapsed=0;v.playing=play&&v.c.ready}button()};
+document.querySelector('#replay').onclick=()=>{for(const v of views){v.elapsed=0;v.playing=v.c.ready}show();button()};
+document.querySelector('#speed').onchange=e=>speed=Number(e.target.value);
+document.querySelector('#filter').onchange=e=>{for(const v of views)v.el.hidden=e.target.value!=='all'&&v.c.character!==e.target.value;};
+document.querySelector('#repeat').onchange=e=>repeat=e.target.checked;
+document.querySelector('#reference').onchange=e=>{reference=e.target.checked;show()};
+function tick(now){if(!reference){for(const v of views)if(v.playing){v.elapsed+=(now-last)*speed;if(!v.c.loop&&v.elapsed>=v.c.images.length*v.c.frameDurationMs){if(!repeat)v.playing=false;else if(v.elapsed>=v.c.images.length*v.c.frameDurationMs+600)v.elapsed%=v.c.images.length*v.c.frameDurationMs+600;}}show();button()}last=now;requestAnimationFrame(tick)}button();show();requestAnimationFrame(tick);
+</script></html>

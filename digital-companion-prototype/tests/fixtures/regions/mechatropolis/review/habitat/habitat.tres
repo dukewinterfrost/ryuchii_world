@@ -1,0 +1,50 @@
+[gd_resource type="Resource" format=3]
+
+[resource]
+metadata/habitat_manifest = {
+"assetId": "habitat-service-deck",
+"blockers": [{
+"id": "mechatropolis-landmark-footprint",
+"rect": [5.0, 5.0, 9.0, 3.0]
+}],
+"decorationZones": [{
+"id": "main",
+"rect": [2.0, 10.0, 36.0, 31.0]
+}, {
+"id": "entry",
+"rect": [15.0, 41.0, 10.0, 5.0]
+}],
+"displayName": "Service Deck",
+"environment": {
+"assetId": "environment-mechatropolis",
+"contentSha256": "sha256:5aefb250b9c41f62bf2acea7445bbceb4263d75f608ba3830dc5da63027565da",
+"revision": "2026-09-12.001"
+},
+"grid": {
+"cellSize": 32.0,
+"columns": 40.0,
+"rows": 48.0
+},
+"kind": "habitat",
+"regionId": "mechatropolis",
+"revision": "2026-09-12.001",
+"schemaVersion": 1.0,
+"spawn": [20.0, 24.0],
+"staticPlacements": [{
+"blocker": "mechatropolis-landmark-footprint",
+"cell": [9.0, 6.0],
+"id": "mechatropolis-landmark-home",
+"persistent": true,
+"planeStack": "mechatropolis-landmark.stack",
+"rotationQuarterTurns": 0.0
+}],
+"wasteAnchors": [[6.0, 38.0], [20.0, 34.0], [34.0, 38.0]]
+}
+metadata/candidate_identity = {
+"assetId": "habitat-service-deck",
+"buildIdentity": "sha256:e6ddc9615106e893169213e15bcfa243cec24b83c65c7c5af54242494a6e5da7",
+"compilerVersion": "1.3.0",
+"kind": "habitat",
+"planSha256": "sha256:82d1ad3f0a0bd65736d8c70a163160de4cb9499b7141c876611f5d4d7226f7bc",
+"revision": "2026-09-12.001"
+}

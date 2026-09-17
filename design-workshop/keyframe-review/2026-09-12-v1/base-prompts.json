@@ -1,0 +1,33 @@
+{
+  "mode": "built-in image_gen",
+  "status": "candidate awaiting user review",
+  "specs": [
+    {
+      "key": "botamon-idle",
+      "species": "Botamon",
+      "prompt": "Use case: stylized-concept. Asset type: ONE new individual pixel-art keyframe for a digital pet game, to review in Figma before animation.\nInput image 1 is the source character identity and pixel style reference. Input image 2 is the source pose vocabulary, NOT a request to recreate the entire sheet.\nGenerate only ONE character in ONE pose. Match the source character's exact anatomy, proportions, colors, features and charming compact silhouette. Crisp deliberate square pixel clusters, dark one-pixel-style outline, limited palette, flat game-sprite shading. Aim for the detail density of a 96x96 pixel sprite enlarged to a square 1024x1024 image with nearest-neighbor-looking hard edges. No smooth vector curves, painterly rendering, antialiasing, gradients, texture noise or 3D.\nTransparent alpha background. Entire body and extremities in frame, centered horizontally, ample empty margin, consistent orthographic slightly three-quarter view toward the RIGHT. Neutral poses rest at 85% canvas height, character occupies roughly 55-65% of square height. No text, labels, multiple poses, panels, floor, ground shadow, glow, environment, props, particles, food or effects. This is a candidate keyframe, not a complete animation.\nBotamon idle: compact soft black-charcoal round furry blob, two little rounded ear-like upper bumps, large simple bright yellow oval eyes. No limbs, no tail, no visible mouth in this neutral pose. Calm attentive grounded resting pose. Preserve short fuzzy contour and subtly warmer charcoal shading from the references; do not turn into a cat or invent paws.",
+      "refs": [
+        "/Users/johncohrn/Documents/Digimon/Digimon Up Assets/Sprite/UI_Partner_Botamon.png",
+        "/Users/johncohrn/Documents/Digimon/Digimon Up Assets/Texture2D/Botamon.png"
+      ]
+    },
+    {
+      "key": "koromon-idle",
+      "species": "Koromon",
+      "prompt": "Use case: stylized-concept. Asset type: ONE new individual pixel-art keyframe for a digital pet game, to review in Figma before animation.\nInput image 1 is the source character identity and pixel style reference. Input image 2 is the source pose vocabulary, NOT a request to recreate the entire sheet.\nGenerate only ONE character in ONE pose. Match the source character's exact anatomy, proportions, colors, features and charming compact silhouette. Crisp deliberate square pixel clusters, dark one-pixel-style outline, limited palette, flat game-sprite shading. Aim for the detail density of a 96x96 pixel sprite enlarged to a square 1024x1024 image with nearest-neighbor-looking hard edges. No smooth vector curves, painterly rendering, antialiasing, gradients, texture noise or 3D.\nTransparent alpha background. Entire body and extremities in frame, centered horizontally, ample empty margin, consistent orthographic slightly three-quarter view toward the RIGHT. Neutral poses rest at 85% canvas height, character occupies roughly 55-65% of square height. No text, labels, multiple poses, panels, floor, ground shadow, glow, environment, props, particles, food or effects. This is a candidate keyframe, not a complete animation.\nKoromon idle: round pale pink soft blob, two long thin flexible ribbon-like ears curving upward, large red-brown eyes, tiny smiling mouth. No arms, legs, paws or tail. Grounded rounded body, alert and gentle expression; retain the elongated narrow ears, not broad rabbit ears. Preserve source color and anatomy.",
+      "refs": [
+        "/Users/johncohrn/Documents/Digimon/Digimon Up Assets/Sprite/UI_Partner_Koromon.png",
+        "/Users/johncohrn/Documents/Digimon/Digimon Up Assets/Texture2D/Koromon.png"
+      ]
+    },
+    {
+      "key": "agumon-idle",
+      "species": "Agumon",
+      "prompt": "Use case: stylized-concept. Asset type: ONE new individual pixel-art keyframe for a digital pet game, to review in Figma before animation.\nInput image 1 is the source character identity and pixel style reference. Input image 2 is the source pose vocabulary, NOT a request to recreate the entire sheet.\nGenerate only ONE character in ONE pose. Match the source character's exact anatomy, proportions, colors, features and charming compact silhouette. Crisp deliberate square pixel clusters, dark one-pixel-style outline, limited palette, flat game-sprite shading. Aim for the detail density of a 96x96 pixel sprite enlarged to a square 1024x1024 image with nearest-neighbor-looking hard edges. No smooth vector curves, painterly rendering, antialiasing, gradients, texture noise or 3D.\nTransparent alpha background. Entire body and extremities in frame, centered horizontally, ample empty margin, consistent orthographic slightly three-quarter view toward the RIGHT. Neutral poses rest at 85% canvas height, character occupies roughly 55-65% of square height. No text, labels, multiple poses, panels, floor, ground shadow, glow, environment, props, particles, food or effects. This is a candidate keyframe, not a complete animation.\nAgumon idle: compact orange biped dinosaur with oversized head and rounded long snout, large green eyes, two short arms, three ivory claws per hand, three ivory toes per foot, short thick tail, subtle chest folds/markings as in source. Standing comfortably facing right in three-quarter view, knees slightly bent, hands relaxed, friendly alert expression, mouth closed or very slightly open. Preserve the source silhouette, eye shape, orange/yellow palette and body proportions.",
+      "refs": [
+        "/Users/johncohrn/Documents/Digimon/Digimon Up Assets/Sprite/UI_Partner_Agumon.png",
+        "/Users/johncohrn/Documents/Digimon/Digimon Up Assets/Texture2D/Agumon.png"
+      ]
+    }
+  ]
+}

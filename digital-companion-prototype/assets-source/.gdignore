@@ -1,0 +1,3 @@
+# Private-prototype source plans and DigimonUP-derived bytes are intentionally
+# excluded from Godot import/export scanning. Offline tooling reads them by
+# explicit filesystem path.

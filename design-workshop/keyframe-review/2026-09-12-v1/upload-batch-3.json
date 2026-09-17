@@ -1,0 +1,46 @@
+{
+  "uploads": [
+    {
+      "key": "agumon-basic-attack",
+      "source": "/Users/johncohrn/.codex/generated_images/01a096c8-8e58-72f1-94fc-a84a5be49c90/exec-58d23434-253b-4b77-80b2-e56e50d3d9c4.png",
+      "path": "/Users/johncohrn/Documents/ChatGPT/Godot Projects/design-workshop/keyframe-review/2026-09-12-v1/agumon-basic-attack.png",
+      "nodeId": "55:217",
+      "submitUrl": "https://mcp.figma.com/mcp/upload/48433401-21e5-4444-a020-aeb0f56e4e29/submit?scaleMode=FIT"
+    },
+    {
+      "key": "agumon-pepper-breath",
+      "source": "/Users/johncohrn/.codex/generated_images/01a096c8-8e58-72f1-94fc-a84a5be49c90/exec-1c9e2ce5-b468-4d41-be67-b213fee9c4c0.png",
+      "path": "/Users/johncohrn/Documents/ChatGPT/Godot Projects/design-workshop/keyframe-review/2026-09-12-v1/agumon-pepper-breath.png",
+      "nodeId": "55:218",
+      "submitUrl": "https://mcp.figma.com/mcp/upload/f6a5f638-be37-4084-87bf-f6f57bc46a20/submit?scaleMode=FIT"
+    },
+    {
+      "key": "agumon-guard",
+      "source": "/Users/johncohrn/.codex/generated_images/01a096c8-8e58-72f1-94fc-a84a5be49c90/exec-be0cc749-3334-4ed4-9d69-3b1f236d03c3.png",
+      "path": "/Users/johncohrn/Documents/ChatGPT/Godot Projects/design-workshop/keyframe-review/2026-09-12-v1/agumon-guard.png",
+      "nodeId": "55:219",
+      "submitUrl": "https://mcp.figma.com/mcp/upload/d02bea30-66ca-4cc2-8a05-21cba77b1a4c/submit?scaleMode=FIT"
+    },
+    {
+      "key": "agumon-evade",
+      "source": "/Users/johncohrn/.codex/generated_images/01a096c8-8e58-72f1-94fc-a84a5be49c90/exec-9cf75261-4c0b-4e5a-8911-3d451d729093.png",
+      "path": "/Users/johncohrn/Documents/ChatGPT/Godot Projects/design-workshop/keyframe-review/2026-09-12-v1/agumon-evade.png",
+      "nodeId": "55:220",
+      "submitUrl": "https://mcp.figma.com/mcp/upload/5cacf58b-fea2-46d4-9b67-6b01aad7026d/submit?scaleMode=FIT"
+    },
+    {
+      "key": "agumon-hit",
+      "source": "/Users/johncohrn/.codex/generated_images/01a096c8-8e58-72f1-94fc-a84a5be49c90/exec-7424c351-617e-4f3b-aa4e-9d4ec0fb0a92.png",
+      "path": "/Users/johncohrn/Documents/ChatGPT/Godot Projects/design-workshop/keyframe-review/2026-09-12-v1/agumon-hit.png",
+      "nodeId": "55:221",
+      "submitUrl": "https://mcp.figma.com/mcp/upload/e1ee4040-ec0f-4bd1-a54e-baf0291c1667/submit?scaleMode=FIT"
+    },
+    {
+      "key": "agumon-defeat",
+      "source": "/Users/johncohrn/.codex/generated_images/01a096c8-8e58-72f1-94fc-a84a5be49c90/exec-43f83641-84f1-4258-87d1-ae88c7694e7e.png",
+      "path": "/Users/johncohrn/Documents/ChatGPT/Godot Projects/design-workshop/keyframe-review/2026-09-12-v1/agumon-defeat.png",
+      "nodeId": "55:222",
+      "submitUrl": "https://mcp.figma.com/mcp/upload/6c51a0f0-f858-4273-8cea-d62f7bd56645/submit?scaleMode=FIT"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "frames": {
+    "koromon.legacy.default.f0000": { "frame": { "x": 0, "y": 0, "w": 96, "h": 96 }, "rotated": false, "trimmed": false, "spriteSourceSize": { "x": 0, "y": 0, "w": 96, "h": 96 }, "sourceSize": { "w": 96, "h": 96 }, "pivot": { "x": 0.5, "y": 0.9 } },
+    "koromon.legacy.default.f0001": { "frame": { "x": 96, "y": 0, "w": 96, "h": 96 }, "rotated": false, "trimmed": false, "spriteSourceSize": { "x": 0, "y": 0, "w": 96, "h": 96 }, "sourceSize": { "w": 96, "h": 96 }, "pivot": { "x": 0.5, "y": 0.9 } },
+    "koromon.legacy.default.f0002": { "frame": { "x": 192, "y": 0, "w": 96, "h": 96 }, "rotated": false, "trimmed": false, "spriteSourceSize": { "x": 0, "y": 0, "w": 96, "h": 96 }, "sourceSize": { "w": 96, "h": 96 }, "pivot": { "x": 0.5, "y": 0.9 } },
+    "koromon.legacy.default.f0003": { "frame": { "x": 288, "y": 0, "w": 96, "h": 96 }, "rotated": false, "trimmed": false, "spriteSourceSize": { "x": 0, "y": 0, "w": 96, "h": 96 }, "sourceSize": { "w": 96, "h": 96 }, "pivot": { "x": 0.5, "y": 0.9 } },
+    "koromon.legacy.default.f0004": { "frame": { "x": 0, "y": 96, "w": 96, "h": 96 }, "rotated": false, "trimmed": false, "spriteSourceSize": { "x": 0, "y": 0, "w": 96, "h": 96 }, "sourceSize": { "w": 96, "h": 96 }, "pivot": { "x": 0.5, "y": 0.9 } },
+    "koromon.legacy.default.f0005": { "frame": { "x": 96, "y": 96, "w": 96, "h": 96 }, "rotated": false, "trimmed": false, "spriteSourceSize": { "x": 0, "y": 0, "w": 96, "h": 96 }, "sourceSize": { "w": 96, "h": 96 }, "pivot": { "x": 0.5, "y": 0.9 } },
+    "koromon.legacy.default.f0006": { "frame": { "x": 192, "y": 96, "w": 96, "h": 96 }, "rotated": false, "trimmed": false, "spriteSourceSize": { "x": 0, "y": 0, "w": 96, "h": 96 }, "sourceSize": { "w": 96, "h": 96 }, "pivot": { "x": 0.5, "y": 0.9 } },
+    "koromon.legacy.default.f0007": { "frame": { "x": 288, "y": 96, "w": 96, "h": 96 }, "rotated": false, "trimmed": false, "spriteSourceSize": { "x": 0, "y": 0, "w": 96, "h": 96 }, "sourceSize": { "w": 96, "h": 96 }, "pivot": { "x": 0.5, "y": 0.9 } }
+  },
+  "meta": { "app": "digital-companion-legacy-grid-wrapper", "version": "1.0.0", "image": "atlas.png", "format": "RGBA8888", "size": { "w": 384, "h": 192 }, "scale": "1" }
+}

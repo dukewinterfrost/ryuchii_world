@@ -1,0 +1,231 @@
+{
+	"$schema": "../../../../../schemas/animation-set.schema.json",
+	"schemaVersion": 1.0,
+	"subjectId": "botamon",
+	"revision": "2026-08-26.001",
+	"status": "legacy",
+	"provenance": {
+		"kind": "legacy",
+		"source": "public/assets/companions/botamon.png",
+		"compilerVersion": "legacy-grid-wrapper-1.0.0",
+		"referenceHashes": [],
+		"sourceHashes": {
+			"legacy-sheet": "sha256:cf9f26202767de297ed43fa8cf4f588a5fd31292c41e985c25c8d7aff36a4bf5"
+		},
+		"outputSha256": "sha256:cf9f26202767de297ed43fa8cf4f588a5fd31292c41e985c25c8d7aff36a4bf5"
+	},
+	"atlas": {
+		"image": "atlas.png",
+		"data": "atlas.json",
+		"paddingPx": 0.0,
+		"extrudePx": 0.0
+	},
+	"motionProfile": {
+		"morphology": "blob",
+		"locomotion": "grounded-hop",
+		"rootPolicy": "in-place",
+		"facing": "right",
+		"requiredAnchors": [
+			"root"
+		]
+	},
+	"clips": {
+		"idle.default": {
+			"semanticAction": "idle",
+			"kind": "loop",
+			"frames": [
+				{
+					"atlasFrame": "botamon.legacy.default.f0000",
+					"durationMs": 400.0,
+					"pivot": {
+						"x": 0.5,
+						"y": 0.9
+					},
+					"anchors": {
+						"root": {
+							"x": 0.5,
+							"y": 0.9
+						}
+					}
+				},
+				{
+					"atlasFrame": "botamon.legacy.default.f0001",
+					"durationMs": 400.0,
+					"pivot": {
+						"x": 0.5,
+						"y": 0.9
+					},
+					"anchors": {
+						"root": {
+							"x": 0.5,
+							"y": 0.9
+						}
+					}
+				},
+				{
+					"atlasFrame": "botamon.legacy.default.f0000",
+					"durationMs": 400.0,
+					"pivot": {
+						"x": 0.5,
+						"y": 0.9
+					},
+					"anchors": {
+						"root": {
+							"x": 0.5,
+							"y": 0.9
+						}
+					}
+				},
+				{
+					"atlasFrame": "botamon.legacy.default.f0002",
+					"durationMs": 400.0,
+					"pivot": {
+						"x": 0.5,
+						"y": 0.9
+					},
+					"anchors": {
+						"root": {
+							"x": 0.5,
+							"y": 0.9
+						}
+					}
+				}
+			],
+			"events": [],
+			"qualityProfile": "legacy-blob-idle"
+		},
+		"move.default": {
+			"semanticAction": "move",
+			"kind": "loop",
+			"frames": [
+				{
+					"atlasFrame": "botamon.legacy.default.f0003",
+					"durationMs": 167.0,
+					"pivot": {
+						"x": 0.5,
+						"y": 0.9
+					},
+					"anchors": {
+						"root": {
+							"x": 0.5,
+							"y": 0.9
+						}
+					}
+				},
+				{
+					"atlasFrame": "botamon.legacy.default.f0004",
+					"durationMs": 167.0,
+					"pivot": {
+						"x": 0.5,
+						"y": 0.9
+					},
+					"anchors": {
+						"root": {
+							"x": 0.5,
+							"y": 0.9
+						}
+					}
+				},
+				{
+					"atlasFrame": "botamon.legacy.default.f0005",
+					"durationMs": 167.0,
+					"pivot": {
+						"x": 0.5,
+						"y": 0.9
+					},
+					"anchors": {
+						"root": {
+							"x": 0.5,
+							"y": 0.9
+						}
+					}
+				},
+				{
+					"atlasFrame": "botamon.legacy.default.f0004",
+					"durationMs": 167.0,
+					"pivot": {
+						"x": 0.5,
+						"y": 0.9
+					},
+					"anchors": {
+						"root": {
+							"x": 0.5,
+							"y": 0.9
+						}
+					}
+				}
+			],
+			"events": [],
+			"qualityProfile": "legacy-blob-roam"
+		},
+		"happy.default": {
+			"semanticAction": "happy",
+			"kind": "one-shot",
+			"frames": [
+				{
+					"atlasFrame": "botamon.legacy.default.f0006",
+					"durationMs": 143.0,
+					"pivot": {
+						"x": 0.5,
+						"y": 0.9
+					},
+					"anchors": {
+						"root": {
+							"x": 0.5,
+							"y": 0.9
+						}
+					}
+				},
+				{
+					"atlasFrame": "botamon.legacy.default.f0007",
+					"durationMs": 143.0,
+					"pivot": {
+						"x": 0.5,
+						"y": 0.9
+					},
+					"anchors": {
+						"root": {
+							"x": 0.5,
+							"y": 0.9
+						}
+					}
+				},
+				{
+					"atlasFrame": "botamon.legacy.default.f0006",
+					"durationMs": 143.0,
+					"pivot": {
+						"x": 0.5,
+						"y": 0.9
+					},
+					"anchors": {
+						"root": {
+							"x": 0.5,
+							"y": 0.9
+						}
+					}
+				},
+				{
+					"atlasFrame": "botamon.legacy.default.f0000",
+					"durationMs": 220.0,
+					"pivot": {
+						"x": 0.5,
+						"y": 0.9
+					},
+					"anchors": {
+						"root": {
+							"x": 0.5,
+							"y": 0.9
+						}
+					}
+				}
+			],
+			"events": [],
+			"qualityProfile": "legacy-blob-reaction"
+		}
+	},
+	"fallbacks": {
+		"listen": "idle.default",
+		"play": "happy.default",
+		"celebrate": "happy.default"
+	}
+}

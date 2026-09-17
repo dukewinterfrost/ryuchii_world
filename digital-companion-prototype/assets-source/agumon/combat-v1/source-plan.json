@@ -1,0 +1,1830 @@
+{
+  "schemaVersion": 1,
+  "assetId": "agumon",
+  "subjectId": "agumon",
+  "revision": "combat-v1",
+  "kind": "animation",
+  "provider": "codex-imagegen",
+  "sources": {},
+  "keyposes": [
+    "keypose.n",
+    "keypose.ne",
+    "keypose.e",
+    "keypose.se",
+    "keypose.s",
+    "keypose.sw",
+    "keypose.w",
+    "keypose.nw"
+  ],
+  "canvas": [
+    128,
+    128
+  ],
+  "requiredFacings": [
+    "N",
+    "NE",
+    "E",
+    "SE",
+    "S",
+    "SW",
+    "W",
+    "NW"
+  ],
+  "requiredActions": [
+    "idle",
+    "move",
+    "basic_attack",
+    "special_attack",
+    "guard",
+    "evade",
+    "hit",
+    "defeat"
+  ],
+  "paddingPx": 2,
+  "extrudePx": 1,
+  "clips": {
+    "idle.n": {
+      "semanticAction": "idle",
+      "kind": "loop",
+      "qualityProfile": "directional-combat",
+      "frames": [
+        {
+          "source": "idle.n.0000",
+          "durationMs": 100,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9375
+          },
+          "anchors": {
+            "root": {
+              "x": 0.5,
+              "y": 0.9375
+            },
+            "mouth": {
+              "x": 0.5,
+              "y": 0.35
+            }
+          }
+        }
+      ],
+      "events": []
+    },
+    "idle.ne": {
+      "semanticAction": "idle",
+      "kind": "loop",
+      "qualityProfile": "directional-combat",
+      "frames": [
+        {
+          "source": "idle.ne.0000",
+          "durationMs": 100,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9375
+          },
+          "anchors": {
+            "root": {
+              "x": 0.5,
+              "y": 0.9375
+            },
+            "mouth": {
+              "x": 0.5,
+              "y": 0.35
+            }
+          }
+        }
+      ],
+      "events": []
+    },
+    "idle.e": {
+      "semanticAction": "idle",
+      "kind": "loop",
+      "qualityProfile": "directional-combat",
+      "frames": [
+        {
+          "source": "idle.e.0000",
+          "durationMs": 100,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9375
+          },
+          "anchors": {
+            "root": {
+              "x": 0.5,
+              "y": 0.9375
+            },
+            "mouth": {
+              "x": 0.5,
+              "y": 0.35
+            }
+          }
+        }
+      ],
+      "events": []
+    },
+    "idle.se": {
+      "semanticAction": "idle",
+      "kind": "loop",
+      "qualityProfile": "directional-combat",
+      "frames": [
+        {
+          "source": "idle.se.0000",
+          "durationMs": 100,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9375
+          },
+          "anchors": {
+            "root": {
+              "x": 0.5,
+              "y": 0.9375
+            },
+            "mouth": {
+              "x": 0.5,
+              "y": 0.35
+            }
+          }
+        }
+      ],
+      "events": []
+    },
+    "idle.s": {
+      "semanticAction": "idle",
+      "kind": "loop",
+      "qualityProfile": "directional-combat",
+      "frames": [
+        {
+          "source": "idle.s.0000",
+          "durationMs": 100,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9375
+          },
+          "anchors": {
+            "root": {
+              "x": 0.5,
+              "y": 0.9375
+            },
+            "mouth": {
+              "x": 0.5,
+              "y": 0.35
+            }
+          }
+        }
+      ],
+      "events": []
+    },
+    "idle.sw": {
+      "semanticAction": "idle",
+      "kind": "loop",
+      "qualityProfile": "directional-combat",
+      "frames": [
+        {
+          "source": "idle.sw.0000",
+          "durationMs": 100,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9375
+          },
+          "anchors": {
+            "root": {
+              "x": 0.5,
+              "y": 0.9375
+            },
+            "mouth": {
+              "x": 0.5,
+              "y": 0.35
+            }
+          }
+        }
+      ],
+      "events": []
+    },
+    "idle.w": {
+      "semanticAction": "idle",
+      "kind": "loop",
+      "qualityProfile": "directional-combat",
+      "frames": [
+        {
+          "source": "idle.w.0000",
+          "durationMs": 100,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9375
+          },
+          "anchors": {
+            "root": {
+              "x": 0.5,
+              "y": 0.9375
+            },
+            "mouth": {
+              "x": 0.5,
+              "y": 0.35
+            }
+          }
+        }
+      ],
+      "events": []
+    },
+    "idle.nw": {
+      "semanticAction": "idle",
+      "kind": "loop",
+      "qualityProfile": "directional-combat",
+      "frames": [
+        {
+          "source": "idle.nw.0000",
+          "durationMs": 100,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9375
+          },
+          "anchors": {
+            "root": {
+              "x": 0.5,
+              "y": 0.9375
+            },
+            "mouth": {
+              "x": 0.5,
+              "y": 0.35
+            }
+          }
+        }
+      ],
+      "events": []
+    },
+    "move.n": {
+      "semanticAction": "move",
+      "kind": "loop",
+      "qualityProfile": "directional-combat",
+      "frames": [
+        {
+          "source": "move.n.0000",
+          "durationMs": 100,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9375
+          },
+          "anchors": {
+            "root": {
+              "x": 0.5,
+              "y": 0.9375
+            },
+            "mouth": {
+              "x": 0.5,
+              "y": 0.35
+            }
+          }
+        }
+      ],
+      "events": []
+    },
+    "move.ne": {
+      "semanticAction": "move",
+      "kind": "loop",
+      "qualityProfile": "directional-combat",
+      "frames": [
+        {
+          "source": "move.ne.0000",
+          "durationMs": 100,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9375
+          },
+          "anchors": {
+            "root": {
+              "x": 0.5,
+              "y": 0.9375
+            },
+            "mouth": {
+              "x": 0.5,
+              "y": 0.35
+            }
+          }
+        }
+      ],
+      "events": []
+    },
+    "move.e": {
+      "semanticAction": "move",
+      "kind": "loop",
+      "qualityProfile": "directional-combat",
+      "frames": [
+        {
+          "source": "move.e.0000",
+          "durationMs": 100,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9375
+          },
+          "anchors": {
+            "root": {
+              "x": 0.5,
+              "y": 0.9375
+            },
+            "mouth": {
+              "x": 0.5,
+              "y": 0.35
+            }
+          }
+        }
+      ],
+      "events": []
+    },
+    "move.se": {
+      "semanticAction": "move",
+      "kind": "loop",
+      "qualityProfile": "directional-combat",
+      "frames": [
+        {
+          "source": "move.se.0000",
+          "durationMs": 100,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9375
+          },
+          "anchors": {
+            "root": {
+              "x": 0.5,
+              "y": 0.9375
+            },
+            "mouth": {
+              "x": 0.5,
+              "y": 0.35
+            }
+          }
+        }
+      ],
+      "events": []
+    },
+    "move.s": {
+      "semanticAction": "move",
+      "kind": "loop",
+      "qualityProfile": "directional-combat",
+      "frames": [
+        {
+          "source": "move.s.0000",
+          "durationMs": 100,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9375
+          },
+          "anchors": {
+            "root": {
+              "x": 0.5,
+              "y": 0.9375
+            },
+            "mouth": {
+              "x": 0.5,
+              "y": 0.35
+            }
+          }
+        }
+      ],
+      "events": []
+    },
+    "move.sw": {
+      "semanticAction": "move",
+      "kind": "loop",
+      "qualityProfile": "directional-combat",
+      "frames": [
+        {
+          "source": "move.sw.0000",
+          "durationMs": 100,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9375
+          },
+          "anchors": {
+            "root": {
+              "x": 0.5,
+              "y": 0.9375
+            },
+            "mouth": {
+              "x": 0.5,
+              "y": 0.35
+            }
+          }
+        }
+      ],
+      "events": []
+    },
+    "move.w": {
+      "semanticAction": "move",
+      "kind": "loop",
+      "qualityProfile": "directional-combat",
+      "frames": [
+        {
+          "source": "move.w.0000",
+          "durationMs": 100,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9375
+          },
+          "anchors": {
+            "root": {
+              "x": 0.5,
+              "y": 0.9375
+            },
+            "mouth": {
+              "x": 0.5,
+              "y": 0.35
+            }
+          }
+        }
+      ],
+      "events": []
+    },
+    "move.nw": {
+      "semanticAction": "move",
+      "kind": "loop",
+      "qualityProfile": "directional-combat",
+      "frames": [
+        {
+          "source": "move.nw.0000",
+          "durationMs": 100,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9375
+          },
+          "anchors": {
+            "root": {
+              "x": 0.5,
+              "y": 0.9375
+            },
+            "mouth": {
+              "x": 0.5,
+              "y": 0.35
+            }
+          }
+        }
+      ],
+      "events": []
+    },
+    "basic_attack.n": {
+      "semanticAction": "basic_attack",
+      "kind": "one-shot",
+      "qualityProfile": "directional-combat",
+      "frames": [
+        {
+          "source": "basic_attack.n.0000",
+          "durationMs": 100,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9375
+          },
+          "anchors": {
+            "root": {
+              "x": 0.5,
+              "y": 0.9375
+            },
+            "mouth": {
+              "x": 0.5,
+              "y": 0.35
+            }
+          }
+        }
+      ],
+      "events": []
+    },
+    "basic_attack.ne": {
+      "semanticAction": "basic_attack",
+      "kind": "one-shot",
+      "qualityProfile": "directional-combat",
+      "frames": [
+        {
+          "source": "basic_attack.ne.0000",
+          "durationMs": 100,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9375
+          },
+          "anchors": {
+            "root": {
+              "x": 0.5,
+              "y": 0.9375
+            },
+            "mouth": {
+              "x": 0.5,
+              "y": 0.35
+            }
+          }
+        }
+      ],
+      "events": []
+    },
+    "basic_attack.e": {
+      "semanticAction": "basic_attack",
+      "kind": "one-shot",
+      "qualityProfile": "directional-combat",
+      "frames": [
+        {
+          "source": "basic_attack.e.0000",
+          "durationMs": 100,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9375
+          },
+          "anchors": {
+            "root": {
+              "x": 0.5,
+              "y": 0.9375
+            },
+            "mouth": {
+              "x": 0.5,
+              "y": 0.35
+            }
+          }
+        }
+      ],
+      "events": []
+    },
+    "basic_attack.se": {
+      "semanticAction": "basic_attack",
+      "kind": "one-shot",
+      "qualityProfile": "directional-combat",
+      "frames": [
+        {
+          "source": "basic_attack.se.0000",
+          "durationMs": 100,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9375
+          },
+          "anchors": {
+            "root": {
+              "x": 0.5,
+              "y": 0.9375
+            },
+            "mouth": {
+              "x": 0.5,
+              "y": 0.35
+            }
+          }
+        }
+      ],
+      "events": []
+    },
+    "basic_attack.s": {
+      "semanticAction": "basic_attack",
+      "kind": "one-shot",
+      "qualityProfile": "directional-combat",
+      "frames": [
+        {
+          "source": "basic_attack.s.0000",
+          "durationMs": 100,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9375
+          },
+          "anchors": {
+            "root": {
+              "x": 0.5,
+              "y": 0.9375
+            },
+            "mouth": {
+              "x": 0.5,
+              "y": 0.35
+            }
+          }
+        }
+      ],
+      "events": []
+    },
+    "basic_attack.sw": {
+      "semanticAction": "basic_attack",
+      "kind": "one-shot",
+      "qualityProfile": "directional-combat",
+      "frames": [
+        {
+          "source": "basic_attack.sw.0000",
+          "durationMs": 100,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9375
+          },
+          "anchors": {
+            "root": {
+              "x": 0.5,
+              "y": 0.9375
+            },
+            "mouth": {
+              "x": 0.5,
+              "y": 0.35
+            }
+          }
+        }
+      ],
+      "events": []
+    },
+    "basic_attack.w": {
+      "semanticAction": "basic_attack",
+      "kind": "one-shot",
+      "qualityProfile": "directional-combat",
+      "frames": [
+        {
+          "source": "basic_attack.w.0000",
+          "durationMs": 100,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9375
+          },
+          "anchors": {
+            "root": {
+              "x": 0.5,
+              "y": 0.9375
+            },
+            "mouth": {
+              "x": 0.5,
+              "y": 0.35
+            }
+          }
+        }
+      ],
+      "events": []
+    },
+    "basic_attack.nw": {
+      "semanticAction": "basic_attack",
+      "kind": "one-shot",
+      "qualityProfile": "directional-combat",
+      "frames": [
+        {
+          "source": "basic_attack.nw.0000",
+          "durationMs": 100,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9375
+          },
+          "anchors": {
+            "root": {
+              "x": 0.5,
+              "y": 0.9375
+            },
+            "mouth": {
+              "x": 0.5,
+              "y": 0.35
+            }
+          }
+        }
+      ],
+      "events": []
+    },
+    "special_attack.n": {
+      "semanticAction": "special_attack",
+      "kind": "one-shot",
+      "qualityProfile": "directional-combat",
+      "frames": [
+        {
+          "source": "special_attack.n.0000",
+          "durationMs": 100,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9375
+          },
+          "anchors": {
+            "root": {
+              "x": 0.5,
+              "y": 0.9375
+            },
+            "mouth": {
+              "x": 0.5,
+              "y": 0.35
+            }
+          }
+        }
+      ],
+      "events": []
+    },
+    "special_attack.ne": {
+      "semanticAction": "special_attack",
+      "kind": "one-shot",
+      "qualityProfile": "directional-combat",
+      "frames": [
+        {
+          "source": "special_attack.ne.0000",
+          "durationMs": 100,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9375
+          },
+          "anchors": {
+            "root": {
+              "x": 0.5,
+              "y": 0.9375
+            },
+            "mouth": {
+              "x": 0.5,
+              "y": 0.35
+            }
+          }
+        }
+      ],
+      "events": []
+    },
+    "special_attack.e": {
+      "semanticAction": "special_attack",
+      "kind": "one-shot",
+      "qualityProfile": "directional-combat",
+      "frames": [
+        {
+          "source": "special_attack.e.0000",
+          "durationMs": 100,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9375
+          },
+          "anchors": {
+            "root": {
+              "x": 0.5,
+              "y": 0.9375
+            },
+            "mouth": {
+              "x": 0.5,
+              "y": 0.35
+            }
+          }
+        }
+      ],
+      "events": []
+    },
+    "special_attack.se": {
+      "semanticAction": "special_attack",
+      "kind": "one-shot",
+      "qualityProfile": "directional-combat",
+      "frames": [
+        {
+          "source": "special_attack.se.0000",
+          "durationMs": 100,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9375
+          },
+          "anchors": {
+            "root": {
+              "x": 0.5,
+              "y": 0.9375
+            },
+            "mouth": {
+              "x": 0.5,
+              "y": 0.35
+            }
+          }
+        }
+      ],
+      "events": []
+    },
+    "special_attack.s": {
+      "semanticAction": "special_attack",
+      "kind": "one-shot",
+      "qualityProfile": "directional-combat",
+      "frames": [
+        {
+          "source": "special_attack.s.0000",
+          "durationMs": 100,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9375
+          },
+          "anchors": {
+            "root": {
+              "x": 0.5,
+              "y": 0.9375
+            },
+            "mouth": {
+              "x": 0.5,
+              "y": 0.35
+            }
+          }
+        }
+      ],
+      "events": []
+    },
+    "special_attack.sw": {
+      "semanticAction": "special_attack",
+      "kind": "one-shot",
+      "qualityProfile": "directional-combat",
+      "frames": [
+        {
+          "source": "special_attack.sw.0000",
+          "durationMs": 100,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9375
+          },
+          "anchors": {
+            "root": {
+              "x": 0.5,
+              "y": 0.9375
+            },
+            "mouth": {
+              "x": 0.5,
+              "y": 0.35
+            }
+          }
+        }
+      ],
+      "events": []
+    },
+    "special_attack.w": {
+      "semanticAction": "special_attack",
+      "kind": "one-shot",
+      "qualityProfile": "directional-combat",
+      "frames": [
+        {
+          "source": "special_attack.w.0000",
+          "durationMs": 100,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9375
+          },
+          "anchors": {
+            "root": {
+              "x": 0.5,
+              "y": 0.9375
+            },
+            "mouth": {
+              "x": 0.5,
+              "y": 0.35
+            }
+          }
+        }
+      ],
+      "events": []
+    },
+    "special_attack.nw": {
+      "semanticAction": "special_attack",
+      "kind": "one-shot",
+      "qualityProfile": "directional-combat",
+      "frames": [
+        {
+          "source": "special_attack.nw.0000",
+          "durationMs": 100,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9375
+          },
+          "anchors": {
+            "root": {
+              "x": 0.5,
+              "y": 0.9375
+            },
+            "mouth": {
+              "x": 0.5,
+              "y": 0.35
+            }
+          }
+        }
+      ],
+      "events": []
+    },
+    "guard.n": {
+      "semanticAction": "guard",
+      "kind": "loop",
+      "qualityProfile": "directional-combat",
+      "frames": [
+        {
+          "source": "guard.n.0000",
+          "durationMs": 100,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9375
+          },
+          "anchors": {
+            "root": {
+              "x": 0.5,
+              "y": 0.9375
+            },
+            "mouth": {
+              "x": 0.5,
+              "y": 0.35
+            }
+          }
+        }
+      ],
+      "events": []
+    },
+    "guard.ne": {
+      "semanticAction": "guard",
+      "kind": "loop",
+      "qualityProfile": "directional-combat",
+      "frames": [
+        {
+          "source": "guard.ne.0000",
+          "durationMs": 100,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9375
+          },
+          "anchors": {
+            "root": {
+              "x": 0.5,
+              "y": 0.9375
+            },
+            "mouth": {
+              "x": 0.5,
+              "y": 0.35
+            }
+          }
+        }
+      ],
+      "events": []
+    },
+    "guard.e": {
+      "semanticAction": "guard",
+      "kind": "loop",
+      "qualityProfile": "directional-combat",
+      "frames": [
+        {
+          "source": "guard.e.0000",
+          "durationMs": 100,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9375
+          },
+          "anchors": {
+            "root": {
+              "x": 0.5,
+              "y": 0.9375
+            },
+            "mouth": {
+              "x": 0.5,
+              "y": 0.35
+            }
+          }
+        }
+      ],
+      "events": []
+    },
+    "guard.se": {
+      "semanticAction": "guard",
+      "kind": "loop",
+      "qualityProfile": "directional-combat",
+      "frames": [
+        {
+          "source": "guard.se.0000",
+          "durationMs": 100,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9375
+          },
+          "anchors": {
+            "root": {
+              "x": 0.5,
+              "y": 0.9375
+            },
+            "mouth": {
+              "x": 0.5,
+              "y": 0.35
+            }
+          }
+        }
+      ],
+      "events": []
+    },
+    "guard.s": {
+      "semanticAction": "guard",
+      "kind": "loop",
+      "qualityProfile": "directional-combat",
+      "frames": [
+        {
+          "source": "guard.s.0000",
+          "durationMs": 100,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9375
+          },
+          "anchors": {
+            "root": {
+              "x": 0.5,
+              "y": 0.9375
+            },
+            "mouth": {
+              "x": 0.5,
+              "y": 0.35
+            }
+          }
+        }
+      ],
+      "events": []
+    },
+    "guard.sw": {
+      "semanticAction": "guard",
+      "kind": "loop",
+      "qualityProfile": "directional-combat",
+      "frames": [
+        {
+          "source": "guard.sw.0000",
+          "durationMs": 100,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9375
+          },
+          "anchors": {
+            "root": {
+              "x": 0.5,
+              "y": 0.9375
+            },
+            "mouth": {
+              "x": 0.5,
+              "y": 0.35
+            }
+          }
+        }
+      ],
+      "events": []
+    },
+    "guard.w": {
+      "semanticAction": "guard",
+      "kind": "loop",
+      "qualityProfile": "directional-combat",
+      "frames": [
+        {
+          "source": "guard.w.0000",
+          "durationMs": 100,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9375
+          },
+          "anchors": {
+            "root": {
+              "x": 0.5,
+              "y": 0.9375
+            },
+            "mouth": {
+              "x": 0.5,
+              "y": 0.35
+            }
+          }
+        }
+      ],
+      "events": []
+    },
+    "guard.nw": {
+      "semanticAction": "guard",
+      "kind": "loop",
+      "qualityProfile": "directional-combat",
+      "frames": [
+        {
+          "source": "guard.nw.0000",
+          "durationMs": 100,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9375
+          },
+          "anchors": {
+            "root": {
+              "x": 0.5,
+              "y": 0.9375
+            },
+            "mouth": {
+              "x": 0.5,
+              "y": 0.35
+            }
+          }
+        }
+      ],
+      "events": []
+    },
+    "evade.n": {
+      "semanticAction": "evade",
+      "kind": "one-shot",
+      "qualityProfile": "directional-combat",
+      "frames": [
+        {
+          "source": "evade.n.0000",
+          "durationMs": 100,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9375
+          },
+          "anchors": {
+            "root": {
+              "x": 0.5,
+              "y": 0.9375
+            },
+            "mouth": {
+              "x": 0.5,
+              "y": 0.35
+            }
+          }
+        }
+      ],
+      "events": []
+    },
+    "evade.ne": {
+      "semanticAction": "evade",
+      "kind": "one-shot",
+      "qualityProfile": "directional-combat",
+      "frames": [
+        {
+          "source": "evade.ne.0000",
+          "durationMs": 100,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9375
+          },
+          "anchors": {
+            "root": {
+              "x": 0.5,
+              "y": 0.9375
+            },
+            "mouth": {
+              "x": 0.5,
+              "y": 0.35
+            }
+          }
+        }
+      ],
+      "events": []
+    },
+    "evade.e": {
+      "semanticAction": "evade",
+      "kind": "one-shot",
+      "qualityProfile": "directional-combat",
+      "frames": [
+        {
+          "source": "evade.e.0000",
+          "durationMs": 100,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9375
+          },
+          "anchors": {
+            "root": {
+              "x": 0.5,
+              "y": 0.9375
+            },
+            "mouth": {
+              "x": 0.5,
+              "y": 0.35
+            }
+          }
+        }
+      ],
+      "events": []
+    },
+    "evade.se": {
+      "semanticAction": "evade",
+      "kind": "one-shot",
+      "qualityProfile": "directional-combat",
+      "frames": [
+        {
+          "source": "evade.se.0000",
+          "durationMs": 100,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9375
+          },
+          "anchors": {
+            "root": {
+              "x": 0.5,
+              "y": 0.9375
+            },
+            "mouth": {
+              "x": 0.5,
+              "y": 0.35
+            }
+          }
+        }
+      ],
+      "events": []
+    },
+    "evade.s": {
+      "semanticAction": "evade",
+      "kind": "one-shot",
+      "qualityProfile": "directional-combat",
+      "frames": [
+        {
+          "source": "evade.s.0000",
+          "durationMs": 100,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9375
+          },
+          "anchors": {
+            "root": {
+              "x": 0.5,
+              "y": 0.9375
+            },
+            "mouth": {
+              "x": 0.5,
+              "y": 0.35
+            }
+          }
+        }
+      ],
+      "events": []
+    },
+    "evade.sw": {
+      "semanticAction": "evade",
+      "kind": "one-shot",
+      "qualityProfile": "directional-combat",
+      "frames": [
+        {
+          "source": "evade.sw.0000",
+          "durationMs": 100,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9375
+          },
+          "anchors": {
+            "root": {
+              "x": 0.5,
+              "y": 0.9375
+            },
+            "mouth": {
+              "x": 0.5,
+              "y": 0.35
+            }
+          }
+        }
+      ],
+      "events": []
+    },
+    "evade.w": {
+      "semanticAction": "evade",
+      "kind": "one-shot",
+      "qualityProfile": "directional-combat",
+      "frames": [
+        {
+          "source": "evade.w.0000",
+          "durationMs": 100,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9375
+          },
+          "anchors": {
+            "root": {
+              "x": 0.5,
+              "y": 0.9375
+            },
+            "mouth": {
+              "x": 0.5,
+              "y": 0.35
+            }
+          }
+        }
+      ],
+      "events": []
+    },
+    "evade.nw": {
+      "semanticAction": "evade",
+      "kind": "one-shot",
+      "qualityProfile": "directional-combat",
+      "frames": [
+        {
+          "source": "evade.nw.0000",
+          "durationMs": 100,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9375
+          },
+          "anchors": {
+            "root": {
+              "x": 0.5,
+              "y": 0.9375
+            },
+            "mouth": {
+              "x": 0.5,
+              "y": 0.35
+            }
+          }
+        }
+      ],
+      "events": []
+    },
+    "hit.n": {
+      "semanticAction": "hit",
+      "kind": "one-shot",
+      "qualityProfile": "directional-combat",
+      "frames": [
+        {
+          "source": "hit.n.0000",
+          "durationMs": 100,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9375
+          },
+          "anchors": {
+            "root": {
+              "x": 0.5,
+              "y": 0.9375
+            },
+            "mouth": {
+              "x": 0.5,
+              "y": 0.35
+            }
+          }
+        }
+      ],
+      "events": []
+    },
+    "hit.ne": {
+      "semanticAction": "hit",
+      "kind": "one-shot",
+      "qualityProfile": "directional-combat",
+      "frames": [
+        {
+          "source": "hit.ne.0000",
+          "durationMs": 100,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9375
+          },
+          "anchors": {
+            "root": {
+              "x": 0.5,
+              "y": 0.9375
+            },
+            "mouth": {
+              "x": 0.5,
+              "y": 0.35
+            }
+          }
+        }
+      ],
+      "events": []
+    },
+    "hit.e": {
+      "semanticAction": "hit",
+      "kind": "one-shot",
+      "qualityProfile": "directional-combat",
+      "frames": [
+        {
+          "source": "hit.e.0000",
+          "durationMs": 100,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9375
+          },
+          "anchors": {
+            "root": {
+              "x": 0.5,
+              "y": 0.9375
+            },
+            "mouth": {
+              "x": 0.5,
+              "y": 0.35
+            }
+          }
+        }
+      ],
+      "events": []
+    },
+    "hit.se": {
+      "semanticAction": "hit",
+      "kind": "one-shot",
+      "qualityProfile": "directional-combat",
+      "frames": [
+        {
+          "source": "hit.se.0000",
+          "durationMs": 100,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9375
+          },
+          "anchors": {
+            "root": {
+              "x": 0.5,
+              "y": 0.9375
+            },
+            "mouth": {
+              "x": 0.5,
+              "y": 0.35
+            }
+          }
+        }
+      ],
+      "events": []
+    },
+    "hit.s": {
+      "semanticAction": "hit",
+      "kind": "one-shot",
+      "qualityProfile": "directional-combat",
+      "frames": [
+        {
+          "source": "hit.s.0000",
+          "durationMs": 100,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9375
+          },
+          "anchors": {
+            "root": {
+              "x": 0.5,
+              "y": 0.9375
+            },
+            "mouth": {
+              "x": 0.5,
+              "y": 0.35
+            }
+          }
+        }
+      ],
+      "events": []
+    },
+    "hit.sw": {
+      "semanticAction": "hit",
+      "kind": "one-shot",
+      "qualityProfile": "directional-combat",
+      "frames": [
+        {
+          "source": "hit.sw.0000",
+          "durationMs": 100,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9375
+          },
+          "anchors": {
+            "root": {
+              "x": 0.5,
+              "y": 0.9375
+            },
+            "mouth": {
+              "x": 0.5,
+              "y": 0.35
+            }
+          }
+        }
+      ],
+      "events": []
+    },
+    "hit.w": {
+      "semanticAction": "hit",
+      "kind": "one-shot",
+      "qualityProfile": "directional-combat",
+      "frames": [
+        {
+          "source": "hit.w.0000",
+          "durationMs": 100,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9375
+          },
+          "anchors": {
+            "root": {
+              "x": 0.5,
+              "y": 0.9375
+            },
+            "mouth": {
+              "x": 0.5,
+              "y": 0.35
+            }
+          }
+        }
+      ],
+      "events": []
+    },
+    "hit.nw": {
+      "semanticAction": "hit",
+      "kind": "one-shot",
+      "qualityProfile": "directional-combat",
+      "frames": [
+        {
+          "source": "hit.nw.0000",
+          "durationMs": 100,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9375
+          },
+          "anchors": {
+            "root": {
+              "x": 0.5,
+              "y": 0.9375
+            },
+            "mouth": {
+              "x": 0.5,
+              "y": 0.35
+            }
+          }
+        }
+      ],
+      "events": []
+    },
+    "defeat.n": {
+      "semanticAction": "defeat",
+      "kind": "one-shot",
+      "qualityProfile": "directional-combat",
+      "frames": [
+        {
+          "source": "defeat.n.0000",
+          "durationMs": 100,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9375
+          },
+          "anchors": {
+            "root": {
+              "x": 0.5,
+              "y": 0.9375
+            },
+            "mouth": {
+              "x": 0.5,
+              "y": 0.35
+            }
+          }
+        }
+      ],
+      "events": []
+    },
+    "defeat.ne": {
+      "semanticAction": "defeat",
+      "kind": "one-shot",
+      "qualityProfile": "directional-combat",
+      "frames": [
+        {
+          "source": "defeat.ne.0000",
+          "durationMs": 100,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9375
+          },
+          "anchors": {
+            "root": {
+              "x": 0.5,
+              "y": 0.9375
+            },
+            "mouth": {
+              "x": 0.5,
+              "y": 0.35
+            }
+          }
+        }
+      ],
+      "events": []
+    },
+    "defeat.e": {
+      "semanticAction": "defeat",
+      "kind": "one-shot",
+      "qualityProfile": "directional-combat",
+      "frames": [
+        {
+          "source": "defeat.e.0000",
+          "durationMs": 100,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9375
+          },
+          "anchors": {
+            "root": {
+              "x": 0.5,
+              "y": 0.9375
+            },
+            "mouth": {
+              "x": 0.5,
+              "y": 0.35
+            }
+          }
+        }
+      ],
+      "events": []
+    },
+    "defeat.se": {
+      "semanticAction": "defeat",
+      "kind": "one-shot",
+      "qualityProfile": "directional-combat",
+      "frames": [
+        {
+          "source": "defeat.se.0000",
+          "durationMs": 100,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9375
+          },
+          "anchors": {
+            "root": {
+              "x": 0.5,
+              "y": 0.9375
+            },
+            "mouth": {
+              "x": 0.5,
+              "y": 0.35
+            }
+          }
+        }
+      ],
+      "events": []
+    },
+    "defeat.s": {
+      "semanticAction": "defeat",
+      "kind": "one-shot",
+      "qualityProfile": "directional-combat",
+      "frames": [
+        {
+          "source": "defeat.s.0000",
+          "durationMs": 100,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9375
+          },
+          "anchors": {
+            "root": {
+              "x": 0.5,
+              "y": 0.9375
+            },
+            "mouth": {
+              "x": 0.5,
+              "y": 0.35
+            }
+          }
+        }
+      ],
+      "events": []
+    },
+    "defeat.sw": {
+      "semanticAction": "defeat",
+      "kind": "one-shot",
+      "qualityProfile": "directional-combat",
+      "frames": [
+        {
+          "source": "defeat.sw.0000",
+          "durationMs": 100,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9375
+          },
+          "anchors": {
+            "root": {
+              "x": 0.5,
+              "y": 0.9375
+            },
+            "mouth": {
+              "x": 0.5,
+              "y": 0.35
+            }
+          }
+        }
+      ],
+      "events": []
+    },
+    "defeat.w": {
+      "semanticAction": "defeat",
+      "kind": "one-shot",
+      "qualityProfile": "directional-combat",
+      "frames": [
+        {
+          "source": "defeat.w.0000",
+          "durationMs": 100,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9375
+          },
+          "anchors": {
+            "root": {
+              "x": 0.5,
+              "y": 0.9375
+            },
+            "mouth": {
+              "x": 0.5,
+              "y": 0.35
+            }
+          }
+        }
+      ],
+      "events": []
+    },
+    "defeat.nw": {
+      "semanticAction": "defeat",
+      "kind": "one-shot",
+      "qualityProfile": "directional-combat",
+      "frames": [
+        {
+          "source": "defeat.nw.0000",
+          "durationMs": 100,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9375
+          },
+          "anchors": {
+            "root": {
+              "x": 0.5,
+              "y": 0.9375
+            },
+            "mouth": {
+              "x": 0.5,
+              "y": 0.35
+            }
+          }
+        }
+      ],
+      "events": []
+    }
+  },
+  "fallbacks": {},
+  "motionProfile": {
+    "morphology": "biped",
+    "locomotion": "walk-run",
+    "rootPolicy": "in-place",
+    "facing": "eight-direction",
+    "requiredAnchors": [
+      "root",
+      "mouth"
+    ]
+  },
+  "provenance": {
+    "kind": "generated",
+    "modelVersion": "record-at-generation",
+    "promptTemplateVersion": "combat-v1",
+    "seed": null,
+    "referenceHashes": []
+  },
+  "generation": {
+    "brief": "Create an Agumon eight-direction combat set in consistent pixel art matching the approved existing companion identity. The camera looks down onto a ground plane. Preserve anatomy, markings, pixel scale and fixed 128x128 canvas; ground contact remains at [64,120]. First supply eight direction-specific neutral keyposes for human review. Do not create inbetweens until keyposes are approved. Combat hit geometry is NOT inferred from art. Mirrored views require explicit human approval. After approved poses, author deliberate windup, release, recovery and evade action cycles. The one-frame clip entries below are source-binding placeholders to expand into complete approved sequences; they are not completed animations.",
+    "jobs": [
+      {
+        "id": "keypose-n",
+        "stage": "keyposes",
+        "operation": "generate-image-v2",
+        "imageSize": [
+          128,
+          128
+        ],
+        "seed": 104208,
+        "description": "Exact Agumon identity, transparent pixel art neutral full-body pose facing N. Ground contact baseline120 on128x128 fixed canvas. Preserve tail, claws, anatomy, color palette and camera elevation from provided approved reference. One pose only.",
+        "references": []
+      },
+      {
+        "id": "keypose-ne",
+        "stage": "keyposes",
+        "operation": "generate-image-v2",
+        "imageSize": [
+          128,
+          128
+        ],
+        "seed": 104208,
+        "description": "Exact Agumon identity, transparent pixel art neutral full-body pose facing NE. Ground contact baseline120 on128x128 fixed canvas. Preserve tail, claws, anatomy, color palette and camera elevation from provided approved reference. One pose only.",
+        "references": []
+      },
+      {
+        "id": "keypose-e",
+        "stage": "keyposes",
+        "operation": "generate-image-v2",
+        "imageSize": [
+          128,
+          128
+        ],
+        "seed": 104208,
+        "description": "Exact Agumon identity, transparent pixel art neutral full-body pose facing E. Ground contact baseline120 on128x128 fixed canvas. Preserve tail, claws, anatomy, color palette and camera elevation from provided approved reference. One pose only.",
+        "references": []
+      },
+      {
+        "id": "keypose-se",
+        "stage": "keyposes",
+        "operation": "generate-image-v2",
+        "imageSize": [
+          128,
+          128
+        ],
+        "seed": 104208,
+        "description": "Exact Agumon identity, transparent pixel art neutral full-body pose facing SE. Ground contact baseline120 on128x128 fixed canvas. Preserve tail, claws, anatomy, color palette and camera elevation from provided approved reference. One pose only.",
+        "references": []
+      },
+      {
+        "id": "keypose-s",
+        "stage": "keyposes",
+        "operation": "generate-image-v2",
+        "imageSize": [
+          128,
+          128
+        ],
+        "seed": 104208,
+        "description": "Exact Agumon identity, transparent pixel art neutral full-body pose facing S. Ground contact baseline120 on128x128 fixed canvas. Preserve tail, claws, anatomy, color palette and camera elevation from provided approved reference. One pose only.",
+        "references": []
+      },
+      {
+        "id": "keypose-sw",
+        "stage": "keyposes",
+        "operation": "generate-image-v2",
+        "imageSize": [
+          128,
+          128
+        ],
+        "seed": 104208,
+        "description": "Exact Agumon identity, transparent pixel art neutral full-body pose facing SW. Ground contact baseline120 on128x128 fixed canvas. Preserve tail, claws, anatomy, color palette and camera elevation from provided approved reference. One pose only.",
+        "references": []
+      },
+      {
+        "id": "keypose-w",
+        "stage": "keyposes",
+        "operation": "generate-image-v2",
+        "imageSize": [
+          128,
+          128
+        ],
+        "seed": 104208,
+        "description": "Exact Agumon identity, transparent pixel art neutral full-body pose facing W. Ground contact baseline120 on128x128 fixed canvas. Preserve tail, claws, anatomy, color palette and camera elevation from provided approved reference. One pose only.",
+        "references": []
+      },
+      {
+        "id": "keypose-nw",
+        "stage": "keyposes",
+        "operation": "generate-image-v2",
+        "imageSize": [
+          128,
+          128
+        ],
+        "seed": 104208,
+        "description": "Exact Agumon identity, transparent pixel art neutral full-body pose facing NW. Ground contact baseline120 on128x128 fixed canvas. Preserve tail, claws, anatomy, color palette and camera elevation from provided approved reference. One pose only.",
+        "references": []
+      }
+    ]
+  }
+}

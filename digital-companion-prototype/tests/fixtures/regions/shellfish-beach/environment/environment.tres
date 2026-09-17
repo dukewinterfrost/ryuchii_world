@@ -1,0 +1,177 @@
+[gd_resource type="Resource" format=3]
+
+[resource]
+metadata/environment_manifest = {
+"ambientColor": "#ffffff",
+"ambientEnergy": 1.0,
+"ambientPlanes": [],
+"assetId": "environment-shellfish-beach",
+"backgroundColor": "#187aa5",
+"camera": {
+"dollyBounds": [2.0, 60.0],
+"far": 200.0,
+"fovDegrees": 28.0,
+"groundDistance": 12.0,
+"keepAspect": "width",
+"movementBounds": [0.0, 0.0, 1280.0, 1536.0],
+"near": 0.1,
+"pitchDegrees": 50.0,
+"projection": "perspective",
+"smoothingSpeed": 5.0,
+"spriteTiltDegrees": 8.0
+},
+"developmentStatus": "source-derived-kit-pending-human-review",
+"displayName": "Shellfish Beach",
+"groundFootprints": [{
+"id": "shellfish-beach-landmark.footprint",
+"rect": [-240.0, -48.0, 480.0, 96.0]
+}],
+"kind": "environment",
+"license": {
+"classification": "private-prototype-only",
+"notice": "Private prototype only; do not redistribute or publish DigimonUP-derived art."
+},
+"navigationProfiles": [{
+"decoration": true,
+"id": "solid",
+"movement": true,
+"waste": true
+}],
+"planeStacks": [{
+"groundFootprint": "shellfish-beach-landmark.footprint",
+"id": "shellfish-beach-landmark.stack",
+"navigation": "solid",
+"planes": ["shellfish-beach-landmark.facade", "shellfish-beach-landmark.interior", "shellfish-beach-landmark.roof"]
+}],
+"presentationProfile": {
+"fovDegrees": 28.0,
+"id": "sprite-in-3d-portrait-v1",
+"keepAspect": "width",
+"pitchDegrees": 50.0,
+"pixelsPerMeter": 32.0,
+"spriteTiltDegrees": 8.0,
+"version": 1.0
+},
+"provenance": {
+"compilerVersion": "1.3.0",
+"generator": "manual",
+"kind": "source-derived",
+"sourceHashes": {
+"feature_facade": "sha256:12d300e3a4b9f1b7fe0cc956b8b6c48b67e4f48f2dbea20adb7304b32ca6828c",
+"feature_interior": "sha256:b81e2e47d6a4e7ef002195fdc76185f6854b5c84df54efb4f3469e88de70124c",
+"feature_original": "sha256:5a9c24f75e729743710ea2c39bf23a8c4c8bd2d3d2196004794da1983ffb054e",
+"feature_roof": "sha256:7e643a8fce2f60172e75cb8f38c96bedb370a587330f8d36e886b6c60af18b24",
+"ground": "sha256:e4adf13337326fb76bbd021aa13967db86304492aa388e0fb5313731f386296b",
+"sample": "sha256:d58d3fcc09b6fb1c2ab3d65de5c342b1d1bb026966f73ebff092f22a4643758e",
+"top": "sha256:d58d3fcc09b6fb1c2ab3d65de5c342b1d1bb026966f73ebff092f22a4643758e"
+}
+},
+"provider": "manual",
+"regionId": "shellfish-beach",
+"reviewViewpoints": [{
+"id": "center",
+"lookAt": [20.0, 0.0, 24.0],
+"position": [20.0, 26.0, 38.0]
+}, {
+"id": "left",
+"lookAt": [20.0, 0.0, 24.0],
+"position": [14.0, 26.0, 38.0]
+}, {
+"id": "right",
+"lookAt": [20.0, 0.0, 24.0],
+"position": [26.0, 26.0, 38.0]
+}, {
+"id": "near",
+"lookAt": [20.0, 0.0, 20.0],
+"position": [20.0, 21.0, 33.0]
+}, {
+"id": "far",
+"lookAt": [20.0, 0.0, 24.0],
+"position": [20.0, 31.0, 45.0]
+}],
+"revision": "2026-09-12.001",
+"schemaVersion": 1.0,
+"spritePlanes": [{
+"alphaMode": "alpha-cut",
+"authoringStatus": "hash-bound-source-derived-card",
+"depthBehavior": "write",
+"id": "shellfish-beach-landmark.facade",
+"localPosition": [0.0, 0.0, 0.08],
+"pivot": {
+"x": 0.5,
+"y": 1.0
+},
+"pixelSize": 0.018,
+"rotationDegrees": [0.0, 0.0, 0.0],
+"source": "feature_facade"
+}, {
+"alphaMode": "alpha-cut",
+"authoringStatus": "hash-bound-source-derived-card",
+"depthBehavior": "write",
+"id": "shellfish-beach-landmark.interior",
+"localPosition": [0.0, 0.0, 0.0],
+"pivot": {
+"x": 0.5,
+"y": 1.0
+},
+"pixelSize": 0.018,
+"rotationDegrees": [0.0, 0.0, 0.0],
+"source": "feature_interior"
+}, {
+"alphaMode": "alpha-cut",
+"authoringStatus": "hash-bound-source-derived-card",
+"depthBehavior": "write",
+"id": "shellfish-beach-landmark.roof",
+"localPosition": [0.0, 0.15, -0.08],
+"pivot": {
+"x": 0.5,
+"y": 1.0
+},
+"pixelSize": 0.018,
+"rotationDegrees": [0.0, 0.0, 0.0],
+"source": "feature_roof"
+}],
+"terrainChunks": [{
+"alphaMode": "opaque",
+"depthBehavior": "write",
+"elevation": 0.0,
+"groundRect": [-512.0, -512.0, 2304.0, 2560.0],
+"id": "shellfish-beach-ground",
+"source": "ground",
+"sourceRegionPx": [0.0, 219.0, 2048.0, 550.0],
+"subdivisions": [18.0, 20.0],
+"textureBinding": "terrain.shellfish-beach-ground"
+}],
+"textures": {
+"feature_facade": "textures/feature_facade.png",
+"feature_interior": "textures/feature_interior.png",
+"feature_roof": "textures/feature_roof.png",
+"ground": "textures/ground.png",
+"terrain.shellfish-beach-ground": "textures/terrain.shellfish-beach-ground.png"
+},
+"worldScale": {
+"pixelsPerUnit": 32.0
+}
+}
+metadata/environment_texture_paths = {
+"feature_facade": "textures/feature_facade.png",
+"feature_interior": "textures/feature_interior.png",
+"feature_roof": "textures/feature_roof.png",
+"ground": "textures/ground.png",
+"terrain.shellfish-beach-ground": "textures/terrain.shellfish-beach-ground.png"
+}
+metadata/environment_texture_hashes = {
+"textures/feature_facade.png": "sha256:12d300e3a4b9f1b7fe0cc956b8b6c48b67e4f48f2dbea20adb7304b32ca6828c",
+"textures/feature_interior.png": "sha256:b81e2e47d6a4e7ef002195fdc76185f6854b5c84df54efb4f3469e88de70124c",
+"textures/feature_roof.png": "sha256:7e643a8fce2f60172e75cb8f38c96bedb370a587330f8d36e886b6c60af18b24",
+"textures/ground.png": "sha256:e4adf13337326fb76bbd021aa13967db86304492aa388e0fb5313731f386296b",
+"textures/terrain.shellfish-beach-ground.png": "sha256:bf8aa3e8495865a58dde9ab3da398ce408663102fa07cdd27f63140f0c155a5f"
+}
+metadata/candidate_identity = {
+"assetId": "environment-shellfish-beach",
+"buildIdentity": "sha256:d4bb82c0f8a3387f2687526db73f629c8d3e697732f9417e21af55345008881d",
+"compilerVersion": "1.3.0",
+"kind": "environment",
+"planSha256": "sha256:031360ce874abe709b695ae56180a9ae9fec7606030bfe762658177dad77c131",
+"revision": "2026-09-12.001"
+}

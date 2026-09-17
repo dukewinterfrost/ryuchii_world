@@ -1,0 +1,463 @@
+{
+  "replacements": {
+    "agumon-basic-attack-out": {
+      "reason": "Original returned detached smoke and flame effects above the head; excluded from review delivery.",
+      "item": {
+        "clip": "agumon-basic-attack",
+        "job": {
+          "description": "Animate only the orange dinosaur body in the provided images: bend both knees slightly, rotate the shoulder, and reach the front clawed hand forward into the supplied final pose. A clean isolated sprite sequence. Exactly one continuous connected character silhouette on an empty transparent canvas in every frame. The space above and around the head stays entirely empty and transparent throughout. The green eye, ivory claws, orange skin and black outline stay identical to the references. Feet stay registered on the same ground line. Fixed right-facing view and fixed scale. Start exactly at the first image, finish exactly at the last image.",
+          "firstFrame": "agumon-idle",
+          "frameCount": 6,
+          "id": "basic_attack.e.out.v2",
+          "lastFrame": "agumon-basic-attack",
+          "operation": "animate-with-text-v3",
+          "seed": 916000
+        },
+        "key": "agumon-basic-attack-out-v2",
+        "species": "agumon"
+      }
+    },
+    "agumon-basic-attack-back": {
+      "reason": "Original returned detached smoke and flame effects above the head; excluded from review delivery.",
+      "item": {
+        "clip": "agumon-basic-attack",
+        "job": {
+          "description": "Animate only the orange dinosaur body in the provided images: draw the outstretched clawed hand back toward the chest and straighten into the supplied final standing pose. A clean isolated sprite sequence. Exactly one continuous connected character silhouette on an empty transparent canvas in every frame. The space above and around the head stays entirely empty and transparent throughout. The green eye, ivory claws, orange skin and black outline stay identical to the references. Feet stay registered on the same ground line. Fixed right-facing view and fixed scale. Start exactly at the first image, finish exactly at the last image.",
+          "firstFrame": "agumon-basic-attack",
+          "frameCount": 6,
+          "id": "basic_attack.e.back.v2",
+          "lastFrame": "agumon-idle",
+          "operation": "animate-with-text-v3",
+          "seed": 916001
+        },
+        "key": "agumon-basic-attack-back-v2",
+        "species": "agumon"
+      }
+    },
+    "agumon-defeat-out": {
+      "reason": "Use concrete body motion and empty-canvas guidance after attack pilot QA; original planned request was never submitted.",
+      "item": {
+        "clip": "agumon-defeat",
+        "job": {
+          "description": "Animate only the orange dinosaur body in the provided images: bend the legs, lower the body and head, then settle into the provided final pose. Hold the final lowered pose; remain still at the end. A clean isolated sprite sequence. Exactly one character on an empty transparent canvas in every frame. The space above and around the character stays empty and transparent throughout. Preserve the supplied eye shapes, appendages, outline and palette. Keep the same right-facing view, scale and ground registration. Start exactly at the first image and finish exactly at the last image.",
+          "firstFrame": "agumon-idle",
+          "frameCount": 8,
+          "id": "defeat.e.out",
+          "lastFrame": "agumon-defeat",
+          "operation": "animate-with-text-v3",
+          "seed": 914002
+        },
+        "key": "agumon-defeat-out",
+        "species": "agumon"
+      }
+    },
+    "agumon-eat-out": {
+      "reason": "Use concrete body motion and empty-canvas guidance after attack pilot QA; original planned request was never submitted.",
+      "item": {
+        "clip": "agumon-eat",
+        "job": {
+          "description": "Animate only the orange dinosaur body in the provided images: lean forward and open the mouth into the provided eating pose. A clean isolated sprite sequence. Exactly one character on an empty transparent canvas in every frame. The space above and around the character stays empty and transparent throughout. Preserve the supplied eye shapes, appendages, outline and palette. Keep the same right-facing view, scale and ground registration. Start exactly at the first image and finish exactly at the last image.",
+          "firstFrame": "agumon-idle",
+          "frameCount": 6,
+          "id": "eat.e.out",
+          "lastFrame": "agumon-eat",
+          "operation": "animate-with-text-v3",
+          "seed": 914003
+        },
+        "key": "agumon-eat-out",
+        "species": "agumon"
+      }
+    },
+    "agumon-eat-back": {
+      "reason": "Use concrete body motion and empty-canvas guidance after attack pilot QA; original planned request was never submitted.",
+      "item": {
+        "clip": "agumon-eat",
+        "job": {
+          "description": "Animate only the orange dinosaur body in the provided images: relax the supplied action pose and move the body smoothly into the supplied neutral standing pose. A clean isolated sprite sequence. Exactly one character on an empty transparent canvas in every frame. The space above and around the character stays empty and transparent throughout. Preserve the supplied eye shapes, appendages, outline and palette. Keep the same right-facing view, scale and ground registration. Start exactly at the first image and finish exactly at the last image.",
+          "firstFrame": "agumon-eat",
+          "frameCount": 6,
+          "id": "eat.e.back",
+          "lastFrame": "agumon-idle",
+          "operation": "animate-with-text-v3",
+          "seed": 914004
+        },
+        "key": "agumon-eat-back",
+        "species": "agumon"
+      }
+    },
+    "agumon-evade-out": {
+      "reason": "Use concrete body motion and empty-canvas guidance after attack pilot QA; original planned request was never submitted.",
+      "item": {
+        "clip": "agumon-evade",
+        "job": {
+          "description": "Animate only the orange dinosaur body in the provided images: quickly lean the torso into the provided dodge pose. A clean isolated sprite sequence. Exactly one character on an empty transparent canvas in every frame. The space above and around the character stays empty and transparent throughout. Preserve the supplied eye shapes, appendages, outline and palette. Keep the same right-facing view, scale and ground registration. Start exactly at the first image and finish exactly at the last image.",
+          "firstFrame": "agumon-idle",
+          "frameCount": 4,
+          "id": "evade.e.out",
+          "lastFrame": "agumon-evade",
+          "operation": "animate-with-text-v3",
+          "seed": 914005
+        },
+        "key": "agumon-evade-out",
+        "species": "agumon"
+      }
+    },
+    "agumon-evade-back": {
+      "reason": "Use concrete body motion and empty-canvas guidance after attack pilot QA; original planned request was never submitted.",
+      "item": {
+        "clip": "agumon-evade",
+        "job": {
+          "description": "Animate only the orange dinosaur body in the provided images: relax the supplied action pose and move the body smoothly into the supplied neutral standing pose. A clean isolated sprite sequence. Exactly one character on an empty transparent canvas in every frame. The space above and around the character stays empty and transparent throughout. Preserve the supplied eye shapes, appendages, outline and palette. Keep the same right-facing view, scale and ground registration. Start exactly at the first image and finish exactly at the last image.",
+          "firstFrame": "agumon-evade",
+          "frameCount": 4,
+          "id": "evade.e.back",
+          "lastFrame": "agumon-idle",
+          "operation": "animate-with-text-v3",
+          "seed": 914006
+        },
+        "key": "agumon-evade-back",
+        "species": "agumon"
+      }
+    },
+    "agumon-guard-loop": {
+      "reason": "Use concrete body motion and empty-canvas guidance after attack pilot QA; original planned request was never submitted.",
+      "item": {
+        "clip": "agumon-guard",
+        "job": {
+          "description": "Animate only the orange dinosaur body in the provided images: hold the provided braced arm position while gently breathing. Complete a seamless cycle from the supplied pose back to itself. A clean isolated sprite sequence. Exactly one character on an empty transparent canvas in every frame. The space above and around the character stays empty and transparent throughout. Preserve the supplied eye shapes, appendages, outline and palette. Keep the same right-facing view, scale and ground registration. Start exactly at the first image and finish exactly at the last image.",
+          "firstFrame": "agumon-guard",
+          "frameCount": 4,
+          "id": "guard.e.loop",
+          "lastFrame": "agumon-guard",
+          "operation": "animate-with-text-v3",
+          "seed": 914007
+        },
+        "key": "agumon-guard-loop",
+        "species": "agumon"
+      }
+    },
+    "agumon-happy-out": {
+      "reason": "Use concrete body motion and empty-canvas guidance after attack pilot QA; original planned request was never submitted.",
+      "item": {
+        "clip": "agumon-happy",
+        "job": {
+          "description": "Animate only the orange dinosaur body in the provided images: squash slightly then spring upward into the provided happy pose. A clean isolated sprite sequence. Exactly one character on an empty transparent canvas in every frame. The space above and around the character stays empty and transparent throughout. Preserve the supplied eye shapes, appendages, outline and palette. Keep the same right-facing view, scale and ground registration. Start exactly at the first image and finish exactly at the last image.",
+          "firstFrame": "agumon-idle",
+          "frameCount": 6,
+          "id": "happy.e.out",
+          "lastFrame": "agumon-happy",
+          "operation": "animate-with-text-v3",
+          "seed": 914008
+        },
+        "key": "agumon-happy-out",
+        "species": "agumon"
+      }
+    },
+    "agumon-happy-back": {
+      "reason": "Use concrete body motion and empty-canvas guidance after attack pilot QA; original planned request was never submitted.",
+      "item": {
+        "clip": "agumon-happy",
+        "job": {
+          "description": "Animate only the orange dinosaur body in the provided images: relax the supplied action pose and move the body smoothly into the supplied neutral standing pose. A clean isolated sprite sequence. Exactly one character on an empty transparent canvas in every frame. The space above and around the character stays empty and transparent throughout. Preserve the supplied eye shapes, appendages, outline and palette. Keep the same right-facing view, scale and ground registration. Start exactly at the first image and finish exactly at the last image.",
+          "firstFrame": "agumon-happy",
+          "frameCount": 6,
+          "id": "happy.e.back",
+          "lastFrame": "agumon-idle",
+          "operation": "animate-with-text-v3",
+          "seed": 914009
+        },
+        "key": "agumon-happy-back",
+        "species": "agumon"
+      }
+    },
+    "agumon-hit-out": {
+      "reason": "Use concrete body motion and empty-canvas guidance after attack pilot QA; original planned request was never submitted.",
+      "item": {
+        "clip": "agumon-hit",
+        "job": {
+          "description": "Animate only the orange dinosaur body in the provided images: recoil the head and torso into the provided reaction pose. A clean isolated sprite sequence. Exactly one character on an empty transparent canvas in every frame. The space above and around the character stays empty and transparent throughout. Preserve the supplied eye shapes, appendages, outline and palette. Keep the same right-facing view, scale and ground registration. Start exactly at the first image and finish exactly at the last image.",
+          "firstFrame": "agumon-idle",
+          "frameCount": 4,
+          "id": "hit.e.out",
+          "lastFrame": "agumon-hit",
+          "operation": "animate-with-text-v3",
+          "seed": 914010
+        },
+        "key": "agumon-hit-out",
+        "species": "agumon"
+      }
+    },
+    "agumon-hit-back": {
+      "reason": "Use concrete body motion and empty-canvas guidance after attack pilot QA; original planned request was never submitted.",
+      "item": {
+        "clip": "agumon-hit",
+        "job": {
+          "description": "Animate only the orange dinosaur body in the provided images: relax the supplied action pose and move the body smoothly into the supplied neutral standing pose. A clean isolated sprite sequence. Exactly one character on an empty transparent canvas in every frame. The space above and around the character stays empty and transparent throughout. Preserve the supplied eye shapes, appendages, outline and palette. Keep the same right-facing view, scale and ground registration. Start exactly at the first image and finish exactly at the last image.",
+          "firstFrame": "agumon-hit",
+          "frameCount": 4,
+          "id": "hit.e.back",
+          "lastFrame": "agumon-idle",
+          "operation": "animate-with-text-v3",
+          "seed": 914011
+        },
+        "key": "agumon-hit-back",
+        "species": "agumon"
+      }
+    },
+    "agumon-move-loop": {
+      "reason": "Use concrete body motion and empty-canvas guidance after attack pilot QA; original planned request was never submitted.",
+      "item": {
+        "clip": "agumon-move",
+        "job": {
+          "description": "Animate only the orange dinosaur body in the provided images: perform one complete in-place walking cycle with alternating feet and a gentle tail counter-swing. Complete a seamless cycle from the supplied pose back to itself. A clean isolated sprite sequence. Exactly one character on an empty transparent canvas in every frame. The space above and around the character stays empty and transparent throughout. Preserve the supplied eye shapes, appendages, outline and palette. Keep the same right-facing view, scale and ground registration. Start exactly at the first image and finish exactly at the last image.",
+          "firstFrame": "agumon-move",
+          "frameCount": 8,
+          "id": "move.e.loop",
+          "lastFrame": "agumon-move",
+          "operation": "animate-with-text-v3",
+          "seed": 914013
+        },
+        "key": "agumon-move-loop",
+        "species": "agumon"
+      }
+    },
+    "agumon-pepper-breath-out": {
+      "reason": "Use concrete body motion and empty-canvas guidance after attack pilot QA; original planned request was never submitted.",
+      "item": {
+        "clip": "agumon-pepper-breath",
+        "job": {
+          "description": "Animate only the orange dinosaur body in the provided images: brace the legs, draw the head back slightly, then extend the neck and open the jaw into the provided final pose. A clean isolated sprite sequence. Exactly one character on an empty transparent canvas in every frame. The space above and around the character stays empty and transparent throughout. Preserve the supplied eye shapes, appendages, outline and palette. Keep the same right-facing view, scale and ground registration. Start exactly at the first image and finish exactly at the last image.",
+          "firstFrame": "agumon-idle",
+          "frameCount": 8,
+          "id": "pepper_breath.e.out",
+          "lastFrame": "agumon-pepper-breath",
+          "operation": "animate-with-text-v3",
+          "seed": 914014
+        },
+        "key": "agumon-pepper-breath-out",
+        "species": "agumon"
+      }
+    },
+    "agumon-pepper-breath-back": {
+      "reason": "Use concrete body motion and empty-canvas guidance after attack pilot QA; original planned request was never submitted.",
+      "item": {
+        "clip": "agumon-pepper-breath",
+        "job": {
+          "description": "Animate only the orange dinosaur body in the provided images: relax the supplied action pose and move the body smoothly into the supplied neutral standing pose. A clean isolated sprite sequence. Exactly one character on an empty transparent canvas in every frame. The space above and around the character stays empty and transparent throughout. Preserve the supplied eye shapes, appendages, outline and palette. Keep the same right-facing view, scale and ground registration. Start exactly at the first image and finish exactly at the last image.",
+          "firstFrame": "agumon-pepper-breath",
+          "frameCount": 8,
+          "id": "pepper_breath.e.back",
+          "lastFrame": "agumon-idle",
+          "operation": "animate-with-text-v3",
+          "seed": 914015
+        },
+        "key": "agumon-pepper-breath-back",
+        "species": "agumon"
+      }
+    },
+    "botamon-eat-out": {
+      "reason": "Use concrete body motion and empty-canvas guidance after attack pilot QA; original planned request was never submitted.",
+      "item": {
+        "clip": "botamon-eat",
+        "job": {
+          "description": "Animate only the black fuzzy round creature body in the provided images: lean forward and open the mouth into the provided eating pose. A clean isolated sprite sequence. Exactly one character on an empty transparent canvas in every frame. The space above and around the character stays empty and transparent throughout. Preserve the supplied eye shapes, appendages, outline and palette. Keep the same right-facing view, scale and ground registration. Start exactly at the first image and finish exactly at the last image.",
+          "firstFrame": "botamon-idle",
+          "frameCount": 6,
+          "id": "eat.e.out",
+          "lastFrame": "botamon-eat",
+          "operation": "animate-with-text-v3",
+          "seed": 914016
+        },
+        "key": "botamon-eat-out",
+        "species": "botamon"
+      }
+    },
+    "botamon-eat-back": {
+      "reason": "Use concrete body motion and empty-canvas guidance after attack pilot QA; original planned request was never submitted.",
+      "item": {
+        "clip": "botamon-eat",
+        "job": {
+          "description": "Animate only the black fuzzy round creature body in the provided images: relax the supplied action pose and move the body smoothly into the supplied neutral standing pose. A clean isolated sprite sequence. Exactly one character on an empty transparent canvas in every frame. The space above and around the character stays empty and transparent throughout. Preserve the supplied eye shapes, appendages, outline and palette. Keep the same right-facing view, scale and ground registration. Start exactly at the first image and finish exactly at the last image.",
+          "firstFrame": "botamon-eat",
+          "frameCount": 6,
+          "id": "eat.e.back",
+          "lastFrame": "botamon-idle",
+          "operation": "animate-with-text-v3",
+          "seed": 914017
+        },
+        "key": "botamon-eat-back",
+        "species": "botamon"
+      }
+    },
+    "botamon-happy-out": {
+      "reason": "Use concrete body motion and empty-canvas guidance after attack pilot QA; original planned request was never submitted.",
+      "item": {
+        "clip": "botamon-happy",
+        "job": {
+          "description": "Animate only the black fuzzy round creature body in the provided images: squash slightly then spring upward into the provided happy pose. A clean isolated sprite sequence. Exactly one character on an empty transparent canvas in every frame. The space above and around the character stays empty and transparent throughout. Preserve the supplied eye shapes, appendages, outline and palette. Keep the same right-facing view, scale and ground registration. Start exactly at the first image and finish exactly at the last image.",
+          "firstFrame": "botamon-idle",
+          "frameCount": 6,
+          "id": "happy.e.out",
+          "lastFrame": "botamon-happy",
+          "operation": "animate-with-text-v3",
+          "seed": 914018
+        },
+        "key": "botamon-happy-out",
+        "species": "botamon"
+      }
+    },
+    "botamon-happy-back": {
+      "reason": "Use concrete body motion and empty-canvas guidance after attack pilot QA; original planned request was never submitted.",
+      "item": {
+        "clip": "botamon-happy",
+        "job": {
+          "description": "Animate only the black fuzzy round creature body in the provided images: relax the supplied action pose and move the body smoothly into the supplied neutral standing pose. A clean isolated sprite sequence. Exactly one character on an empty transparent canvas in every frame. The space above and around the character stays empty and transparent throughout. Preserve the supplied eye shapes, appendages, outline and palette. Keep the same right-facing view, scale and ground registration. Start exactly at the first image and finish exactly at the last image.",
+          "firstFrame": "botamon-happy",
+          "frameCount": 6,
+          "id": "happy.e.back",
+          "lastFrame": "botamon-idle",
+          "operation": "animate-with-text-v3",
+          "seed": 914019
+        },
+        "key": "botamon-happy-back",
+        "species": "botamon"
+      }
+    },
+    "botamon-idle-loop": {
+      "reason": "Use concrete body motion and empty-canvas guidance after attack pilot QA; original planned request was never submitted.",
+      "item": {
+        "clip": "botamon-idle",
+        "job": {
+          "description": "Animate only the black fuzzy round creature body in the provided images: gently expand and relax the body while blinking once. Complete a seamless cycle from the supplied pose back to itself. A clean isolated sprite sequence. Exactly one character on an empty transparent canvas in every frame. The space above and around the character stays empty and transparent throughout. Preserve the supplied eye shapes, appendages, outline and palette. Keep the same right-facing view, scale and ground registration. Start exactly at the first image and finish exactly at the last image.",
+          "firstFrame": "botamon-idle",
+          "frameCount": 4,
+          "id": "idle.e.loop",
+          "lastFrame": "botamon-idle",
+          "operation": "animate-with-text-v3",
+          "seed": 914020
+        },
+        "key": "botamon-idle-loop",
+        "species": "botamon"
+      }
+    },
+    "botamon-move-loop": {
+      "reason": "Use concrete body motion and empty-canvas guidance after attack pilot QA; original planned request was never submitted.",
+      "item": {
+        "clip": "botamon-move",
+        "job": {
+          "description": "Animate only the black fuzzy round creature body in the provided images: perform a small complete hop cycle in place, squashing slightly on landing. Complete a seamless cycle from the supplied pose back to itself. A clean isolated sprite sequence. Exactly one character on an empty transparent canvas in every frame. The space above and around the character stays empty and transparent throughout. Preserve the supplied eye shapes, appendages, outline and palette. Keep the same right-facing view, scale and ground registration. Start exactly at the first image and finish exactly at the last image.",
+          "firstFrame": "botamon-move",
+          "frameCount": 8,
+          "id": "move.e.loop",
+          "lastFrame": "botamon-move",
+          "operation": "animate-with-text-v3",
+          "seed": 914021
+        },
+        "key": "botamon-move-loop",
+        "species": "botamon"
+      }
+    },
+    "koromon-eat-out": {
+      "reason": "Use concrete body motion and empty-canvas guidance after attack pilot QA; original planned request was never submitted.",
+      "item": {
+        "clip": "koromon-eat",
+        "job": {
+          "description": "Animate only the pink round creature with two long appendages body in the provided images: lean forward and open the mouth into the provided eating pose. A clean isolated sprite sequence. Exactly one character on an empty transparent canvas in every frame. The space above and around the character stays empty and transparent throughout. Preserve the supplied eye shapes, appendages, outline and palette. Keep the same right-facing view, scale and ground registration. Start exactly at the first image and finish exactly at the last image.",
+          "firstFrame": "koromon-idle",
+          "frameCount": 6,
+          "id": "eat.e.out",
+          "lastFrame": "koromon-eat",
+          "operation": "animate-with-text-v3",
+          "seed": 914022
+        },
+        "key": "koromon-eat-out",
+        "species": "koromon"
+      }
+    },
+    "koromon-eat-back": {
+      "reason": "Use concrete body motion and empty-canvas guidance after attack pilot QA; original planned request was never submitted.",
+      "item": {
+        "clip": "koromon-eat",
+        "job": {
+          "description": "Animate only the pink round creature with two long appendages body in the provided images: relax the supplied action pose and move the body smoothly into the supplied neutral standing pose. A clean isolated sprite sequence. Exactly one character on an empty transparent canvas in every frame. The space above and around the character stays empty and transparent throughout. Preserve the supplied eye shapes, appendages, outline and palette. Keep the same right-facing view, scale and ground registration. Start exactly at the first image and finish exactly at the last image.",
+          "firstFrame": "koromon-eat",
+          "frameCount": 6,
+          "id": "eat.e.back",
+          "lastFrame": "koromon-idle",
+          "operation": "animate-with-text-v3",
+          "seed": 914023
+        },
+        "key": "koromon-eat-back",
+        "species": "koromon"
+      }
+    },
+    "koromon-happy-out": {
+      "reason": "Use concrete body motion and empty-canvas guidance after attack pilot QA; original planned request was never submitted.",
+      "item": {
+        "clip": "koromon-happy",
+        "job": {
+          "description": "Animate only the pink round creature with two long appendages body in the provided images: squash slightly then spring upward into the provided happy pose. A clean isolated sprite sequence. Exactly one character on an empty transparent canvas in every frame. The space above and around the character stays empty and transparent throughout. Preserve the supplied eye shapes, appendages, outline and palette. Keep the same right-facing view, scale and ground registration. Start exactly at the first image and finish exactly at the last image.",
+          "firstFrame": "koromon-idle",
+          "frameCount": 6,
+          "id": "happy.e.out",
+          "lastFrame": "koromon-happy",
+          "operation": "animate-with-text-v3",
+          "seed": 914024
+        },
+        "key": "koromon-happy-out",
+        "species": "koromon"
+      }
+    },
+    "koromon-happy-back": {
+      "reason": "Use concrete body motion and empty-canvas guidance after attack pilot QA; original planned request was never submitted.",
+      "item": {
+        "clip": "koromon-happy",
+        "job": {
+          "description": "Animate only the pink round creature with two long appendages body in the provided images: relax the supplied action pose and move the body smoothly into the supplied neutral standing pose. A clean isolated sprite sequence. Exactly one character on an empty transparent canvas in every frame. The space above and around the character stays empty and transparent throughout. Preserve the supplied eye shapes, appendages, outline and palette. Keep the same right-facing view, scale and ground registration. Start exactly at the first image and finish exactly at the last image.",
+          "firstFrame": "koromon-happy",
+          "frameCount": 6,
+          "id": "happy.e.back",
+          "lastFrame": "koromon-idle",
+          "operation": "animate-with-text-v3",
+          "seed": 914025
+        },
+        "key": "koromon-happy-back",
+        "species": "koromon"
+      }
+    },
+    "koromon-idle-loop": {
+      "reason": "Use concrete body motion and empty-canvas guidance after attack pilot QA; original planned request was never submitted.",
+      "item": {
+        "clip": "koromon-idle",
+        "job": {
+          "description": "Animate only the pink round creature with two long appendages body in the provided images: gently expand and relax the body while blinking once. Complete a seamless cycle from the supplied pose back to itself. A clean isolated sprite sequence. Exactly one character on an empty transparent canvas in every frame. The space above and around the character stays empty and transparent throughout. Preserve the supplied eye shapes, appendages, outline and palette. Keep the same right-facing view, scale and ground registration. Start exactly at the first image and finish exactly at the last image.",
+          "firstFrame": "koromon-idle",
+          "frameCount": 4,
+          "id": "idle.e.loop",
+          "lastFrame": "koromon-idle",
+          "operation": "animate-with-text-v3",
+          "seed": 914026
+        },
+        "key": "koromon-idle-loop",
+        "species": "koromon"
+      }
+    },
+    "koromon-move-loop": {
+      "reason": "Use concrete body motion and empty-canvas guidance after attack pilot QA; original planned request was never submitted.",
+      "item": {
+        "clip": "koromon-move",
+        "job": {
+          "description": "Animate only the pink round creature with two long appendages body in the provided images: perform a small complete hop cycle in place, squashing slightly on landing. Complete a seamless cycle from the supplied pose back to itself. A clean isolated sprite sequence. Exactly one character on an empty transparent canvas in every frame. The space above and around the character stays empty and transparent throughout. Preserve the supplied eye shapes, appendages, outline and palette. Keep the same right-facing view, scale and ground registration. Start exactly at the first image and finish exactly at the last image.",
+          "firstFrame": "koromon-move",
+          "frameCount": 8,
+          "id": "move.e.loop",
+          "lastFrame": "koromon-move",
+          "operation": "animate-with-text-v3",
+          "seed": 914027
+        },
+        "key": "koromon-move-loop",
+        "species": "koromon"
+      }
+    }
+  }
+}

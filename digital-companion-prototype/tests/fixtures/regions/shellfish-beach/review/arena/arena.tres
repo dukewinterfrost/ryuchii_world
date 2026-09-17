@@ -1,0 +1,53 @@
+[gd_resource type="Resource" format=3]
+
+[resource]
+metadata/arena_manifest = {
+"assetId": "arena-breaker-cove",
+"displayName": "Breaker Cove",
+"environment": {
+"assetId": "environment-shellfish-beach",
+"contentSha256": "sha256:05c2dfba32d610279aec9671cc65e94d7ef71efd2787678020d4007022f28e6e",
+"revision": "2026-09-12.001"
+},
+"ground": {
+"cellSize": 32.0,
+"height": 1152.0,
+"width": 960.0
+},
+"kind": "arena",
+"maxBodyRadius": 16.0,
+"obstacles": [{
+"id": "shellfish-beach-landmark-footprint",
+"movement": true,
+"occlusion": true,
+"projectile": true,
+"rect": [240.0, 192.0, 480.0, 96.0],
+"sight": true
+}],
+"presentation": {
+"staticPlacements": [{
+"groundPosition": [480.0, 240.0],
+"id": "shellfish-beach-landmark-arena",
+"obstacle": "shellfish-beach-landmark-footprint",
+"planeStack": "shellfish-beach-landmark.stack",
+"rotationDegrees": 0.0
+}]
+},
+"projection": "square",
+"regionId": "shellfish-beach",
+"revision": "2026-09-12.001",
+"schemaVersion": 1.0,
+"spawns": {
+"opponent": [816.0, 560.0],
+"player": [144.0, 560.0]
+},
+"tiles": []
+}
+metadata/candidate_identity = {
+"assetId": "arena-breaker-cove",
+"buildIdentity": "sha256:2cfa980ee0d5614bf8c3696584cf8b464fb5bdb4b7708b794a6f82e2b4aec51c",
+"compilerVersion": "1.3.0",
+"kind": "arena",
+"planSha256": "sha256:d3184ad15167063f540b24e36e3186060ab7cb5cdf463b6a552645d22253ea95",
+"revision": "2026-09-12.001"
+}

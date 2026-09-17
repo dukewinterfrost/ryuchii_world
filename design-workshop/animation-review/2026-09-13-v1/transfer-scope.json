@@ -1,0 +1,18 @@
+{
+  "destination": "https://api.pixellab.ai/v2",
+  "payloadDescription": "Only the 18 game-character PNG keyframes created in this task, plus character/action prompts. The images depict Botamon, Koromon and Agumon; no personal photos, messages, contacts or business documents.",
+  "userInstructions": [
+    "Can we use the pixel AI API to do this",
+    "Wait forget that last bit - that will be just for the animations",
+    "These are looking good, run them through the animation machine, and either create, or update the 'sprite generator workflow' skill (or whatever similar"
+  ],
+  "interpretation": "PixelLab is the existing Pixel AI animation provider in this project's animation adapter. The user restricted the provider to animation production and has now approved these exact keyframes for that production.",
+  "operations": [
+    "POST /unzoom (native grid recovery)",
+    "POST /remove-background (transparent animation input)",
+    "POST /animate-with-text-v3 (animation generation)",
+    "GET /background-jobs/{id} (status/results)"
+  ],
+  "unchanged": "Original keyframe PNGs and existing runtime assets remain preserved. Generated results stay candidates for review. No subscription purchase or account changes.",
+  "approvalRecord": "keyframe-approval.json"
+}

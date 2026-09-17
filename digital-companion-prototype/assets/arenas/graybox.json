@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "kind": "arena",
+  "assetId": "graybox",
+  "revision": "1",
+  "projection": "square",
+  "ground": {"width": 640, "height": 480, "cellSize": 20},
+  "maxBodyRadius": 16,
+  "spawns": {"player": [100, 240], "opponent": [540, 240]},
+  "obstacles": [],
+  "tiles": []
+}

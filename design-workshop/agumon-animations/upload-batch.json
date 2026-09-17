@@ -1,0 +1,16 @@
+{
+  "uploads": [
+    {
+      "submitUrl": "https://mcp.figma.com/mcp/upload/9489b697-913c-48af-baaf-dda8e2738066/submit?scaleMode=FIT",
+      "targetNodeId": "26:226",
+      "path": "/Users/johncohrn/Documents/ChatGPT/Godot Projects/design-workshop/agumon-animations/legacy-roam-preview.gif",
+      "nodeId": "26:226"
+    },
+    {
+      "submitUrl": "https://mcp.figma.com/mcp/upload/3b42a49e-0027-4813-9b29-737392bbc256/submit?scaleMode=FIT",
+      "targetNodeId": "26:235",
+      "path": "/Users/johncohrn/Documents/ChatGPT/Godot Projects/design-workshop/agumon-animations/legacy-happy-preview.gif",
+      "nodeId": "26:235"
+    }
+  ]
+}
