@@ -78,7 +78,7 @@ static func default_layout_for_manifest(manifest: Dictionary) -> Dictionary:
 
 
 static func migrate_legacy_layout(layout: Dictionary) -> Dictionary:
-	if not _validate_layout_shape(layout, LEGACY_WIDTH, LEGACY_HEIGHT, {}, Vector2i(-1, -1)).ok:
+	if not _validate_layout_shape(layout, LEGACY_WIDTH, LEGACY_HEIGHT, {}, Vector2i(-1, -1), true).ok:
 		return {}
 	var migrated := layout.duplicate(true)
 	var old_creature := Vector2i(int(layout.creature_cell[0]), int(layout.creature_cell[1]))
@@ -87,14 +87,14 @@ static func migrate_legacy_layout(layout: Dictionary) -> Dictionary:
 	for item: Dictionary in migrated.items:
 		item.x = int(item.x) + LEGACY_CENTER_OFFSET.x
 		item.y = int(item.y) + LEGACY_CENTER_OFFSET.y
-	return migrated if validate_layout(migrated).ok else {}
+	return migrated if validate_layout(migrated, Vector2i(-1, -1), {}, true).ok else {}
 
 
-static func footprint(item: Dictionary) -> Array[Vector2i]:
+static func footprint(item: Dictionary, legacy_geometry := false) -> Array[Vector2i]:
 	var cells: Array[Vector2i] = []
 	if not Definitions.DECOR.has(item.get("item_id", "")):
 		return cells
-	var size: Array = Definitions.DECOR[item.item_id].size
+	var size: Array = Definitions.OLD_DECOR_SIZES[item.item_id] if legacy_geometry else Definitions.DECOR[item.item_id].size
 	var w := int(size[0]) if int(item.get("rotation", 0)) % 2 == 0 else int(size[1])
 	var h := int(size[1]) if int(item.get("rotation", 0)) % 2 == 0 else int(size[0])
 	for y: int in h:
@@ -104,13 +104,34 @@ static func footprint(item: Dictionary) -> Array[Vector2i]:
 
 
 static func potty_entrance(item: Dictionary) -> Vector2i:
-	var offsets := [Vector2i(0, 2), Vector2i(-1, 0), Vector2i(1, -1), Vector2i(2, 1)]
-	return Vector2i(int(item.x), int(item.y)) + offsets[int(item.get("rotation", 0)) % 4]
+	return facility_entrance(item)
 
 
-static func validate_layout(layout: Dictionary, creature_cell: Vector2i = Vector2i(-1, -1), habitat_manifest: Dictionary = {}) -> Dictionary:
+static func facility_entrance(item: Dictionary, legacy_geometry := false) -> Vector2i:
+	var definition: Dictionary = Definitions.DECOR[item.item_id]
+	var size: Array = Definitions.OLD_DECOR_SIZES[item.item_id] if legacy_geometry else definition.size
+	var e: Array = ([1, 3] if item.item_id == "pond" else [0, 2]) if legacy_geometry else definition.get("entrance", [0, size[1]])
+	var offset := Vector2i(int(e[0]), int(e[1]))
+	match int(item.get("rotation", 0)) % 4:
+		1: offset = Vector2i(int(size[1]) - 1 - offset.y, offset.x)
+		2: offset = Vector2i(int(size[0]) - 1 - offset.x, int(size[1]) - 1 - offset.y)
+		3: offset = Vector2i(offset.y, int(size[0]) - 1 - offset.x)
+	return Vector2i(int(item.x), int(item.y)) + offset
+
+
+static func path_to_facility(layout: Dictionary, kind: String, habitat_manifest: Dictionary = {}) -> Array[Vector2i]:
+	var start := Vector2i(int(layout.creature_cell[0]), int(layout.creature_cell[1]))
+	var best: Array[Vector2i] = []
+	for item: Dictionary in layout.items:
+		if item.item_id == kind:
+			var path := path_between_cells(layout, start, facility_entrance(item), habitat_manifest)
+			if not path.is_empty() and (best.is_empty() or path.size() < best.size()): best = path
+	return best
+
+
+static func validate_layout(layout: Dictionary, creature_cell: Vector2i = Vector2i(-1, -1), habitat_manifest: Dictionary = {}, legacy_geometry := false) -> Dictionary:
 	var dimensions := grid_size(habitat_manifest)
-	return _validate_layout_shape(layout, dimensions.x, dimensions.y, habitat_manifest, creature_cell)
+	return _validate_layout_shape(layout, dimensions.x, dimensions.y, habitat_manifest, creature_cell, legacy_geometry)
 
 
 static func path_to_potty(layout: Dictionary, creature_cell: Vector2i = Vector2i(-1, -1), habitat_manifest: Dictionary = {}) -> Array[Vector2i]:
@@ -195,7 +216,7 @@ static func inside(cell: Vector2i, dimensions := Vector2i(WIDTH, HEIGHT)) -> boo
 	return cell.x >= 0 and cell.y >= 0 and cell.x < dimensions.x and cell.y < dimensions.y
 
 
-static func _validate_layout_shape(layout: Dictionary, width: int, height: int, habitat_manifest: Dictionary, creature_cell: Vector2i) -> Dictionary:
+static func _validate_layout_shape(layout: Dictionary, width: int, height: int, habitat_manifest: Dictionary, creature_cell: Vector2i, legacy_geometry := false) -> Dictionary:
 	if not layout.has_all(["theme", "items", "camera", "creature_cell"]) or layout.size() != 4:
 		return {"ok": false, "error": "Incomplete habitat layout."}
 	if layout.theme not in ["verdant", "practice"] or not layout.items is Array or layout.items.size() > width * height:
@@ -221,7 +242,7 @@ static func _validate_layout_shape(layout: Dictionary, width: int, height: int, 
 		if not _integer(item.x) or not _integer(item.y) or not _integer(item.rotation) or int(item.rotation) < 0 or int(item.rotation) > 3:
 			return {"ok": false, "error": "Items must snap to the grid."}
 		ids[item.instance_id] = true
-		for cell: Vector2i in footprint(item):
+		for cell: Vector2i in footprint(item, legacy_geometry):
 			if not inside(cell, dimensions) or occupied.has(cell) or solid.has(cell) or not decoration_cell_allowed(cell, habitat_manifest):
 				return {"ok": false, "error": "Items overlap, block authored scenery, or extend outside the decoration zone."}
 			occupied[cell] = true
@@ -230,8 +251,8 @@ static func _validate_layout_shape(layout: Dictionary, width: int, height: int, 
 	if solid.has(creature_cell):
 		return {"ok": false, "error": "An item blocks the creature."}
 	for item: Dictionary in layout.items:
-		if item.item_id == "digi_potty" and _path(creature_cell, potty_entrance(item), solid, dimensions).is_empty():
-			return {"ok": false, "error": "The potty entrance must remain reachable."}
+		if Definitions.DECOR[item.item_id].has("entrance") and _path(creature_cell, facility_entrance(item, legacy_geometry), solid, dimensions).is_empty():
+			return {"ok": false, "error": "Every facility entrance must remain reachable."}
 	return {"ok": true, "error": ""}
 
 

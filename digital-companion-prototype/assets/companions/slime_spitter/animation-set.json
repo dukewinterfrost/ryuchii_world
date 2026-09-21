@@ -1,0 +1,841 @@
+{
+  "schemaVersion": 1,
+  "subjectId": "slime_spitter",
+  "assetId": "slime_spitter",
+  "revision": "source-2026-09-21",
+  "status": "source-derived-fallback",
+  "provenance": {
+    "kind": "source-derived",
+    "referenceHashes": [
+      "sha256:0eb2596c4c65f1d381e4f8d6d8d8c03620530ad7f4357ac625d1960587d7c8d4"
+    ],
+    "note": "Original Figma sheet poses; PixelLab replacements await motion review."
+  },
+  "motionProfile": {
+    "morphology": "legless",
+    "locomotion": "hopping",
+    "rootPolicy": "in-place",
+    "facing": "right"
+  },
+  "fallbacks": {},
+  "clips": {
+    "idle.default": {
+      "semanticAction": "idle",
+      "kind": "loop",
+      "frames": [
+        {
+          "atlasFrame": "slime_spitter.idle.0",
+          "durationMs": 160,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9375
+          },
+          "anchors": {
+            "root": {
+              "x": 0.5,
+              "y": 0.9375
+            }
+          }
+        },
+        {
+          "atlasFrame": "slime_spitter.idle.1",
+          "durationMs": 160,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9375
+          },
+          "anchors": {
+            "root": {
+              "x": 0.5,
+              "y": 0.9375
+            }
+          }
+        },
+        {
+          "atlasFrame": "slime_spitter.idle.2",
+          "durationMs": 160,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9375
+          },
+          "anchors": {
+            "root": {
+              "x": 0.5,
+              "y": 0.9375
+            }
+          }
+        },
+        {
+          "atlasFrame": "slime_spitter.idle.3",
+          "durationMs": 160,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9375
+          },
+          "anchors": {
+            "root": {
+              "x": 0.5,
+              "y": 0.9375
+            }
+          }
+        },
+        {
+          "atlasFrame": "slime_spitter.idle.4",
+          "durationMs": 160,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9375
+          },
+          "anchors": {
+            "root": {
+              "x": 0.5,
+              "y": 0.9375
+            }
+          }
+        },
+        {
+          "atlasFrame": "slime_spitter.idle.5",
+          "durationMs": 160,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9375
+          },
+          "anchors": {
+            "root": {
+              "x": 0.5,
+              "y": 0.9375
+            }
+          }
+        },
+        {
+          "atlasFrame": "slime_spitter.idle.6",
+          "durationMs": 160,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9375
+          },
+          "anchors": {
+            "root": {
+              "x": 0.5,
+              "y": 0.9375
+            }
+          }
+        },
+        {
+          "atlasFrame": "slime_spitter.idle.7",
+          "durationMs": 160,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9375
+          },
+          "anchors": {
+            "root": {
+              "x": 0.5,
+              "y": 0.9375
+            }
+          }
+        }
+      ]
+    },
+    "move.default": {
+      "semanticAction": "move",
+      "kind": "loop",
+      "frames": [
+        {
+          "atlasFrame": "slime_spitter.move.0",
+          "durationMs": 100,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9375
+          },
+          "anchors": {
+            "root": {
+              "x": 0.5,
+              "y": 0.9375
+            }
+          }
+        },
+        {
+          "atlasFrame": "slime_spitter.move.1",
+          "durationMs": 100,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9375
+          },
+          "anchors": {
+            "root": {
+              "x": 0.5,
+              "y": 0.9375
+            }
+          }
+        },
+        {
+          "atlasFrame": "slime_spitter.move.2",
+          "durationMs": 100,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9375
+          },
+          "anchors": {
+            "root": {
+              "x": 0.5,
+              "y": 0.9375
+            }
+          }
+        },
+        {
+          "atlasFrame": "slime_spitter.move.3",
+          "durationMs": 100,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9375
+          },
+          "anchors": {
+            "root": {
+              "x": 0.5,
+              "y": 0.9375
+            }
+          }
+        },
+        {
+          "atlasFrame": "slime_spitter.move.4",
+          "durationMs": 100,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9375
+          },
+          "anchors": {
+            "root": {
+              "x": 0.5,
+              "y": 0.9375
+            }
+          }
+        },
+        {
+          "atlasFrame": "slime_spitter.move.5",
+          "durationMs": 100,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9375
+          },
+          "anchors": {
+            "root": {
+              "x": 0.5,
+              "y": 0.9375
+            }
+          }
+        },
+        {
+          "atlasFrame": "slime_spitter.move.6",
+          "durationMs": 100,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9375
+          },
+          "anchors": {
+            "root": {
+              "x": 0.5,
+              "y": 0.9375
+            }
+          }
+        },
+        {
+          "atlasFrame": "slime_spitter.move.7",
+          "durationMs": 100,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9375
+          },
+          "anchors": {
+            "root": {
+              "x": 0.5,
+              "y": 0.9375
+            }
+          }
+        }
+      ]
+    },
+    "basic_attack.default": {
+      "semanticAction": "basic_attack",
+      "kind": "one-shot",
+      "frames": [
+        {
+          "atlasFrame": "slime_spitter.basic_attack.0",
+          "durationMs": 100,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9375
+          },
+          "anchors": {
+            "root": {
+              "x": 0.5,
+              "y": 0.9375
+            }
+          }
+        },
+        {
+          "atlasFrame": "slime_spitter.basic_attack.1",
+          "durationMs": 100,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9375
+          },
+          "anchors": {
+            "root": {
+              "x": 0.5,
+              "y": 0.9375
+            }
+          }
+        },
+        {
+          "atlasFrame": "slime_spitter.basic_attack.2",
+          "durationMs": 100,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9375
+          },
+          "anchors": {
+            "root": {
+              "x": 0.5,
+              "y": 0.9375
+            }
+          }
+        },
+        {
+          "atlasFrame": "slime_spitter.basic_attack.3",
+          "durationMs": 100,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9375
+          },
+          "anchors": {
+            "root": {
+              "x": 0.5,
+              "y": 0.9375
+            }
+          }
+        },
+        {
+          "atlasFrame": "slime_spitter.basic_attack.4",
+          "durationMs": 100,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9375
+          },
+          "anchors": {
+            "root": {
+              "x": 0.5,
+              "y": 0.9375
+            }
+          }
+        },
+        {
+          "atlasFrame": "slime_spitter.basic_attack.5",
+          "durationMs": 100,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9375
+          },
+          "anchors": {
+            "root": {
+              "x": 0.5,
+              "y": 0.9375
+            }
+          }
+        },
+        {
+          "atlasFrame": "slime_spitter.basic_attack.6",
+          "durationMs": 100,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9375
+          },
+          "anchors": {
+            "root": {
+              "x": 0.5,
+              "y": 0.9375
+            }
+          }
+        }
+      ]
+    },
+    "special_attack.default": {
+      "semanticAction": "special_attack",
+      "kind": "one-shot",
+      "frames": [
+        {
+          "atlasFrame": "slime_spitter.special_attack.0",
+          "durationMs": 100,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9375
+          },
+          "anchors": {
+            "root": {
+              "x": 0.5,
+              "y": 0.9375
+            }
+          }
+        },
+        {
+          "atlasFrame": "slime_spitter.special_attack.1",
+          "durationMs": 100,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9375
+          },
+          "anchors": {
+            "root": {
+              "x": 0.5,
+              "y": 0.9375
+            }
+          }
+        },
+        {
+          "atlasFrame": "slime_spitter.special_attack.2",
+          "durationMs": 100,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9375
+          },
+          "anchors": {
+            "root": {
+              "x": 0.5,
+              "y": 0.9375
+            }
+          }
+        },
+        {
+          "atlasFrame": "slime_spitter.special_attack.3",
+          "durationMs": 100,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9375
+          },
+          "anchors": {
+            "root": {
+              "x": 0.5,
+              "y": 0.9375
+            }
+          }
+        },
+        {
+          "atlasFrame": "slime_spitter.special_attack.4",
+          "durationMs": 100,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9375
+          },
+          "anchors": {
+            "root": {
+              "x": 0.5,
+              "y": 0.9375
+            }
+          }
+        },
+        {
+          "atlasFrame": "slime_spitter.special_attack.5",
+          "durationMs": 100,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9375
+          },
+          "anchors": {
+            "root": {
+              "x": 0.5,
+              "y": 0.9375
+            }
+          }
+        }
+      ]
+    },
+    "guard.default": {
+      "semanticAction": "guard",
+      "kind": "loop",
+      "frames": [
+        {
+          "atlasFrame": "slime_spitter.guard.0",
+          "durationMs": 100,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9375
+          },
+          "anchors": {
+            "root": {
+              "x": 0.5,
+              "y": 0.9375
+            }
+          }
+        },
+        {
+          "atlasFrame": "slime_spitter.guard.1",
+          "durationMs": 100,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9375
+          },
+          "anchors": {
+            "root": {
+              "x": 0.5,
+              "y": 0.9375
+            }
+          }
+        },
+        {
+          "atlasFrame": "slime_spitter.guard.2",
+          "durationMs": 100,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9375
+          },
+          "anchors": {
+            "root": {
+              "x": 0.5,
+              "y": 0.9375
+            }
+          }
+        }
+      ]
+    },
+    "evade.default": {
+      "semanticAction": "evade",
+      "kind": "one-shot",
+      "frames": [
+        {
+          "atlasFrame": "slime_spitter.evade.0",
+          "durationMs": 100,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9375
+          },
+          "anchors": {
+            "root": {
+              "x": 0.5,
+              "y": 0.9375
+            }
+          }
+        },
+        {
+          "atlasFrame": "slime_spitter.evade.1",
+          "durationMs": 100,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9375
+          },
+          "anchors": {
+            "root": {
+              "x": 0.5,
+              "y": 0.9375
+            }
+          }
+        },
+        {
+          "atlasFrame": "slime_spitter.evade.2",
+          "durationMs": 100,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9375
+          },
+          "anchors": {
+            "root": {
+              "x": 0.5,
+              "y": 0.9375
+            }
+          }
+        },
+        {
+          "atlasFrame": "slime_spitter.evade.3",
+          "durationMs": 100,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9375
+          },
+          "anchors": {
+            "root": {
+              "x": 0.5,
+              "y": 0.9375
+            }
+          }
+        },
+        {
+          "atlasFrame": "slime_spitter.evade.4",
+          "durationMs": 100,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9375
+          },
+          "anchors": {
+            "root": {
+              "x": 0.5,
+              "y": 0.9375
+            }
+          }
+        },
+        {
+          "atlasFrame": "slime_spitter.evade.5",
+          "durationMs": 100,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9375
+          },
+          "anchors": {
+            "root": {
+              "x": 0.5,
+              "y": 0.9375
+            }
+          }
+        },
+        {
+          "atlasFrame": "slime_spitter.evade.6",
+          "durationMs": 100,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9375
+          },
+          "anchors": {
+            "root": {
+              "x": 0.5,
+              "y": 0.9375
+            }
+          }
+        },
+        {
+          "atlasFrame": "slime_spitter.evade.7",
+          "durationMs": 100,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9375
+          },
+          "anchors": {
+            "root": {
+              "x": 0.5,
+              "y": 0.9375
+            }
+          }
+        }
+      ]
+    },
+    "hit.default": {
+      "semanticAction": "hit",
+      "kind": "one-shot",
+      "frames": [
+        {
+          "atlasFrame": "slime_spitter.hit.0",
+          "durationMs": 100,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9375
+          },
+          "anchors": {
+            "root": {
+              "x": 0.5,
+              "y": 0.9375
+            }
+          }
+        },
+        {
+          "atlasFrame": "slime_spitter.hit.1",
+          "durationMs": 100,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9375
+          },
+          "anchors": {
+            "root": {
+              "x": 0.5,
+              "y": 0.9375
+            }
+          }
+        },
+        {
+          "atlasFrame": "slime_spitter.hit.2",
+          "durationMs": 100,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9375
+          },
+          "anchors": {
+            "root": {
+              "x": 0.5,
+              "y": 0.9375
+            }
+          }
+        },
+        {
+          "atlasFrame": "slime_spitter.hit.3",
+          "durationMs": 100,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9375
+          },
+          "anchors": {
+            "root": {
+              "x": 0.5,
+              "y": 0.9375
+            }
+          }
+        },
+        {
+          "atlasFrame": "slime_spitter.hit.4",
+          "durationMs": 100,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9375
+          },
+          "anchors": {
+            "root": {
+              "x": 0.5,
+              "y": 0.9375
+            }
+          }
+        },
+        {
+          "atlasFrame": "slime_spitter.hit.5",
+          "durationMs": 100,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9375
+          },
+          "anchors": {
+            "root": {
+              "x": 0.5,
+              "y": 0.9375
+            }
+          }
+        }
+      ]
+    },
+    "defeat.default": {
+      "semanticAction": "defeat",
+      "kind": "one-shot",
+      "frames": [
+        {
+          "atlasFrame": "slime_spitter.defeat.0",
+          "durationMs": 100,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9375
+          },
+          "anchors": {
+            "root": {
+              "x": 0.5,
+              "y": 0.9375
+            }
+          }
+        },
+        {
+          "atlasFrame": "slime_spitter.defeat.1",
+          "durationMs": 100,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9375
+          },
+          "anchors": {
+            "root": {
+              "x": 0.5,
+              "y": 0.9375
+            }
+          }
+        },
+        {
+          "atlasFrame": "slime_spitter.defeat.2",
+          "durationMs": 100,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9375
+          },
+          "anchors": {
+            "root": {
+              "x": 0.5,
+              "y": 0.9375
+            }
+          }
+        },
+        {
+          "atlasFrame": "slime_spitter.defeat.3",
+          "durationMs": 100,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9375
+          },
+          "anchors": {
+            "root": {
+              "x": 0.5,
+              "y": 0.9375
+            }
+          }
+        },
+        {
+          "atlasFrame": "slime_spitter.defeat.4",
+          "durationMs": 100,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9375
+          },
+          "anchors": {
+            "root": {
+              "x": 0.5,
+              "y": 0.9375
+            }
+          }
+        },
+        {
+          "atlasFrame": "slime_spitter.defeat.5",
+          "durationMs": 100,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9375
+          },
+          "anchors": {
+            "root": {
+              "x": 0.5,
+              "y": 0.9375
+            }
+          }
+        },
+        {
+          "atlasFrame": "slime_spitter.defeat.6",
+          "durationMs": 100,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9375
+          },
+          "anchors": {
+            "root": {
+              "x": 0.5,
+              "y": 0.9375
+            }
+          }
+        },
+        {
+          "atlasFrame": "slime_spitter.defeat.7",
+          "durationMs": 100,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9375
+          },
+          "anchors": {
+            "root": {
+              "x": 0.5,
+              "y": 0.9375
+            }
+          }
+        },
+        {
+          "atlasFrame": "slime_spitter.defeat.8",
+          "durationMs": 100,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9375
+          },
+          "anchors": {
+            "root": {
+              "x": 0.5,
+              "y": 0.9375
+            }
+          }
+        }
+      ]
+    }
+  }
+}

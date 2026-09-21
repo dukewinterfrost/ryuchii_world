@@ -7,6 +7,7 @@ extends Node2D
 var arena: Dictionary = {}
 var tile_set: TileSet
 var debug_overlays := false
+var reduced_motion := false
 var dependency_error := ""
 var _props: Array[Node2D] = []
 var _tile_visuals: Array[Node2D] = []
@@ -25,30 +26,29 @@ class CombatOverlay extends Node2D:
 		for actor: Dictionary in session.get("actors", {}).values():
 			var start := point(actor.pos)
 			var action := String(actor.get("action", "idle"))
-			var tick := int(actor.get("action_tick", 0))
-			var windup := int(actor.get("windup", 0))
-			if action in ["basic_attack", "special_attack"] and tick < windup + int(actor.get("active_ticks", 0)):
-				var ground_start := Vector2(float(actor.pos[0]), float(actor.pos[1])) / BattleSimulator.SCALE
-				var aim := Vector2(float(actor.aim[0]), float(actor.aim[1])) / BattleSimulator.SCALE
-				var reach := float(BattleSimulator.SPECIAL_RANGE if action == "special_attack" else BattleSimulator.BASIC_RANGE) / BattleSimulator.SCALE
-				var direction := ground_start.direction_to(aim)
-				var ground_end := view.clipped_attack_end(ground_start, ground_start + direction * reach, 4 if action == "special_attack" else 6)
-				var finish := view.project(ground_end)
-				var color := Color("ffcc78") if action == "special_attack" else Color("ff8878")
-				if tick < windup:
-					color.a = 0.35 + 0.5 * float(tick) / maxf(1, windup)
-					draw_line(start, finish, color, 2, true)
-					draw_circle(finish, 5, color, false, 1.5)
-				elif action == "basic_attack":
-					# Melee's authored active ray has a 6-ground-unit half-width.
-					var side := Vector2(-direction.y, direction.x) * 6
-					var points := PackedVector2Array([view.project(ground_start + side), view.project(ground_end + side), view.project(ground_end - side), view.project(ground_start - side)])
-					color.a = 0.45
-					draw_colored_polygon(points, color)
+			var cue := BattlePresentationCues.attack(actor, view.arena, session)
+			if not cue.is_empty():
+				var polygon := PackedVector2Array()
+				for ground_point: Vector2 in cue.points:
+					polygon.append(view.project(ground_point))
+				var color: Color = cue.color
+				color.a = 0.17 if cue.phase == "charge" else 0.38
+				draw_colored_polygon(polygon, color)
+				polygon.append(polygon[0])
+				color.a = 0.8
+				draw_polyline(polygon, color, 1.5, true)
+				if cue.phase == "charge":
+					draw_rect(Rect2(start + Vector2(-20, -46), Vector2(40, 5)), Color("182e29"))
+					draw_rect(Rect2(start + Vector2(-20, -46), Vector2(40 * float(cue.progress), 5)), color)
+
 			if action == "guard":
 				draw_arc(start + Vector2(0, -8), 18, -PI, 0, 18, Color("84d5eb"), 2, true)
-			elif action == "evade":
+			elif action in ["evade", "rush_attack"] and not view.reduced_motion:
 				draw_line(point(actor.previous_pos), start, Color(0.75, 0.95, 1, 0.75), 3, true)
+			if actor.get("effects", {}).has("barrier"):
+				draw_arc(start + Vector2(0, -14), 24, 0, TAU, 24, Color(0.5, 0.85, 1, 0.65), 2, true)
+			if actor.get("effects", {}).has("haste"):
+				draw_arc(start, 15, 0, TAU, 18, Color("a8edab"), 2, true)
 			if view.debug_overlays:
 				var radius := float(actor.get("radius", BattleSimulator.BODY_RADIUS)) / BattleSimulator.SCALE
 				var ground := Vector2(float(actor.pos[0]), float(actor.pos[1])) / BattleSimulator.SCALE
@@ -64,8 +64,13 @@ class CombatOverlay extends Node2D:
 			var position := point(projectile.pos)
 			var velocity := Vector2(float(projectile.velocity[0]), float(projectile.velocity[1])).normalized()
 			var previous := point(projectile.previous_pos)
-			draw_line(previous - velocity * 8, position, Color("ff923d"), 5, true)
-			draw_circle(position, maxf(3, float(projectile.get("radius", BattleSimulator.PROJECTILE_RADIUS)) / BattleSimulator.SCALE), Color("ffe5a0"))
+			var color := BattlePresentationCues.palette(String(projectile.get("effect", "fire")))
+			var visual_size := 5.0 * float(projectile.get("visual_scale", 1000)) / 1000.0
+			if not view.reduced_motion:
+				draw_line(previous - velocity * 8, position, color, visual_size, true)
+			draw_circle(position, visual_size, color)
+			if view.debug_overlays:
+				draw_circle(position, float(projectile.get("radius", 4000)) / 1000.0, Color.WHITE, false, 1.0)
 
 
 func render_session(session: Dictionary) -> void:

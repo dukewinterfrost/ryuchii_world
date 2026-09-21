@@ -1,0 +1,4588 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Texture2D" path="res://assets/environment_workshop/forest-parallax/foliage.png" id="foliage"]
+
+[node name="OvalLayout" type="Node3D"]
+metadata/center = Vector2(15, 18)
+metadata/inner_radii = Vector2(27, 23)
+metadata/edit_help = "Home-only irregular oval. Uneven plant clumps and open pockets; all placements are baked and editable, never randomized during gameplay."
+metadata/layout_seed = 984012
+metadata/layout_style = "clustered woodland edge, shaded lower valley, three interior oaks and open vista gaps"
+
+[node name="Boundary" type="Node3D" parent="."]
+
+[node name="InteriorTrees" type="Node3D" parent="."]
+metadata/gameplay = "Explicit 2x2 trunk footprints, resolved against saved items and navigation by native_care_scenery.gd."
+
+[node name="GrassDetails" type="Node3D" parent="."]
+metadata/gameplay = "Low, decorative and traversable. Never creates collision."
+
+[node name="South_Forest_3_5" type="Sprite3D" parent="Boundary"]
+position = Vector3(-12.44178, -11.98125, 99.84792)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+offset = Vector2(-24, 268.5)
+pixel_size = 0.02136
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+modulate = Color(0.40444, 0.43432, 0.38733, 1)
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+
+metadata/grounded_on_slope = true
+
+[node name="South_Forest_3_6" type="Sprite3D" parent="Boundary"]
+position = Vector3(-3.24144, -11.98125, 92.04216)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+offset = Vector2(-24, 268.5)
+pixel_size = 0.01882
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+modulate = Color(0.43978, 0.47228, 0.42118, 1)
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+
+metadata/grounded_on_slope = true
+
+[node name="South_Forest_3_9" type="Sprite3D" parent="Boundary"]
+position = Vector3(23.08950, -11.98125, 96.42790)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+offset = Vector2(-24, 268.5)
+pixel_size = 0.01656
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+modulate = Color(0.39167, 0.42061, 0.37510, 1)
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+
+metadata/grounded_on_slope = true
+
+[node name="South_Forest_3_16" type="Sprite3D" parent="Boundary"]
+position = Vector3(87.03116, -11.98125, 94.23541)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+offset = Vector2(-24, 268.5)
+pixel_size = 0.01145
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+modulate = Color(0.42351, 0.45480, 0.40559, 1)
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+
+metadata/grounded_on_slope = true
+
+[node name="South_Forest_4_14" type="Sprite3D" parent="Boundary"]
+position = Vector3(65.64159, -11.98125, 106.51079)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+offset = Vector2(-24, 268.5)
+pixel_size = 0.01320
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+modulate = Color(0.41276, 0.44326, 0.39530, 1)
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+
+metadata/grounded_on_slope = true
+
+[node name="South_Forest_5_5" type="Sprite3D" parent="Boundary"]
+position = Vector3(-11.30323, -11.98125, 115.08242)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+offset = Vector2(-24, 268.5)
+pixel_size = 0.01912
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+modulate = Color(0.40532, 0.43527, 0.38818, 1)
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+
+metadata/grounded_on_slope = true
+
+[node name="South_Forest_5_7" type="Sprite3D" parent="Boundary"]
+position = Vector3(8.16674, -11.98125, 117.40072)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+offset = Vector2(-24, 268.5)
+pixel_size = 0.01164
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+modulate = Color(0.42852, 0.46018, 0.41039, 1)
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+
+metadata/grounded_on_slope = true
+
+[node name="South_Forest_5_8" type="Sprite3D" parent="Boundary"]
+position = Vector3(15.46666, -11.98125, 116.47301)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+offset = Vector2(-24, 268.5)
+pixel_size = 0.01808
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+modulate = Color(0.39717, 0.42651, 0.38036, 1)
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+
+metadata/grounded_on_slope = true
+
+[node name="South_Forest_5_9" type="Sprite3D" parent="Boundary"]
+position = Vector3(24.26363, -11.98125, 114.74778)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+offset = Vector2(-24, 268.5)
+pixel_size = 0.01152
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+modulate = Color(0.40812, 0.43827, 0.39086, 1)
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+
+metadata/grounded_on_slope = true
+
+[node name="South_Forest_5_13" type="Sprite3D" parent="Boundary"]
+position = Vector3(61.15175, -11.98125, 113.57429)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+offset = Vector2(-24, 268.5)
+pixel_size = 0.01473
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+modulate = Color(0.39866, 0.42811, 0.38179, 1)
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+
+metadata/grounded_on_slope = true
+
+[node name="South_Forest_5_16" type="Sprite3D" parent="Boundary"]
+position = Vector3(87.85631, -11.98125, 114.78528)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+offset = Vector2(-24, 268.5)
+pixel_size = 0.02054
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+modulate = Color(0.39344, 0.42251, 0.37679, 1)
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+
+metadata/grounded_on_slope = true
+
+[node name="South_Forest_6_13" type="Sprite3D" parent="Boundary"]
+position = Vector3(54.71387, -11.98125, 124.33781)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+offset = Vector2(-24, 268.5)
+pixel_size = 0.01459
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+modulate = Color(0.42421, 0.45555, 0.40625, 1)
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+
+metadata/grounded_on_slope = true
+
+[node name="South_Forest_7_1" type="Sprite3D" parent="Boundary"]
+position = Vector3(-45.34731, -11.98125, 134.85857)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+offset = Vector2(-24, 268.5)
+pixel_size = 0.01108
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+modulate = Color(0.42910, 0.46080, 0.41094, 1)
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+
+metadata/grounded_on_slope = true
+
+[node name="South_Forest_7_3" type="Sprite3D" parent="Boundary"]
+position = Vector3(-26.81623, -11.98125, 134.70504)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+offset = Vector2(-24, 268.5)
+pixel_size = 0.01196
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+modulate = Color(0.39042, 0.41926, 0.37390, 1)
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+
+metadata/grounded_on_slope = true
+
+[node name="South_Forest_7_13" type="Sprite3D" parent="Boundary"]
+position = Vector3(61.68908, -11.98125, 137.54373)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+offset = Vector2(-24, 268.5)
+pixel_size = 0.01881
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+modulate = Color(0.43212, 0.46405, 0.41384, 1)
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+
+metadata/grounded_on_slope = true
+
+[node name="East_Oval_0_6" type="Sprite3D" parent="Boundary"]
+position = Vector3(38.46043, -0.38401, 30.96824)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.00639
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+modulate = Color(0.83630, 0.89808, 0.80090, 1)
+metadata/boundary_side = "East"
+metadata/outside_gameplay = true
+metadata/ring = 0
+
+metadata/grounded_on_slope = true
+
+[node name="South_Oval_0_10" type="Sprite3D" parent="Boundary"]
+position = Vector3(30.04162, 0.01875, 36.70000)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+offset = Vector2(-18, 217.5)
+pixel_size = 0.00333
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+modulate = Color(0.90801, 0.97510, 0.86959, 1)
+metadata/boundary_side = "South"
+metadata/outside_gameplay = true
+metadata/ring = 0
+
+metadata/grounded_on_slope = true
+
+[node name="South_Oval_0_11" type="Sprite3D" parent="Boundary"]
+position = Vector3(27.57975, 0.01875, 37.08071)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.00539
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+modulate = Color(0.84817, 0.91084, 0.81228, 1)
+metadata/boundary_side = "South"
+metadata/outside_gameplay = true
+metadata/ring = 0
+
+metadata/grounded_on_slope = true
+
+[node name="South_Oval_0_12" type="Sprite3D" parent="Boundary"]
+position = Vector3(24.25920, 0.01875, 38.29683)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+offset = Vector2(-18, 217.5)
+pixel_size = 0.00691
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+modulate = Color(0.88477, 0.95013, 0.84733, 1)
+metadata/boundary_side = "South"
+metadata/outside_gameplay = true
+metadata/ring = 0
+
+metadata/grounded_on_slope = true
+
+[node name="South_Oval_0_17" type="Sprite3D" parent="Boundary"]
+position = Vector3(13.15934, -0.09109, 41.05796)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+offset = Vector2(-18, 217.5)
+pixel_size = 0.00485
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+modulate = Color(0.84035, 0.90244, 0.80480, 1)
+metadata/boundary_side = "South"
+metadata/outside_gameplay = true
+metadata/ring = 0
+
+metadata/grounded_on_slope = true
+
+[node name="South_Oval_0_20" type="Sprite3D" parent="Boundary"]
+position = Vector3(4.32973, -0.22265, 40.17705)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.00345
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+modulate = Color(0.89318, 0.95917, 0.85538, 1)
+metadata/boundary_side = "South"
+metadata/outside_gameplay = true
+metadata/ring = 0
+
+metadata/grounded_on_slope = true
+
+[node name="South_Oval_0_21" type="Sprite3D" parent="Boundary"]
+position = Vector3(2.96464, 0.00899, 38.51333)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.00421
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+modulate = Color(0.88265, 0.94786, 0.84531, 1)
+metadata/boundary_side = "South"
+metadata/outside_gameplay = true
+metadata/ring = 0
+
+metadata/grounded_on_slope = true
+
+[node name="South_Oval_0_22" type="Sprite3D" parent="Boundary"]
+position = Vector3(-0.38394, 0.01875, 37.41856)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.00582
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+modulate = Color(0.91239, 0.97980, 0.87379, 1)
+metadata/boundary_side = "South"
+metadata/outside_gameplay = true
+metadata/ring = 0
+
+metadata/grounded_on_slope = true
+
+[node name="South_Oval_0_24" type="Sprite3D" parent="Boundary"]
+position = Vector3(-4.37506, -0.07175, 34.24390)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.00643
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+modulate = Color(0.89897, 0.96539, 0.86093, 1)
+metadata/boundary_side = "South"
+metadata/outside_gameplay = true
+metadata/ring = 0
+
+metadata/grounded_on_slope = true
+
+[node name="West_Oval_0_25" type="Sprite3D" parent="Boundary"]
+position = Vector3(-6.76666, -0.39707, 33.00520)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+offset = Vector2(-18, 217.5)
+pixel_size = 0.00533
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+modulate = Color(0.92483, 0.99315, 0.88569, 1)
+metadata/boundary_side = "West"
+metadata/outside_gameplay = true
+metadata/ring = 0
+
+metadata/grounded_on_slope = true
+
+[node name="West_Oval_0_26" type="Sprite3D" parent="Boundary"]
+position = Vector3(-10.24303, -1.27857, 31.37091)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+offset = Vector2(-18, 217.5)
+pixel_size = 0.00406
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+modulate = Color(0.87355, 0.93809, 0.83659, 1)
+metadata/boundary_side = "West"
+metadata/outside_gameplay = true
+metadata/ring = 0
+
+metadata/grounded_on_slope = true
+
+[node name="West_Oval_0_28" type="Sprite3D" parent="Boundary"]
+position = Vector3(-11.68988, -0.91669, 27.90083)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.00593
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+modulate = Color(0.86507, 0.92898, 0.82846, 1)
+metadata/boundary_side = "West"
+metadata/outside_gameplay = true
+metadata/ring = 0
+
+metadata/grounded_on_slope = true
+
+[node name="West_Oval_0_33" type="Sprite3D" parent="Boundary"]
+position = Vector3(-9.12025, 0.01875, 16.63642)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.00694
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+modulate = Color(0.85735, 0.92070, 0.82108, 1)
+metadata/boundary_side = "West"
+metadata/outside_gameplay = true
+metadata/ring = 0
+
+metadata/grounded_on_slope = true
+
+[node name="West_Oval_0_35" type="Sprite3D" parent="Boundary"]
+position = Vector3(-8.03141, 0.01875, 12.01872)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.00685
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+modulate = Color(0.90261, 0.96930, 0.86443, 1)
+metadata/boundary_side = "West"
+metadata/outside_gameplay = true
+metadata/ring = 0
+
+metadata/grounded_on_slope = true
+
+[node name="West_Oval_0_37" type="Sprite3D" parent="Boundary"]
+position = Vector3(-7.83921, 0.01875, 7.56541)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.00561
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+modulate = Color(0.86679, 0.93083, 0.83011, 1)
+metadata/boundary_side = "West"
+metadata/outside_gameplay = true
+metadata/ring = 0
+
+metadata/grounded_on_slope = true
+
+[node name="West_Oval_0_40" type="Sprite3D" parent="Boundary"]
+position = Vector3(-5.36679, -0.35220, 1.52896)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.00395
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+modulate = Color(0.84124, 0.90340, 0.80565, 1)
+metadata/boundary_side = "West"
+metadata/outside_gameplay = true
+metadata/ring = 0
+
+metadata/grounded_on_slope = true
+
+[node name="North_Oval_0_42" type="Sprite3D" parent="Boundary"]
+position = Vector3(-0.17984, 0.01141, -1.93577)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.00413
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+modulate = Color(0.87025, 0.93455, 0.83343, 1)
+metadata/boundary_side = "North"
+metadata/outside_gameplay = true
+metadata/ring = 0
+
+metadata/grounded_on_slope = true
+
+[node name="North_Oval_0_44" type="Sprite3D" parent="Boundary"]
+position = Vector3(4.94712, -0.26540, -4.42333)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.00622
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+modulate = Color(0.90198, 0.96862, 0.86382, 1)
+metadata/boundary_side = "North"
+metadata/outside_gameplay = true
+metadata/ring = 0
+
+metadata/grounded_on_slope = true
+
+[node name="North_Oval_0_45" type="Sprite3D" parent="Boundary"]
+position = Vector3(7.63702, -0.51513, -5.45873)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.00364
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+modulate = Color(0.91541, 0.98304, 0.87668, 1)
+metadata/boundary_side = "North"
+metadata/outside_gameplay = true
+metadata/ring = 0
+
+metadata/grounded_on_slope = true
+
+[node name="North_Oval_0_49" type="Sprite3D" parent="Boundary"]
+position = Vector3(16.83668, -0.04638, -4.84695)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.00361
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+modulate = Color(0.85622, 0.91948, 0.82000, 1)
+metadata/boundary_side = "North"
+metadata/outside_gameplay = true
+metadata/ring = 0
+
+metadata/grounded_on_slope = true
+
+[node name="North_Oval_0_50" type="Sprite3D" parent="Boundary"]
+position = Vector3(21.04539, -0.00402, -4.06807)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.00401
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+modulate = Color(0.93750, 1.00676, 0.89783, 1)
+metadata/boundary_side = "North"
+metadata/outside_gameplay = true
+metadata/ring = 0
+
+metadata/grounded_on_slope = true
+
+[node name="North_Oval_0_51" type="Sprite3D" parent="Boundary"]
+position = Vector3(22.22156, -0.09116, -4.42664)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.00577
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+modulate = Color(0.89492, 0.96105, 0.85706, 1)
+metadata/boundary_side = "North"
+metadata/outside_gameplay = true
+metadata/ring = 0
+
+metadata/grounded_on_slope = true
+
+[node name="North_Oval_0_55" type="Sprite3D" parent="Boundary"]
+position = Vector3(31.75895, 0.01776, -0.14968)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+offset = Vector2(-18, 217.5)
+pixel_size = 0.00658
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+modulate = Color(0.93370, 1.00269, 0.89420, 1)
+metadata/boundary_side = "North"
+metadata/outside_gameplay = true
+metadata/ring = 0
+
+metadata/grounded_on_slope = true
+
+[node name="East_Oval_0_57" type="Sprite3D" parent="Boundary"]
+position = Vector3(34.70293, 0.01875, 3.65251)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+offset = Vector2(-18, 217.5)
+pixel_size = 0.00427
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+modulate = Color(0.84879, 0.91150, 0.81288, 1)
+metadata/boundary_side = "East"
+metadata/outside_gameplay = true
+metadata/ring = 0
+
+metadata/grounded_on_slope = true
+
+[node name="East_Oval_0_58" type="Sprite3D" parent="Boundary"]
+position = Vector3(35.43539, 0.01875, 5.59971)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+offset = Vector2(-18, 217.5)
+pixel_size = 0.00563
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+modulate = Color(0.87810, 0.94298, 0.84095, 1)
+metadata/boundary_side = "East"
+metadata/outside_gameplay = true
+metadata/ring = 0
+
+metadata/grounded_on_slope = true
+
+[node name="East_Oval_0_60" type="Sprite3D" parent="Boundary"]
+position = Vector3(37.47160, 0.01875, 9.46306)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+offset = Vector2(-18, 217.5)
+pixel_size = 0.00616
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+modulate = Color(0.82920, 0.89047, 0.79412, 1)
+metadata/boundary_side = "East"
+metadata/outside_gameplay = true
+metadata/ring = 0
+
+metadata/grounded_on_slope = true
+
+[node name="East_Oval_0_61" type="Sprite3D" parent="Boundary"]
+position = Vector3(38.36928, 0.01875, 11.33968)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.00477
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+modulate = Color(0.92825, 0.99684, 0.88898, 1)
+metadata/boundary_side = "East"
+metadata/outside_gameplay = true
+metadata/ring = 0
+
+metadata/grounded_on_slope = true
+
+[node name="East_Oval_0_63" type="Sprite3D" parent="Boundary"]
+position = Vector3(42.21886, -0.20949, 15.00069)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+offset = Vector2(-18, 217.5)
+pixel_size = 0.00421
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+modulate = Color(0.88000, 0.94502, 0.84277, 1)
+metadata/boundary_side = "East"
+metadata/outside_gameplay = true
+metadata/ring = 0
+
+metadata/grounded_on_slope = true
+
+[node name="East_Oval_1_1" type="Sprite3D" parent="Boundary"]
+position = Vector3(49.14514, -5.19418, 21.68646)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+offset = Vector2(-18, 217.5)
+pixel_size = 0.00371
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+modulate = Color(0.55645, 0.59756, 0.53290, 1)
+metadata/boundary_side = "East"
+metadata/outside_gameplay = true
+metadata/ring = 1
+
+metadata/grounded_on_slope = true
+
+[node name="East_Oval_1_3" type="Sprite3D" parent="Boundary"]
+position = Vector3(47.33316, -5.36813, 28.49153)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+offset = Vector2(-18, 217.5)
+pixel_size = 0.00591
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+modulate = Color(0.52413, 0.56286, 0.50196, 1)
+metadata/boundary_side = "East"
+metadata/outside_gameplay = true
+metadata/ring = 1
+
+metadata/grounded_on_slope = true
+
+[node name="South_Oval_1_9" type="Sprite3D" parent="Boundary"]
+position = Vector3(33.11755, -0.25297, 37.83122)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.00574
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+modulate = Color(0.89547, 0.96164, 0.85759, 1)
+metadata/boundary_side = "South"
+metadata/outside_gameplay = true
+metadata/ring = 1
+
+metadata/grounded_on_slope = true
+
+[node name="South_Oval_1_21" type="Sprite3D" parent="Boundary"]
+position = Vector3(-1.27959, -1.85726, 40.95598)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.00583
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+modulate = Color(0.82448, 0.88540, 0.78960, 1)
+metadata/boundary_side = "South"
+metadata/outside_gameplay = true
+metadata/ring = 1
+
+metadata/grounded_on_slope = true
+
+[node name="West_Oval_1_25" type="Sprite3D" parent="Boundary"]
+position = Vector3(-11.54021, -4.56453, 35.76889)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.00590
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+modulate = Color(0.63140, 0.67805, 0.60469, 1)
+metadata/boundary_side = "West"
+metadata/outside_gameplay = true
+metadata/ring = 1
+
+metadata/grounded_on_slope = true
+
+[node name="West_Oval_1_26" type="Sprite3D" parent="Boundary"]
+position = Vector3(-13.70867, -4.04274, 32.19789)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+offset = Vector2(-18, 217.5)
+pixel_size = 0.00618
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+modulate = Color(0.61019, 0.65527, 0.58437, 1)
+metadata/boundary_side = "West"
+metadata/outside_gameplay = true
+metadata/ring = 1
+
+metadata/grounded_on_slope = true
+
+[node name="West_Oval_1_27" type="Sprite3D" parent="Boundary"]
+position = Vector3(-14.27549, -3.97093, 31.18965)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.00639
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+modulate = Color(0.62749, 0.67384, 0.60093, 1)
+metadata/boundary_side = "West"
+metadata/outside_gameplay = true
+metadata/ring = 1
+
+metadata/grounded_on_slope = true
+
+[node name="West_Oval_1_30" type="Sprite3D" parent="Boundary"]
+position = Vector3(-16.21213, -2.55512, 21.53405)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+offset = Vector2(-18, 217.5)
+pixel_size = 0.00459
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+modulate = Color(0.81455, 0.87473, 0.78008, 1)
+metadata/boundary_side = "West"
+metadata/outside_gameplay = true
+metadata/ring = 1
+
+metadata/grounded_on_slope = true
+
+[node name="West_Oval_1_31" type="Sprite3D" parent="Boundary"]
+position = Vector3(-15.68261, -2.02082, 20.29910)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.00688
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+modulate = Color(0.83786, 0.89977, 0.80241, 1)
+metadata/boundary_side = "West"
+metadata/outside_gameplay = true
+metadata/ring = 1
+
+metadata/grounded_on_slope = true
+
+[node name="West_Oval_1_36" type="Sprite3D" parent="Boundary"]
+position = Vector3(-11.01453, -1.04610, 6.44199)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.00582
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+modulate = Color(0.89140, 0.95726, 0.85368, 1)
+metadata/boundary_side = "West"
+metadata/outside_gameplay = true
+metadata/ring = 1
+
+metadata/grounded_on_slope = true
+
+[node name="North_Oval_1_46" type="Sprite3D" parent="Boundary"]
+position = Vector3(9.25487, -3.95538, -9.55406)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+offset = Vector2(-18, 217.5)
+pixel_size = 0.00356
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+modulate = Color(0.68723, 0.73800, 0.65815, 1)
+metadata/boundary_side = "North"
+metadata/outside_gameplay = true
+metadata/ring = 1
+
+metadata/grounded_on_slope = true
+
+[node name="North_Oval_1_47" type="Sprite3D" parent="Boundary"]
+position = Vector3(13.66036, -4.51509, -10.37993)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.00627
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+modulate = Color(0.62816, 0.67457, 0.60158, 1)
+metadata/boundary_side = "North"
+metadata/outside_gameplay = true
+metadata/ring = 1
+
+metadata/grounded_on_slope = true
+
+[node name="North_Oval_1_49" type="Sprite3D" parent="Boundary"]
+position = Vector3(19.65773, -2.32428, -8.18805)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.00654
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+modulate = Color(0.82092, 0.88157, 0.78618, 1)
+metadata/boundary_side = "North"
+metadata/outside_gameplay = true
+metadata/ring = 1
+
+metadata/grounded_on_slope = true
+
+[node name="North_Oval_1_52" type="Sprite3D" parent="Boundary"]
+position = Vector3(27.91582, -1.63746, -5.61755)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+offset = Vector2(-18, 217.5)
+pixel_size = 0.00620
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+modulate = Color(0.80417, 0.86358, 0.77014, 1)
+metadata/boundary_side = "North"
+metadata/outside_gameplay = true
+metadata/ring = 1
+
+metadata/grounded_on_slope = true
+
+[node name="East_Oval_1_59" type="Sprite3D" parent="Boundary"]
+position = Vector3(40.21084, -0.55673, 6.88577)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+offset = Vector2(-18, 217.5)
+pixel_size = 0.00337
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+modulate = Color(0.91000, 0.97724, 0.87151, 1)
+metadata/boundary_side = "East"
+metadata/outside_gameplay = true
+metadata/ring = 1
+
+metadata/grounded_on_slope = true
+
+[node name="South_Canopy_0_6" type="Sprite3D" parent="Boundary"]
+position = Vector3(35.92446, -9.69301, 46.38134)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+offset = Vector2(-24, 268.5)
+pixel_size = 0.01547
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+modulate = Color(0.43725, 0.46956, 0.41875, 1)
+metadata/boundary_side = "South"
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+
+metadata/grounded_on_slope = true
+
+[node name="South_Canopy_0_10" type="Sprite3D" parent="Boundary"]
+position = Vector3(12.65455, -8.64522, 50.37756)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+offset = Vector2(-24, 268.5)
+pixel_size = 0.01496
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+modulate = Color(0.42191, 0.45308, 0.40406, 1)
+metadata/boundary_side = "South"
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+
+metadata/grounded_on_slope = true
+
+[node name="West_Canopy_0_16" type="Sprite3D" parent="Boundary"]
+position = Vector3(-17.80944, -8.44543, 34.08403)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+offset = Vector2(-24, 268.5)
+pixel_size = 0.01618
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+modulate = Color(0.41269, 0.44318, 0.39523, 1)
+metadata/boundary_side = "West"
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+
+metadata/grounded_on_slope = true
+
+[node name="West_Canopy_0_22" type="Sprite3D" parent="Boundary"]
+position = Vector3(-20.61622, -10.65730, 1.21636)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+offset = Vector2(-24, 268.5)
+pixel_size = 0.01288
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+modulate = Color(0.41346, 0.44401, 0.39596, 1)
+metadata/boundary_side = "West"
+metadata/outside_gameplay = true
+metadata/camera_clearance = false
+
+metadata/grounded_on_slope = true
+
+[node name="North_Canopy_0_25" type="Sprite3D" parent="Boundary"]
+position = Vector3(-6.31714, -8.13433, -8.19870)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+offset = Vector2(-24, 268.5)
+pixel_size = 0.01437
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+modulate = Color(0.41352, 0.44407, 0.39602, 1)
+metadata/boundary_side = "North"
+metadata/outside_gameplay = true
+metadata/camera_clearance = false
+
+metadata/grounded_on_slope = true
+
+[node name="North_Canopy_0_31" type="Sprite3D" parent="Boundary"]
+position = Vector3(30.23169, -11.63644, -14.15145)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+offset = Vector2(-24, 268.5)
+pixel_size = 0.02223
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+modulate = Color(0.39796, 0.42737, 0.38112, 1)
+metadata/boundary_side = "North"
+metadata/outside_gameplay = true
+metadata/camera_clearance = false
+
+metadata/grounded_on_slope = true
+
+[node name="East_Canopy_0_36" type="Sprite3D" parent="Boundary"]
+position = Vector3(47.86981, -5.11690, 9.53927)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+offset = Vector2(-24, 268.5)
+pixel_size = 0.01720
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+modulate = Color(0.52813, 0.56715, 0.50579, 1)
+metadata/boundary_side = "East"
+metadata/outside_gameplay = true
+metadata/camera_clearance = false
+
+metadata/grounded_on_slope = true
+
+[node name="East_Canopy_0_37" type="Sprite3D" parent="Boundary"]
+position = Vector3(51.42345, -7.80518, 11.77302)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+offset = Vector2(-24, 268.5)
+pixel_size = 0.01276
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+modulate = Color(0.40936, 0.43961, 0.39204, 1)
+metadata/boundary_side = "East"
+metadata/outside_gameplay = true
+metadata/camera_clearance = false
+
+metadata/grounded_on_slope = true
+
+[node name="South_Canopy_1_8" type="Sprite3D" parent="Boundary"]
+position = Vector3(21.73916, -11.98125, 60.93431)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+offset = Vector2(-24, 268.5)
+pixel_size = 0.01400
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+modulate = Color(0.40776, 0.43789, 0.39051, 1)
+metadata/boundary_side = "South"
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+
+metadata/grounded_on_slope = true
+
+[node name="South_Canopy_1_9" type="Sprite3D" parent="Boundary"]
+position = Vector3(14.76588, -11.98125, 56.67654)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+offset = Vector2(-24, 268.5)
+pixel_size = 0.01997
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+modulate = Color(0.41405, 0.44464, 0.39653, 1)
+metadata/boundary_side = "South"
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+
+metadata/grounded_on_slope = true
+
+[node name="West_Canopy_1_17" type="Sprite3D" parent="Boundary"]
+position = Vector3(-27.10965, -11.89952, 27.78307)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+offset = Vector2(-24, 268.5)
+pixel_size = 0.01974
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+modulate = Color(0.40985, 0.44013, 0.39251, 1)
+metadata/boundary_side = "West"
+metadata/outside_gameplay = true
+metadata/camera_clearance = false
+
+metadata/grounded_on_slope = true
+
+[node name="West_Canopy_1_20" type="Sprite3D" parent="Boundary"]
+position = Vector3(-30.13786, -11.98125, 8.40525)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+offset = Vector2(-24, 268.5)
+pixel_size = 0.01865
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+modulate = Color(0.42328, 0.45456, 0.40537, 1)
+metadata/boundary_side = "West"
+metadata/outside_gameplay = true
+metadata/camera_clearance = false
+
+metadata/grounded_on_slope = true
+
+[node name="North_Canopy_1_25" type="Sprite3D" parent="Boundary"]
+position = Vector3(-7.24425, -15.19561, -21.14936)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+offset = Vector2(-24, 268.5)
+pixel_size = 0.01915
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+modulate = Color(0.39073, 0.41960, 0.37420, 1)
+metadata/boundary_side = "North"
+metadata/outside_gameplay = true
+metadata/camera_clearance = false
+
+metadata/grounded_on_slope = true
+
+[node name="North_Canopy_1_26" type="Sprite3D" parent="Boundary"]
+position = Vector3(-0.28078, -14.87302, -20.16574)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+offset = Vector2(-24, 268.5)
+pixel_size = 0.01278
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+modulate = Color(0.40721, 0.43730, 0.38998, 1)
+metadata/boundary_side = "North"
+metadata/outside_gameplay = true
+metadata/camera_clearance = false
+
+metadata/grounded_on_slope = true
+
+[node name="North_Canopy_1_30" type="Sprite3D" parent="Boundary"]
+position = Vector3(31.96079, -15.50958, -22.32416)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+offset = Vector2(-24, 268.5)
+pixel_size = 0.02164
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+modulate = Color(0.42941, 0.46114, 0.41124, 1)
+metadata/boundary_side = "North"
+metadata/outside_gameplay = true
+metadata/camera_clearance = false
+
+metadata/grounded_on_slope = true
+
+[node name="East_Canopy_1_34" type="Sprite3D" parent="Boundary"]
+position = Vector3(52.08909, -11.98125, -4.55415)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+offset = Vector2(-24, 268.5)
+pixel_size = 0.02226
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+modulate = Color(0.40476, 0.43467, 0.38763, 1)
+metadata/boundary_side = "East"
+metadata/outside_gameplay = true
+metadata/camera_clearance = false
+
+metadata/grounded_on_slope = true
+
+[node name="East_Canopy_1_35" type="Sprite3D" parent="Boundary"]
+position = Vector3(56.82472, -11.98125, 2.10446)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+offset = Vector2(-24, 268.5)
+pixel_size = 0.02189
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+modulate = Color(0.41377, 0.44434, 0.39626, 1)
+metadata/boundary_side = "East"
+metadata/outside_gameplay = true
+metadata/camera_clearance = false
+
+metadata/grounded_on_slope = true
+
+[node name="South_Forest_2_4" type="Sprite3D" parent="Boundary"]
+position = Vector3(2.75615, -11.98125, 89.06775)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+offset = Vector2(-24, 268.5)
+pixel_size = 0.01434
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+modulate = Color(0.39801, 0.42742, 0.38117, 1)
+metadata/boundary_side = "South"
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+
+metadata/grounded_on_slope = true
+
+[node name="Grass_0" type="Sprite3D" parent="GrassDetails"]
+position = Vector3(-3.47150, 0.025, 16.19973)
+scale = Vector3(1, 0.83078, 1)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+offset = Vector2(-18, 217.5)
+pixel_size = 0.00272
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+modulate = Color(0.90913, 0.92769, 0.85347, 1)
+metadata/gameplay = "traversable ground detail"
+metadata/grass_detail = true
+metadata/plant_cluster = 0
+metadata/cluster_lead = true
+
+[node name="Grass_1" type="Sprite3D" parent="GrassDetails"]
+position = Vector3(-2.68913, 0.025, 16.28341)
+scale = Vector3(1, 0.90474, 1)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+offset = Vector2(-18, 217.5)
+pixel_size = 0.00191
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+modulate = Color(0.90061, 0.91899, 0.84547, 1)
+metadata/gameplay = "traversable ground detail"
+metadata/grass_detail = true
+metadata/plant_cluster = 0
+metadata/cluster_lead = false
+
+[node name="Grass_2" type="Sprite3D" parent="GrassDetails"]
+position = Vector3(0.42759, 0.025, 16.90256)
+scale = Vector3(1, 0.83613, 1)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+offset = Vector2(-18, 217.5)
+pixel_size = 0.00097
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+modulate = Color(0.94281, 0.96205, 0.88509, 1)
+metadata/gameplay = "traversable ground detail"
+metadata/grass_detail = true
+metadata/plant_cluster = 0
+metadata/cluster_lead = false
+
+[node name="Grass_3" type="Sprite3D" parent="GrassDetails"]
+position = Vector3(-2.50423, 0.025, 15.79318)
+scale = Vector3(1, 0.96418, 1)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.00127
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+modulate = Color(0.97183, 0.99166, 0.91233, 1)
+metadata/gameplay = "traversable ground detail"
+metadata/grass_detail = true
+metadata/plant_cluster = 0
+metadata/cluster_lead = false
+
+[node name="Grass_4" type="Sprite3D" parent="GrassDetails"]
+position = Vector3(-1.12609, 0.025, 18.51020)
+scale = Vector3(1, 0.96690, 1)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+offset = Vector2(-18, 217.5)
+pixel_size = 0.00134
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+modulate = Color(0.95414, 0.97362, 0.89573, 1)
+metadata/gameplay = "traversable ground detail"
+metadata/grass_detail = true
+metadata/plant_cluster = 0
+metadata/cluster_lead = false
+
+[node name="Grass_5" type="Sprite3D" parent="GrassDetails"]
+position = Vector3(-0.13771, 0.025, 15.58956)
+scale = Vector3(1, 0.73363, 1)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.00099
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+modulate = Color(0.89407, 0.91232, 0.83933, 1)
+metadata/gameplay = "traversable ground detail"
+metadata/grass_detail = true
+metadata/plant_cluster = 0
+metadata/cluster_lead = false
+
+[node name="Grass_6" type="Sprite3D" parent="GrassDetails"]
+position = Vector3(1.15301, 0.025, 17.64318)
+scale = Vector3(1, 0.84825, 1)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+offset = Vector2(-18, 217.5)
+pixel_size = 0.00196
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+modulate = Color(0.89053, 0.90871, 0.83601, 1)
+metadata/gameplay = "traversable ground detail"
+metadata/grass_detail = true
+metadata/plant_cluster = 0
+metadata/cluster_lead = false
+
+[node name="Grass_7" type="Sprite3D" parent="GrassDetails"]
+position = Vector3(0.89502, 0.025, 16.59306)
+scale = Vector3(1, 0.76858, 1)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.00182
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+modulate = Color(0.93779, 0.95693, 0.88037, 1)
+metadata/gameplay = "traversable ground detail"
+metadata/grass_detail = true
+metadata/plant_cluster = 0
+metadata/cluster_lead = false
+
+[node name="Grass_8" type="Sprite3D" parent="GrassDetails"]
+position = Vector3(5.90844, 0.025, 7.98719)
+scale = Vector3(1, 0.72163, 1)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+offset = Vector2(-18, 217.5)
+pixel_size = 0.00321
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+modulate = Color(0.95808, 0.97763, 0.89942, 1)
+metadata/gameplay = "traversable ground detail"
+metadata/grass_detail = true
+metadata/plant_cluster = 1
+metadata/cluster_lead = true
+
+[node name="Grass_9" type="Sprite3D" parent="GrassDetails"]
+position = Vector3(4.70009, 0.025, 5.75658)
+scale = Vector3(1, 0.98180, 1)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+offset = Vector2(-18, 217.5)
+pixel_size = 0.00126
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+modulate = Color(0.94964, 0.96902, 0.89149, 1)
+metadata/gameplay = "traversable ground detail"
+metadata/grass_detail = true
+metadata/plant_cluster = 1
+metadata/cluster_lead = false
+
+[node name="Grass_10" type="Sprite3D" parent="GrassDetails"]
+position = Vector3(5.59871, 0.025, 6.67777)
+scale = Vector3(1, 0.91938, 1)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+offset = Vector2(-18, 217.5)
+pixel_size = 0.00149
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+modulate = Color(0.94524, 0.96453, 0.88737, 1)
+metadata/gameplay = "traversable ground detail"
+metadata/grass_detail = true
+metadata/plant_cluster = 1
+metadata/cluster_lead = false
+
+[node name="Grass_11" type="Sprite3D" parent="GrassDetails"]
+position = Vector3(5.07883, 0.025, 7.94356)
+scale = Vector3(1, 0.93730, 1)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+offset = Vector2(-18, 217.5)
+pixel_size = 0.00117
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+modulate = Color(0.89371, 0.91195, 0.83899, 1)
+metadata/gameplay = "traversable ground detail"
+metadata/grass_detail = true
+metadata/plant_cluster = 1
+metadata/cluster_lead = false
+
+[node name="Grass_12" type="Sprite3D" parent="GrassDetails"]
+position = Vector3(6.96985, 0.025, 8.33867)
+scale = Vector3(1, 0.82545, 1)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+offset = Vector2(-18, 217.5)
+pixel_size = 0.00185
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+modulate = Color(0.97508, 0.99498, 0.91538, 1)
+metadata/gameplay = "traversable ground detail"
+metadata/grass_detail = true
+metadata/plant_cluster = 1
+metadata/cluster_lead = false
+
+[node name="Grass_13" type="Sprite3D" parent="GrassDetails"]
+position = Vector3(25.14225, 0.025, 5.84637)
+scale = Vector3(1, 0.97436, 1)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+offset = Vector2(-18, 217.5)
+pixel_size = 0.00295
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+modulate = Color(0.90414, 0.92259, 0.84878, 1)
+metadata/gameplay = "traversable ground detail"
+metadata/grass_detail = true
+metadata/plant_cluster = 2
+metadata/cluster_lead = true
+
+[node name="Grass_14" type="Sprite3D" parent="GrassDetails"]
+position = Vector3(23.90537, 0.025, 6.62528)
+scale = Vector3(1, 0.79459, 1)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.00096
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+modulate = Color(0.89358, 0.91182, 0.83887, 1)
+metadata/gameplay = "traversable ground detail"
+metadata/grass_detail = true
+metadata/plant_cluster = 2
+metadata/cluster_lead = false
+
+[node name="Grass_15" type="Sprite3D" parent="GrassDetails"]
+position = Vector3(24.62352, 0.025, 7.38112)
+scale = Vector3(1, 0.87954, 1)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+offset = Vector2(-18, 217.5)
+pixel_size = 0.00196
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+modulate = Color(0.89258, 0.91080, 0.83793, 1)
+metadata/gameplay = "traversable ground detail"
+metadata/grass_detail = true
+metadata/plant_cluster = 2
+metadata/cluster_lead = false
+
+[node name="Grass_16" type="Sprite3D" parent="GrassDetails"]
+position = Vector3(26.56264, 0.025, 26.58647)
+scale = Vector3(1, 0.98594, 1)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+offset = Vector2(-18, 217.5)
+pixel_size = 0.00290
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+modulate = Color(0.93447, 0.95354, 0.87726, 1)
+metadata/gameplay = "traversable ground detail"
+metadata/grass_detail = true
+metadata/plant_cluster = 3
+metadata/cluster_lead = true
+
+[node name="Grass_17" type="Sprite3D" parent="GrassDetails"]
+position = Vector3(26.84750, 0.025, 27.86513)
+scale = Vector3(1, 0.85019, 1)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+offset = Vector2(-18, 217.5)
+pixel_size = 0.00194
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+modulate = Color(0.92336, 0.94221, 0.86683, 1)
+metadata/gameplay = "traversable ground detail"
+metadata/grass_detail = true
+metadata/plant_cluster = 3
+metadata/cluster_lead = false
+
+[node name="Grass_18" type="Sprite3D" parent="GrassDetails"]
+position = Vector3(29.80222, 0.025, 28.93170)
+scale = Vector3(1, 0.94818, 1)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+offset = Vector2(-18, 217.5)
+pixel_size = 0.00174
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+modulate = Color(0.92011, 0.93888, 0.86377, 1)
+metadata/gameplay = "traversable ground detail"
+metadata/grass_detail = true
+metadata/plant_cluster = 3
+metadata/cluster_lead = false
+
+[node name="Grass_19" type="Sprite3D" parent="GrassDetails"]
+position = Vector3(30.54666, 0.025, 25.76464)
+scale = Vector3(1, 0.88688, 1)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.00144
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+modulate = Color(0.94795, 0.96730, 0.88992, 1)
+metadata/gameplay = "traversable ground detail"
+metadata/grass_detail = true
+metadata/plant_cluster = 3
+metadata/cluster_lead = false
+
+[node name="Grass_20" type="Sprite3D" parent="GrassDetails"]
+position = Vector3(25.25766, 0.025, 25.72901)
+scale = Vector3(1, 0.96459, 1)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.00112
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+modulate = Color(0.90767, 0.92619, 0.85209, 1)
+metadata/gameplay = "traversable ground detail"
+metadata/grass_detail = true
+metadata/plant_cluster = 3
+metadata/cluster_lead = false
+
+[node name="Grass_21" type="Sprite3D" parent="GrassDetails"]
+position = Vector3(29.35991, 0.025, 27.80704)
+scale = Vector3(1, 0.73200, 1)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+offset = Vector2(-18, 217.5)
+pixel_size = 0.00191
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+modulate = Color(0.97423, 0.99411, 0.91458, 1)
+metadata/gameplay = "traversable ground detail"
+metadata/grass_detail = true
+metadata/plant_cluster = 3
+metadata/cluster_lead = false
+
+[node name="Grass_22" type="Sprite3D" parent="GrassDetails"]
+position = Vector3(26.61952, 0.025, 29.34363)
+scale = Vector3(1, 0.99997, 1)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+offset = Vector2(-18, 217.5)
+pixel_size = 0.00119
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+modulate = Color(0.95806, 0.97762, 0.89941, 1)
+metadata/gameplay = "traversable ground detail"
+metadata/grass_detail = true
+metadata/plant_cluster = 3
+metadata/cluster_lead = false
+
+[node name="Grass_23" type="Sprite3D" parent="GrassDetails"]
+position = Vector3(28.73454, 0.025, 28.16915)
+scale = Vector3(1, 0.72737, 1)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+offset = Vector2(-18, 217.5)
+pixel_size = 0.00196
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+modulate = Color(0.93284, 0.95188, 0.87573, 1)
+metadata/gameplay = "traversable ground detail"
+metadata/grass_detail = true
+metadata/plant_cluster = 3
+metadata/cluster_lead = false
+
+[node name="Grass_24" type="Sprite3D" parent="GrassDetails"]
+position = Vector3(26.04820, 0.025, 29.03453)
+scale = Vector3(1, 0.73449, 1)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+offset = Vector2(-18, 217.5)
+pixel_size = 0.00153
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+modulate = Color(0.93768, 0.95682, 0.88027, 1)
+metadata/gameplay = "traversable ground detail"
+metadata/grass_detail = true
+metadata/plant_cluster = 3
+metadata/cluster_lead = false
+
+[node name="Grass_25" type="Sprite3D" parent="GrassDetails"]
+position = Vector3(8.72842, 0.025, 30.10188)
+scale = Vector3(1, 0.89685, 1)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+offset = Vector2(-18, 217.5)
+pixel_size = 0.00317
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+modulate = Color(0.97131, 0.99113, 0.91184, 1)
+metadata/gameplay = "traversable ground detail"
+metadata/grass_detail = true
+metadata/plant_cluster = 4
+metadata/cluster_lead = true
+
+[node name="Grass_26" type="Sprite3D" parent="GrassDetails"]
+position = Vector3(7.89894, 0.025, 29.40870)
+scale = Vector3(1, 0.75895, 1)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.00101
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+modulate = Color(0.93124, 0.95025, 0.87423, 1)
+metadata/gameplay = "traversable ground detail"
+metadata/grass_detail = true
+metadata/plant_cluster = 4
+metadata/cluster_lead = false
+
+[node name="Grass_27" type="Sprite3D" parent="GrassDetails"]
+position = Vector3(5.40797, 0.025, 29.79019)
+scale = Vector3(1, 1.00804, 1)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+offset = Vector2(-18, 217.5)
+pixel_size = 0.00192
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+modulate = Color(0.92654, 0.94545, 0.86981, 1)
+metadata/gameplay = "traversable ground detail"
+metadata/grass_detail = true
+metadata/plant_cluster = 4
+metadata/cluster_lead = false
+
+[node name="Grass_28" type="Sprite3D" parent="GrassDetails"]
+position = Vector3(8.01812, 0.025, 31.42360)
+scale = Vector3(1, 0.77057, 1)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.00130
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+modulate = Color(0.89370, 0.91194, 0.83898, 1)
+metadata/gameplay = "traversable ground detail"
+metadata/grass_detail = true
+metadata/plant_cluster = 4
+metadata/cluster_lead = false
+
+[node name="Grass_29" type="Sprite3D" parent="GrassDetails"]
+position = Vector3(4.88032, 0.025, 30.60914)
+scale = Vector3(1, 0.97563, 1)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+offset = Vector2(-18, 217.5)
+pixel_size = 0.00194
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+modulate = Color(0.94315, 0.96240, 0.88541, 1)
+metadata/gameplay = "traversable ground detail"
+metadata/grass_detail = true
+metadata/plant_cluster = 4
+metadata/cluster_lead = false
+
+[node name="Grass_30" type="Sprite3D" parent="GrassDetails"]
+position = Vector3(6.67933, 0.025, 30.56830)
+scale = Vector3(1, 0.73218, 1)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+offset = Vector2(-18, 217.5)
+pixel_size = 0.00142
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+modulate = Color(0.92568, 0.94457, 0.86901, 1)
+metadata/gameplay = "traversable ground detail"
+metadata/grass_detail = true
+metadata/plant_cluster = 4
+metadata/cluster_lead = false
+
+[node name="Grass_31" type="Sprite3D" parent="GrassDetails"]
+position = Vector3(-2.15809, 0.025, 25.81453)
+scale = Vector3(1, 0.87821, 1)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+offset = Vector2(-18, 217.5)
+pixel_size = 0.00300
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+modulate = Color(0.96190, 0.98153, 0.90301, 1)
+metadata/gameplay = "traversable ground detail"
+metadata/grass_detail = true
+metadata/plant_cluster = 5
+metadata/cluster_lead = true
+
+[node name="Grass_32" type="Sprite3D" parent="GrassDetails"]
+position = Vector3(-3.37229, 0.025, 26.54980)
+scale = Vector3(1, 0.96337, 1)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.00115
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+modulate = Color(0.94649, 0.96581, 0.88854, 1)
+metadata/gameplay = "traversable ground detail"
+metadata/grass_detail = true
+metadata/plant_cluster = 5
+metadata/cluster_lead = false
+
+[node name="Grass_33" type="Sprite3D" parent="GrassDetails"]
+position = Vector3(-3.47692, 0.025, 30.84939)
+scale = Vector3(1, 0.75562, 1)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+offset = Vector2(-18, 217.5)
+pixel_size = 0.00178
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+modulate = Color(0.92240, 0.94122, 0.86592, 1)
+metadata/gameplay = "traversable ground detail"
+metadata/grass_detail = true
+metadata/plant_cluster = 5
+metadata/cluster_lead = false
+
+[node name="Grass_34" type="Sprite3D" parent="GrassDetails"]
+position = Vector3(-1.98162, 0.025, 27.23909)
+scale = Vector3(1, 0.82283, 1)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+offset = Vector2(-18, 217.5)
+pixel_size = 0.00198
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+modulate = Color(0.91970, 0.93847, 0.86339, 1)
+metadata/gameplay = "traversable ground detail"
+metadata/grass_detail = true
+metadata/plant_cluster = 5
+metadata/cluster_lead = false
+
+[node name="Grass_35" type="Sprite3D" parent="GrassDetails"]
+position = Vector3(-4.21423, 0.025, 27.62254)
+scale = Vector3(1, 0.93663, 1)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.00153
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+modulate = Color(0.97044, 0.99024, 0.91102, 1)
+metadata/gameplay = "traversable ground detail"
+metadata/grass_detail = true
+metadata/plant_cluster = 5
+metadata/cluster_lead = false
+
+[node name="Grass_36" type="Sprite3D" parent="GrassDetails"]
+position = Vector3(32.97295, 0.025, 16.52177)
+scale = Vector3(1, 0.94828, 1)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.00289
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+modulate = Color(0.92771, 0.94664, 0.87091, 1)
+metadata/gameplay = "traversable ground detail"
+metadata/grass_detail = true
+metadata/plant_cluster = 6
+metadata/cluster_lead = true
+
+[node name="Grass_37" type="Sprite3D" parent="GrassDetails"]
+position = Vector3(33.75573, 0.025, 15.76804)
+scale = Vector3(1, 0.91412, 1)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+offset = Vector2(-18, 217.5)
+pixel_size = 0.00154
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+modulate = Color(0.95012, 0.96951, 0.89195, 1)
+metadata/gameplay = "traversable ground detail"
+metadata/grass_detail = true
+metadata/plant_cluster = 6
+metadata/cluster_lead = false
+
+[node name="Grass_38" type="Sprite3D" parent="GrassDetails"]
+position = Vector3(37.13419, 0.025, 18.08067)
+scale = Vector3(1, 0.96650, 1)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+offset = Vector2(-18, 217.5)
+pixel_size = 0.00180
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+modulate = Color(0.89079, 0.90897, 0.83625, 1)
+metadata/gameplay = "traversable ground detail"
+metadata/grass_detail = true
+metadata/plant_cluster = 6
+metadata/cluster_lead = false
+
+[node name="Grass_39" type="Sprite3D" parent="GrassDetails"]
+position = Vector3(35.27583, 0.025, 19.22025)
+scale = Vector3(1, 0.76825, 1)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+offset = Vector2(-18, 217.5)
+pixel_size = 0.00194
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+modulate = Color(0.95271, 0.97215, 0.89438, 1)
+metadata/gameplay = "traversable ground detail"
+metadata/grass_detail = true
+metadata/plant_cluster = 6
+metadata/cluster_lead = false
+
+[node name="Grass_40" type="Sprite3D" parent="GrassDetails"]
+position = Vector3(34.77328, 0.025, 18.52787)
+scale = Vector3(1, 0.93147, 1)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+offset = Vector2(-18, 217.5)
+pixel_size = 0.00175
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+modulate = Color(0.89771, 0.91603, 0.84275, 1)
+metadata/gameplay = "traversable ground detail"
+metadata/grass_detail = true
+metadata/plant_cluster = 6
+metadata/cluster_lead = false
+
+[node name="Grass_41" type="Sprite3D" parent="GrassDetails"]
+position = Vector3(37.18940, 0.025, 16.40131)
+scale = Vector3(1, 0.99499, 1)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+offset = Vector2(-18, 217.5)
+pixel_size = 0.00120
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+modulate = Color(0.97080, 0.99061, 0.91136, 1)
+metadata/gameplay = "traversable ground detail"
+metadata/grass_detail = true
+metadata/plant_cluster = 6
+metadata/cluster_lead = false
+
+[node name="Grass_42" type="Sprite3D" parent="GrassDetails"]
+position = Vector3(34.51698, 0.025, 17.60195)
+scale = Vector3(1, 0.83790, 1)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+offset = Vector2(-18, 217.5)
+pixel_size = 0.00126
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+modulate = Color(0.97281, 0.99266, 0.91325, 1)
+metadata/gameplay = "traversable ground detail"
+metadata/grass_detail = true
+metadata/plant_cluster = 6
+metadata/cluster_lead = false
+
+[node name="Grass_43" type="Sprite3D" parent="GrassDetails"]
+position = Vector3(9.14221, 0.025, 18.52678)
+scale = Vector3(1, 0.92922, 1)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.00323
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+modulate = Color(0.95582, 0.97532, 0.89730, 1)
+metadata/gameplay = "traversable ground detail"
+metadata/grass_detail = true
+metadata/plant_cluster = 7
+metadata/cluster_lead = true
+
+[node name="Grass_44" type="Sprite3D" parent="GrassDetails"]
+position = Vector3(7.76289, 0.025, 18.92614)
+scale = Vector3(1, 0.79915, 1)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+offset = Vector2(-18, 217.5)
+pixel_size = 0.00148
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+modulate = Color(0.97895, 0.99893, 0.91901, 1)
+metadata/gameplay = "traversable ground detail"
+metadata/grass_detail = true
+metadata/plant_cluster = 7
+metadata/cluster_lead = false
+
+[node name="Grass_45" type="Sprite3D" parent="GrassDetails"]
+position = Vector3(9.27472, 0.025, 16.89087)
+scale = Vector3(1, 0.76528, 1)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.00105
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+modulate = Color(0.94711, 0.96644, 0.88913, 1)
+metadata/gameplay = "traversable ground detail"
+metadata/grass_detail = true
+metadata/plant_cluster = 7
+metadata/cluster_lead = false
+
+[node name="Grass_46" type="Sprite3D" parent="GrassDetails"]
+position = Vector3(8.49080, 0.025, 17.35990)
+scale = Vector3(1, 0.94790, 1)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+offset = Vector2(-18, 217.5)
+pixel_size = 0.00210
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+modulate = Color(0.90844, 0.92698, 0.85283, 1)
+metadata/gameplay = "traversable ground detail"
+metadata/grass_detail = true
+metadata/plant_cluster = 7
+metadata/cluster_lead = false
+
+[node name="Grass_47" type="Sprite3D" parent="GrassDetails"]
+position = Vector3(0.21092, 0.025, 11.28503)
+scale = Vector3(1, 0.80491, 1)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+offset = Vector2(-18, 217.5)
+pixel_size = 0.00157
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+modulate = Color(0.96878, 0.98855, 0.90947, 1)
+metadata/gameplay = "traversable ground detail"
+metadata/grass_detail = true
+metadata/plant_cluster = -1
+metadata/cluster_lead = false
+
+[node name="Grass_48" type="Sprite3D" parent="GrassDetails"]
+position = Vector3(24.37792, 0.025, 1.24728)
+scale = Vector3(1, 0.79625, 1)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+offset = Vector2(-18, 217.5)
+pixel_size = 0.00133
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+modulate = Color(0.96165, 0.98127, 0.90277, 1)
+metadata/gameplay = "traversable ground detail"
+metadata/grass_detail = true
+metadata/plant_cluster = -1
+metadata/cluster_lead = false
+
+[node name="Grass_49" type="Sprite3D" parent="GrassDetails"]
+position = Vector3(7.23206, 0.025, 24.73607)
+scale = Vector3(1, 0.88753, 1)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+offset = Vector2(-18, 217.5)
+pixel_size = 0.00163
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+modulate = Color(0.90800, 0.92653, 0.85241, 1)
+metadata/gameplay = "traversable ground detail"
+metadata/grass_detail = true
+metadata/plant_cluster = -1
+metadata/cluster_lead = false
+
+[node name="Grass_50" type="Sprite3D" parent="GrassDetails"]
+position = Vector3(32.65797, 0.025, 10.25449)
+scale = Vector3(1, 0.77746, 1)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+offset = Vector2(-18, 217.5)
+pixel_size = 0.00159
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+modulate = Color(0.95049, 0.96989, 0.89230, 1)
+metadata/gameplay = "traversable ground detail"
+metadata/grass_detail = true
+metadata/plant_cluster = -1
+metadata/cluster_lead = false
+
+[node name="Grass_51" type="Sprite3D" parent="GrassDetails"]
+position = Vector3(23.78884, 0.025, 34.48084)
+scale = Vector3(1, 0.79153, 1)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+offset = Vector2(-18, 217.5)
+pixel_size = 0.00103
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+modulate = Color(0.94002, 0.95921, 0.88247, 1)
+metadata/gameplay = "traversable ground detail"
+metadata/grass_detail = true
+metadata/plant_cluster = -1
+metadata/cluster_lead = false
+
+[node name="Grass_52" type="Sprite3D" parent="GrassDetails"]
+position = Vector3(21.40570, 0.025, 16.56545)
+scale = Vector3(1, 0.88061, 1)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+offset = Vector2(-18, 217.5)
+pixel_size = 0.00102
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+modulate = Color(0.97366, 0.99353, 0.91405, 1)
+metadata/gameplay = "traversable ground detail"
+metadata/grass_detail = true
+metadata/plant_cluster = -1
+metadata/cluster_lead = false
+
+[node name="Grass_53" type="Sprite3D" parent="GrassDetails"]
+position = Vector3(18.78958, 0.025, 27.78762)
+scale = Vector3(1, 0.87699, 1)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+offset = Vector2(-18, 217.5)
+pixel_size = 0.00134
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+modulate = Color(0.95102, 0.97043, 0.89279, 1)
+metadata/gameplay = "traversable ground detail"
+metadata/grass_detail = true
+metadata/plant_cluster = -1
+metadata/cluster_lead = false
+
+[node name="Grass_54" type="Sprite3D" parent="GrassDetails"]
+position = Vector3(10.42513, 0.025, 10.24388)
+scale = Vector3(1, 0.74106, 1)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+offset = Vector2(-18, 217.5)
+pixel_size = 0.00138
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+modulate = Color(0.94464, 0.96392, 0.88681, 1)
+metadata/gameplay = "traversable ground detail"
+metadata/grass_detail = true
+metadata/plant_cluster = 8
+
+[node name="Grass_55" type="Sprite3D" parent="GrassDetails"]
+position = Vector3(8.91805, 0.025, 10.55106)
+scale = Vector3(1, 0.89418, 1)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+offset = Vector2(-18, 217.5)
+pixel_size = 0.00113
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+modulate = Color(0.91381, 0.93246, 0.85786, 1)
+metadata/gameplay = "traversable ground detail"
+metadata/grass_detail = true
+metadata/plant_cluster = 8
+
+[node name="Grass_56" type="Sprite3D" parent="GrassDetails"]
+position = Vector3(10.85038, 0.025, 8.68029)
+scale = Vector3(1, 0.99970, 1)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+offset = Vector2(-18, 217.5)
+pixel_size = 0.00183
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+modulate = Color(0.88808, 0.90621, 0.83371, 1)
+metadata/gameplay = "traversable ground detail"
+metadata/grass_detail = true
+metadata/plant_cluster = 8
+
+[node name="Grass_57" type="Sprite3D" parent="GrassDetails"]
+position = Vector3(9.30937, 0.025, 7.40974)
+scale = Vector3(1, 0.90910, 1)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+offset = Vector2(-18, 217.5)
+pixel_size = 0.00120
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+modulate = Color(0.95467, 0.97415, 0.89622, 1)
+metadata/gameplay = "traversable ground detail"
+metadata/grass_detail = true
+metadata/plant_cluster = 8
+
+[node name="Grass_58" type="Sprite3D" parent="GrassDetails"]
+position = Vector3(8.98195, 0.025, 9.02406)
+scale = Vector3(1, 0.73043, 1)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+offset = Vector2(-18, 217.5)
+pixel_size = 0.00116
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+modulate = Color(0.92315, 0.94199, 0.86663, 1)
+metadata/gameplay = "traversable ground detail"
+metadata/grass_detail = true
+metadata/plant_cluster = 8
+
+[node name="Grass_59" type="Sprite3D" parent="GrassDetails"]
+position = Vector3(9.49027, 0.025, 10.61236)
+scale = Vector3(1, 0.76541, 1)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+offset = Vector2(-18, 217.5)
+pixel_size = 0.00164
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+modulate = Color(0.90352, 0.92196, 0.84820, 1)
+metadata/gameplay = "traversable ground detail"
+metadata/grass_detail = true
+metadata/plant_cluster = 8
+
+[node name="Grass_60" type="Sprite3D" parent="GrassDetails"]
+position = Vector3(11.49069, 0.025, 8.52475)
+scale = Vector3(1, 0.85686, 1)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+offset = Vector2(-18, 217.5)
+pixel_size = 0.00189
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+modulate = Color(0.89526, 0.91353, 0.84045, 1)
+metadata/gameplay = "traversable ground detail"
+metadata/grass_detail = true
+metadata/plant_cluster = 8
+
+[node name="Grass_61" type="Sprite3D" parent="GrassDetails"]
+position = Vector3(19.23285, 0.025, 13.60786)
+scale = Vector3(1, 0.72520, 1)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+offset = Vector2(-18, 217.5)
+pixel_size = 0.00207
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+modulate = Color(0.90518, 0.92366, 0.84977, 1)
+metadata/gameplay = "traversable ground detail"
+metadata/grass_detail = true
+metadata/plant_cluster = 9
+
+[node name="Grass_62" type="Sprite3D" parent="GrassDetails"]
+position = Vector3(20.11866, 0.025, 10.90201)
+scale = Vector3(1, 0.91601, 1)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+offset = Vector2(-18, 217.5)
+pixel_size = 0.00157
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+modulate = Color(0.93142, 0.95043, 0.87439, 1)
+metadata/gameplay = "traversable ground detail"
+metadata/grass_detail = true
+metadata/plant_cluster = 9
+
+[node name="Grass_63" type="Sprite3D" parent="GrassDetails"]
+position = Vector3(18.50126, 0.025, 11.98484)
+scale = Vector3(1, 0.78753, 1)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+offset = Vector2(-18, 217.5)
+pixel_size = 0.00194
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+modulate = Color(0.93217, 0.95120, 0.87510, 1)
+metadata/gameplay = "traversable ground detail"
+metadata/grass_detail = true
+metadata/plant_cluster = 9
+
+[node name="Grass_64" type="Sprite3D" parent="GrassDetails"]
+position = Vector3(21.56239, 0.025, 12.73364)
+scale = Vector3(1, 0.87379, 1)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+offset = Vector2(-18, 217.5)
+pixel_size = 0.00188
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+modulate = Color(0.90334, 0.92178, 0.84803, 1)
+metadata/gameplay = "traversable ground detail"
+metadata/grass_detail = true
+metadata/plant_cluster = 9
+
+[node name="Grass_65" type="Sprite3D" parent="GrassDetails"]
+position = Vector3(21.58764, 0.025, 11.36081)
+scale = Vector3(1, 0.88960, 1)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+offset = Vector2(-18, 217.5)
+pixel_size = 0.00109
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+modulate = Color(0.88995, 0.90811, 0.83546, 1)
+metadata/gameplay = "traversable ground detail"
+metadata/grass_detail = true
+metadata/plant_cluster = 9
+
+[node name="Grass_66" type="Sprite3D" parent="GrassDetails"]
+position = Vector3(19.92560, 0.025, 11.78537)
+scale = Vector3(1, 0.75195, 1)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+offset = Vector2(-18, 217.5)
+pixel_size = 0.00128
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+modulate = Color(0.96419, 0.98387, 0.90516, 1)
+metadata/gameplay = "traversable ground detail"
+metadata/grass_detail = true
+metadata/plant_cluster = 9
+
+[node name="Grass_67" type="Sprite3D" parent="GrassDetails"]
+position = Vector3(23.33169, 0.025, 23.08078)
+scale = Vector3(1, 0.74661, 1)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+offset = Vector2(-18, 217.5)
+pixel_size = 0.00146
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+modulate = Color(0.92224, 0.94106, 0.86577, 1)
+metadata/gameplay = "traversable ground detail"
+metadata/grass_detail = true
+metadata/plant_cluster = 10
+
+[node name="Grass_68" type="Sprite3D" parent="GrassDetails"]
+position = Vector3(24.20660, 0.025, 23.21353)
+scale = Vector3(1, 0.77757, 1)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+offset = Vector2(-18, 217.5)
+pixel_size = 0.00173
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+modulate = Color(0.91803, 0.93676, 0.86182, 1)
+metadata/gameplay = "traversable ground detail"
+metadata/grass_detail = true
+metadata/plant_cluster = 10
+
+[node name="Grass_69" type="Sprite3D" parent="GrassDetails"]
+position = Vector3(23.81272, 0.025, 20.32492)
+scale = Vector3(1, 0.86099, 1)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+offset = Vector2(-18, 217.5)
+pixel_size = 0.00132
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+modulate = Color(0.96641, 0.98613, 0.90724, 1)
+metadata/gameplay = "traversable ground detail"
+metadata/grass_detail = true
+metadata/plant_cluster = 10
+
+[node name="Grass_70" type="Sprite3D" parent="GrassDetails"]
+position = Vector3(22.37071, 0.025, 22.79198)
+scale = Vector3(1, 0.92933, 1)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.00161
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+modulate = Color(0.89037, 0.90854, 0.83586, 1)
+metadata/gameplay = "traversable ground detail"
+metadata/grass_detail = true
+metadata/plant_cluster = 10
+
+[node name="Grass_71" type="Sprite3D" parent="GrassDetails"]
+position = Vector3(20.49872, 0.025, 21.72849)
+scale = Vector3(1, 0.71172, 1)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+offset = Vector2(-18, 217.5)
+pixel_size = 0.00174
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+modulate = Color(0.90316, 0.92159, 0.84786, 1)
+metadata/gameplay = "traversable ground detail"
+metadata/grass_detail = true
+metadata/plant_cluster = 10
+
+[node name="Grass_72" type="Sprite3D" parent="GrassDetails"]
+position = Vector3(22.85150, 0.025, 22.71288)
+scale = Vector3(1, 0.71396, 1)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+offset = Vector2(-18, 217.5)
+pixel_size = 0.00098
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+modulate = Color(0.95327, 0.97273, 0.89491, 1)
+metadata/gameplay = "traversable ground detail"
+metadata/grass_detail = true
+metadata/plant_cluster = 10
+
+[node name="Grass_73" type="Sprite3D" parent="GrassDetails"]
+position = Vector3(22.33058, 0.025, 21.19210)
+scale = Vector3(1, 0.90396, 1)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.00120
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+modulate = Color(0.90209, 0.92050, 0.84686, 1)
+metadata/gameplay = "traversable ground detail"
+metadata/grass_detail = true
+metadata/plant_cluster = 10
+
+[node name="Grass_74" type="Sprite3D" parent="GrassDetails"]
+position = Vector3(10.65394, 0.025, 25.67182)
+scale = Vector3(1, 0.98807, 1)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+offset = Vector2(-18, 217.5)
+pixel_size = 0.00114
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+modulate = Color(0.90454, 0.92300, 0.84916, 1)
+metadata/gameplay = "traversable ground detail"
+metadata/grass_detail = true
+metadata/plant_cluster = 11
+
+[node name="Grass_75" type="Sprite3D" parent="GrassDetails"]
+position = Vector3(11.35831, 0.025, 26.97134)
+scale = Vector3(1, 0.97080, 1)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.00137
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+modulate = Color(0.97204, 0.99188, 0.91253, 1)
+metadata/gameplay = "traversable ground detail"
+metadata/grass_detail = true
+metadata/plant_cluster = 11
+
+[node name="Grass_76" type="Sprite3D" parent="GrassDetails"]
+position = Vector3(10.95913, 0.025, 26.27770)
+scale = Vector3(1, 0.80388, 1)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+offset = Vector2(-18, 217.5)
+pixel_size = 0.00165
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+modulate = Color(0.95951, 0.97909, 0.90076, 1)
+metadata/gameplay = "traversable ground detail"
+metadata/grass_detail = true
+metadata/plant_cluster = 11
+
+[node name="Grass_77" type="Sprite3D" parent="GrassDetails"]
+position = Vector3(10.35444, 0.025, 27.38440)
+scale = Vector3(1, 0.89872, 1)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+offset = Vector2(-18, 217.5)
+pixel_size = 0.00098
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+modulate = Color(0.91066, 0.92925, 0.85491, 1)
+metadata/gameplay = "traversable ground detail"
+metadata/grass_detail = true
+metadata/plant_cluster = 11
+
+[node name="Grass_78" type="Sprite3D" parent="GrassDetails"]
+position = Vector3(8.92507, 0.025, 26.19816)
+scale = Vector3(1, 0.78151, 1)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.00156
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+modulate = Color(0.97577, 0.99568, 0.91603, 1)
+metadata/gameplay = "traversable ground detail"
+metadata/grass_detail = true
+metadata/plant_cluster = 11
+
+[node name="Grass_79" type="Sprite3D" parent="GrassDetails"]
+position = Vector3(10.78906, 0.025, 24.72489)
+scale = Vector3(1, 0.71805, 1)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+offset = Vector2(-18, 217.5)
+pixel_size = 0.00174
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+modulate = Color(0.96703, 0.98677, 0.90783, 1)
+metadata/gameplay = "traversable ground detail"
+metadata/grass_detail = true
+metadata/plant_cluster = 11
+
+[node name="Grass_80" type="Sprite3D" parent="GrassDetails"]
+position = Vector3(22.14018, 0.025, 30.12487)
+scale = Vector3(1, 0.86254, 1)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+offset = Vector2(-18, 217.5)
+pixel_size = 0.00164
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+modulate = Color(0.95908, 0.97865, 0.90036, 1)
+metadata/gameplay = "traversable ground detail"
+metadata/grass_detail = true
+metadata/plant_cluster = 12
+
+[node name="Grass_81" type="Sprite3D" parent="GrassDetails"]
+position = Vector3(20.08803, 0.025, 28.78059)
+scale = Vector3(1, 0.96288, 1)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+offset = Vector2(-18, 217.5)
+pixel_size = 0.00105
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+modulate = Color(0.89647, 0.91477, 0.84159, 1)
+metadata/gameplay = "traversable ground detail"
+metadata/grass_detail = true
+metadata/plant_cluster = 12
+
+[node name="Grass_82" type="Sprite3D" parent="GrassDetails"]
+position = Vector3(20.15646, 0.025, 31.83687)
+scale = Vector3(1, 0.82970, 1)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+offset = Vector2(-18, 217.5)
+pixel_size = 0.00176
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+modulate = Color(0.97360, 0.99347, 0.91399, 1)
+metadata/gameplay = "traversable ground detail"
+metadata/grass_detail = true
+metadata/plant_cluster = 12
+
+[node name="Grass_83" type="Sprite3D" parent="GrassDetails"]
+position = Vector3(20.59396, 0.025, 30.61923)
+scale = Vector3(1, 0.73126, 1)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+offset = Vector2(-18, 217.5)
+pixel_size = 0.00149
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+modulate = Color(0.97209, 0.99192, 0.91257, 1)
+metadata/gameplay = "traversable ground detail"
+metadata/grass_detail = true
+metadata/plant_cluster = 12
+
+[node name="Grass_84" type="Sprite3D" parent="GrassDetails"]
+position = Vector3(21.54043, 0.025, 30.79657)
+scale = Vector3(1, 0.86421, 1)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.00097
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+modulate = Color(0.94480, 0.96408, 0.88696, 1)
+metadata/gameplay = "traversable ground detail"
+metadata/grass_detail = true
+metadata/plant_cluster = 12
+
+[node name="Grass_85" type="Sprite3D" parent="GrassDetails"]
+position = Vector3(20.59554, 0.025, 29.96975)
+scale = Vector3(1, 0.73363, 1)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+offset = Vector2(-18, 217.5)
+pixel_size = 0.00127
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+modulate = Color(0.90869, 0.92724, 0.85306, 1)
+metadata/gameplay = "traversable ground detail"
+metadata/grass_detail = true
+metadata/plant_cluster = 12
+
+[node name="Grass_86" type="Sprite3D" parent="GrassDetails"]
+position = Vector3(20.53326, 0.025, 28.27549)
+scale = Vector3(1, 0.71336, 1)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+offset = Vector2(-18, 217.5)
+pixel_size = 0.00164
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+modulate = Color(0.93118, 0.95018, 0.87417, 1)
+metadata/gameplay = "traversable ground detail"
+metadata/grass_detail = true
+metadata/plant_cluster = 12
+
+[node name="Grass_87" type="Sprite3D" parent="GrassDetails"]
+position = Vector3(5.27195, 0.025, 19.97194)
+scale = Vector3(1, 0.93648, 1)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+offset = Vector2(-18, 217.5)
+pixel_size = 0.00209
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+modulate = Color(0.96940, 0.98919, 0.91005, 1)
+metadata/gameplay = "traversable ground detail"
+metadata/grass_detail = true
+metadata/plant_cluster = 13
+
+[node name="Grass_88" type="Sprite3D" parent="GrassDetails"]
+position = Vector3(5.50691, 0.025, 21.85256)
+scale = Vector3(1, 0.75030, 1)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+offset = Vector2(-18, 217.5)
+pixel_size = 0.00128
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+modulate = Color(0.90755, 0.92607, 0.85198, 1)
+metadata/gameplay = "traversable ground detail"
+metadata/grass_detail = true
+metadata/plant_cluster = 13
+
+[node name="Grass_89" type="Sprite3D" parent="GrassDetails"]
+position = Vector3(4.53787, 0.025, 20.23947)
+scale = Vector3(1, 0.74271, 1)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.00184
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+modulate = Color(0.96221, 0.98185, 0.90330, 1)
+metadata/gameplay = "traversable ground detail"
+metadata/grass_detail = true
+metadata/plant_cluster = 13
+
+[node name="Grass_90" type="Sprite3D" parent="GrassDetails"]
+position = Vector3(5.88427, 0.025, 21.33014)
+scale = Vector3(1, 0.97794, 1)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+offset = Vector2(-18, 217.5)
+pixel_size = 0.00146
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+modulate = Color(0.94276, 0.96200, 0.88504, 1)
+metadata/gameplay = "traversable ground detail"
+metadata/grass_detail = true
+metadata/plant_cluster = 13
+
+[node name="Grass_91" type="Sprite3D" parent="GrassDetails"]
+position = Vector3(6.35148, 0.025, 20.94440)
+scale = Vector3(1, 0.75013, 1)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+offset = Vector2(-18, 217.5)
+pixel_size = 0.00120
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+modulate = Color(0.95126, 0.97067, 0.89302, 1)
+metadata/gameplay = "traversable ground detail"
+metadata/grass_detail = true
+metadata/plant_cluster = 13
+
+[node name="Grass_92" type="Sprite3D" parent="GrassDetails"]
+position = Vector3(25.10609, 0.025, 18.04437)
+scale = Vector3(1, 0.79251, 1)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.00104
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+modulate = Color(0.89692, 0.91522, 0.84200, 1)
+metadata/gameplay = "traversable ground detail"
+metadata/grass_detail = true
+metadata/plant_cluster = 14
+
+[node name="Grass_93" type="Sprite3D" parent="GrassDetails"]
+position = Vector3(26.27074, 0.025, 17.58014)
+scale = Vector3(1, 0.83615, 1)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+offset = Vector2(-18, 217.5)
+pixel_size = 0.00181
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+modulate = Color(0.89335, 0.91158, 0.83865, 1)
+metadata/gameplay = "traversable ground detail"
+metadata/grass_detail = true
+metadata/plant_cluster = 14
+
+[node name="Grass_94" type="Sprite3D" parent="GrassDetails"]
+position = Vector3(25.64704, 0.025, 17.36529)
+scale = Vector3(1, 0.96403, 1)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+offset = Vector2(-18, 217.5)
+pixel_size = 0.00177
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+modulate = Color(0.89576, 0.91404, 0.84092, 1)
+metadata/gameplay = "traversable ground detail"
+metadata/grass_detail = true
+metadata/plant_cluster = 14
+
+[node name="Grass_95" type="Sprite3D" parent="GrassDetails"]
+position = Vector3(26.78876, 0.025, 17.49641)
+scale = Vector3(1, 0.88221, 1)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.00187
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+modulate = Color(0.95535, 0.97485, 0.89686, 1)
+metadata/gameplay = "traversable ground detail"
+metadata/grass_detail = true
+metadata/plant_cluster = 14
+
+[node name="Grass_96" type="Sprite3D" parent="GrassDetails"]
+position = Vector3(25.68261, 0.025, 15.75128)
+scale = Vector3(1, 0.77399, 1)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+offset = Vector2(-18, 217.5)
+pixel_size = 0.00173
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+modulate = Color(0.90703, 0.92554, 0.85149, 1)
+metadata/gameplay = "traversable ground detail"
+metadata/grass_detail = true
+metadata/plant_cluster = 14
+
+[node name="Grass_97" type="Sprite3D" parent="GrassDetails"]
+position = Vector3(27.45343, 0.025, 17.39672)
+scale = Vector3(1, 0.87927, 1)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+offset = Vector2(-18, 217.5)
+pixel_size = 0.00178
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+modulate = Color(0.92805, 0.94699, 0.87123, 1)
+metadata/gameplay = "traversable ground detail"
+metadata/grass_detail = true
+metadata/plant_cluster = 14
+
+[node name="Grass_98" type="Sprite3D" parent="GrassDetails"]
+position = Vector3(8.22137, 0.025, 13.32892)
+scale = Vector3(1, 0.96034, 1)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+offset = Vector2(-18, 217.5)
+pixel_size = 0.00124
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+modulate = Color(0.89000, 0.90816, 0.83551, 1)
+metadata/gameplay = "traversable ground detail"
+metadata/grass_detail = true
+metadata/plant_cluster = 15
+
+[node name="Grass_99" type="Sprite3D" parent="GrassDetails"]
+position = Vector3(8.53837, 0.025, 12.87584)
+scale = Vector3(1, 0.77307, 1)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+offset = Vector2(-18, 217.5)
+pixel_size = 0.00180
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+modulate = Color(0.89591, 0.91419, 0.84106, 1)
+metadata/gameplay = "traversable ground detail"
+metadata/grass_detail = true
+metadata/plant_cluster = 15
+
+[node name="Grass_100" type="Sprite3D" parent="GrassDetails"]
+position = Vector3(10.21894, 0.025, 13.22845)
+scale = Vector3(1, 0.76381, 1)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+offset = Vector2(-18, 217.5)
+pixel_size = 0.00174
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+modulate = Color(0.90170, 0.92010, 0.84649, 1)
+metadata/gameplay = "traversable ground detail"
+metadata/grass_detail = true
+metadata/plant_cluster = 15
+
+[node name="Grass_101" type="Sprite3D" parent="GrassDetails"]
+position = Vector3(9.83001, 0.025, 14.61873)
+scale = Vector3(1, 0.78935, 1)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.00116
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+modulate = Color(0.88565, 0.90372, 0.83142, 1)
+metadata/gameplay = "traversable ground detail"
+metadata/grass_detail = true
+metadata/plant_cluster = 15
+
+[node name="Grass_102" type="Sprite3D" parent="GrassDetails"]
+position = Vector3(10.28837, 0.025, 14.10126)
+scale = Vector3(1, 0.70133, 1)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+offset = Vector2(-18, 217.5)
+pixel_size = 0.00118
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+modulate = Color(0.88651, 0.90460, 0.83223, 1)
+metadata/gameplay = "traversable ground detail"
+metadata/grass_detail = true
+metadata/plant_cluster = 15
+
+[node name="Grass_103" type="Sprite3D" parent="GrassDetails"]
+position = Vector3(9.06847, 0.025, 14.98252)
+scale = Vector3(1, 0.98907, 1)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+offset = Vector2(-18, 217.5)
+pixel_size = 0.00092
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+modulate = Color(0.88720, 0.90531, 0.83289, 1)
+metadata/gameplay = "traversable ground detail"
+metadata/grass_detail = true
+metadata/plant_cluster = 15
+
+[node name="EdgeCluster_0_0" type="Sprite3D" parent="Boundary"]
+position = Vector3(-10.03080, -1.65461, 3.46485)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+offset = Vector2(-18, 217.5)
+pixel_size = 0.00887
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+modulate = Color(0.85192, 0.87827, 0.82557, 1)
+metadata/outside_gameplay = true
+metadata/grounded_on_slope = true
+metadata/edge_cluster = 0
+
+[node name="EdgeCluster_0_1" type="Sprite3D" parent="Boundary"]
+position = Vector3(-7.03699, -0.10140, 4.68422)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.00443
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+modulate = Color(0.89853, 0.92632, 0.87074, 1)
+metadata/outside_gameplay = true
+metadata/grounded_on_slope = true
+metadata/edge_cluster = 0
+
+[node name="EdgeCluster_0_2" type="Sprite3D" parent="Boundary"]
+position = Vector3(-7.34460, -0.82099, 2.34358)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.00408
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+modulate = Color(0.89710, 0.92485, 0.86936, 1)
+metadata/outside_gameplay = true
+metadata/grounded_on_slope = true
+metadata/edge_cluster = 0
+
+[node name="EdgeCluster_0_3" type="Sprite3D" parent="Boundary"]
+position = Vector3(-7.06999, -0.45551, 3.11610)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.00480
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+modulate = Color(0.91526, 0.94357, 0.88695, 1)
+metadata/outside_gameplay = true
+metadata/grounded_on_slope = true
+metadata/edge_cluster = 0
+
+[node name="EdgeCluster_0_4" type="Sprite3D" parent="Boundary"]
+position = Vector3(-7.61497, -0.84232, 2.57261)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.00659
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+modulate = Color(0.92987, 0.95863, 0.90111, 1)
+metadata/outside_gameplay = true
+metadata/grounded_on_slope = true
+metadata/edge_cluster = 0
+
+[node name="EdgeCluster_0_5" type="Sprite3D" parent="Boundary"]
+position = Vector3(-9.26515, -0.68065, 5.01807)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.00460
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+modulate = Color(0.95760, 0.98722, 0.92798, 1)
+metadata/outside_gameplay = true
+metadata/grounded_on_slope = true
+metadata/edge_cluster = 0
+
+[node name="EdgeCluster_0_6" type="Sprite3D" parent="Boundary"]
+position = Vector3(-8.57029, -1.02871, 3.15909)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.00476
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+modulate = Color(0.90486, 0.93285, 0.87688, 1)
+metadata/outside_gameplay = true
+metadata/grounded_on_slope = true
+metadata/edge_cluster = 0
+
+[node name="EdgeCluster_0_7" type="Sprite3D" parent="Boundary"]
+position = Vector3(-8.93592, -0.67615, 4.59629)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+offset = Vector2(-18, 217.5)
+pixel_size = 0.00499
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+modulate = Color(0.91359, 0.94185, 0.88534, 1)
+metadata/outside_gameplay = true
+metadata/grounded_on_slope = true
+metadata/edge_cluster = 0
+
+[node name="EdgeCluster_1_0" type="Sprite3D" parent="Boundary"]
+position = Vector3(-14.07156, -0.92143, 16.57847)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.00659
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+modulate = Color(0.97876, 1.00904, 0.94849, 1)
+metadata/outside_gameplay = true
+metadata/grounded_on_slope = true
+metadata/edge_cluster = 1
+
+[node name="EdgeCluster_1_1" type="Sprite3D" parent="Boundary"]
+position = Vector3(-9.62267, 0.01875, 17.90142)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+offset = Vector2(-18, 217.5)
+pixel_size = 0.00491
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+modulate = Color(0.90884, 0.93695, 0.88073, 1)
+metadata/outside_gameplay = true
+metadata/grounded_on_slope = true
+metadata/edge_cluster = 1
+
+[node name="EdgeCluster_1_2" type="Sprite3D" parent="Boundary"]
+position = Vector3(-10.34602, 0.01875, 18.57951)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+offset = Vector2(-18, 217.5)
+pixel_size = 0.00435
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+modulate = Color(0.86795, 0.89479, 0.84111, 1)
+metadata/outside_gameplay = true
+metadata/grounded_on_slope = true
+metadata/edge_cluster = 1
+
+[node name="EdgeCluster_1_3" type="Sprite3D" parent="Boundary"]
+position = Vector3(-11.53266, -0.03447, 15.91044)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.00610
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+modulate = Color(0.98648, 1.01699, 0.95597, 1)
+metadata/outside_gameplay = true
+metadata/grounded_on_slope = true
+metadata/edge_cluster = 1
+
+[node name="EdgeCluster_1_4" type="Sprite3D" parent="Boundary"]
+position = Vector3(-12.10697, -0.12120, 17.94108)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.00529
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+modulate = Color(0.98635, 1.01686, 0.95585, 1)
+metadata/outside_gameplay = true
+metadata/grounded_on_slope = true
+metadata/edge_cluster = 1
+
+[node name="EdgeCluster_1_5" type="Sprite3D" parent="Boundary"]
+position = Vector3(-10.40175, 0.01875, 17.56335)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.00396
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+modulate = Color(0.89070, 0.91824, 0.86315, 1)
+metadata/outside_gameplay = true
+metadata/grounded_on_slope = true
+metadata/edge_cluster = 1
+
+[node name="EdgeCluster_1_6" type="Sprite3D" parent="Boundary"]
+position = Vector3(-13.70468, -0.70965, 17.40116)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+offset = Vector2(-18, 217.5)
+pixel_size = 0.00477
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+modulate = Color(0.95452, 0.98404, 0.92500, 1)
+metadata/outside_gameplay = true
+metadata/grounded_on_slope = true
+metadata/edge_cluster = 1
+
+[node name="EdgeCluster_1_7" type="Sprite3D" parent="Boundary"]
+position = Vector3(-9.86769, 0.01875, 15.61657)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.00425
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+modulate = Color(0.91119, 0.93937, 0.88301, 1)
+metadata/outside_gameplay = true
+metadata/grounded_on_slope = true
+metadata/edge_cluster = 1
+
+[node name="EdgeCluster_1_8" type="Sprite3D" parent="Boundary"]
+position = Vector3(-11.43539, -0.04820, 14.59762)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.00487
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+modulate = Color(0.90405, 0.93201, 0.87609, 1)
+metadata/outside_gameplay = true
+metadata/grounded_on_slope = true
+metadata/edge_cluster = 1
+
+[node name="EdgeCluster_1_9" type="Sprite3D" parent="Boundary"]
+position = Vector3(-11.41240, -0.01205, 19.49155)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.00474
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+modulate = Color(0.88963, 0.91715, 0.86212, 1)
+metadata/outside_gameplay = true
+metadata/grounded_on_slope = true
+metadata/edge_cluster = 1
+
+[node name="EdgeCluster_2_0" type="Sprite3D" parent="Boundary"]
+position = Vector3(-6.45975, -0.51288, 33.71248)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.00361
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+modulate = Color(0.88898, 0.91647, 0.86148, 1)
+metadata/outside_gameplay = true
+metadata/grounded_on_slope = true
+metadata/edge_cluster = 2
+
+[node name="EdgeCluster_2_1" type="Sprite3D" parent="Boundary"]
+position = Vector3(-7.82452, -0.89076, 33.32652)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+offset = Vector2(-18, 217.5)
+pixel_size = 0.00386
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+modulate = Color(0.93132, 0.96012, 0.90251, 1)
+metadata/outside_gameplay = true
+metadata/grounded_on_slope = true
+metadata/edge_cluster = 2
+
+[node name="EdgeCluster_2_2" type="Sprite3D" parent="Boundary"]
+position = Vector3(-9.94257, -1.96660, 33.28804)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+offset = Vector2(-18, 217.5)
+pixel_size = 0.00349
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+modulate = Color(0.86037, 0.88698, 0.83377, 1)
+metadata/outside_gameplay = true
+metadata/grounded_on_slope = true
+metadata/edge_cluster = 2
+
+[node name="EdgeCluster_2_3" type="Sprite3D" parent="Boundary"]
+position = Vector3(-8.25100, -0.50744, 31.70367)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.00426
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+modulate = Color(0.88005, 0.90727, 0.85283, 1)
+metadata/outside_gameplay = true
+metadata/grounded_on_slope = true
+metadata/edge_cluster = 2
+
+[node name="EdgeCluster_2_4" type="Sprite3D" parent="Boundary"]
+position = Vector3(-4.80272, 0.01875, 31.51308)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+offset = Vector2(-18, 217.5)
+pixel_size = 0.00635
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+modulate = Color(0.92482, 0.95343, 0.89622, 1)
+metadata/outside_gameplay = true
+metadata/grounded_on_slope = true
+metadata/edge_cluster = 2
+
+[node name="EdgeCluster_2_5" type="Sprite3D" parent="Boundary"]
+position = Vector3(-4.86771, -0.11529, 33.95861)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.00389
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+modulate = Color(0.94554, 0.97478, 0.91630, 1)
+metadata/outside_gameplay = true
+metadata/grounded_on_slope = true
+metadata/edge_cluster = 2
+
+[node name="EdgeCluster_2_6" type="Sprite3D" parent="Boundary"]
+position = Vector3(-8.25662, -1.51074, 34.25428)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+offset = Vector2(-18, 217.5)
+pixel_size = 0.00677
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+modulate = Color(0.89666, 0.92439, 0.86893, 1)
+metadata/outside_gameplay = true
+metadata/grounded_on_slope = true
+metadata/edge_cluster = 2
+
+[node name="EdgeCluster_2_7" type="Sprite3D" parent="Boundary"]
+position = Vector3(-5.66181, 0.01875, 31.04223)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.00524
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+modulate = Color(0.97766, 1.00790, 0.94743, 1)
+metadata/outside_gameplay = true
+metadata/grounded_on_slope = true
+metadata/edge_cluster = 2
+
+[node name="EdgeCluster_2_8" type="Sprite3D" parent="Boundary"]
+position = Vector3(-6.31690, -0.28753, 33.08620)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.00616
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+modulate = Color(0.93975, 0.96882, 0.91069, 1)
+metadata/outside_gameplay = true
+metadata/grounded_on_slope = true
+metadata/edge_cluster = 2
+
+[node name="EdgeCluster_3_0" type="Sprite3D" parent="Boundary"]
+position = Vector3(2.24613, -2.89689, 42.90793)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.00825
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+modulate = Color(0.77462, 0.79858, 0.75067, 1)
+metadata/outside_gameplay = true
+metadata/grounded_on_slope = true
+metadata/edge_cluster = 3
+
+[node name="EdgeCluster_3_1" type="Sprite3D" parent="Boundary"]
+position = Vector3(1.43655, -3.83244, 43.59524)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.00471
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+modulate = Color(0.67870, 0.69969, 0.65771, 1)
+metadata/outside_gameplay = true
+metadata/grounded_on_slope = true
+metadata/edge_cluster = 3
+
+[node name="EdgeCluster_3_2" type="Sprite3D" parent="Boundary"]
+position = Vector3(3.87513, -0.41874, 40.52214)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.00613
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+modulate = Color(0.96933, 0.99931, 0.93935, 1)
+metadata/outside_gameplay = true
+metadata/grounded_on_slope = true
+metadata/edge_cluster = 3
+
+[node name="EdgeCluster_3_3" type="Sprite3D" parent="Boundary"]
+position = Vector3(4.95623, -2.59865, 43.46894)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+offset = Vector2(-18, 217.5)
+pixel_size = 0.00642
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+modulate = Color(0.85191, 0.87826, 0.82556, 1)
+metadata/outside_gameplay = true
+metadata/grounded_on_slope = true
+metadata/edge_cluster = 3
+
+[node name="EdgeCluster_3_4" type="Sprite3D" parent="Boundary"]
+position = Vector3(2.99643, -4.40458, 44.72058)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.00629
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+modulate = Color(0.63798, 0.65771, 0.61825, 1)
+metadata/outside_gameplay = true
+metadata/grounded_on_slope = true
+metadata/edge_cluster = 3
+
+[node name="EdgeCluster_3_5" type="Sprite3D" parent="Boundary"]
+position = Vector3(1.53323, -2.85794, 42.59851)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+offset = Vector2(-18, 217.5)
+pixel_size = 0.00449
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+modulate = Color(0.78533, 0.80962, 0.76104, 1)
+metadata/outside_gameplay = true
+metadata/grounded_on_slope = true
+metadata/edge_cluster = 3
+
+[node name="EdgeCluster_3_6" type="Sprite3D" parent="Boundary"]
+position = Vector3(4.30955, -3.83736, 44.56953)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+offset = Vector2(-18, 217.5)
+pixel_size = 0.00650
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+modulate = Color(0.74204, 0.76499, 0.71909, 1)
+metadata/outside_gameplay = true
+metadata/grounded_on_slope = true
+metadata/edge_cluster = 3
+
+[node name="EdgeCluster_3_7" type="Sprite3D" parent="Boundary"]
+position = Vector3(3.63368, -4.71344, 45.21881)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.00386
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+modulate = Color(0.58396, 0.60202, 0.56590, 1)
+metadata/outside_gameplay = true
+metadata/grounded_on_slope = true
+metadata/edge_cluster = 3
+
+[node name="EdgeCluster_3_8" type="Sprite3D" parent="Boundary"]
+position = Vector3(6.41064, -2.36447, 43.59347)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.00422
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+modulate = Color(0.88081, 0.90805, 0.85357, 1)
+metadata/outside_gameplay = true
+metadata/grounded_on_slope = true
+metadata/edge_cluster = 3
+
+[node name="EdgeCluster_3_9" type="Sprite3D" parent="Boundary"]
+position = Vector3(6.24901, -2.85039, 44.08276)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+offset = Vector2(-18, 217.5)
+pixel_size = 0.00568
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+modulate = Color(0.84214, 0.86819, 0.81610, 1)
+metadata/outside_gameplay = true
+metadata/grounded_on_slope = true
+metadata/edge_cluster = 3
+
+[node name="EdgeCluster_4_0" type="Sprite3D" parent="Boundary"]
+position = Vector3(30.15933, -1.37840, 40.81295)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.00473
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+modulate = Color(0.89966, 0.92748, 0.87183, 1)
+metadata/outside_gameplay = true
+metadata/grounded_on_slope = true
+metadata/edge_cluster = 4
+
+[node name="EdgeCluster_4_1" type="Sprite3D" parent="Boundary"]
+position = Vector3(27.90004, -0.63737, 40.48684)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.00546
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+modulate = Color(0.92757, 0.95626, 0.89889, 1)
+metadata/outside_gameplay = true
+metadata/grounded_on_slope = true
+metadata/edge_cluster = 4
+
+[node name="EdgeCluster_4_2" type="Sprite3D" parent="Boundary"]
+position = Vector3(28.86356, -0.99137, 40.72026)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.00669
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+modulate = Color(0.92395, 0.95252, 0.89537, 1)
+metadata/outside_gameplay = true
+metadata/grounded_on_slope = true
+metadata/edge_cluster = 4
+
+[node name="EdgeCluster_4_3" type="Sprite3D" parent="Boundary"]
+position = Vector3(31.32689, 0.01757, 37.64568)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+offset = Vector2(-18, 217.5)
+pixel_size = 0.00624
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+modulate = Color(0.98447, 1.01492, 0.95402, 1)
+metadata/outside_gameplay = true
+metadata/grounded_on_slope = true
+metadata/edge_cluster = 4
+
+[node name="EdgeCluster_4_4" type="Sprite3D" parent="Boundary"]
+position = Vector3(30.39361, -1.72705, 41.06673)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+offset = Vector2(-18, 217.5)
+pixel_size = 0.00466
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+modulate = Color(0.83017, 0.85585, 0.80449, 1)
+metadata/outside_gameplay = true
+metadata/grounded_on_slope = true
+metadata/edge_cluster = 4
+
+[node name="EdgeCluster_4_5" type="Sprite3D" parent="Boundary"]
+position = Vector3(29.13912, -0.08844, 38.95601)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+offset = Vector2(-18, 217.5)
+pixel_size = 0.00484
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+modulate = Color(0.91798, 0.94637, 0.88959, 1)
+metadata/outside_gameplay = true
+metadata/grounded_on_slope = true
+metadata/edge_cluster = 4
+
+[node name="EdgeCluster_4_6" type="Sprite3D" parent="Boundary"]
+position = Vector3(32.47068, -0.15449, 38.30532)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.00513
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+modulate = Color(0.97824, 1.00849, 0.94798, 1)
+metadata/outside_gameplay = true
+metadata/grounded_on_slope = true
+metadata/edge_cluster = 4
+
+[node name="EdgeCluster_4_7" type="Sprite3D" parent="Boundary"]
+position = Vector3(32.07120, -0.02930, 37.97767)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+offset = Vector2(-18, 217.5)
+pixel_size = 0.00542
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+modulate = Color(0.93522, 0.96415, 0.90630, 1)
+metadata/outside_gameplay = true
+metadata/grounded_on_slope = true
+metadata/edge_cluster = 4
+
+[node name="EdgeCluster_5_0" type="Sprite3D" parent="Boundary"]
+position = Vector3(41.14392, -0.07620, 23.37249)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.00565
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+modulate = Color(0.93260, 0.96144, 0.90375, 1)
+metadata/outside_gameplay = true
+metadata/grounded_on_slope = true
+metadata/edge_cluster = 5
+
+[node name="EdgeCluster_5_1" type="Sprite3D" parent="Boundary"]
+position = Vector3(45.55618, -2.71003, 25.11167)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.00643
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+modulate = Color(0.81356, 0.83872, 0.78840, 1)
+metadata/outside_gameplay = true
+metadata/grounded_on_slope = true
+metadata/edge_cluster = 5
+
+[node name="EdgeCluster_5_2" type="Sprite3D" parent="Boundary"]
+position = Vector3(45.18470, -2.62553, 25.88831)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+offset = Vector2(-18, 217.5)
+pixel_size = 0.00407
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+modulate = Color(0.80212, 0.82693, 0.77731, 1)
+metadata/outside_gameplay = true
+metadata/grounded_on_slope = true
+metadata/edge_cluster = 5
+
+[node name="EdgeCluster_5_3" type="Sprite3D" parent="Boundary"]
+position = Vector3(41.44274, -0.44880, 26.18043)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.00671
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+modulate = Color(0.88847, 0.91594, 0.86099, 1)
+metadata/outside_gameplay = true
+metadata/grounded_on_slope = true
+metadata/edge_cluster = 5
+
+[node name="EdgeCluster_5_4" type="Sprite3D" parent="Boundary"]
+position = Vector3(44.93083, -1.91974, 23.68013)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.00607
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+modulate = Color(0.87806, 0.90522, 0.85091, 1)
+metadata/outside_gameplay = true
+metadata/grounded_on_slope = true
+metadata/edge_cluster = 5
+
+[node name="EdgeCluster_5_5" type="Sprite3D" parent="Boundary"]
+position = Vector3(41.60272, -0.21654, 23.83254)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.00567
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+modulate = Color(0.87637, 0.90348, 0.84927, 1)
+metadata/outside_gameplay = true
+metadata/grounded_on_slope = true
+metadata/edge_cluster = 5
+
+[node name="EdgeCluster_5_6" type="Sprite3D" parent="Boundary"]
+position = Vector3(42.44418, -0.38379, 22.58210)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.00378
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+modulate = Color(0.87944, 0.90664, 0.85224, 1)
+metadata/outside_gameplay = true
+metadata/grounded_on_slope = true
+metadata/edge_cluster = 5
+
+[node name="EdgeCluster_5_7" type="Sprite3D" parent="Boundary"]
+position = Vector3(41.41180, -0.17344, 23.93928)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+offset = Vector2(-18, 217.5)
+pixel_size = 0.00421
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+modulate = Color(0.96422, 0.99404, 0.93439, 1)
+metadata/outside_gameplay = true
+metadata/grounded_on_slope = true
+metadata/edge_cluster = 5
+
+[node name="EdgeCluster_5_8" type="Sprite3D" parent="Boundary"]
+position = Vector3(43.31624, -1.48393, 26.54989)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.00594
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+modulate = Color(0.94301, 0.97218, 0.91384, 1)
+metadata/outside_gameplay = true
+metadata/grounded_on_slope = true
+metadata/edge_cluster = 5
+
+[node name="EdgeCluster_6_0" type="Sprite3D" parent="Boundary"]
+position = Vector3(35.78777, -0.45248, 1.70223)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+offset = Vector2(-18, 217.5)
+pixel_size = 0.00352
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+modulate = Color(0.96689, 0.99680, 0.93699, 1)
+metadata/outside_gameplay = true
+metadata/grounded_on_slope = true
+metadata/edge_cluster = 6
+
+[node name="EdgeCluster_6_1" type="Sprite3D" parent="Boundary"]
+position = Vector3(35.59906, -0.06213, 3.29002)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.00516
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+modulate = Color(0.89852, 0.92631, 0.87073, 1)
+metadata/outside_gameplay = true
+metadata/grounded_on_slope = true
+metadata/edge_cluster = 6
+
+[node name="EdgeCluster_6_2" type="Sprite3D" parent="Boundary"]
+position = Vector3(36.66603, -0.73425, 1.88331)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.00641
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+modulate = Color(0.91844, 0.94684, 0.89003, 1)
+metadata/outside_gameplay = true
+metadata/grounded_on_slope = true
+metadata/edge_cluster = 6
+
+[node name="EdgeCluster_6_3" type="Sprite3D" parent="Boundary"]
+position = Vector3(35.30817, -0.13405, 2.45979)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.00423
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+modulate = Color(0.91432, 0.94260, 0.88604, 1)
+metadata/outside_gameplay = true
+metadata/grounded_on_slope = true
+metadata/edge_cluster = 6
+
+[node name="EdgeCluster_6_4" type="Sprite3D" parent="Boundary"]
+position = Vector3(35.56036, 0.01875, 5.07438)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.00380
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+modulate = Color(0.97371, 1.00383, 0.94360, 1)
+metadata/outside_gameplay = true
+metadata/grounded_on_slope = true
+metadata/edge_cluster = 6
+
+[node name="EdgeCluster_6_5" type="Sprite3D" parent="Boundary"]
+position = Vector3(39.19247, -0.81235, 4.50822)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.00635
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+modulate = Color(0.94444, 0.97365, 0.91523, 1)
+metadata/outside_gameplay = true
+metadata/grounded_on_slope = true
+metadata/edge_cluster = 6
+
+[node name="EdgeCluster_6_6" type="Sprite3D" parent="Boundary"]
+position = Vector3(36.70065, -0.73453, 1.91738)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.00592
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+modulate = Color(0.93011, 0.95888, 0.90135, 1)
+metadata/outside_gameplay = true
+metadata/grounded_on_slope = true
+metadata/edge_cluster = 6
+
+[node name="EdgeCluster_6_7" type="Sprite3D" parent="Boundary"]
+position = Vector3(35.72975, -0.38552, 1.85872)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.00519
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+modulate = Color(0.97904, 1.00932, 0.94876, 1)
+metadata/outside_gameplay = true
+metadata/grounded_on_slope = true
+metadata/edge_cluster = 6
+
+[node name="EdgeCluster_6_8" type="Sprite3D" parent="Boundary"]
+position = Vector3(37.45151, -0.12910, 5.00942)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.00471
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+modulate = Color(0.95274, 0.98221, 0.92328, 1)
+metadata/outside_gameplay = true
+metadata/grounded_on_slope = true
+metadata/edge_cluster = 6
+
+[node name="EdgeCluster_7_0" type="Sprite3D" parent="Boundary"]
+position = Vector3(26.27983, 0.01116, -2.62981)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+offset = Vector2(-18, 217.5)
+pixel_size = 0.00552
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+modulate = Color(0.98807, 1.01862, 0.95751, 1)
+metadata/outside_gameplay = true
+metadata/grounded_on_slope = true
+metadata/edge_cluster = 7
+
+[node name="EdgeCluster_7_1" type="Sprite3D" parent="Boundary"]
+position = Vector3(25.27941, -0.64128, -5.08407)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.00379
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+modulate = Color(0.93187, 0.96069, 0.90305, 1)
+metadata/outside_gameplay = true
+metadata/grounded_on_slope = true
+metadata/edge_cluster = 7
+
+[node name="EdgeCluster_7_2" type="Sprite3D" parent="Boundary"]
+position = Vector3(27.15728, -1.46314, -5.63877)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.00413
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+modulate = Color(0.93285, 0.96170, 0.90400, 1)
+metadata/outside_gameplay = true
+metadata/grounded_on_slope = true
+metadata/edge_cluster = 7
+
+[node name="EdgeCluster_7_3" type="Sprite3D" parent="Boundary"]
+position = Vector3(26.84572, -2.10643, -6.36288)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+offset = Vector2(-18, 217.5)
+pixel_size = 0.00666
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+modulate = Color(0.83775, 0.86365, 0.81184, 1)
+metadata/outside_gameplay = true
+metadata/grounded_on_slope = true
+metadata/edge_cluster = 7
+
+[node name="EdgeCluster_7_4" type="Sprite3D" parent="Boundary"]
+position = Vector3(25.46656, -1.98591, -6.63008)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.00392
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+modulate = Color(0.91861, 0.94702, 0.89020, 1)
+metadata/outside_gameplay = true
+metadata/grounded_on_slope = true
+metadata/edge_cluster = 7
+
+[node name="EdgeCluster_7_5" type="Sprite3D" parent="Boundary"]
+position = Vector3(26.45415, -1.07285, -5.38616)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.00676
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+modulate = Color(0.89588, 0.92358, 0.86817, 1)
+metadata/outside_gameplay = true
+metadata/grounded_on_slope = true
+metadata/edge_cluster = 7
+
+[node name="EdgeCluster_7_6" type="Sprite3D" parent="Boundary"]
+position = Vector3(25.63027, -1.67874, -6.25178)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.00672
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+modulate = Color(0.93042, 0.95920, 0.90165, 1)
+metadata/outside_gameplay = true
+metadata/grounded_on_slope = true
+metadata/edge_cluster = 7
+
+[node name="EdgeCluster_7_7" type="Sprite3D" parent="Boundary"]
+position = Vector3(26.67811, -0.01261, -2.94893)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.00393
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+modulate = Color(0.86703, 0.89385, 0.84022, 1)
+metadata/outside_gameplay = true
+metadata/grounded_on_slope = true
+metadata/edge_cluster = 7
+
+[node name="EdgeCluster_8_0" type="Sprite3D" parent="Boundary"]
+position = Vector3(3.02438, -0.35058, -4.19545)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.00836
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+modulate = Color(0.89488, 0.92256, 0.86720, 1)
+metadata/outside_gameplay = true
+metadata/grounded_on_slope = true
+metadata/edge_cluster = 8
+
+[node name="EdgeCluster_8_1" type="Sprite3D" parent="Boundary"]
+position = Vector3(0.41810, -0.09665, -2.90937)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.00443
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+modulate = Color(0.86609, 0.89287, 0.83930, 1)
+metadata/outside_gameplay = true
+metadata/grounded_on_slope = true
+metadata/edge_cluster = 8
+
+[node name="EdgeCluster_8_2" type="Sprite3D" parent="Boundary"]
+position = Vector3(4.68774, -0.06011, -3.63435)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.00594
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+modulate = Color(0.93594, 0.96488, 0.90699, 1)
+metadata/outside_gameplay = true
+metadata/grounded_on_slope = true
+metadata/edge_cluster = 8
+
+[node name="EdgeCluster_8_3" type="Sprite3D" parent="Boundary"]
+position = Vector3(3.48697, -0.00126, -2.83725)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.00349
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+modulate = Color(0.87020, 0.89711, 0.84329, 1)
+metadata/outside_gameplay = true
+metadata/grounded_on_slope = true
+metadata/edge_cluster = 8
+
+[node name="EdgeCluster_8_4" type="Sprite3D" parent="Boundary"]
+position = Vector3(3.96189, -0.04677, -3.38662)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.00375
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+modulate = Color(0.88629, 0.91370, 0.85888, 1)
+metadata/outside_gameplay = true
+metadata/grounded_on_slope = true
+metadata/edge_cluster = 8
+
+[node name="EdgeCluster_8_5" type="Sprite3D" parent="Boundary"]
+position = Vector3(3.80092, -0.44112, -4.54779)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.00438
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+modulate = Color(0.92362, 0.95219, 0.89506, 1)
+metadata/outside_gameplay = true
+metadata/grounded_on_slope = true
+metadata/edge_cluster = 8
+
+[node name="EdgeCluster_8_6" type="Sprite3D" parent="Boundary"]
+position = Vector3(-0.78948, -0.55594, -3.73371)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+offset = Vector2(22, 252.5)
+pixel_size = 0.00513
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+modulate = Color(0.97811, 1.00836, 0.94786, 1)
+metadata/outside_gameplay = true
+metadata/grounded_on_slope = true
+metadata/edge_cluster = 8
+
+[node name="RimOak_0" type="Sprite3D" parent="Boundary"]
+position = Vector3(-3.75000, 0.01875, 9.00000)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+offset = Vector2(-24, 268.5)
+pixel_size = 0.01500
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+modulate = Color(0.88559, 0.91298, 0.85820, 1)
+metadata/outside_gameplay = true
+metadata/grounded_on_slope = true
+metadata/shadow_radius = 4.2
+metadata/camera_clearance = true
+
+[node name="RimOak_1" type="Sprite3D" parent="Boundary"]
+position = Vector3(34.50000, 0.01875, 6.00000)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+offset = Vector2(-24, 268.5)
+pixel_size = 0.01650
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+modulate = Color(0.98727, 1.01780, 0.95673, 1)
+metadata/outside_gameplay = true
+metadata/grounded_on_slope = true
+metadata/shadow_radius = 4.2
+metadata/camera_clearance = true
+
+[node name="RimOak_2" type="Sprite3D" parent="Boundary"]
+position = Vector3(-5.25000, 0.01875, 24.75000)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+offset = Vector2(-24, 268.5)
+pixel_size = 0.01800
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+modulate = Color(0.90405, 0.93201, 0.87609, 1)
+metadata/outside_gameplay = true
+metadata/grounded_on_slope = true
+metadata/shadow_radius = 4.2
+metadata/camera_clearance = true
+
+[node name="RimOak_3" type="Sprite3D" parent="Boundary"]
+position = Vector3(34.50000, 0.01875, 28.50000)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+offset = Vector2(-24, 268.5)
+pixel_size = 0.01400
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+modulate = Color(0.93156, 0.96037, 0.90275, 1)
+metadata/outside_gameplay = true
+metadata/grounded_on_slope = true
+metadata/shadow_radius = 4.2
+metadata/camera_clearance = true
+
+[node name="RimOak_4" type="Sprite3D" parent="Boundary"]
+position = Vector3(4.50000, -0.09046, -3.75000)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+offset = Vector2(-24, 268.5)
+pixel_size = 0.01700
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = false
+modulate = Color(0.98844, 1.01901, 0.95787, 1)
+metadata/outside_gameplay = true
+metadata/grounded_on_slope = true
+metadata/shadow_radius = 4.2
+metadata/camera_clearance = true
+
+[node name="RimOak_5" type="Sprite3D" parent="Boundary"]
+position = Vector3(23.25000, -0.48854, 41.25000)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+offset = Vector2(-24, 268.5)
+pixel_size = 0.01900
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+modulate = Color(0.93684, 0.96581, 0.90786, 1)
+metadata/outside_gameplay = true
+metadata/grounded_on_slope = true
+metadata/shadow_radius = 4.2
+metadata/camera_clearance = true
+
+[node name="InteriorOakWest" type="Sprite3D" parent="InteriorTrees"]
+position = Vector3(6.75000, 0.01875, 9.00000)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+offset = Vector2(-24, 268.5)
+pixel_size = 0.00950
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+modulate = Color(0.87344, 0.90046, 0.84643, 1)
+metadata/shadow_radius = 3.0
+metadata/footprint_authority = "native_care_scenery.gd"
+
+[node name="InteriorOakEast" type="Sprite3D" parent="InteriorTrees"]
+position = Vector3(22.50000, 0.01875, 13.50000)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+offset = Vector2(-24, 268.5)
+pixel_size = 0.01050
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+modulate = Color(0.97150, 1.00155, 0.94146, 1)
+metadata/shadow_radius = 3.0
+metadata/footprint_authority = "native_care_scenery.gd"
+
+[node name="InteriorOakSouth" type="Sprite3D" parent="InteriorTrees"]
+position = Vector3(9.00000, 0.01875, 26.25000)
+texture = ExtResource("foliage")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+offset = Vector2(-24, 268.5)
+pixel_size = 0.00900
+billboard = 1
+texture_filter = 0
+alpha_cut = 1
+flip_h = true
+modulate = Color(0.89780, 0.92557, 0.87003, 1)
+metadata/shadow_radius = 3.0
+metadata/footprint_authority = "native_care_scenery.gd"

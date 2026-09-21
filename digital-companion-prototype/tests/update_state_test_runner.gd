@@ -100,9 +100,10 @@ func _test_habitat_and_preferences() -> void:
 	canceled_layout.items = []
 	game._repository = FailedRepository.new(game._repository.primary_path)
 	_check(not game.apply_habitat_layout(canceled_layout).ok and game.state.inventory.decor.digi_potty == 0 and game.state.habitat.items.size() == 1, "failed Apply cannot duplicate returned inventory or remove saved layout")
+	game.state.enclosure.materials.wood = 0
 	var forged: Dictionary = draft.duplicate(true)
 	forged.items.append({"instance_id": "potty-2", "item_id": "digi_potty", "x": 2, "y": 2, "rotation": 0})
-	_check(not game.apply_habitat_layout(forged).ok, "cannot place unavailable decor")
+	_check(not game.apply_habitat_layout(forged).ok, "cannot buy additional decor without materials")
 	game.state.care.next_poop_at = 1020.0
 	game.state.care.poop_slots = [false, true, false]
 	game.state.care.poop_count = 1
@@ -188,5 +189,6 @@ func _test_actual_lifecycle() -> void:
 		game.advance_care_time(30.0, true, game._test_clock)
 	_check(game.state.identity.species_id == "agumon" and evolution_times.size() == 2, "actual care and training commands complete both evolutions")
 	_check(elapsed >= 1800 and elapsed <= 3600 and float(game.state.progression.active_seconds) <= 3600.0, "accelerated mixed interaction reaches Rookie in 30–60 engaged minutes")
-	_check(game.state.progression.training_history.offense == 2 and game.state.battle_profile.offense == 12 and game.state.care.discipline >= 45.0, "legitimate targeted sessions satisfy visible Rookie criteria")
+	# A requested training session can now add one extra offense point.
+	_check(game.state.progression.training_history.offense == 2 and game.state.battle_profile.offense >= 12 and game.state.battle_profile.offense <= 14 and game.state.care.discipline >= 45.0, "legitimate targeted sessions satisfy visible Rookie criteria, including motivation bonuses")
 	print("Lifecycle reached Agumon after %d simulated seconds; evolution engaged times: %s" % [elapsed, evolution_times])

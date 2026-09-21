@@ -1,0 +1,46 @@
+{
+  "provider": "PixelLab",
+  "sourceDate": "2026-09-20",
+  "figmaFile": "syQM2pShfeCTfXms0HmzTB",
+  "figmaPage": "156:150",
+  "selectedStills": {
+    "digi_potty": {
+      "source": "jobs/digi_potty/frame-0000.png",
+      "sha256": "d5e240d88e3af67c85d0392966a05a93da8926f0356b180e17c316e00bc412a9"
+    },
+    "campfire": {
+      "source": "jobs/campfire/frame-0000.png",
+      "sha256": "898c44a984e7b9bb5afe1a390d0cf37c87846df305c771a30d58444a4536c094"
+    },
+    "pond": {
+      "source": "jobs/pond/frame-0000.png",
+      "sha256": "1223506341faeb1e42aad3a4a7cb7829a89e525f3f2c206ddff53b866eef6f4a"
+    },
+    "flame": {
+      "source": "jobs/flame/frame-0000.png",
+      "sha256": "31598f0e5c920f4ca71b9af9586174f3dab5f1ae6a212a2fcd9e9df1b860a9f6"
+    }
+  },
+  "flame": {
+    "requestedFrames": 4,
+    "returnedFrames": 5,
+    "selectedFrames": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "omittedFrame": 4,
+    "reason": "Frame 4 is byte-identical to frame 0, the supplied loop endpoint.",
+    "fps": 8,
+    "canvas": [
+      64,
+      64
+    ],
+    "atlas": [
+      256,
+      64
+    ]
+  },
+  "status": "Agent visually inspected prototype art; not a user final-art approval."
+}

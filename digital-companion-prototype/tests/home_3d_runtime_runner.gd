@@ -48,8 +48,8 @@ func _run() -> void:
 	_check(waste_group.get_child_count() == 1 and waste_group.get_child(0) is Sprite3D, "occupied waste uses a real depth-tested Sprite3D in the live home")
 	var decor_types := {}
 	for child: Node in decor_group.get_children():
-		decor_types[String(child.get_meta("care_instance_id", ""))] = child.get_class()
-	_check(decor_group.get_child_count() == 2 and decor_types.get("home-planter") == "Sprite3D" and decor_types.get("home-rug") == "MeshInstance3D", "decor uses grounded depth-tested sprite or textured-plane presentations")
+		decor_types[String(child.get_meta("care_instance_id", ""))] = child.get_meta("enclosure_model", "")
+	_check(decor_group.get_child_count() == 2 and decor_types.get("home-planter") == "planter" and decor_types.get("home-rug") == "rug", "decor uses layered models with preserved instance identity")
 	_check(not (waste_group.get_child(0) as Sprite3D).no_depth_test and (waste_group.get_child(0) as Sprite3D).alpha_cut == SpriteBase3D.ALPHA_CUT_DISCARD, "live waste presentation writes and tests depth")
 	var waste_sprite := waste_group.get_child(0) as Sprite3D
 	_check(is_equal_approx(waste_sprite.offset.y, waste_sprite.texture.get_height() * 0.5) and waste_sprite.position.y < 0.03, "upright care cards use a feet/ground pivot")

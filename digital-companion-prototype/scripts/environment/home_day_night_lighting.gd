@@ -2,13 +2,14 @@ class_name HomeDayNightLighting
 extends Node
 ## Instance-scoped tint bindings; no global shader parameters or shared mutation.
 var clock := TimeOfDayController.new()
+var shafts := HomeLightShafts.new()
 var current_sample: Dictionary = TimeOfDayController.sample_time(12.0)
 var _bindings: Dictionary = {}
 var _sky_materials: Array[ShaderMaterial] = []
 var _environment: Environment
 
 
-func configure(stage: Node3D, environment: Environment) -> void:
+func configure(stage: Node3D, environment: Environment, reduced_motion := false) -> void:
 	_environment = environment
 	for path: String in ["ForestParallax/Sky", "ForestParallax/ForestVista"]:
 		var card := stage.get_node_or_null(path) as Sprite3D
@@ -31,17 +32,24 @@ func configure(stage: Node3D, environment: Environment) -> void:
 			base_position.y -= 56.0 if path.ends_with("ForestVista") else 80.0
 		stage.get_node("ForestParallax").set_layer_base_position(card, base_position)
 		card.material_override = material
+		if card.has_method("refresh_wrapped_material"):
+			card.refresh_wrapped_material()
 		card.set_meta("day_night_sky", true)
 		_sky_materials.append(material)
 	register_branch(stage)
+	shafts.name = "LightShafts"
+	shafts.set_reduced_motion(reduced_motion)
+	add_child(shafts)
 	clock.name = "LocalTime"
 	clock.lighting_changed.connect(_apply_sample)
 	add_child(clock)
 
 
 func register_branch(node: Node) -> void:
-	if node.has_meta("day_night_sky"):
+	if node.has_meta("day_night_sky") or node.has_meta("enclosure_emissive"):
 		return
+	if node.has_method("refresh_wrapped_material") and is_instance_valid(node.ribbon):
+		register_branch(node.ribbon)
 	var id := node.get_instance_id()
 	if not _bindings.has(id):
 		var entry: Dictionary = {}
@@ -55,7 +63,7 @@ func register_branch(node: Node) -> void:
 					var local := original.duplicate() as BaseMaterial3D
 					node.set_surface_override_material(surface, local)
 					materials.append({"material": local, "base_color": local.albedo_color})
-				elif original is ShaderMaterial and original.shader in [preload("res://shaders/care_clearing_ground.gdshader"), preload("res://shaders/care_foliage.gdshader")]:
+				elif original is ShaderMaterial and original.shader in [preload("res://shaders/care_clearing_ground.gdshader"), preload("res://shaders/care_foliage.gdshader"), preload("res://shaders/enclosure_water.gdshader"), preload("res://shaders/enclosure_surfaces.gdshader")]:
 					var local := original.duplicate() as ShaderMaterial
 					node.set_surface_override_material(surface, local)
 					materials.append({"material": local})
@@ -77,6 +85,7 @@ func _remove_binding(id: int) -> void:
 
 func _apply_sample(sample: Dictionary) -> void:
 	current_sample = sample
+	shafts.apply_sample(sample)
 	for entry: Dictionary in _bindings.values():
 		_apply_binding(entry)
 	for material: ShaderMaterial in _sky_materials:

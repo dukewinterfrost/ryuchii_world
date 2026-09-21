@@ -55,21 +55,21 @@ func _initialize() -> void:
 	layout.items.append({"instance_id": "potty-1", "item_id": "digi_potty", "x": 3, "y": 3, "rotation": 0})
 	check(Habitat.validate_layout(layout).ok, "potty placement valid")
 	var path := Habitat.path_to_potty(layout)
-	check(not path.is_empty() and path.back() == Vector2i(3, 5), "path reaches potty entrance")
+	check(not path.is_empty() and path.back() == Vector2i(4, 7), "path reaches potty entrance")
 	check(not Habitat.path_between_cells(layout, Vector2i(10, 12), Vector2i(3, 3)).size(), "roaming cannot enter solid prop")
 	var overlap := layout.duplicate(true)
 	overlap.items.append({"instance_id": "planter-1", "item_id": "planter", "x": 3, "y": 3, "rotation": 0})
 	check(not Habitat.validate_layout(overlap).ok, "overlapping props rejected")
 	var blocked := layout.duplicate(true)
-	blocked.items.append({"instance_id": "planter-1", "item_id": "planter", "x": 3, "y": 5, "rotation": 0})
+	blocked.items.append({"instance_id": "planter-1", "item_id": "planter", "x": 4, "y": 7, "rotation": 0})
 	check(not Habitat.validate_layout(blocked).ok, "blocked potty entrance rejected")
 	var potty_state := original.duplicate(true)
 	potty_state.habitat = layout
 	check(Rules.bathroom_warning(potty_state, 1870.0) and not Rules.bathroom_warning(potty_state, 1869.0), "warning begins 30 seconds before bathroom interval")
 	check(not Rules.complete_potty_guidance(potty_state, 1875.0, Vector2i(10, 12)).ok, "guidance must reach entrance before completion")
-	var guided := Rules.complete_potty_guidance(potty_state, 1875.0, Vector2i(3, 5))
+	var guided := Rules.complete_potty_guidance(potty_state, 1875.0, Vector2i(4, 7))
 	check(guided.ok and guided.state.care.potty_habit == 20.0 and guided.state.care.discipline == 44.0 and guided.state.care.next_poop_at == 2800.0, "guided potty awards habit and skips one bathroom event")
-	check(not Rules.complete_potty_guidance(guided.state, 1875.0, Vector2i(3, 5)).ok, "repeated guidance cannot duplicate reward")
+	check(not Rules.complete_potty_guidance(guided.state, 1875.0, Vector2i(4, 7)).ok, "repeated guidance cannot duplicate reward")
 	potty_state.care.potty_habit = 60.0
 	potty_state.care.discipline = 50.0
 	var offline := Rules.advance_time(potty_state, 1000.0 + 900.0 * 1000000.0)
@@ -100,12 +100,14 @@ func _legacy(state: Dictionary) -> Dictionary:
 	state = state.duplicate(true)
 	state.meta.erase("preferences")
 	var result := state.duplicate(true)
+	result.battle.erase("mob_wins")
+	result.erase("enclosure")
 	result.erase("home_region")
 	result.erase("habitats")
 	result.progression.erase("story_flags")
 	for key: String in ["habitat", "inventory", "skills"]:
 		result.erase(key)
-	for key: String in ["fatigue", "potty_habit", "stage_care_mistakes", "food"]:
+	for key: String in ["fatigue", "potty_habit", "stage_care_mistakes", "food", "status"]:
 		result.care.erase(key)
 	for key: String in ["last_social_reward_at", "training_history", "last_training_id"]:
 		result.progression.erase(key)

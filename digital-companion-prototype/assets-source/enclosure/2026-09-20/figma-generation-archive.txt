@@ -1,0 +1,81 @@
+PIXELLAB GENERATION ARCHIVE · 2026-09-20
+Original pixel art generated for the enclosure builder. Selected still: variant 1 per object.
+Provider outputs are retained unchanged; source sheets show all still variants.
+
+DIGI_POTTY
+{
+  "id": "digi_potty",
+  "description": "Original cozy monster-raising woodland builder game prop, crisp native pixel art, restrained warm earthy palette, dark colored outlines, readable chunky forms, elevated front three-quarter view showing the top and front, orthographic camera, centered isolated complete object with transparent background, no text, no characters, no ground tile, no cast shadow outside object. A small inviting mint-green ceramic training potty with a low wooden privacy back, rounded bowl, wooden step in front and tiny leaf motif. Two by two tile footprint. Front access must read clearly.",
+  "imageSize": [
+    128,
+    128
+  ],
+  "seed": 920100,
+  "noBackground": true
+}
+Job ID: 9e1253a4-e673-483c-92a0-fc02aeb4c219
+Request SHA256: sha256:24f87de6be713c0126d22b5bca07ddf685423e27a7e7fe691a1b9a97507f16ba
+Output count: 4
+
+CAMPFIRE
+{
+  "id": "campfire",
+  "description": "Original cozy monster-raising woodland builder game prop, crisp native pixel art, restrained warm earthy palette, dark colored outlines, readable chunky forms, elevated front three-quarter view showing the top and front, orthographic camera, centered isolated complete object with transparent background, no text, no characters, no ground tile, no cast shadow outside object. An unlit cooking campfire base: low ring of chunky gray stones surrounding crossed brown logs and dark embers, a short wooden cooking spit with an empty horizontal bar. NO flames, NO smoke, NO glow. Two by two tile footprint; keep central flame area clear. Static reusable base.",
+  "imageSize": [
+    128,
+    128
+  ],
+  "seed": 920101,
+  "noBackground": true
+}
+Job ID: 03208efc-805f-48c1-b402-8a753f96675d
+Request SHA256: sha256:6b39c371b810936d95cda2b507dd0616eb87d51bdecd1aa26ead550695242fea
+Output count: 4
+
+POND
+{
+  "id": "pond",
+  "description": "Original cozy monster-raising woodland builder game prop, crisp native pixel art, restrained warm earthy palette, dark colored outlines, readable chunky forms, elevated front three-quarter view showing the top and front, orthographic camera, centered isolated complete object with transparent background, no text, no characters, no ground tile, no cast shadow outside object. A shallow small oval turquoise bathing pond bordered by smooth rounded stones and a few reeds, clear shallow entry at the front, calm cool water with sparse highlights. Four by three tile footprint. Low profile with entire water surface visible.",
+  "imageSize": [
+    160,
+    128
+  ],
+  "seed": 920102,
+  "noBackground": true
+}
+Job ID: aa9b5e76-b72c-47e7-b409-fa8177d5abf7
+Request SHA256: sha256:9ba1cfce59bfcad48f81a7b01faf96d71c0fcc403368e8347e81a22727cd1c70
+Output count: 4
+
+FLAME
+{
+  "id": "flame",
+  "description": "Original cozy monster-raising woodland builder game prop, crisp native pixel art, restrained warm earthy palette, dark colored outlines, readable chunky forms, elevated front three-quarter view showing the top and front, orthographic camera, centered isolated complete object with transparent background, no text, no characters, no ground tile, no cast shadow outside object. One small compact yellow-orange campfire flame with red base, three pointed tongues, NO logs, NO stones, NO smoke, NO stand. A detached fire overlay, centered, anchored at bottom center with generous transparent margins.",
+  "imageSize": [
+    64,
+    64
+  ],
+  "seed": 920103,
+  "noBackground": true
+}
+Job ID: 6481a6a9-45fa-40b3-a346-4a9939c642a7
+Request SHA256: sha256:f986977fa64321f5b99b134eb70f6a3442d7016b466423f48269153ec84c307f
+Output count: 16
+
+FLAME-LOOP
+{
+  "id": "flame-loop",
+  "operation": "animate-with-text-v3",
+  "firstFrame": "flame",
+  "lastFrame": "flame",
+  "frameCount": 4,
+  "seed": 920200,
+  "description": "A tiny seamless four-frame campfire flame flicker loop. Only the upper yellow-orange flame tongues gently bend and rise. Keep the bottom of the fire anchored in exactly the same place. Fixed camera, no movement across canvas, no logs, smoke, sparks or new objects. Preserve this pixel-art palette and outline. End at the starting flame shape."
+}
+Job ID: 42770623-3d8e-4974-bb22-3195d321c36d
+Request SHA256: sha256:8feaefeb47bd63a2276fedba8cf08243277c64fe8b380147fb7e360471955817
+Output count: 5
+
+CAMPFIRE SELECTION
+Animation request returned 5 images; frame 4 repeats frame 0 exactly. Runtime atlas uses 0,1,2,3 at 8 fps. This is generated animation, not duplicated still art.
+Account balance observed: 1942 before, 1856 after. No credits purchased.

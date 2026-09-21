@@ -42,7 +42,7 @@ func run() -> void:
 		check(preload("res://tests/care_foliage_review.gd").apply(view), "Hash-bound foliage preview is isolated from production")
 	check(care.habitat.using_3d and view.environment_manifest.get("builtin", false), "Normal care path uses original 3D clearing")
 	check(EnvironmentAssetLibrary.active_package().is_empty(), "No pending regional art was promoted/activated")
-	check(care.habitat.habitat_manifest == game._home_package.habitat, "Ground/navigation authority is unchanged")
+	check(care.habitat.habitat_manifest == game.get_home_package().habitat, "Ground/navigation authority uses the same resolved scenery footprints")
 	for size: Vector2i in [Vector2i(360,640),Vector2i(390,844),Vector2i(430,932)]:
 		root.content_scale_size = size
 		root.size = size

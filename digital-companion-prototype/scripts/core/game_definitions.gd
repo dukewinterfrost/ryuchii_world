@@ -2,45 +2,44 @@ class_name GameDefinitions
 extends RefCounted
 
 ## Prototype balance values. Stable IDs are save/replay identifiers.
-const CARE_TUNING := {"social_cooldown": 30.0, "pet": [4.0, 0.0], "praise": [5.0, -2.0], "scold": [-5.0, 5.0], "potty_warning": 30.0, "potty_habit_required": 60.0, "potty_discipline_required": 50.0}
+static var CARE_TUNING: Dictionary = GameBalance.setting("game_definitions.CARE_TUNING")
 const SPECIES := {
 	"botamon": {"name": "Botamon", "stage": "Baby", "basic_move": "tackle", "personality": "Cautious, curious, verbally simple"},
 	"koromon": {"name": "Koromon", "stage": "In-Training", "basic_move": "headbutt", "personality": "Affectionate, expressive, excitable"},
 	"agumon": {"name": "Agumon", "stage": "Rookie", "basic_move": "claw", "personality": "Energetic, brave, lightly mischievous"},
 }
-const TRAINING := {
-	"hp": {"name": "Stamina", "gain": 20, "cap": 9999}, "mp": {"name": "Focus", "gain": 20, "cap": 9999},
-	"offense": {"name": "Strength", "gain": 2, "cap": 999}, "defense": {"name": "Endurance", "gain": 2, "cap": 999},
-	"speed": {"name": "Agility", "gain": 2, "cap": 999}, "brains": {"name": "Wisdom", "gain": 2, "cap": 999},
+static var TRAINING: Dictionary = GameBalance.setting("game_definitions.TRAINING")
+static var TRAINING_SECONDS: float = GameBalance.setting("game_definitions.TRAINING_SECONDS")
+static var EVOLUTIONS: Dictionary = GameBalance.setting("game_definitions.EVOLUTIONS")
+# Stable save identities are independent of editable balance. An invalid table
+# must block battle creation, never make a player's existing save look corrupt.
+const Content = preload("res://scripts/battle/mob_content.gd")
+const MOVE_IDENTITIES := {
+	"tackle": {"name": "Tackle", "equippable": false},
+	"headbutt": {"name": "Headbutt", "equippable": false},
+	"claw": {"name": "Claw", "equippable": false},
+	"pepper_breath": {"name": "Pepper Breath", "equippable": true},
+	"quick_bite": {"name": "Quick Bite", "equippable": true},
+	"heavy_claw": {"name": "Heavy Claw", "equippable": true},
+	"acid_bubbles": {"name": "Acid Bubbles", "equippable": false},
+	"bubble_blow": {"name": "Bubble Blow", "equippable": false},
+	"opening_tackle": {"name": "Opening Tackle", "equippable": false},
 }
-const TRAINING_SECONDS := 30.0
-const EVOLUTIONS := {
-	"botamon": [{"target": "koromon", "priority": 0, "stage": "In-Training", "min_active_seconds": 600.0, "min_bond": 24.0, "required_actions": ["feed", "play", "chat"], "stats": {}, "care": {}, "learned_moves": []}],
-	"koromon": [{"target": "agumon", "priority": 0, "stage": "Rookie", "min_active_seconds": 1800.0, "min_bond": 70.0, "required_actions": ["feed", "play", "chat"], "stats": {"offense": 12}, "care": {"discipline": 45}, "learned_moves": []}],
+const ITEM_IDENTITIES := {
+	"small_recovery": {"name": "Small Recovery"}, "mp_recovery": {"name": "MP Recovery"},
+	"barrier": {"name": "Barrier"}, "haste": {"name": "Haste"},
 }
-const MOVES := {
-	"tackle": {"name": "Tackle", "mp": 0, "power": 100, "range": "melee", "equippable": false},
-	"headbutt": {"name": "Headbutt", "mp": 0, "power": 100, "range": "melee", "equippable": false},
-	"claw": {"name": "Claw", "mp": 0, "power": 100, "range": "melee", "equippable": false},
-	"pepper_breath": {"name": "Pepper Breath", "mp": 12, "range": "ranged", "equippable": true},
-	"quick_bite": {"name": "Quick Bite", "mp": 4, "power": 115, "range": "melee", "equippable": true},
-	"heavy_claw": {"name": "Heavy Claw", "mp": 8, "power": 180, "range": "melee", "windup": 30, "active": 3, "duration": 54, "equippable": true},
-}
-const ITEMS := {
-	"small_recovery": {"name": "Small Recovery", "stat": "hp", "restore": 50},
-	"mp_recovery": {"name": "MP Recovery", "stat": "mp", "restore": 24},
-}
-const DECOR := {
-	"digi_potty": {"name": "Digi Potty", "size": [2, 2], "solid": true, "entrance": [0, 2]},
-	"rug": {"name": "Rug", "size": [3, 2], "solid": false},
-	"planter": {"name": "Planter", "size": [1, 1], "solid": true},
-}
+static var MOVES: Dictionary = _move_metadata()
+static var ITEMS: Dictionary = _item_metadata()
+const LEGACY_DECOR := ["digi_potty", "rug", "planter"]
+const OLD_DECOR_SIZES := {"campfire": [2, 2], "pond": [4, 3], "digi_potty": [2, 2], "rug": [3, 2], "planter": [1, 1]}
+static var DECOR: Dictionary = GameBalance.setting("game_definitions.DECOR")
 
 static func default_inventory() -> Dictionary:
-	var starter_decor := {"digi_potty": 1, "rug": 1, "planter": 1}
+	var starter_decor: Dictionary = GameBalance.setting("inventory.starter_decor").duplicate(true)
 	return {
 		"starter_granted": true,
-		"items": {"small_recovery": 3, "mp_recovery": 3},
+		"items": GameBalance.setting("inventory.starter_items").duplicate(true),
 		"decor": starter_decor.duplicate(true),
 		# Durable entitlement totals make regional layouts auditable. The sum of
 		# every placed instance plus the unplaced count must equal this value.
@@ -54,3 +53,26 @@ static func default_skills(species: String) -> Dictionary:
 	for move: String in learned:
 		slots.append({"move_id": move, "auto": true})
 	return {"learned": learned, "equipped": slots}
+
+
+static func refresh_combat_metadata() -> void:
+	MOVES = _move_metadata()
+	ITEMS = _item_metadata()
+
+
+static func _move_metadata() -> Dictionary:
+	var result := Content.move_metadata()
+	if result.is_empty():
+		result = MOVE_IDENTITIES.duplicate(true)
+		for id: String in result:
+			result[id]["content_available"] = false
+	return result
+
+
+static func _item_metadata() -> Dictionary:
+	var result := Content.item_metadata()
+	if result.is_empty():
+		result = ITEM_IDENTITIES.duplicate(true)
+		for id: String in result:
+			result[id]["content_available"] = false
+	return result

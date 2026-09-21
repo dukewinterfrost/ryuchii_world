@@ -1,0 +1,5 @@
+id,name,effect,stat,amount,duration_seconds,movement_multiplier
+small_recovery,Small Recovery,restore,hp,50,0,1
+mp_recovery,MP Recovery,restore,mp,24,0,1
+barrier,Barrier,barrier,,30,6,1
+haste,Haste,haste,,0,6,1.35

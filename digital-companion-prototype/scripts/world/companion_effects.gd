@@ -6,8 +6,8 @@ extends Node2D
 ## No gameplay signals, damage, status conditions, sprite changes, or root motion.
 ## Drawing follows CanvasItem._draw/queue_redraw:
 ## https://docs.godotengine.org/en/stable/tutorials/2d/custom_drawing_in_2d.html
-const EFFECTS: Array[String] = ["feed", "pet", "sickness", "basic_attack", "special_attack", "hit_general", "hit_fire", "hit_poison", "hit_freeze", "knocked_down", "stun"]
-const LABELS: Array[String] = ["Feeding plus + happy face", "Petting hearts", "Sickness indicator", "Basic melee", "Species special", "General hit", "Fire hit", "Poison hit", "Freeze hit", "Knockdown", "Stun"]
+const EFFECTS: Array[String] = ["feed", "pet", "sickness", "basic_attack", "special_attack", "hit_general", "hit_fire", "hit_poison", "hit_freeze", "knocked_down", "stun", "perfect_guard", "shield_impact"]
+const LABELS: Array[String] = ["Feeding plus + happy face", "Petting hearts", "Sickness indicator", "Basic melee", "Species special", "General hit", "Fire hit", "Poison hit", "Freeze hit", "Knockdown", "Stun", "Perfect guard shield", "Barrier impact"]
 
 var reduced_motion := false
 var effect_id := ""
@@ -94,6 +94,14 @@ func _draw() -> void:
 			draw_circle(center, 10 + 4 * sin(t * PI), Color(1.0, 0.43, 0.13, fade))
 			draw_circle(center + Vector2(3, 0), 5, cream)
 			draw_line(center - Vector2(19, 0), center - Vector2(8, 0), cream, 3)
+		"perfect_guard", "shield_impact":
+			var shield := PackedVector2Array([Vector2(-22, -72), Vector2(0, -80), Vector2(22, -72), Vector2(18, -44), Vector2(0, -30), Vector2(-18, -44), Vector2(-22, -72)])
+			var blue := Color(0.45, 0.9, 1.0, fade)
+			draw_colored_polygon(shield, Color(0.2, 0.6, 0.9, fade * 0.2))
+			draw_polyline(shield, blue, 3, true)
+			if effect_id == "perfect_guard":
+				_plus(Vector2(0, -56), 10, Color(0.92, 1, 1, fade))
+				_burst(Vector2(0, -56), 34 + (0 if reduced_motion else 8 * t), blue)
 		"hit_general":
 			_burst(Vector2(0, -50), 18 + 7 * t, cream)
 		"hit_fire":

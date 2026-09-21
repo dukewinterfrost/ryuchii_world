@@ -68,15 +68,25 @@ run_checked() {
 }
 
 run_checked "Godot import/parse" 0 none run_godot --headless --path "$test_project_dir" --import -- --test-mode
+run_checked "enclosure construction" 0 '^Enclosure: [0-9]+ checks, 0 failures$' run_godot --headless --path "$test_project_dir" --script res://tests/enclosure_runner.gd -- --test-mode
 run_checked "care rules" 0 '^PASS:' run_godot --headless --path "$test_project_dir" --script res://tests/test_runner.gd -- --test-mode
 run_checked "care v4, habitat and training rules" 0 '^Care v4: [0-9]+ checks, 0 failures$' run_godot --headless --path "$test_project_dir" --script res://tests/care_v4_test_runner.gd -- --test-mode
 run_checked "home regions and save v5" 0 '^PASS:' run_godot --headless --path "$test_project_dir" --script res://tests/home_v5_test_runner.gd -- --test-mode
 run_checked "food favorites, cravings and save v6" 1 '^Food care: [0-9]+ checks, 0 failures$' run_godot --headless --path "$test_project_dir" --script res://tests/food_care_runner.gd -- --test-mode
+run_checked "care statuses, sleep and wishes v7" 3 '^Care statuses: [0-9]+ checks, 0 failures$' run_godot --headless --path "$test_project_dir" --script res://tests/care_status_runner.gd -- --test-mode
 run_checked "persistence hardening" 2 '^PASS:' run_godot --headless --path "$test_project_dir" --script res://tests/persistence_hardening_runner.gd -- --test-mode
 run_checked "update state integration" 4 '^PASS:' run_godot --headless --path "$test_project_dir" --script res://tests/update_state_test_runner.gd -- --test-mode
 run_checked "legacy spatial combat" 0 '^PASS:' run_godot --headless --path "$test_project_dir" --script res://tests/spatial_battle_test_runner.gd -- --test-mode
 run_checked "battle v3 moves, items and replay" 0 '^PASS:' run_godot --headless --path "$test_project_dir" --script res://tests/battle_v3_test_runner.gd -- --test-mode
+run_checked "combat tables and frozen replay content" 0 '^PASS: [0-9]+ combat content and frozen replay checks \(0 failures\)$' run_godot --headless --path "$test_project_dir" --script res://tests/combat_content_test_runner.gd -- --test-mode
+run_checked "battle v4 reactive combat" 0 '^PASS: [0-9]+ battle-v4 checks \(0 failures\)$' run_godot --headless --path "$test_project_dir" --script res://tests/battle_v4_test_runner.gd -- --test-mode
+run_checked "mob encounters, support and settlement" 1 '^Mobs: [0-9]+ checks, 0 failures$' run_godot --headless --path "$test_project_dir" --script res://tests/mob_test_runner.gd -- --test-mode
+run_checked "editable Excel balance" 0 '^OK$' "$test_python" -m unittest discover -s "$test_project_dir/tests" -p 'test_game_balance.py' -v
+run_checked "mob portrait targeting" 0 '^Mob visual controls: 0 failures$' run_godot --headless --path "$test_project_dir" res://tests/mob_visual_runner.tscn -- --test-mode
+run_checked "battle v4 saves and live commands" 1 '^Battle v4 integration: [0-9]+ checks, 0 failures$' run_godot --headless --path "$test_project_dir" --script res://tests/battle_v4_integration_runner.gd -- --test-mode
+run_checked "isolated battle sandbox" 0 '^Battle sandbox: [0-9]+ checks, 0 failures$' run_godot --headless --path "$test_project_dir" res://tests/battle_sandbox_runner.tscn -- --test-mode
 run_checked "battle Sprite-in-3D presentation" 0 '^Battle Sprite-in-3D: [0-9]+ checks, 0 failures$' run_godot --headless --path "$test_project_dir" res://tests/battle_3d_test_runner.tscn -- --test-mode
+run_checked "battle v4 visual cues and portrait layout" 0 '^Battle v4 visuals: [0-9]+ checks, 0 failures$' run_godot --headless --path "$test_project_dir" res://tests/battle_v4_visual_runner.tscn -- --test-mode
 run_checked "live battle integration" 1 '^PASS:' run_godot --headless --path "$test_project_dir" --script res://tests/battle_test_runner.gd -- --test-mode
 run_checked "native assets/review" 0 '^Asset resource checks: [0-9]+ passed / [0-9]+ total$' run_godot --headless --path "$test_project_dir" --script res://tests/asset_resource_test_runner.gd -- --asset-review
 run_checked "arena visual depth" 0 '^PASS:' run_godot --headless --path "$test_project_dir" --script res://tests/arena_depth_test_runner.gd -- --asset-review
@@ -94,6 +104,8 @@ run_checked "environment runtime architecture" 0 '^PASS:' run_godot --headless -
 run_checked "five-region runtime content" 0 '^PASS: 84 five-region content checks$' run_godot --headless --path "$test_project_dir" --script res://tests/five_region_content_runner.gd -- --test-mode
 run_checked "editable environment workshop" 0 '^PASS: [0-9]+ environment workshop checks; 0 failures$' run_godot --headless --path "$test_project_dir" --script res://tests/environment_workshop_runner.gd -- --test-mode
 run_checked "camera-facing care presentation" 0 '^PASS: [0-9]+ care reference checks; 0 failures$' run_godot --headless --path "$test_project_dir" --script res://tests/care_reference_runner.gd -- --test-mode
+run_checked "native scene builder and lower woodland" 0 '^Scene builder: [0-9]+ checks, 0 failures$' run_godot --headless --path "$test_project_dir" --script res://tests/scene_builder_runner.gd -- --test-mode
+run_checked "Rootbound Glade and sheer stage ledges" 0 '^Rootbound ledge: [0-9]+ checks, 0 failures$' run_godot --headless --path "$test_project_dir" --script res://tests/rootbound_glade_runner.gd -- --test-mode
 if [ -n "$test_resume_pending" ]; then
   echo "Unknown resume suite: $test_resume_pending" >&2
   exit 2
@@ -101,5 +113,5 @@ fi
 if [ -n "${COMPANION_TEST_FROM:-}" ]; then
   echo "PASS: remaining suites from $COMPANION_TEST_FROM"
 else
-  echo "PASS: complete care v4, persistence, habitat, training, battle v2/v3, animation pipeline, 3D environment and scene suite"
+  echo "PASS: complete care, save v8, habitat, training, battle v2/v3/v4, sandbox, animation pipeline, 3D environment and scene suite"
 fi

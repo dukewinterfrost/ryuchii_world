@@ -23,7 +23,7 @@ func _initialize() -> void:
 
 func _test_new_state_and_aliases() -> void:
 	var state := Rules.make_new_state(1000.0)
-	_check(Rules.SAVE_SCHEMA_VERSION == 6 and Rules.state_is_valid(state), "new saves use strict schema v6 with v5 regional layouts")
+	_check(Rules.SAVE_SCHEMA_VERSION == 11 and Rules.state_is_valid(state), "new saves use strict schema v11 with v5 regional layouts")
 	_check(state.home_region == "green-shade" and state.habitats.is_empty(), "Green Shade is the only initial home layout")
 	_check(state.progression.story_flags == Habitat.default_story_flags(), "future region story flags start locked")
 	_check(state.inventory.decor_owned == state.inventory.decor, "new saves persist exact starter decoration entitlements")
@@ -33,7 +33,11 @@ func _test_new_state_and_aliases() -> void:
 
 func _test_v4_migration_and_repository() -> void:
 	var legacy := Rules.make_new_state(1000.0)
+	legacy.battle.erase("mob_wins")
 	legacy.care.erase("food")
+	legacy.care.erase("status")
+	legacy.inventory.items.erase("barrier")
+	legacy.inventory.items.erase("haste")
 	legacy.erase("home_region")
 	legacy.erase("habitats")
 	legacy.progression.erase("story_flags")
@@ -56,7 +60,11 @@ func _test_v4_migration_and_repository() -> void:
 	_check(FileAccess.get_file_as_string(repository.backup_path) == encoded, "v4 bytes remain available as the rollback generation")
 	repository.clear()
 	var early_v5 := Rules.make_new_state(1000.0)
+	early_v5.battle.erase("mob_wins")
 	early_v5.care.erase("food")
+	early_v5.care.erase("status")
+	early_v5.inventory.items.erase("barrier")
+	early_v5.inventory.items.erase("haste")
 	early_v5.habitat.items = [{"instance_id": "early-rug", "item_id": "rug", "x": 4, "y": 4, "rotation": 0}]
 	early_v5.inventory.decor.rug = 0
 	early_v5.inventory.erase("decor_owned")
@@ -87,7 +95,7 @@ func _test_unlock_switch_and_inventory() -> void:
 	_check(game.select_home_region("forest-arena").ok and game.state.home_region == "green-shade", "legacy arena alias selects the Green Shade home")
 	var green: Dictionary = game.state.habitat.duplicate(true)
 	green.items = [{"instance_id": "forged-planter", "item_id": "planter", "x": 18, "y": 24, "rotation": 0}]
-	_check(not game.apply_habitat_layout(green).ok, "decor stored in another home cannot be duplicated")
+	_check(game.apply_habitat_layout(green).ok and game.state.inventory.decor_owned.planter == 2 and game.state.enclosure.materials.wood == 57, "another regional planter must be purchased with materials")
 	_check(game.select_home_region("shellfish-beach").ok and game.state.habitat.items[0].instance_id == "beach-planter", "returning to a region restores its independent layout")
 	beach = game.state.habitat.duplicate(true)
 	beach.items = []

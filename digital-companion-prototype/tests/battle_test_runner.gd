@@ -52,7 +52,7 @@ func _test_start_and_abandon() -> void:
 	_check(JSON.stringify(game.state) == before and not FileAccess.file_exists(game._repository.primary_path), "starting neither awards nor writes care progress")
 	_check(started.battle_id == Rules.make_battle_id(game.state, 8080) and started.battle_id.begins_with("battle-v2-"), "new sessions use versioned v2 reward identity")
 	_check(started.arena.assetId == "arena-rootbound-glade" and started.arena.regionId == "green-shade" and started.arena.ground.width == 360, "default training arena uses the active Green Shade contextual identity")
-	_check(started.content_revisions.visuals.has_all(["player", "training_opponent"]), "both fighter artwork revisions pinned at start")
+	_check(started.content_revisions.visuals.has_all(["player", "enemy_1"]), "both fighter artwork revisions pinned at start")
 	_check(not game.start_training_battle(9).ok, "a live session blocks an overlapping match")
 	_check(not game.finish_training_battle().ok, "uncompleted session cannot receive a reward")
 	game.advance_training_battle()

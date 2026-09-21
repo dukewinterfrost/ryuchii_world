@@ -1,6 +1,7 @@
 extends SceneTree
 
-const Sim = preload("res://scripts/battle/battle_simulator.gd")
+const Sim = preload("res://scripts/battle/battle_simulator_v3.gd")
+const PublicSim = preload("res://scripts/battle/battle_simulator.gd")
 const Legacy = preload("res://scripts/battle/battle_simulator_v2.gd")
 const Playback = preload("res://scripts/battle/battle_playback_model.gd")
 var _checks := 0
@@ -213,7 +214,7 @@ func _test_replays() -> void:
 	_check(used_items > 1, "replay scenario exercised real accepted item uses")
 	var record := Sim.replay_record(session)
 	_check(record.initial_supplies.small_recovery == 3 and record.item_definitions.mp_recovery.amount == 24, "replay pins initial supplies and item definitions")
-	var replay := Sim.replay(record)
+	var replay := PublicSim.replay(record)
 	_check(JSON.stringify(replay) == JSON.stringify(session), "v3 command replay reconstructs full session byte-for-byte")
 	var roundtrip := Sim.replay(JSON.parse_string(JSON.stringify(record)))
 	_check(roundtrip.get("actors") == session.actors and roundtrip.get("supplies") == session.supplies, "JSON replay preserves integer moves, state, and inventory")
@@ -235,7 +236,7 @@ func _test_replays() -> void:
 	old_enemy.display_name = "Opponent"
 	var old := Legacy.simulate("golden-battle-v2", 20260909, old_player, old_enemy, 900)
 	_check(JSON.stringify(old).sha256_text() == "f684c88673239c31bfbadffce63f05b017d3874706e49008baf5634af49d7bfe", "battle-v2 golden remains byte-for-byte unchanged")
-	_check(JSON.stringify(Sim.replay(Sim.replay_record(old))) == JSON.stringify(old), "public replay dispatch preserves battle-v2")
+	_check(JSON.stringify(PublicSim.replay(PublicSim.replay_record(old))) == JSON.stringify(old), "public replay dispatch preserves battle-v2")
 	playback = Playback.new()
 	playback.setup(old)
 	_check(playback.error.is_empty(), "legacy battle playback sets up using version dispatch")

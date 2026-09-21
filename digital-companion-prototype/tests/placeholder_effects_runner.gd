@@ -19,7 +19,7 @@ func _run() -> void:
 	root.add_child(review)
 	await process_frame
 	review._playing = false
-	_check(review._placeholders and review._clip.item_count == 11, "all named placeholders available without a candidate")
+	_check(review._placeholders and review._clip.item_count == 13, "all named placeholders available without a candidate")
 	for species_id: String in ["botamon", "koromon", "agumon"]:
 		review._avatar.configure(species_id)
 		var frames: SpriteFrames = review._avatar.sprite.sprite_frames

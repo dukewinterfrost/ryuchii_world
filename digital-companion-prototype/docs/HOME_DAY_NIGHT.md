@@ -6,11 +6,14 @@ In a debug build, press **F7** or open **Field → Lighting preview**. Drag the 
 
 The close companion view primarily shows ground lighting. Open **Field → Explore map** for the sun, moon, and stars above the treeline. Celestial elements remain behind foreground scenery and may be occluded as the camera moves.
 
+Daylight sends warm, soft light shafts into the clearing; nights switch to cooler moonbeams. They fade with the sun/moon at the horizon, stay rooted as you pan, and respect foreground depth. **Reduce motion** freezes their subtle shimmer.
+
 ## Integration
 
 - `TimeOfDayController.sample_time(hour)` is a pure, wrapping 24-hour palette/celestial sampler. Its clock polls local device time every five seconds and resamples on focus. Corrections blend along the shortest path across midnight, with a capped frame delta after suspension. Tests can inject `clock_source`.
 - `EnvironmentView3D.day_night` exists only for the built-in clearing. `register_home_lighting(branch)` immediately registers new presentation objects; home decor and waste call this after building their nodes. Bindings retain original sprite colors and duplicate mesh materials per instance. Tree exit removes bindings.
 - Sky cards share screen coordinates for a continuous distant sky. The home instance lowers their authored placement to expose the sky in Field framing. The forest panorama shader keys the upper cyan opening and small painted stars while retaining the landscape, clouds, and dark canopy. Its upper edge blends into the procedural sky. This mask is specific to the current panorama; new background artwork needs its own mask review.
+- `HomeLightShafts` owns five additive, depth-tested ribbons with instance-local materials. It uses the same clock sample, and is freed with the home lighting controller. This works with the Compatibility renderer without volumetric fog.
 - Ground and foliage shaders default to a white tint, so other environments keep their authored appearance. UI, navigation, simulation, save data, and battle lighting are unaffected.
 
 ## Verification

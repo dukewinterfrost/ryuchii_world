@@ -25,6 +25,11 @@ then reopen with the launcher. Full Disk Access is not required.
 
 ### Care, growth and decorating
 
+- Thought bubbles now include **Zzz, tired/sick faces, animated play and training
+  wishes**. Tap one to respond. **Tools → Sleep** starts a two-minute rest that
+  clears sickness and grants +2 discipline when rest was needed. Training while
+  already tired risks sickness; requested play/training earns a small bonus.
+  See [status tuning and save v7](docs/CARE_STATUSES_V7.md).
 - **Feed** opens nine pixel-art snacks. Botamon favors pudding, Koromon favors
   strawberries, and Agumon favors drumsticks. Occasional food thought bubbles
   show cravings; tap one to choose a snack. Favorites increase happiness, and
@@ -41,12 +46,16 @@ then reopen with the launcher. Full Disk Access is not required.
 - Pet, Praise and Scold have a shared 30-second reward cooldown. Praise trades
   discipline for happiness; Scold does the reverse. Neither grants bond. Cleaning
   removes waste and virus exposure without granting discipline.
-- Use **Tools** for cleanup and habitat editing. Place the starter digi potty,
-  rug and planter on the grid; move, rotate or return them to inventory. **Apply**
-  validates and saves the layout; **Cancel** discards the draft.
+- Use **Tools → Build enclosure** for grid placement with material costs. Build
+  potties, campfires and ponds; move, rotate or store owned objects for free.
+  **Build / Apply** saves the layout and costs together; **Cancel** spends nothing.
+  Overlapped native scenery disappears while the building occupies its footprint.
+  Cook meat or potatoes at a campfire, then serve the prepared meals. Visit a
+  pond to rinse and recover fatigue. Prototype supplies can be refilled in Tools.
+  See the [enclosure plan and verification](docs/ENCLOSURE_BUILDER.md).
 - During the 30-second bathroom warning, **Guide to potty** walks the companion
   to a reachable potty. Guided success raises habit by 20 and discipline by 2.
-  At 60 habit and 50 discipline, reachable potties are used automatically, even
+  At 50 discipline, reachable potties are used automatically, even
   offline. Failed or unavailable routes produce ordinary cleanable waste.
 - Zoom buttons and wheel/pinch range from **0% (full map)** through the default
   **100% (companion close-up)** to 200%. Follow gently tracks the companion;
@@ -87,16 +96,20 @@ all five regions remain available in isolated review/debug tooling.
 At Rookie, equip and order up to three learned moves in the care Skills sheet,
 with an automatic-use toggle per move. Agumon starts with Pepper Breath, Quick
 Bite and Heavy Claw. Each species also has a permanent zero-MP melee attack.
-Open **Moves** or **Items** over the running arena: selection does not pause the
-battle. A requested move waits for reaction/recovery and legal range; a newer
-request replaces it, and an unusable request expires after five simulation
-seconds. MP is spent only when an attack commits.
+Equipped moves appear directly on the battle HUD. A request waits for availability
+and legal range; the newest replaces it and expires after five seconds. MP and
+cooldown are spent when charging starts. **Dodge** and **Guard** remain visible
+while Items is open. They can cancel a charge without refunding resources, but
+active attacks and recovery remain committed. Space dodges, G guards, and 1–3
+request the equipped moves. Guard's first 0.2 seconds can perfectly block one hit.
 
 Starter supplies are three Small Recoveries (+50 battle HP) and three MP
-Recoveries (+24 MP). Items share a five-second cooldown and never consume on a
-full meter or invalid request. Consumption is saved before the battle effect;
+Recoveries (+24 MP), plus two Barriers (30 damage absorbed for up to six seconds)
+and two Hastes (+35% movement for six seconds). Items share a five-second cooldown
+and never consume on a full meter, active tactical effect, or invalid request.
+Consumption is saved before the battle effect;
 a save failure rejects use. Consumed items remain spent after abandonment or a
-crash. A win grants one of each recovery item, settled once alongside its normal
+crash. A win explicitly grants one of each of these four items, settled once alongside its normal
 rewards. Loadouts cannot change during battle.
 
 Live combat pauses on focus loss. Results and rewards are settled only after
@@ -107,11 +120,31 @@ not supported. See [battle behavior and save semantics](docs/BATTLE_VERTICAL.md)
 Care saves use Godot's platform-specific `user://companion-save.json`, with the
 preceding valid generation in `companion-save.json.bak`. The launcher also avoids
 editor startup problems caused by stale terminal working directories.
-Save schema v6 upgrades earlier saves, retaining identity, stats, progress,
-precise waste slots, home regions, and food preferences/cravings; starter
-supplies are granted once. Current replays use pinned battle-v3 content
-and command identities; battle-v2 records dispatch to the unchanged legacy
-simulator. Replay playback never consumes inventory.
+Save schema v10 upgrades earlier saves, retaining identity, stats, progress,
+precise waste slots, home regions, food preferences/cravings, and ongoing care
+statuses; tactical and construction starter supplies are granted once. Current battle-v4 replays
+pin the complete normalized combat configuration, roster, arena, seed and accepted
+commands. Battle-v2/v3 records dispatch to frozen historical simulators. Replay
+playback never consumes inventory.
+
+### Battle tuning and isolated sandbox
+
+Run `./open-battle-sandbox.command` or open `scenes/battle_sandbox.tscn` with F6.
+The sandbox never reads or spends real inventory or awards care rewards. Use
+**Same seed**, **New seed**, and **Reload CSV** for repeatable tests; **Tuning**
+opens stat overrides, effective 30 Hz timings, geometry overlays and reduced
+motion. The 3v3 fixture uses a larger field and shared hostile-team targeting.
+Sandbox supplies are unlimited, and all commands control Allies 1.
+
+Edit [moves.csv](assets/combat/moves.csv) in Excel, Numbers or a text editor;
+companion `items.csv`, `natures.csv` and `tuning.csv` share the same folder.
+Times are authored in seconds and distances in arena units. Reload applies only
+to a fresh sandbox battle, retaining the previous valid battle on validation or
+fixture errors. Running battles and old replays retain their pinned data.
+See the [v4 feature contract](docs/BATTLE_V4.md) and
+[placeholder register](docs/BATTLE_V4_PLACEHOLDERS.md). Reusable planning guidance
+is installed at `~/.codex/skills/game-feature-planning/`, with a reviewable copy
+in [skill-drafts/game-feature-planning](../skill-drafts/game-feature-planning/SKILL.md).
 
 ## Sprite and environment workflow
 
@@ -121,6 +154,10 @@ planes, and character placement in Godot. Start with the [editing guide](docs/EN
 and [Figma floor texture bank](https://www.figma.com/design/syQM2pShfeCTfXms0HmzTB?node-id=66-150).
 These working scenes preserve manual edits and do not replace the live game's
 pinned environment packages automatically.
+
+The [Rootbound Glade rework](docs/ROOTBOUND_GLADE_REVIEW.md) adds an open battle
+clearing and shared sheer ledges for the first field and native forest home.
+Use `open-battle-fields.command` → **Rootbound Glade** to play the edited field.
 
 The project-owned pipeline supports animations, effects/UI/prop atlases,
 square/isometric TileSets, and playable arena bundles. Codex coordinates image
@@ -207,3 +244,7 @@ image service or LLM integration.
 Digimon names, character art, sound, and extracted material are for private
 prototype use only and are not cleared for public/commercial distribution.
 See `assets/asset-provenance.json`; public releases need licensed or original art.
+
+## Slime and fairy mobs
+
+See [mob encounters and editable balance](docs/MOBS.md). Tune `Game Balance.xlsx`, apply it with `Apply Game Balance.command`, and use the battle sandbox to test the intro and mixed groups. The mob creator skill is installed as `$mob-creator`; PixelLab animation replacement is pending the recorded provider pilot.

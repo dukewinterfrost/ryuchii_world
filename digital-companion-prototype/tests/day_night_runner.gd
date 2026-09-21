@@ -77,6 +77,31 @@ func run() -> void:
 	var view: EnvironmentView3D = care.habitat.environment_3d
 	check(view.day_night != null, "Built-in home has lighting")
 	var lighting := view.day_night
+	var shafts := lighting.shafts
+	check(shafts.get_child_count() == 5, "Bounded set of five world light shafts")
+	lighting.clock.set_preview_hour(12.0)
+	check(shafts.daylight_strength > 0 and shafts.moonlight_strength == 0, "Daylight shafts use the sun")
+	var day_color: Color = shafts.materials[0].get_shader_parameter("shaft_color")
+	check(day_color.r > day_color.b, "Daylight shafts are warm")
+	lighting.clock.set_preview_hour(0.0)
+	check(shafts.moonlight_strength > 0 and shafts.daylight_strength == 0, "Moonlight shafts use the moon")
+	var night_color: Color = shafts.materials[0].get_shader_parameter("shaft_color")
+	check(night_color.b > night_color.r, "Moonlight shafts are cool")
+	for boundary: float in [6.0, 18.0]:
+		lighting.clock.set_preview_hour(boundary)
+		check(not shafts.visible, "Shafts fade at the horizon at %s" % boundary)
+	lighting.clock.set_preview_hour(0.0)
+	view.set_reduced_motion(true)
+	var frozen_time := shafts.animation_time
+	shafts._process(1.0)
+	check(shafts.animation_time == frozen_time, "Reduced motion freezes shaft shimmer")
+	view.set_reduced_motion(false)
+	shafts._process(0.1)
+	check(shafts.animation_time > frozen_time, "Shaft shimmer resumes")
+	var rooted_position: Vector3 = shafts.get_child(0).global_position
+	view.set_home_manual_pan(Vector2(96, -64), true)
+	check(shafts.get_child(0).global_position == rooted_position, "Camera pan leaves shafts rooted in the world")
+	view.set_home_follow(care.habitat.avatar.position, true)
 	var noon := TimeOfDayController.sample_time(12.0)
 	var midnight := TimeOfDayController.sample_time(0.0)
 	lighting.clock.set_preview_hour(0.0)
@@ -170,6 +195,7 @@ func run() -> void:
 		check(root.get_texture().get_image().save_png("/tmp/day-night-preview.png") == OK, "Capture development preview")
 	var old_clock := lighting.clock
 	check(care.habitat.configure_region(HabitatAssetLibrary.resolve_region("green-shade", true)), "Switch to regional fixture")
+	check(not is_instance_valid(shafts), "Region switch destroys light shafts")
 	check(view.day_night == null and not is_instance_valid(old_clock), "Region switch destroys clock and lighting")
 	await process_frame
 	check(not care._day_night_preview.visible, "Preview hidden outside built-in clearing")

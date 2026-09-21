@@ -1,0 +1,10 @@
+{
+  "id": "campfire",
+  "description": "Original cozy monster-raising woodland builder game prop, crisp native pixel art, restrained warm earthy palette, dark colored outlines, readable chunky forms, elevated front three-quarter view showing the top and front, orthographic camera, centered isolated complete object with transparent background, no text, no characters, no ground tile, no cast shadow outside object. An unlit cooking campfire base: low ring of chunky gray stones surrounding crossed brown logs and dark embers, a short wooden cooking spit with an empty horizontal bar. NO flames, NO smoke, NO glow. Two by two tile footprint; keep central flame area clear. Static reusable base.",
+  "imageSize": [
+    128,
+    128
+  ],
+  "seed": 920101,
+  "noBackground": true
+}

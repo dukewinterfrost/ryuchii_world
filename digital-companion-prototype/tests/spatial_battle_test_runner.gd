@@ -1,6 +1,6 @@
 extends SceneTree
 
-const Sim = preload("res://scripts/battle/battle_simulator.gd")
+const Sim = preload("res://scripts/battle/battle_simulator_v3.gd")
 const Legacy = preload("res://scripts/battle/battle_simulator_v2.gd")
 const Arena = preload("res://scripts/battle/battle_arena.gd")
 var _checks := 0

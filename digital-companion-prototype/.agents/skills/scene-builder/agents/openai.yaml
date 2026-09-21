@@ -1,0 +1,4 @@
+interface:
+  display_name: "Scene Builder"
+  short_description: "Compose and review editable Godot environment scenes"
+  default_prompt: "Use $scene-builder to compose and verify this project's next environment from the supplied reference."

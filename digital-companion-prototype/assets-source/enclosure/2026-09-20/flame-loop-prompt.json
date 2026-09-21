@@ -1,0 +1,9 @@
+{
+  "id": "flame-loop",
+  "operation": "animate-with-text-v3",
+  "firstFrame": "flame",
+  "lastFrame": "flame",
+  "frameCount": 4,
+  "seed": 920200,
+  "description": "A tiny seamless four-frame campfire flame flicker loop. Only the upper yellow-orange flame tongues gently bend and rise. Keep the bottom of the fire anchored in exactly the same place. Fixed camera, no movement across canvas, no logs, smoke, sparks or new objects. Preserve this pixel-art palette and outline. End at the starting flame shape."
+}

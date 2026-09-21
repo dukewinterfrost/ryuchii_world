@@ -1,0 +1,37 @@
+[
+  {
+    "file": "digi_potty-variants",
+    "success": true,
+    "imageHash": "fc35cd695dfbb516c23069d18f506a5821756cb4",
+    "sizeBytes": 13707,
+    "contentType": "image/png"
+  },
+  {
+    "file": "campfire-variants",
+    "success": true,
+    "imageHash": "7f79da235c63c17a527ce8b8b9cc81225707a9ed",
+    "sizeBytes": 30587,
+    "contentType": "image/png"
+  },
+  {
+    "file": "pond-variants",
+    "success": true,
+    "imageHash": "1563a277e2a5fe5651ad7562027b7eeb72d6a524",
+    "sizeBytes": 28187,
+    "contentType": "image/png"
+  },
+  {
+    "file": "flame-variants",
+    "success": true,
+    "imageHash": "287e5cf5ad0964cc80fae5124c251f63cb47ce66",
+    "sizeBytes": 23483,
+    "contentType": "image/png"
+  },
+  {
+    "file": "flame-loop",
+    "success": true,
+    "imageHash": "173f5f8c1cde17c075774ccd43da3e4b590e71dc",
+    "sizeBytes": 3178,
+    "contentType": "image/png"
+  }
+]

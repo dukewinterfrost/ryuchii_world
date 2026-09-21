@@ -526,12 +526,16 @@ class EnvironmentPipelineTests(unittest.TestCase):
                          "Set SPRITE_NATIVE_TESTS=1 for installed Godot integration")
     def test_real_godot_exports_environment_and_habitat_resources(self):
         project = Path(__file__).resolve().parents[1]
+        shutil.copytree(project / "assets" / "balance", self.root / "assets" / "balance", dirs_exist_ok=True)
         shutil.copytree(project / "scripts", self.root / "scripts")
         shutil.copytree(project / "scenes", self.root / "scenes")
         shutil.copytree(project / "shaders", self.root / "shaders")
         shutil.copy2(project / "project.godot", self.root / "project.godot")
         (self.root / "assets/habitat").mkdir(parents=True)
         (self.root / "assets/habitat/verdant-field.png").write_bytes(png())
+        (self.root / "assets/enclosure").mkdir(parents=True)
+        for texture in ("digi_potty.png", "campfire.png", "pond.png", "flame-loop.png"):
+            (self.root / "assets/enclosure" / texture).write_bytes(png())
         imported = subprocess.run([self.pipeline.godot, "--headless", "--path", str(self.root), "--import",
                                    "--", "--test-mode"], capture_output=True, text=True, timeout=60)
         self.assertEqual(imported.returncode, 0, imported.stdout + imported.stderr)

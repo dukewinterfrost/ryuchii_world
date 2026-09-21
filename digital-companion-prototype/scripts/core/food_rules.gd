@@ -13,12 +13,12 @@ const FOODS := {
 	"steak": {"name": "Steak", "icon": 7},
 	"cake": {"name": "Cake", "icon": 8},
 }
-const FAVORITES := {"botamon": "pudding", "koromon": "strawberry", "agumon": "drumstick"}
-const DURATION := 120.0
-const MAX_FULLNESS := 85.0
+static var FAVORITES: Dictionary = GameBalance.setting("food.favorites")
+static var DURATION: float = GameBalance.setting("food_rules.DURATION")
+static var MAX_FULLNESS: float = GameBalance.setting("food_rules.MAX_FULLNESS")
 
 static func initial() -> Dictionary:
-	return {"craving": "", "expires_at": 0.0, "wait_seconds": 120.0, "sequence": 0, "satisfied": 0}
+	return {"craving": "", "expires_at": 0.0, "wait_seconds": float(GameBalance.setting("food.initial_wait")), "sequence": 0, "satisfied": 0}
 
 static func favorite(species: String) -> String:
 	return String(FAVORITES.get(species, "pudding"))
@@ -55,7 +55,7 @@ static func advance(state: Dictionary, now: float, engaged: float) -> void:
 	data.craving = favorite(String(state.identity.species_id)) if sequence % 2 == 0 else String(keys[(sequence * 7) % keys.size()])
 	data.sequence = mini(sequence + 1, 1000000000)
 	data.expires_at = now + DURATION
-	data.wait_seconds = 240.0 + float((sequence * 73 + 41) % 181)
+	data.wait_seconds = float(GameBalance.setting("food.wait_base")) + float((sequence * 73 + 41) % (int(GameBalance.setting("food.wait_jitter")) + 1))
 
 static func valid(data: Variant) -> bool:
 	if not data is Dictionary or data.size() != 5 or not data.has_all(["craving", "expires_at", "wait_seconds", "sequence", "satisfied"]):
