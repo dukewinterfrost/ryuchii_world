@@ -1,0 +1,103 @@
+{
+  "packs": [
+    {
+      "id": "kenney-particle-pack",
+      "source_url": "https://kenney.nl/assets/particle-pack",
+      "download_url": "https://kenney.nl/media/pages/assets/particle-pack/f8fe0f8cb8-1677578741/kenney_particle-pack.zip",
+      "archive": "kenney-particle-pack/kenney_particle-pack.zip",
+      "sha256": "b631d4b07f7002549fdcf155f01141ad482f79f3440e4e301eed49ce5f1d8958",
+      "bytes": 15001764,
+      "license": "CC0-1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "downloaded_on": "2026-09-17",
+      "status": "downloaded-originals-not-integrated",
+      "file_counts": {
+        "PNG": 193
+      },
+      "total_media_bytes": 9703374
+    },
+    {
+      "id": "kenney-impact-sounds",
+      "source_url": "https://kenney.nl/assets/impact-sounds",
+      "download_url": "https://kenney.nl/media/pages/assets/impact-sounds/87b4ddecda-1677589768/kenney_impact-sounds.zip",
+      "archive": "kenney-impact-sounds/kenney_impact-sounds.zip",
+      "sha256": "029d734af1582474edf3a694d1b0cebc97c1c152f2f39fa34d4c2bafc5de77f8",
+      "bytes": 800850,
+      "license": "CC0-1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "downloaded_on": "2026-09-17",
+      "status": "downloaded-originals-not-integrated",
+      "file_counts": {
+        "OGG": 130
+      },
+      "total_media_bytes": 1034296
+    },
+    {
+      "id": "kenney-rpg-audio",
+      "source_url": "https://kenney.nl/assets/rpg-audio",
+      "download_url": "https://kenney.nl/media/pages/assets/rpg-audio/8e99002d76-1677590336/kenney_rpg-audio.zip",
+      "archive": "kenney-rpg-audio/kenney_rpg-audio.zip",
+      "sha256": "6dbeaf8544da958d8f2adcb4a4a4b76c1ade34a05f8ab9edccd327da7375f38b",
+      "bytes": 964837,
+      "license": "CC0-1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "downloaded_on": "2026-09-17",
+      "status": "downloaded-originals-not-integrated",
+      "file_counts": {
+        "OGG": 52
+      },
+      "total_media_bytes": 1048639
+    },
+    {
+      "id": "mikodrak-spell-effects",
+      "source_url": "https://opengameart.org/content/2d-spell-effects",
+      "download_url": "https://opengameart.org/sites/default/files/FX.zip",
+      "archive": "mikodrak-spell-effects/FX.zip",
+      "sha256": "8d0c09487ab0337867e90333e9c26e455760b31414bf503bedcde94b0cddbc30",
+      "bytes": 3084313,
+      "license": "CC0-1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "downloaded_on": "2026-09-17",
+      "status": "downloaded-originals-not-integrated",
+      "file_counts": {
+        "PNG": 231,
+        "GIF": 11
+      },
+      "total_media_bytes": 3095464
+    },
+    {
+      "id": "second-bubble",
+      "source_url": "https://opengameart.org/content/2d-bubble-animation",
+      "download_url": "https://opengameart.org/sites/default/files/Bubble.zip",
+      "archive": "second-bubble/Bubble.zip",
+      "sha256": "281c501e4a65f6191bc5c5dbee1def2d1081bd8012deaeb1d6da03a40011bd79",
+      "bytes": 2606,
+      "license": "CC0-1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "downloaded_on": "2026-09-17",
+      "status": "downloaded-originals-not-integrated",
+      "file_counts": {
+        "PNG": 9
+      },
+      "total_media_bytes": 949
+    },
+    {
+      "id": "natural-privateer-bubble-pop",
+      "source_url": "https://opengameart.org/content/pink-bubble-popping-animation-16x16",
+      "download_url": "https://opengameart.org/sites/default/files/pink_transparent_bubble_anim-sheet.png",
+      "archive": "natural-privateer-bubble-pop/pink_transparent_bubble_anim-sheet.png",
+      "sha256": "18547e2fb15afdb987426fd8fc2235facd106e48cfe202f3cd50c8a43c7c0768",
+      "bytes": 720,
+      "license": "CC0-1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "downloaded_on": "2026-09-17",
+      "status": "downloaded-originals-not-integrated",
+      "file_counts": {
+        "PNG": 1
+      },
+      "total_media_bytes": 720
+    }
+  ],
+  "schema_version": 1,
+  "review_status": "source acquisition and structural checks; no runtime integration or final visual/audio approval"
+}

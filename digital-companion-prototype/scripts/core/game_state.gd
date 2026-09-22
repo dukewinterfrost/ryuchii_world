@@ -38,7 +38,7 @@ const AUTOSAVE_RETRY_SECONDS := 5.0
 func _ready() -> void:
 	# Asset review, demos, and scene smoke checks must never read/advance/save a
 	# real companion. Unit-test instances not added to the tree retain normal I/O.
-	for flag: String in ["--asset-review", "--battle-demo", "--test-mode"]:
+	for flag: String in ["--asset-review", "--battle-demo", "--battle-sandbox", "--test-mode"]:
 		if flag in OS.get_cmdline_user_args():
 			isolated_mode = true
 	# Editor F6/direct scene launches omit our CLI flag. Detect the review scene
@@ -79,6 +79,8 @@ static func is_review_launch(arguments: PackedStringArray) -> bool:
 			return true
 		if path == "asset_review_scene.tscn" or path.ends_with("/asset_review_scene.tscn"):
 			return true
+		if path.get_file() in ["battle_sandbox.tscn", "battle_v4_visual_runner.tscn", "battle_sandbox_runner.tscn"]:
+			return true
 	return false
 
 
@@ -113,6 +115,7 @@ func advance_care_time(seconds: float, focused: bool, now_unix: float) -> void:
 		# player returns much later.
 		_engagement_seconds_remaining = 0.0
 	var previous_poop := int(state["care"].get("poop_count", 0))
+	var previous_status: Dictionary = state.care.status.duplicate(true)
 	state = CareRules.advance_time(state, now_unix, engaged, not _training.is_empty(), _active_habitat_manifest())
 	if not _guidance.is_empty() and not CareRules.bathroom_warning(state, now_unix):
 		_guidance.clear()
@@ -126,7 +129,7 @@ func advance_care_time(seconds: float, focused: bool, now_unix: float) -> void:
 	if bool(evolution.evolved):
 		_commit_candidate(state)
 	_autosave_accumulator += seconds
-	if previous_poop != int(state["care"].get("poop_count", 0)):
+	if previous_poop != int(state["care"].get("poop_count", 0)) or previous_status.sleeping != state.care.status.sleeping or previous_status.wish != state.care.status.wish:
 		if save_now():
 			_autosave_accumulator = 0.0
 		else:
@@ -140,6 +143,8 @@ func advance_care_time(seconds: float, focused: bool, now_unix: float) -> void:
 
 
 func execute_command(action: String, payload: String = "") -> Dictionary:
+	if action in ["sleep", "wake", "play"] and (not _training.is_empty() or not active_battle_result.is_empty()):
+		return {"accepted": false, "rewarded": false, "bond_gain": 0.0, "animation": "idle", "message": "Finish the current activity first.", "state": get_state()}
 	note_player_activity()
 	var result := CareRules.apply_command(state, action, payload, _now_unix())
 	if bool(result["accepted"]):
@@ -151,6 +156,7 @@ func execute_command(action: String, payload: String = "") -> Dictionary:
 			result.bond_gain = 0.0
 		elif committed.has("evolution"):
 			result.evolution = committed.evolution
+		if committed.ok and action == "sleep": _guidance.clear()
 	result["state"] = get_state()
 	command_resolved.emit(result)
 	state_changed.emit(get_state())
@@ -208,7 +214,7 @@ func start_training(stat: String) -> Dictionary:
 	var ready := CareRules.training_readiness(state, stat)
 	if not ready.ok:
 		return ready
-	_training = {"id": _unique_input_id("training"), "stat": stat, "elapsed": 0.0}
+	_training = {"id": _unique_input_id("training"), "stat": stat, "elapsed": 0.0, "care_context": CareStatusRules.training_context(state, _now_unix())}
 	_guidance.clear()
 	_tick_accumulator = 0.0
 	note_player_activity()
@@ -233,7 +239,7 @@ func cancel_training() -> Dictionary:
 func complete_training(session_id: String) -> Dictionary:
 	if _training.is_empty() or session_id != String(_training.id):
 		return {"ok": false, "error": "This training session is no longer active."}
-	var result := CareRules.complete_training(state, String(_training.stat), session_id, float(_training.elapsed))
+	var result := CareRules.complete_training(state, String(_training.stat), session_id, float(_training.elapsed), _training.get("care_context", {}))
 	if not result.ok:
 		return {"ok": false, "error": result.error}
 	var committed := _commit_candidate(result.state)
@@ -241,33 +247,53 @@ func complete_training(session_id: String) -> Dictionary:
 		var trained_stat := String(_training.stat)
 		_training.clear()
 		training_changed.emit(get_training_status())
-		command_resolved.emit({"accepted": true, "message": "Training complete! +%d %s." % [result.gain, trained_stat.to_upper()], "animation": "happy", "state": get_state()})
+		var note := "Training complete! +%d %s.%s%s" % [result.gain, trained_stat.to_upper(), " Motivation bonus included!" if result.wish_bonus > 0 else "", " Overtraining made me sick. I need a full sleep." if result.became_sick else ""]
+		command_resolved.emit({"accepted": true, "message": note, "animation": "happy", "state": get_state()})
 	return committed
 
 
 func apply_habitat_layout(layout: Dictionary) -> Dictionary:
-	# A draft may not teleport the companion or modify unrelated camera settings.
-	var candidate := state.duplicate(true)
-	var proposed := layout.duplicate(true)
-	proposed.creature_cell = state.habitat.creature_cell.duplicate()
-	proposed.camera = state.habitat.camera.duplicate(true)
-	proposed.theme = state.habitat.theme
-	var valid := HabitatRules.validate_layout(proposed, Vector2i(-1, -1), _active_habitat_manifest())
-	if not valid.ok:
-		return valid
-	var available: Dictionary = state.inventory.decor.duplicate(true)
-	for item: Dictionary in state.habitat.items:
-		available[item.item_id] = int(available[item.item_id]) + 1
-	for item: Dictionary in proposed.items:
-		available[item.item_id] = int(available[item.item_id]) - 1
-		if int(available[item.item_id]) < 0:
-			return {"ok": false, "error": "That decoration is not in your inventory."}
-	candidate.habitat = proposed
-	candidate.inventory.decor = available
-	var result := _commit_candidate(candidate)
-	if result.ok:
-		_guidance.clear()
+	var built := EnclosureRules.build(state, layout, _active_habitat_manifest())
+	if not built.ok: return built
+	var result := _commit_candidate(built.state)
+	if result.ok: _guidance.clear()
 	return result
+
+
+func quote_habitat_layout(layout: Dictionary) -> Dictionary:
+	return EnclosureRules.quote(state, layout, _active_habitat_manifest())
+
+
+func use_enclosure_facility(action: String) -> Dictionary:
+	if not _training.is_empty() or not active_battle_result.is_empty():
+		return {"ok": false, "error": "Finish the current activity first."}
+	var kind := "pond" if action == "pond" else "campfire"
+	if HabitatRules.path_to_facility(state.habitat, kind, _active_habitat_manifest()).size() != 1:
+		return {"ok": false, "error": "Walk to the facility entrance first."}
+	var result := EnclosureRules.use_facility(state, action, _now_unix(), _active_habitat_manifest())
+	if not result.ok: return result
+	var committed := _commit_candidate(result.state)
+	if committed.ok: committed["message"] = result.message
+	return committed
+
+
+func serve_cooked_meal(meal: String) -> Dictionary:
+	if meal not in ["steak", "sweet_potato"] or int(state.enclosure.meals.get(meal, 0)) < 1:
+		return {"ok": false, "error": "Cook this meal at a campfire first."}
+	if not _training.is_empty() or not active_battle_result.is_empty():
+		return {"ok": false, "error": "Finish the current activity first."}
+	var result := CareRules.apply_command(state, "feed", meal, _now_unix())
+	if not result.accepted: return {"ok": false, "error": result.message}
+	result.state.enclosure.meals[meal] -= 1
+	var committed := _commit_candidate(result.state)
+	if committed.ok: committed["message"] = result.message
+	return committed
+
+
+func refill_prototype_materials() -> Dictionary:
+	var candidate := state.duplicate(true)
+	candidate.enclosure.materials = EnclosureRules.STARTER.duplicate()
+	return _commit_candidate(candidate)
 
 
 func set_habitat_camera(zoom: float, follow: bool) -> Dictionary:
@@ -308,7 +334,7 @@ func set_creature_cell(cell: Vector2i) -> bool:
 func get_potty_status() -> Dictionary:
 	var warning := CareRules.bathroom_warning(state, _now_unix())
 	var path := HabitatRules.path_to_potty(state.habitat, Vector2i(-1, -1), _active_habitat_manifest())
-	return {"warning": warning, "guiding": not _guidance.is_empty(), "path": path, "can_guide": warning and not path.is_empty(), "automatic": float(state.care.potty_habit) >= 60.0 and float(state.care.discipline) >= 50.0, "remaining": maxf(0.0, float(state.care.next_poop_at) - _now_unix())}
+	return {"warning": warning, "guiding": not _guidance.is_empty(), "path": path, "can_guide": warning and not path.is_empty(), "automatic": float(state.care.discipline) >= float(GameDefinitions.CARE_TUNING.potty_discipline_required), "remaining": maxf(0.0, float(state.care.next_poop_at) - _now_unix())}
 
 
 func begin_potty_guidance() -> Dictionary:
@@ -352,7 +378,10 @@ func get_home_package() -> Dictionary:
 			_home_package.notice = "The saved layout conflicts with this environment revision. Its verified habitat grid and blockers remain authoritative in 2D."
 			_home_package.environment_package = {}
 			EnvironmentAssetLibrary.clear_active()
-	return _home_package.duplicate(true)
+	var package := _home_package.duplicate(true)
+	if package.get("mode") == "fallback-2d":
+		package.habitat = preload("res://scripts/environment/native_care_scenery.gd").resolve(state.habitat, package.habitat)
+	return package
 
 
 func available_home_regions(include_locked := true) -> Array[Dictionary]:
@@ -442,6 +471,11 @@ func set_skill_loadout(slots: Array) -> Dictionary:
 
 
 func start_training_battle(seed_value: int = -1, encounter_id: String = "") -> Dictionary:
+	var combat_config := MobContent.defaults()
+	if combat_config.is_empty():
+		return {"ok": false, "error": "Battle tables need correction: " + "; ".join(MobContent.last_errors())}
+	if not state.is_empty() and (state.care.status.sleeping or state.care.status.sick):
+		return {"ok": false, "error": "Rest before battling while sick or asleep."}
 	note_player_activity()
 	if state.is_empty():
 		return {"ok": false, "error": "Companion state is unavailable."}
@@ -472,17 +506,20 @@ func start_training_battle(seed_value: int = -1, encounter_id: String = "") -> D
 	battle_seed = battle_seed & BattleRng.MASK_31
 	var battle_id := CareRules.make_battle_id(state, battle_seed)
 	var player := BattleSimulator.player_snapshot_from_state(state)
-	var opponent := BattleSimulator.training_opponent(battle_seed)
+	var mob_encounter := MobCatalog.encounter(int(state.battle.get("mob_wins", 0)), battle_seed)
+	var roster_result := MobCatalog.roster(player, mob_encounter, resolved_arena.arena, combat_config)
+	if not roster_result.ok: return roster_result
 	var visual_pins: Dictionary = {}
-	for fighter: Dictionary in [player, opponent]:
+	for fighter: Dictionary in roster_result.roster:
 		var library := CompanionAssetLibrary.build(String(fighter.species_id))
 		if library.is_empty():
-			return {"ok": false, "error": "Companion artwork is unavailable for " + String(fighter.species_id)}
+			return {"ok": false, "error": "Creature artwork is unavailable for " + String(fighter.species_id)}
 		visual_pins[fighter.fighter_id] = {"assetId": String(library.get("asset_id", fighter.species_id)), "revision": String(library.revision)}
-	var session := BattleSimulator.create_session(battle_id, battle_seed, player, opponent,
+	var session := BattleSimulator.create_roster_session(battle_id, battle_seed, roster_result.roster,
 		resolved_arena.arena, BattleSimulator.DEFAULT_MAX_TICKS, visual_pins,
 		state.inventory.items, {}, String(resolved_arena.encounterId),
-		String(resolved_arena.get("contentSha256", "")))
+		String(resolved_arena.get("contentSha256", "")), combat_config)
+	session["mob_encounter"] = mob_encounter.id
 	if not bool(session.get("ok", false)):
 		return session
 	session["reward"] = {}
@@ -505,6 +542,10 @@ func queue_battle_order(order: String) -> Dictionary:
 
 func queue_battle_move(move_id: String) -> Dictionary:
 	return queue_battle_command({"kind": "move_request", "move_id": move_id})
+
+
+func queue_battle_defense(defense: String) -> Dictionary:
+	return queue_battle_command({"kind": "defense_request", "defense": defense})
 
 
 func queue_battle_item(item_id: String) -> Dictionary:
@@ -531,6 +572,14 @@ func queue_battle_command(input: Dictionary) -> Dictionary:
 	for rejected: Dictionary in preview.get("rejected", []):
 		if rejected.command.get("command_id") == command.command_id:
 			return {"ok": false, "error": rejected.error}
+	var normalized: Dictionary = {}
+	for accepted: Dictionary in preview.get("commands", []):
+		if accepted.get("command_id") == command.command_id:
+			normalized = accepted
+			break
+	if normalized.is_empty():
+		return {"ok": false, "error": "The battle request could not be validated."}
+	command = normalized.duplicate(true)
 	if command.kind == "item_use" and state.inventory.consumed_command_ids.size() >= CareRules.MAX_BATTLE_HISTORY:
 		return {"ok": false, "error": "The durable item history is full."}
 	_queued_battle_orders.append(command)
@@ -601,6 +650,8 @@ func finish_training_battle() -> Dictionary:
 		var error := "Battle reward could not be settled: %s" % reward_result.get("reason", "unknown")
 		active_battle_result.settlement_error = error
 		return {"ok": false, "error": error, "retryable": false}
+	if active_battle_result.has("mob_encounter") and active_battle_result.result.get("outcome") == "win":
+		reward_result.state.battle.mob_wins = mini(CareRules.MAX_ACTION_COUNT, int(reward_result.state.battle.mob_wins) + 1)
 	var committed := _commit_candidate(reward_result.state)
 	if not committed.ok:
 		# The repository discards uncommitted staged files. Roll back ONLY this reward

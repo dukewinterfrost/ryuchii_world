@@ -3,7 +3,10 @@ extends RefCounted
 
 ## Pure, deterministic care simulation. It never reads the clock, filesystem, or scene tree.
 
-const SAVE_SCHEMA_VERSION := 6
+const SAVE_SCHEMA_VERSION := 11
+const LEGACY_BATTLE_ITEMS := ["small_recovery", "mp_recovery"]
+static var WIN_ITEM_REWARDS: Dictionary = GameBalance.setting("care_rules.WIN_ITEM_REWARDS")
+const Status = preload("res://scripts/core/care_status_rules.gd")
 const Food = preload("res://scripts/core/food_rules.gd")
 const Definitions = preload("res://scripts/core/game_definitions.gd")
 const Habitat = preload("res://scripts/core/habitat_rules.gd")
@@ -19,12 +22,12 @@ const MAX_TIMESTAMP := 253402300799.0
 const BATTLE_MAX_HP := 9999
 const BATTLE_MAX_MP := 9999
 const BATTLE_MAX_STAT := 999
-const HUNGER_SECONDS_PER_POINT := 300.0
-const POOP_INTERVAL_SECONDS := 900.0
-const VIRUS_PER_DIRTY_HOUR := 6.0
-const HAPPINESS_LOSS_PER_DIRTY_HOUR := 1.0
+static var HUNGER_SECONDS_PER_POINT: float = GameBalance.setting("care_rules.HUNGER_SECONDS_PER_POINT")
+static var POOP_INTERVAL_SECONDS: float = GameBalance.setting("care_rules.POOP_INTERVAL_SECONDS")
+static var VIRUS_PER_DIRTY_HOUR: float = GameBalance.setting("care_rules.VIRUS_PER_DIRTY_HOUR")
+static var HAPPINESS_LOSS_PER_DIRTY_HOUR: float = GameBalance.setting("care_rules.HAPPINESS_LOSS_PER_DIRTY_HOUR")
 
-const EVOLUTION_RULES := Definitions.EVOLUTIONS
+static var EVOLUTION_RULES: Dictionary = Definitions.EVOLUTIONS
 
 const SPECIES_NAMES := {
 	"botamon": "Botamon",
@@ -44,6 +47,7 @@ const NATURES := ["Bold", "Gentle", "Jolly", "Calm", "Earnest", "Stubborn"]
 static func make_new_state(now_unix: float, nature: String = "Gentle") -> Dictionary:
 	var chosen_nature := nature if nature in NATURES else "Gentle"
 	return {
+		"enclosure": EnclosureRules.initial(),
 		"identity": {
 			"player_name": "Tamer",
 			"companion_name": "Byte",
@@ -53,16 +57,17 @@ static func make_new_state(now_unix: float, nature: String = "Gentle") -> Dictio
 			"nature": chosen_nature,
 		},
 		"care": {
+			"status": Status.initial(),
 			"food": Food.initial(),
 			"fatigue": 0.0,
 			"potty_habit": 0.0,
 			"stage_care_mistakes": 0,
-			"hunger": 78.0,
-			"happiness": 72.0,
-			"discipline": 42.0,
+			"hunger": float(GameBalance.setting("care.initial").hunger),
+			"happiness": float(GameBalance.setting("care.initial").happiness),
+			"discipline": float(GameBalance.setting("care.initial").discipline),
 			"virus": 0.0,
 			"bond": 0.0,
-			"weight": 5.0,
+			"weight": float(GameBalance.setting("care.initial").weight),
 			"care_mistakes": 0,
 			"poop_count": 0,
 			"poop_slots": [false, false, false],
@@ -81,16 +86,17 @@ static func make_new_state(now_unix: float, nature: String = "Gentle") -> Dictio
 			"evolution_count": 0,
 		},
 		"battle_profile": {
-			"hp": 100,
-			"mp": 60,
-			"offense": 8,
-			"defense": 8,
-			"speed": 8,
-			"brains": 8,
+			"hp": int(GameBalance.setting("player.initial_stats")["hp"]),
+			"mp": int(GameBalance.setting("player.initial_stats")["mp"]),
+			"offense": int(GameBalance.setting("player.initial_stats")["offense"]),
+			"defense": int(GameBalance.setting("player.initial_stats")["defense"]),
+			"speed": int(GameBalance.setting("player.initial_stats")["speed"]),
+			"brains": int(GameBalance.setting("player.initial_stats")["brains"]),
 			"implementation_status": "active",
 		},
 		"battle": {
 			"next_serial": 1,
+			"mob_wins": 0,
 			"completed_battle_ids": [],
 			"wins": 0,
 			"losses": 0,
@@ -123,10 +129,11 @@ static func advance_time(state: Dictionary, now_unix: float, engaged_seconds: fl
 	var effective_now := maxf(previous_time, now_unix)
 	var elapsed := effective_now - previous_time
 	if not training_active:
-		care["fatigue"] = maxf(0.0, float(care.get("fatigue", 0.0)) - elapsed / 60.0)
+		care["fatigue"] = maxf(0.0, float(care.get("fatigue", 0.0)) - elapsed / float(GameBalance.setting("care.rest_seconds_per_fatigue")))
 
 	care["hunger"] = clampf(float(care.get("hunger", MAX_HUNGER)) - elapsed / HUNGER_SECONDS_PER_POINT, 0.0, MAX_HUNGER)
-	progression["active_seconds"] = maxf(0.0, float(progression.get("active_seconds", 0.0)) + maxf(0.0, engaged_seconds))
+	var sleeping: bool = care.status.sleeping
+	progression["active_seconds"] = maxf(0.0, float(progression.get("active_seconds", 0.0)) + (0.0 if sleeping else maxf(0.0, engaged_seconds)))
 
 	var poop_count := int(care.get("poop_count", 0))
 	var poop_slots: Array = (care.get("poop_slots", [false, false, false]) as Array).duplicate()
@@ -140,7 +147,7 @@ static func advance_time(state: Dictionary, now_unix: float, engaged_seconds: fl
 	# The same pinned habitat manifest that authorizes live movement also
 	# authorizes automatic potty use. Presentation failure must never erase its
 	# blockers or make an otherwise unreachable entrance usable.
-	var automatic_potty := float(care.get("potty_habit", 0.0)) >= 60.0 and float(care.discipline) >= 50.0 \
+	var automatic_potty := float(care.discipline) >= float(Definitions.CARE_TUNING.potty_discipline_required) \
 		and not Habitat.path_to_potty(next.get("habitat", {}), Vector2i(-1, -1), habitat_manifest).is_empty()
 	var missed_intervals := 0 if automatic_potty else due_intervals
 	var spawned := mini(missed_intervals, MAX_POOP - poop_count)
@@ -165,15 +172,20 @@ static func advance_time(state: Dictionary, now_unix: float, engaged_seconds: fl
 	if dirty_poops_seconds > 0.0:
 		care["virus"] = clampf(float(care.get("virus", 0.0)) + dirty_poops_seconds / 3600.0 * VIRUS_PER_DIRTY_HOUR, 0.0, 100.0)
 		care["happiness"] = clampf(float(care.get("happiness", 50.0)) - dirty_poops_seconds / 3600.0 * HAPPINESS_LOSS_PER_DIRTY_HOUR, 0.0, 100.0)
-	if float(care["hunger"]) <= 15.0 and elapsed > 0.0:
-		care["happiness"] = clampf(float(care.get("happiness", 50.0)) - elapsed / 1800.0, 0.0, 100.0)
+	if float(care["hunger"]) <= float(GameBalance.setting("care.hungry_threshold")) and elapsed > 0.0:
+		care["happiness"] = clampf(float(care.get("happiness", 50.0)) - elapsed / float(GameBalance.setting("care.hungry_happiness_seconds")), 0.0, 100.0)
 
 	meta["last_update_time"] = effective_now
-	Food.advance(next, effective_now, 0.0 if training_active else maxf(0.0, engaged_seconds))
+	Food.advance(next, effective_now, 0.0 if training_active or sleeping or care.status.sick else maxf(0.0, engaged_seconds))
+	Status.advance(next, elapsed, 0.0 if sleeping else engaged_seconds, training_active)
 	return next
 
 
 static func apply_command(state: Dictionary, action: String, payload: String = "", now_unix: float = -1.0) -> Dictionary:
+	if action in ["sleep", "wake"]:
+		return Status.sleep_command(state, action == "wake")
+	if (state.care.status.sleeping and action != "clean") or (state.care.status.sick and action == "play"):
+		return {"state": state.duplicate(true), "accepted": false, "rewarded": false, "bond_gain": 0.0, "animation": "idle", "message": "Let's rest first. Use Tools to sleep or wake up."}
 	var next := state.duplicate(true)
 	var care: Dictionary = next["care"]
 	var progression: Dictionary = next["progression"]
@@ -195,21 +207,21 @@ static func apply_command(state: Dictionary, action: String, payload: String = "
 				care.happiness = clampf(float(care.happiness) + float(changes[0]), 0.0, 100.0)
 				care.discipline = clampf(float(care.discipline) + float(changes[1]), 0.0, 100.0)
 				progression.last_social_reward_at = maxf(0.001, now)
-				base_bond = 2.0 if action == "pet" else 0.0
+				base_bond = float(GameBalance.setting("care.pet_bond")) if action == "pet" else 0.0
 		"feed":
 			if not payload.is_empty() and not Food.FOODS.has(payload):
 				accepted = false
 				message = "That food isn't in the pantry."
-			elif float(care.get("hunger", MAX_HUNGER)) >= 96.0:
+			elif float(care.get("hunger", MAX_HUNGER)) >= float(GameBalance.setting("food.full_threshold")):
 				accepted = false
 				message = "I'm full right now. Let's save that for later."
 			else:
 				var craved := not payload.is_empty() and Food.active(next, now) == payload
 				var favorite := not payload.is_empty() and Food.favorite(String(next.identity.species_id)) == payload
-				care["hunger"] = clampf(float(care["hunger"]) + 30.0, 0.0, MAX_HUNGER)
-				care["happiness"] = clampf(float(care["happiness"]) + 5.0 + (3.0 if favorite else 0.0) + (6.0 if craved else 0.0), 0.0, 100.0)
-				care["weight"] = clampf(float(care.get("weight", 5.0)) + 0.25, 1.0, 99.0)
-				base_bond = 5.0 + (3.0 if craved else 0.0)
+				care["hunger"] = clampf(float(care["hunger"]) + float(GameBalance.setting("food.hunger_gain")), 0.0, MAX_HUNGER)
+				care["happiness"] = clampf(float(care["happiness"]) + float(GameBalance.setting("food.happiness_gain")) + (float(GameBalance.setting("food.favorite_happiness")) if favorite else 0.0) + (float(GameBalance.setting("food.craving_happiness")) if craved else 0.0), 0.0, 100.0)
+				care["weight"] = clampf(float(care.get("weight", 5.0)) + float(GameBalance.setting("food.weight_gain")), 1.0, 99.0)
+				base_bond = float(GameBalance.setting("food.bond_gain")) + (float(GameBalance.setting("food.craving_bond")) if craved else 0.0)
 				message = "That's exactly what I was craving!" if craved else ("%s! My favorite!" % Food.label(payload) if favorite else "That hit the spot!")
 				if craved or float(care.hunger) > Food.MAX_FULLNESS:
 					care.food.craving = ""
@@ -218,17 +230,19 @@ static func apply_command(state: Dictionary, action: String, payload: String = "
 					care.food.satisfied = mini(int(care.food.satisfied) + 1, MAX_ACTION_COUNT)
 				animation = "eat"
 		"play":
-			care["happiness"] = clampf(float(care["happiness"]) + 11.0, 0.0, 100.0)
-			care["discipline"] = clampf(float(care["discipline"]) - 1.0, 0.0, 100.0)
-			base_bond = 4.0
-			message = "Again! That was fun."
+			var requested := Status.wish(next, now) == "play"
+			care["happiness"] = clampf(float(care["happiness"]) + float(GameBalance.setting("care.play_happiness")) + (float(GameBalance.setting("care.wish_play_happiness")) if requested else 0.0), 0.0, 100.0)
+			care["discipline"] = clampf(float(care["discipline"]) - float(GameBalance.setting("care.play_discipline_cost")), 0.0, 100.0)
+			base_bond = float(GameBalance.setting("care.play_bond")) + (float(GameBalance.setting("care.wish_play_bond")) if requested else 0.0)
+			message = "Just what I wanted! That was extra fun." if requested else "Again! That was fun."
+			if requested: Status.clear_wish(care.status)
 		"chat":
 			if payload.strip_edges().is_empty():
 				accepted = false
 				message = "Say something and I'll listen."
 			else:
-				care["happiness"] = clampf(float(care["happiness"]) + 3.0, 0.0, 100.0)
-				base_bond = 3.0
+				care["happiness"] = clampf(float(care["happiness"]) + float(GameBalance.setting("care.chat_happiness")), 0.0, 100.0)
+				base_bond = float(GameBalance.setting("care.chat_bond"))
 				message = companion_reply(next, payload)
 				animation = "happy"
 		"clean":
@@ -252,9 +266,9 @@ static func apply_command(state: Dictionary, action: String, payload: String = "
 					poop_slots[selected_slot] = false
 					care["poop_slots"] = poop_slots
 					care["poop_count"] = int(care["poop_count"]) - 1
-					care["virus"] = clampf(float(care["virus"]) - 18.0, 0.0, 100.0)
-					care["happiness"] = clampf(float(care["happiness"]) + 2.0, 0.0, 100.0)
-					base_bond = 2.0
+					care["virus"] = clampf(float(care["virus"]) - float(GameBalance.setting("care.clean_virus_reduction")), 0.0, 100.0)
+					care["happiness"] = clampf(float(care["happiness"]) + float(GameBalance.setting("care.clean_happiness")), 0.0, 100.0)
+					base_bond = float(GameBalance.setting("care.clean_bond"))
 					message = "Fresh field, fresh start!"
 		_:
 			accepted = false
@@ -266,7 +280,7 @@ static func apply_command(state: Dictionary, action: String, payload: String = "
 		var streak := int(progression.get("repeat_streak", 0)) + 1 if previous_action == action else 1
 		progression["repeat_streak"] = streak
 		progression["last_action"] = action
-		var multiplier: float = [1.0, 0.55, 0.25, 0.1][mini(streak - 1, 3)]
+		var multiplier: float = GameBalance.setting("care.repeat_multipliers")[mini(streak - 1, 3)]
 		bond_gain = base_bond * multiplier
 		care["bond"] = clampf(float(care.get("bond", 0.0)) + bond_gain, 0.0, 100.0)
 		var counts: Dictionary = progression.get("valid_action_counts", {})
@@ -450,10 +464,7 @@ static func apply_battle_reward(state: Dictionary, battle_id: String, outcome: S
 		return {"state": next, "awarded": false, "reason": "already_awarded", "reward": {}}
 	if completed.size() >= MAX_BATTLE_HISTORY:
 		return {"state": next, "awarded": false, "reason": "history_full", "reward": {}}
-	var reward := {
-		"bond": 2 if outcome == "win" else 1,
-		"training_points": 3 if outcome == "win" else (2 if outcome == "draw" else 1),
-	}
+	var reward: Dictionary = GameBalance.setting("rewards.outcomes")[outcome].duplicate(true)
 	completed = completed.duplicate()
 	completed.append(battle_id)
 	battle["completed_battle_ids"] = completed
@@ -467,40 +478,47 @@ static func apply_battle_reward(state: Dictionary, battle_id: String, outcome: S
 	var care: Dictionary = next["care"]
 	care["bond"] = clampf(float(care.get("bond", 0.0)) + float(reward["bond"]), 0.0, 100.0)
 	if outcome == "win":
-		reward["items"] = {"small_recovery": 1, "mp_recovery": 1}
-		for item: String in Definitions.ITEMS:
-			next.inventory.items[item] = mini(MAX_ACTION_COUNT, int(next.inventory.items[item]) + 1)
+		reward["items"] = WIN_ITEM_REWARDS.duplicate()
+		for item: String in WIN_ITEM_REWARDS:
+			next.inventory.items[item] = mini(MAX_ACTION_COUNT, int(next.inventory.items[item]) + int(WIN_ITEM_REWARDS[item]))
 	return {"state": next, "awarded": true, "reason": "awarded", "reward": reward}
 
 
 static func training_readiness(state: Dictionary, stat: String) -> Dictionary:
+	if state.care.status.sleeping or state.care.status.sick:
+		return {"ok": false, "error": "Finish a full sleep before training while sick or asleep."}
 	if not Definitions.TRAINING.has(stat):
 		return {"ok": false, "error": "Unknown training session."}
-	if float(state.care.hunger) < 20.0:
-		return {"ok": false, "error": "Feed your companion before training (20 fullness required)."}
-	if float(state.care.fatigue) > 70.0:
-		return {"ok": false, "error": "Rest before training (fatigue must be 70 or less)."}
+	if float(state.care.hunger) < float(GameBalance.setting("training.min_fullness")):
+		return {"ok": false, "error": "Feed your companion before training (%.0f fullness required)." % float(GameBalance.setting("training.min_fullness"))}
+	if float(state.care.fatigue) > float(GameBalance.setting("training.max_fatigue")):
+		return {"ok": false, "error": "Rest before training (fatigue must be %.0f or less)." % float(GameBalance.setting("training.max_fatigue"))}
 	return {"ok": true, "error": ""}
 
 
 ## Caller owns the transient active session and foreground elapsed time. Never
 ## restore an active session from disk. Commit this returned state before showing rewards.
-static func complete_training(state: Dictionary, stat: String, session_id: String, elapsed_seconds: float) -> Dictionary:
+static func complete_training(state: Dictionary, stat: String, session_id: String, elapsed_seconds: float, context: Dictionary = {}) -> Dictionary:
 	var result := {"ok": false, "state": state.duplicate(true), "error": "Training session is incomplete or already awarded."}
 	if not Definitions.TRAINING.has(stat) or session_id.is_empty() or session_id.length() > 96 or elapsed_seconds < Definitions.TRAINING_SECONDS or not is_finite(elapsed_seconds) or session_id == String(state.progression.last_training_id):
 		return result
 	var next: Dictionary = result.state
+	if state.care.status.sleeping or state.care.status.sick: return result
+	var motivation := Status.training_context(state, float(state.meta.last_update_time)) if context.is_empty() else context
 	var definition: Dictionary = Definitions.TRAINING[stat]
-	next.battle_profile[stat] = mini(int(definition.cap), int(next.battle_profile[stat]) + int(definition.gain))
-	next.care.fatigue = minf(100.0, float(next.care.fatigue) + 15.0)
-	next.care.hunger = maxf(0.0, float(next.care.hunger) - 5.0)
-	next.care.discipline = minf(100.0, float(next.care.discipline) + 2.0)
-	next.care.happiness = maxf(0.0, float(next.care.happiness) - 2.0)
+	var bonus := (int(GameBalance.setting("training.wish_meter_bonus")) if stat in ["hp", "mp"] else int(GameBalance.setting("training.wish_stat_bonus"))) if motivation.get("wish_bonus", false) else 0
+	next.battle_profile[stat] = maxi(int(next.battle_profile[stat]), mini(int(definition.cap), int(next.battle_profile[stat]) + int(definition.gain) + bonus))
+	next.care.fatigue = minf(100.0, float(next.care.fatigue) + float(GameBalance.setting("training.fatigue_gain")))
+	next.care.hunger = maxf(0.0, float(next.care.hunger) - float(GameBalance.setting("training.hunger_cost")))
+	next.care.discipline = minf(100.0, float(next.care.discipline) + float(GameBalance.setting("training.discipline_gain")))
+	next.care.happiness = maxf(0.0, float(next.care.happiness) - float(GameBalance.setting("training.happiness_cost")))
 	next.progression.training_history[stat] = mini(MAX_ACTION_COUNT, int(next.progression.training_history[stat]) + 1)
 	next.progression.last_training_id = session_id
 	result.ok = true
 	result.error = ""
-	result["gain"] = int(definition.gain)
+	result["gain"] = int(next.battle_profile[stat]) - int(state.battle_profile[stat])
+	result["wish_bonus"] = bonus
+	result["became_sick"] = Status.training_effects(next, motivation)
 	return result
 
 
@@ -518,8 +536,8 @@ static func complete_potty_guidance(state: Dictionary, now_unix: float, creature
 		return result
 	var next: Dictionary = result.state
 	next.care.next_poop_at = float(next.care.next_poop_at) + POOP_INTERVAL_SECONDS
-	next.care.potty_habit = minf(100.0, float(next.care.potty_habit) + 20.0)
-	next.care.discipline = minf(100.0, float(next.care.discipline) + 2.0)
+	next.care.potty_habit = minf(100.0, float(next.care.potty_habit) + float(GameBalance.setting("care.potty_habit_gain")))
+	next.care.discipline = minf(100.0, float(next.care.discipline) + float(GameBalance.setting("training.discipline_gain")))
 	next.habitat.creature_cell = [creature_cell.x, creature_cell.y]
 	result.ok = true
 	result.error = ""
@@ -527,11 +545,100 @@ static func complete_potty_guidance(state: Dictionary, now_unix: float, creature
 
 
 static func state_is_valid(state: Dictionary) -> bool:
+	if not state.get("battle") is Dictionary or not _integer_in_range(state.battle.get("mob_wins"), 0, MAX_ACTION_COUNT): return false
+	var projected := state.duplicate(true)
+	projected.battle.erase("mob_wins")
+	return _state_v10_is_valid(projected)
+
+
+static func migrate_state_v10(value: Dictionary) -> Dictionary:
+	if state_is_valid(value): return value.duplicate(true)
+	if not _state_v10_is_valid(value): return {}
+	var next := value.duplicate(true)
+	next.battle["mob_wins"] = 0
+	return next
+
+
+static func _state_v10_is_valid(state: Dictionary) -> bool:
+	if not EnclosureRules.valid(state.get("enclosure")): return false
+	if not state.get("inventory") is Dictionary: return false
+	for key: String in ["decor", "decor_owned"]:
+		if not state.inventory.get(key) is Dictionary or not _has_exact_keys(state.inventory[key], Definitions.DECOR.keys()): return false
+	var legacy := state.duplicate(true)
+	legacy.erase("enclosure")
+	return _state_v8_is_valid(legacy, false)
+
+
+static func migrate_state_v8(value: Dictionary) -> Dictionary:
+	if state_is_valid(value): return value.duplicate(true)
+	if not _state_v8_is_valid(value): return {}
+	var next := value.duplicate(true)
+	next["enclosure"] = EnclosureRules.initial()
+	for key: String in ["decor", "decor_owned"]:
+		for kind: String in Definitions.DECOR:
+			if not next.inventory[key].has(kind): next.inventory[key][kind] = 0
+	return migrate_state_v9(next)
+
+
+static func migrate_state_v9(value: Dictionary) -> Dictionary:
+	# The envelope chooses this migration exactly once; a geometrically valid
+	# larger layout needs no relocation and preserves all balances verbatim.
+	if state_is_valid(value): return value.duplicate(true)
+	if _state_v10_is_valid(value): return migrate_state_v10(value)
+	if not EnclosureRules.valid(value.get("enclosure")) or not _state_v8_is_valid(value, true): return {}
+	var next := value.duplicate(true)
+	next.habitat = EnclosureRules.enlarge_legacy_layout(next.habitat, next.inventory)
+	for region: String in next.habitats:
+		next.habitats[region] = EnclosureRules.enlarge_legacy_layout(next.habitats[region], next.inventory)
+	return migrate_state_v10(next)
+
+
+static func _state_v8_is_valid(state: Dictionary, legacy_geometry := true) -> bool:
+	if not state.get("inventory") is Dictionary or not state.inventory.get("items") is Dictionary \
+			or not _has_exact_keys(state.inventory.items, Definitions.ITEM_IDENTITIES.keys()):
+		return false
+	for item: String in ["barrier", "haste"]:
+		if not _integer_in_range(state.inventory.items[item], 0, MAX_ACTION_COUNT):
+			return false
+	var legacy := state.duplicate(true)
+	legacy.inventory.items.erase("barrier")
+	legacy.inventory.items.erase("haste")
+	return _state_v7_is_valid(legacy, legacy_geometry)
+
+
+static func _state_v7_is_valid(state: Dictionary, legacy_geometry := true) -> bool:
+	if not state.get("care") is Dictionary or not Status.valid(state.care.get("status")):
+		return false
+	var legacy := state.duplicate(true)
+	legacy.care.erase("status")
+	return _state_v6_is_valid(legacy, legacy_geometry)
+
+
+static func migrate_state_v7(value: Dictionary) -> Dictionary:
+	if state_is_valid(value): return value.duplicate(true)
+	if not _state_v7_is_valid(value): return {}
+	var next := value.duplicate(true)
+	# Schema advancement is the one-time starter grant marker. An already migrated
+	# save, including one whose tactical supplies were spent, is never refilled.
+	next.inventory.items["barrier"] = 2
+	next.inventory.items["haste"] = 2
+	return migrate_state_v8(next)
+
+
+static func _state_v6_is_valid(state: Dictionary, legacy_geometry := true) -> bool:
 	if not state.get("care") is Dictionary or not Food.valid(state.care.get("food")):
 		return false
 	var legacy := state.duplicate(true)
 	legacy.care.erase("food")
-	return _state_v5_is_valid(legacy)
+	return _state_v5_is_valid(legacy, legacy_geometry)
+
+
+static func migrate_state_v6(value: Dictionary) -> Dictionary:
+	if state_is_valid(value): return value.duplicate(true)
+	if not _state_v6_is_valid(value): return {}
+	var next := value.duplicate(true)
+	next.care["status"] = Status.initial()
+	return migrate_state_v7(next)
 
 
 static func migrate_state_v5(value: Dictionary) -> Dictionary:
@@ -545,10 +652,12 @@ static func migrate_state_v5(value: Dictionary) -> Dictionary:
 	if not _state_v5_is_valid(migrated):
 		return {}
 	migrated.care["food"] = Food.initial()
-	return migrated
+	return migrate_state_v6(migrated)
 
 
-static func _state_v5_is_valid(state: Dictionary) -> bool:
+static func _state_v5_is_valid(state: Dictionary, legacy_geometry := true) -> bool:
+	state = state.duplicate(true)
+	state.erase("enclosure")
 	if not _has_exact_keys(state, ["identity", "care", "progression", "battle_profile", "battle", "meta", "habitat", "home_region", "habitats", "inventory", "skills"]):
 		return false
 	for section: String in ["identity", "care", "progression", "battle_profile", "battle", "meta", "habitat", "inventory", "skills"]:
@@ -561,7 +670,7 @@ static func _state_v5_is_valid(state: Dictionary) -> bool:
 	for region_value: Variant in state.habitats:
 		if not region_value is String or Habitat.resolve_region_alias(region_value) != region_value or not Habitat.region_is_known(region_value):
 			return false
-		if not state.habitats[region_value] is Dictionary or not bool(Habitat.validate_layout(state.habitats[region_value]).ok):
+		if not state.habitats[region_value] is Dictionary or not bool(Habitat.validate_layout(state.habitats[region_value], Vector2i(-1, -1), {}, legacy_geometry).ok):
 			return false
 	var care: Dictionary = state.care
 	for meter: String in ["fatigue", "potty_habit"]:
@@ -582,7 +691,7 @@ static func _state_v5_is_valid(state: Dictionary) -> bool:
 	for inactive_region: String in state.habitats:
 		if not Habitat.region_is_unlocked(inactive_region, progress.story_flags):
 			return false
-	if not bool(Habitat.validate_layout(state.habitat).ok):
+	if not bool(Habitat.validate_layout(state.habitat, Vector2i(-1, -1), {}, legacy_geometry).ok):
 		return false
 	var placed_ids := {}
 	var placed_totals := {}
@@ -604,16 +713,16 @@ static func _state_v5_is_valid(state: Dictionary) -> bool:
 	var inventory: Dictionary = state.inventory
 	if not _has_exact_keys(inventory, ["starter_granted", "items", "decor", "decor_owned", "consumed_command_ids"]) or inventory.starter_granted != true:
 		return false
-	if not inventory.items is Dictionary or not _has_exact_keys(inventory.items, Definitions.ITEMS.keys()) \
-			or not inventory.decor is Dictionary or not _has_exact_keys(inventory.decor, Definitions.DECOR.keys()) \
-			or not inventory.decor_owned is Dictionary or not _has_exact_keys(inventory.decor_owned, Definitions.DECOR.keys()):
+	if not inventory.items is Dictionary or not _has_exact_keys(inventory.items, LEGACY_BATTLE_ITEMS) \
+			or not inventory.decor is Dictionary or not (_has_exact_keys(inventory.decor, Definitions.DECOR.keys()) or _has_exact_keys(inventory.decor, Definitions.LEGACY_DECOR)) \
+			or not inventory.decor_owned is Dictionary or not (_has_exact_keys(inventory.decor_owned, Definitions.DECOR.keys()) or _has_exact_keys(inventory.decor_owned, Definitions.LEGACY_DECOR)):
 		return false
 	for collection: Dictionary in [inventory.items, inventory.decor, inventory.decor_owned]:
 		for key: String in collection:
 			if not _integer_in_range(collection[key], 0, MAX_ACTION_COUNT):
 				return false
 	for item_id: String in Definitions.DECOR:
-		if int(inventory.decor[item_id]) + int(placed_totals[item_id]) != int(inventory.decor_owned[item_id]):
+		if int(inventory.decor.get(item_id, 0)) + int(placed_totals[item_id]) != int(inventory.decor_owned.get(item_id, 0)):
 			return false
 	if not inventory.consumed_command_ids is Array or inventory.consumed_command_ids.size() > MAX_BATTLE_HISTORY:
 		return false
@@ -627,7 +736,7 @@ static func _state_v5_is_valid(state: Dictionary) -> bool:
 		return false
 	seen.clear()
 	for move: Variant in skills.learned:
-		if not move is String or not Definitions.MOVES.has(move) or not bool(Definitions.MOVES[move].equippable) or seen.has(move):
+		if not move is String or not Definitions.MOVE_IDENTITIES.has(move) or not bool(Definitions.MOVE_IDENTITIES[move].equippable) or seen.has(move):
 			return false
 		seen[move] = true
 	seen.clear()
@@ -840,6 +949,8 @@ static func migrate_state_v3(legacy_state: Dictionary) -> Dictionary:
 	# one-time centering translation into the 40x48 Green Shade home.
 	migrated["habitat"] = Habitat.default_layout(Vector2i(10, 12))
 	migrated["inventory"] = Definitions.default_inventory()
+	migrated.inventory.items.erase("barrier")
+	migrated.inventory.items.erase("haste")
 	migrated["skills"] = Definitions.default_skills(String(migrated.identity.species_id))
 	return migrate_state_v4(migrated)
 

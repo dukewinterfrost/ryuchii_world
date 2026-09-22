@@ -181,14 +181,14 @@ func _inspect_encoded(encoded: String) -> Dictionary:
 	var schema_version := int(raw_version)
 	if schema_version > CareRules.SAVE_SCHEMA_VERSION:
 		return {"status": "future", "schema_version": schema_version, "envelope": envelope, "encoded": encoded}
-	if schema_version != CareRules.SAVE_SCHEMA_VERSION and schema_version not in [1, 2, 3, 4, 5]:
+	if schema_version != CareRules.SAVE_SCHEMA_VERSION and schema_version not in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]:
 		return {"status": "invalid", "schema_version": schema_version, "envelope": {}, "encoded": encoded}
 	var saved_at: Variant = envelope.get("savedAt", null)
 	if not _is_nonnegative_number(saved_at):
 		return {"status": "invalid", "schema_version": schema_version, "envelope": {}, "encoded": encoded}
 	if not envelope.get("companion", null) is Dictionary:
 		return {"status": "invalid", "schema_version": schema_version, "envelope": {}, "encoded": encoded}
-	if schema_version in [1, 2, 3, 4, 5]:
+	if schema_version in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]:
 		var migrated_state: Dictionary
 		match schema_version:
 			1: migrated_state = CareRules.migrate_state_v1(envelope["companion"])
@@ -196,6 +196,11 @@ func _inspect_encoded(encoded: String) -> Dictionary:
 			3: migrated_state = CareRules.migrate_state_v3(envelope["companion"])
 			4: migrated_state = CareRules.migrate_state_v4(envelope["companion"])
 			5: migrated_state = CareRules.migrate_state_v5(envelope["companion"])
+			6: migrated_state = CareRules.migrate_state_v6(envelope["companion"])
+			7: migrated_state = CareRules.migrate_state_v7(envelope["companion"])
+			8: migrated_state = CareRules.migrate_state_v8(envelope["companion"])
+			9: migrated_state = CareRules.migrate_state_v9(envelope["companion"])
+			10: migrated_state = CareRules.migrate_state_v10(envelope["companion"])
 		if migrated_state.is_empty():
 			return {"status": "invalid", "schema_version": schema_version, "envelope": {}, "encoded": encoded}
 		var migrated_envelope := envelope.duplicate(true)

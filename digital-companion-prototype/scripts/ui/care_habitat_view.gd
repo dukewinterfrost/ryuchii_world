@@ -6,6 +6,7 @@ signal creature_cell_changed(cell: Vector2i)
 signal route_completed(guided: bool)
 signal waste_selected(slot: int)
 signal camera_changed(zoom_multiplier: float, follow: bool)
+signal facility_arrived(action: String)
 signal draft_changed
 
 const WORLD_SIZE := Vector2(HabitatRules.WIDTH * HabitatRules.CELL_SIZE, HabitatRules.HEIGHT * HabitatRules.CELL_SIZE)
@@ -27,6 +28,9 @@ var presentation_notice := ""
 var layout: Dictionary = {}
 var draft: Dictionary = {}
 var editing := false
+var _before_edit_zoom := 1.0
+var _flame_frame := -1
+var _facility_action := ""
 var selected_id := ""
 var zoom_multiplier := 1.0
 var follow := true
@@ -47,6 +51,7 @@ var _focused := true
 var _acknowledged_cell := Vector2i(20, 24)
 var _camera_save_delay := -1.0
 var _care_pause := 0.0
+var sleeping := false
 var _manual_pan_ground := Vector2.ZERO
 var _camera_initialized := false
 var _care_textures_3d: Dictionary = {}
@@ -137,6 +142,10 @@ func update_snapshot(snapshot: Dictionary) -> void:
 	var first_snapshot := not _camera_initialized
 	var saved_camera_changed: bool = first_snapshot or layout.get("camera", {}) != snapshot.habitat.camera
 	layout = (snapshot.habitat as Dictionary).duplicate(true)
+	if using_3d and environment_3d.environment_manifest.get("assetId") == "builtin-care-clearing":
+		habitat_manifest = preload("res://scripts/environment/native_care_scenery.gd").resolve(layout, habitat_manifest)
+		environment_3d.sync_native_care_trees(habitat_manifest.get("nativeTrees", []))
+		environment_3d.suppress_built_scenery(layout)
 	# Durable state always wins over an in-flight presentation. This also repairs
 	# rejected movement commits without leaving the 2D/3D avatars divergent.
 	var incoming_cell := Vector2i(int(layout.creature_cell[0]), int(layout.creature_cell[1]))
@@ -147,6 +156,11 @@ func update_snapshot(snapshot: Dictionary) -> void:
 		zoom_multiplier = float(layout.camera.zoom)
 		follow = bool(layout.camera.follow)
 	avatar.configure(String(snapshot.identity.species_id))
+	var was_sleeping := sleeping
+	sleeping = bool(snapshot.care.status.sleeping)
+	if sleeping and not was_sleeping:
+		stop_route()
+		play_loop("idle")
 	set_meta("species_id", String(snapshot.identity.species_id))
 	environment_3d.set_reduced_motion(reduced_motion)
 	if using_3d and is_instance_valid(avatar_3d):
@@ -188,10 +202,27 @@ func update_snapshot(snapshot: Dictionary) -> void:
 	ground.queue_redraw()
 	_sync_3d_decor(layout)
 	_sync_3d_waste(snapshot.care.poop_slots)
+	if using_3d and is_instance_valid(care_visuals_3d):
+		for water: MeshInstance3D in care_visuals_3d.find_children("RecessedWater", "MeshInstance3D", true, false):
+			var material := water.get_active_material(0) as ShaderMaterial
+			if material != null: material.set_shader_parameter("reduced_motion", reduced_motion)
 	_fit_camera()
 
 
 func _process(delta: float) -> void:
+	var frame := 0 if reduced_motion else int(Time.get_ticks_msec() / 125) % 4
+	if frame != _flame_frame:
+		_flame_frame = frame
+		if using_3d and is_instance_valid(care_visuals_3d):
+			var group := care_visuals_3d.get_node_or_null("HomeDecor")
+			if group != null:
+				for card: Node in group.find_children("*", "Sprite3D", true, false):
+					if card is Sprite3D and card.get_meta("enclosure_flame", false): card.frame = frame
+		elif not using_3d:
+			for visual: Node2D in _decor.values():
+				if visual.item.item_id == "campfire":
+					visual.flame_frame = frame
+					visual.queue_redraw()
 	_sync_care_effects_3d()
 	if _camera_save_delay >= 0:
 		_camera_save_delay -= delta
@@ -200,7 +231,7 @@ func _process(delta: float) -> void:
 	if layout.is_empty() or not _focused:
 		return
 	_care_pause = maxf(0.0, _care_pause - delta)
-	if editing or avatar.is_care_action_playing() or _care_pause > 0.0:
+	if sleeping or editing or avatar.is_care_action_playing() or _care_pause > 0.0:
 		return
 	if not _path.is_empty():
 		var destination := cell_center(_path[0])
@@ -219,6 +250,10 @@ func _process(delta: float) -> void:
 				avatar.play_loop("idle")
 				if using_3d and is_instance_valid(avatar_3d): avatar_3d.play_loop("idle")
 				_roam_wait = _rng.randf_range(2.0, 5.0)
+				if not _facility_action.is_empty():
+					var action := _facility_action
+					_facility_action = ""
+					facility_arrived.emit(action)
 				if _route_is_potty:
 					var was_guided := _guided
 					_route_is_potty = false
@@ -250,6 +285,7 @@ static func cell_center(cell: Vector2i) -> Vector2:
 
 
 func begin_route(path: Array, guided: bool) -> void:
+	_facility_action = ""
 	_path.clear()
 	for cell: Vector2i in path:
 		_path.append(cell)
@@ -259,7 +295,14 @@ func begin_route(path: Array, guided: bool) -> void:
 		_route_is_potty = false
 
 
+func begin_facility_route(path: Array, action: String) -> void:
+	stop_route()
+	for cell: Vector2i in path: _path.append(cell)
+	_facility_action = action if not _path.is_empty() else ""
+
+
 func stop_route() -> void:
+	_facility_action = ""
 	_path.clear()
 	avatar.position = cell_center(_acknowledged_cell)
 	_roam_wait = 3.0
@@ -460,6 +503,10 @@ func _motion(point: Vector2) -> void:
 
 func begin_edit() -> void:
 	stop_route()
+	_before_edit_zoom = zoom_multiplier
+	zoom_multiplier = minf(zoom_multiplier, 0.65)
+	if using_3d: environment_3d.set_home_zoom_multiplier(zoom_multiplier, true)
+	_fit_camera()
 	editing = true
 	draft = layout.duplicate(true)
 	draft.creature_cell = [creature_cell().x, creature_cell().y]
@@ -468,6 +515,9 @@ func begin_edit() -> void:
 
 
 func end_edit() -> void:
+	zoom_multiplier = _before_edit_zoom
+	if using_3d: environment_3d.set_home_zoom_multiplier(zoom_multiplier, true)
+	_fit_camera()
 	editing = false
 	draft.clear()
 	selected_id = ""
@@ -475,6 +525,7 @@ func end_edit() -> void:
 	if using_3d:
 		environment_3d.set_debug_group_visible("CareGrid", false)
 		environment_3d.set_debug_group_visible("CareSelection", false)
+		environment_3d.set_debug_group_visible("CareEntrances", false)
 	_sync_decor(layout)
 	_sync_3d_decor(layout)
 	ground.queue_redraw()
@@ -487,7 +538,8 @@ func place_item(item_id: String) -> void:
 	var focus := avatar.position + _manual_pan_ground if using_3d else camera.position
 	var cell := Vector2i(focus / 32.0) + Vector2i(2, 1)
 	var dimensions := HabitatRules.grid_size(habitat_manifest)
-	draft.items.append({"instance_id": selected_id, "item_id": item_id, "x": clampi(cell.x, 0, dimensions.x - 3), "y": clampi(cell.y, 0, dimensions.y - 3), "rotation": 0})
+	var footprint: Array = GameDefinitions.DECOR[item_id].size
+	draft.items.append({"instance_id": selected_id, "item_id": item_id, "x": clampi(cell.x, 0, dimensions.x - int(footprint[0])), "y": clampi(cell.y, 0, dimensions.y - int(footprint[1])), "rotation": 0})
 	_refresh_draft()
 
 
@@ -517,7 +569,7 @@ func remove_selected() -> void:
 
 
 func draft_validity() -> Dictionary:
-	return HabitatRules.validate_layout(draft, creature_cell(), habitat_manifest)
+	return HabitatRules.validate_layout(draft, creature_cell(), EnclosureRules.placement_manifest(draft, habitat_manifest))
 
 
 func _refresh_draft() -> void:
@@ -525,6 +577,8 @@ func _refresh_draft() -> void:
 	ground.layout = draft
 	ground.selected_id = selected_id
 	ground.valid = bool(draft_validity().ok)
+	var game := get_node_or_null("/root/GameState")
+	if game != null and not game.state.is_empty(): ground.valid = ground.valid and bool(game.quote_habitat_layout(draft).ok)
 	_sync_decor(draft)
 	_sync_3d_decor(draft)
 	if using_3d:
@@ -533,12 +587,17 @@ func _refresh_draft() -> void:
 			lines.append([x * 32, 0, 1, WORLD_SIZE.y])
 		for y: int in HabitatRules.HEIGHT + 1:
 			lines.append([0, y * 32, WORLD_SIZE.x, 1])
-		environment_3d.set_debug_rectangles("CareGrid", lines, Color(0.95, 0.98, 0.79, 0.24))
+		environment_3d.set_debug_rectangles("CareGrid", lines, Color(0.95, 0.98, 0.79, 0.48))
 		var selection: Array = []
+		var entrances: Array = []
 		for item: Dictionary in draft.get("items", []):
+			if GameDefinitions.DECOR[item.item_id].has("entrance"):
+				var entry := HabitatRules.facility_entrance(item)
+				entrances.append([entry.x * 32 + 6, entry.y * 32 + 6, 20, 20])
 			if String(item.instance_id) == selected_id:
 				for cell: Vector2i in HabitatRules.footprint(item):
 					selection.append([cell.x * 32 + 1, cell.y * 32 + 1, 30, 30])
+		environment_3d.set_debug_rectangles("CareEntrances", entrances, Color(1, 0.85, 0.35, 0.8))
 		environment_3d.set_debug_rectangles("CareSelection", selection, Color(0.45, 0.93, 0.60, 0.44) if ground.valid else Color(1.0, 0.2, 0.25, 0.45))
 	ground.queue_redraw()
 	draft_changed.emit()
@@ -609,10 +668,9 @@ func _sync_3d_decor(source: Dictionary) -> void:
 		var bounds := Rect2(Vector2(cells[0]) * 32.0, Vector2.ONE * 32.0)
 		for cell: Vector2i in cells:
 			bounds = bounds.merge(Rect2(Vector2(cell) * 32.0, Vector2.ONE * 32.0))
-		if String(item.item_id) == "rug":
-			group.add_child(_make_ground_card_3d(String(item.instance_id), bounds, _care_texture_3d("rug")))
-		else:
-			group.add_child(_make_upright_card_3d(String(item.instance_id), bounds, _care_texture_3d(String(item.item_id))))
+		var model := EnclosureModels.create(String(item.item_id), String(item.instance_id), int(item.rotation))
+		model.position = EnvironmentView3D.ground_to_world(bounds.get_center())
+		group.add_child(model)
 
 	environment_3d.register_home_lighting(group)
 
@@ -712,6 +770,8 @@ func _make_ground_card_3d(node_name: String, ground_bounds: Rect2, texture: Text
 
 
 func _care_texture_3d(kind: String) -> Texture2D:
+	if kind in ["digi_potty", "campfire", "pond", "flame"]:
+		return load("res://assets/enclosure/%s.png" % kind) as Texture2D
 	if _care_textures_3d.has(kind):
 		return _care_textures_3d[kind]
 	var dimensions := {"digi_potty": Vector2i(32, 32), "rug": Vector2i(48, 32), "planter": Vector2i(16, 24), "waste": Vector2i(16, 16)}.get(kind, Vector2i(16, 16)) as Vector2i
@@ -782,12 +842,19 @@ class Ground extends Node2D:
 			for item: Dictionary in layout.get("items", []):
 				var color := Color(0.35, 0.9, 0.65, 0.38) if valid else Color(1, 0.2, 0.25, 0.5)
 				for cell: Vector2i in HabitatRules.footprint(item):
-					draw_rect(Rect2(Vector2(cell) * 32, Vector2.ONE * 32), color, item.instance_id == selected_id, 2)
-				if item.item_id == "digi_potty":
+					draw_rect(Rect2(Vector2(cell) * 32, Vector2.ONE * 32), color, item.instance_id == selected_id, -1 if item.instance_id == selected_id else 2)
+				if GameDefinitions.DECOR[item.item_id].has("entrance"):
 					draw_circle(Vector2(HabitatRules.potty_entrance(item)) * 32 + Vector2(16, 16), 10, Color("ffe798"))
 
 
 class Decor extends Node2D:
+	const BUILDING_ART := {
+		"digi_potty": preload("res://assets/enclosure/digi_potty.png"),
+		"campfire": preload("res://assets/enclosure/campfire.png"),
+		"pond": preload("res://assets/enclosure/pond.png"),
+	}
+	const FLAME_ART = preload("res://assets/enclosure/flame-loop.png")
+	var flame_frame := 0
 	var item: Dictionary = {}
 	var footprint_size := Vector2.ZERO
 	func configure(value: Dictionary) -> void:
@@ -803,11 +870,21 @@ class Decor extends Node2D:
 		queue_redraw()
 	func _draw() -> void:
 		var center := Vector2(footprint_size.x * 0.5, -footprint_size.y * 0.5)
+		if String(item.get("item_id", "")) in ["digi_potty", "campfire", "pond"]:
+			var texture: Texture2D = BUILDING_ART[item.item_id]
+			var height := footprint_size.x * texture.get_height() / float(texture.get_width())
+			draw_texture_rect(texture, Rect2(Vector2(0, -height), Vector2(footprint_size.x, height)), false)
+			if item.item_id == "campfire":
+				var flame: Texture2D = FLAME_ART
+				draw_texture_rect_region(flame, Rect2(Vector2(footprint_size.x * 0.25, -height * 0.70), Vector2.ONE * footprint_size.x * 0.5), Rect2(flame_frame * 64, 0, 64, 64))
+			return
 		match String(item.get("item_id", "")):
 			"rug":
 				draw_rect(Rect2(Vector2(3, -footprint_size.y + 3), footprint_size - Vector2(6, 6)), Color("c5a86c"))
 				draw_rect(Rect2(Vector2(9, -footprint_size.y + 9), footprint_size - Vector2(18, 18)), Color("487366"), false, 3)
 			"planter":
+				draw_set_transform(center, 0, Vector2.ONE * footprint_size.x / 32.0)
+				center = Vector2.ZERO
 				draw_rect(Rect2(center + Vector2(-12, -4), Vector2(24, 20)), Color("9c6850"))
 				draw_circle(center + Vector2(-6, -12), 10, Color("426e43"))
 				draw_circle(center + Vector2(7, -20), 12, Color("719a55"))

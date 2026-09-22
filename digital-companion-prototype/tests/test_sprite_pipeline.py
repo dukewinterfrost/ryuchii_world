@@ -638,6 +638,7 @@ class SpritePipelineTests(unittest.TestCase):
         # An isolated project proves actual import settings change imported PNGs,
         # without touching the user's real catalog, imports, saves, or approvals.
         project = Path(__file__).resolve().parents[1]
+        shutil.copytree(project / "assets" / "balance", self.root / "assets" / "balance", dirs_exist_ok=True)
         shutil.copytree(project / "scripts", self.root / "scripts")
         shutil.copytree(project / "scenes", self.root / "scenes")
         shutil.copytree(project / "shaders", self.root / "shaders")
@@ -646,6 +647,9 @@ class SpritePipelineTests(unittest.TestCase):
         # full-project parse remains valid without copying private runtime art.
         (self.root / "assets/habitat").mkdir(parents=True)
         (self.root / "assets/habitat/verdant-field.png").write_bytes(png())
+        (self.root / "assets/enclosure").mkdir(parents=True)
+        for texture in ("digi_potty.png", "campfire.png", "pond.png", "flame-loop.png"):
+            (self.root / "assets/enclosure" / texture).write_bytes(png())
         (self.root / "tests").mkdir()
         shutil.copy2(project / "tests/asset_import_test_runner.gd", self.root / "tests/asset_import_test_runner.gd")
 

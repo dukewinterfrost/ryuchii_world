@@ -136,8 +136,47 @@ func configure_care_clearing() -> bool:
 		world_root.add_child(day_night)
 		var world := world_root.get_node("WorldEnvironment") as WorldEnvironment
 		world.environment = world.environment.duplicate(true)
-		day_night.configure(_terrain_root.get_node("CareClearing"), world.environment)
+		day_night.configure(_terrain_root.get_node("CareClearing"), world.environment, reduced_motion)
 	return configured
+
+
+func sync_native_care_trees(definitions: Array) -> void:
+	if not is_instance_valid(_native_parallax):
+		return
+	var trees := _native_parallax.get_node_or_null("OvalLayout/InteriorTrees")
+	if trees == null:
+		return
+	var enabled: Dictionary = {}
+	for definition: Dictionary in definitions:
+		enabled[String(definition.id)] = true
+	for tree: Node3D in trees.get_children():
+		tree.visible = enabled.has(String(tree.name))
+	_terrain_root.get_node("CareClearing/Ground").update_tree_shadows()
+
+
+var _scenery_build_signature := ""
+
+func suppress_built_scenery(layout: Dictionary) -> void:
+	if not is_instance_valid(_native_parallax): return
+	var signature := str(_native_parallax.get_instance_id()) + JSON.stringify(layout.get("items", []))
+	if signature == _scenery_build_signature: return
+	_scenery_build_signature = signature
+	var occupied: Dictionary = {}
+	for item: Dictionary in layout.get("items", []):
+		for cell: Vector2i in HabitatRules.footprint(item): occupied[cell] = true
+	for node: Node in _native_parallax.find_children("*", "Sprite3D", true, false):
+		var card := node as Sprite3D
+		# Native trunk visibility already follows authoritative footprint checks.
+		if String(card.get_path()).contains("InteriorTrees"): continue
+		if not card.has_meta("build_ground_anchor"):
+			card.set_meta("build_ground_anchor", world_to_ground(card.global_position))
+		var anchor: Vector2 = card.get_meta("build_ground_anchor")
+		var cell := Vector2i(floori(anchor.x / 32.0), floori(anchor.y / 32.0))
+		var suppressed := occupied.has(cell)
+		var was_suppressed := bool(card.get_meta("built_over", false))
+		card.set_meta("built_over", suppressed)
+		if suppressed: card.visible = false
+		elif was_suppressed: card.visible = true
 
 
 func _configure_native_stage(scene_path: String, bounds: Rect2, asset_id: String) -> bool:
@@ -648,6 +687,8 @@ func camera_mode() -> String:
 
 func set_reduced_motion(enabled: bool) -> void:
 	reduced_motion = enabled
+	if is_instance_valid(day_night):
+		day_night.shafts.set_reduced_motion(enabled)
 	if enabled:
 		_camera_focus_ground = _camera_target_ground
 		_camera_ground_distance = _camera_target_ground_distance

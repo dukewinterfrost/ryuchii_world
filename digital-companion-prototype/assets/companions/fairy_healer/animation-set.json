@@ -1,0 +1,841 @@
+{
+  "schemaVersion": 1,
+  "subjectId": "fairy_healer",
+  "assetId": "fairy_healer",
+  "revision": "source-2026-09-21",
+  "status": "source-derived-fallback",
+  "provenance": {
+    "kind": "source-derived",
+    "referenceHashes": [
+      "sha256:a059163c29652ec529f1d4c8862be492ffc2db99b698515afc089cd2ca5d0556"
+    ],
+    "note": "Original Figma sheet poses; PixelLab replacements await motion review."
+  },
+  "motionProfile": {
+    "morphology": "winged",
+    "locomotion": "flying",
+    "rootPolicy": "in-place",
+    "facing": "right"
+  },
+  "fallbacks": {},
+  "clips": {
+    "idle.default": {
+      "semanticAction": "idle",
+      "kind": "loop",
+      "frames": [
+        {
+          "atlasFrame": "fairy_healer.idle.0",
+          "durationMs": 160,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9375
+          },
+          "anchors": {
+            "root": {
+              "x": 0.5,
+              "y": 0.9375
+            }
+          }
+        },
+        {
+          "atlasFrame": "fairy_healer.idle.1",
+          "durationMs": 160,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9375
+          },
+          "anchors": {
+            "root": {
+              "x": 0.5,
+              "y": 0.9375
+            }
+          }
+        },
+        {
+          "atlasFrame": "fairy_healer.idle.2",
+          "durationMs": 160,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9375
+          },
+          "anchors": {
+            "root": {
+              "x": 0.5,
+              "y": 0.9375
+            }
+          }
+        },
+        {
+          "atlasFrame": "fairy_healer.idle.3",
+          "durationMs": 160,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9375
+          },
+          "anchors": {
+            "root": {
+              "x": 0.5,
+              "y": 0.9375
+            }
+          }
+        },
+        {
+          "atlasFrame": "fairy_healer.idle.4",
+          "durationMs": 160,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9375
+          },
+          "anchors": {
+            "root": {
+              "x": 0.5,
+              "y": 0.9375
+            }
+          }
+        },
+        {
+          "atlasFrame": "fairy_healer.idle.5",
+          "durationMs": 160,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9375
+          },
+          "anchors": {
+            "root": {
+              "x": 0.5,
+              "y": 0.9375
+            }
+          }
+        },
+        {
+          "atlasFrame": "fairy_healer.idle.6",
+          "durationMs": 160,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9375
+          },
+          "anchors": {
+            "root": {
+              "x": 0.5,
+              "y": 0.9375
+            }
+          }
+        },
+        {
+          "atlasFrame": "fairy_healer.idle.7",
+          "durationMs": 160,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9375
+          },
+          "anchors": {
+            "root": {
+              "x": 0.5,
+              "y": 0.9375
+            }
+          }
+        }
+      ]
+    },
+    "move.default": {
+      "semanticAction": "move",
+      "kind": "loop",
+      "frames": [
+        {
+          "atlasFrame": "fairy_healer.move.0",
+          "durationMs": 100,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9375
+          },
+          "anchors": {
+            "root": {
+              "x": 0.5,
+              "y": 0.9375
+            }
+          }
+        },
+        {
+          "atlasFrame": "fairy_healer.move.1",
+          "durationMs": 100,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9375
+          },
+          "anchors": {
+            "root": {
+              "x": 0.5,
+              "y": 0.9375
+            }
+          }
+        },
+        {
+          "atlasFrame": "fairy_healer.move.2",
+          "durationMs": 100,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9375
+          },
+          "anchors": {
+            "root": {
+              "x": 0.5,
+              "y": 0.9375
+            }
+          }
+        },
+        {
+          "atlasFrame": "fairy_healer.move.3",
+          "durationMs": 100,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9375
+          },
+          "anchors": {
+            "root": {
+              "x": 0.5,
+              "y": 0.9375
+            }
+          }
+        },
+        {
+          "atlasFrame": "fairy_healer.move.4",
+          "durationMs": 100,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9375
+          },
+          "anchors": {
+            "root": {
+              "x": 0.5,
+              "y": 0.9375
+            }
+          }
+        },
+        {
+          "atlasFrame": "fairy_healer.move.5",
+          "durationMs": 100,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9375
+          },
+          "anchors": {
+            "root": {
+              "x": 0.5,
+              "y": 0.9375
+            }
+          }
+        },
+        {
+          "atlasFrame": "fairy_healer.move.6",
+          "durationMs": 100,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9375
+          },
+          "anchors": {
+            "root": {
+              "x": 0.5,
+              "y": 0.9375
+            }
+          }
+        },
+        {
+          "atlasFrame": "fairy_healer.move.7",
+          "durationMs": 100,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9375
+          },
+          "anchors": {
+            "root": {
+              "x": 0.5,
+              "y": 0.9375
+            }
+          }
+        }
+      ]
+    },
+    "basic_attack.default": {
+      "semanticAction": "basic_attack",
+      "kind": "one-shot",
+      "frames": [
+        {
+          "atlasFrame": "fairy_healer.basic_attack.0",
+          "durationMs": 100,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9375
+          },
+          "anchors": {
+            "root": {
+              "x": 0.5,
+              "y": 0.9375
+            }
+          }
+        },
+        {
+          "atlasFrame": "fairy_healer.basic_attack.1",
+          "durationMs": 100,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9375
+          },
+          "anchors": {
+            "root": {
+              "x": 0.5,
+              "y": 0.9375
+            }
+          }
+        },
+        {
+          "atlasFrame": "fairy_healer.basic_attack.2",
+          "durationMs": 100,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9375
+          },
+          "anchors": {
+            "root": {
+              "x": 0.5,
+              "y": 0.9375
+            }
+          }
+        },
+        {
+          "atlasFrame": "fairy_healer.basic_attack.3",
+          "durationMs": 100,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9375
+          },
+          "anchors": {
+            "root": {
+              "x": 0.5,
+              "y": 0.9375
+            }
+          }
+        },
+        {
+          "atlasFrame": "fairy_healer.basic_attack.4",
+          "durationMs": 100,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9375
+          },
+          "anchors": {
+            "root": {
+              "x": 0.5,
+              "y": 0.9375
+            }
+          }
+        },
+        {
+          "atlasFrame": "fairy_healer.basic_attack.5",
+          "durationMs": 100,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9375
+          },
+          "anchors": {
+            "root": {
+              "x": 0.5,
+              "y": 0.9375
+            }
+          }
+        },
+        {
+          "atlasFrame": "fairy_healer.basic_attack.6",
+          "durationMs": 100,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9375
+          },
+          "anchors": {
+            "root": {
+              "x": 0.5,
+              "y": 0.9375
+            }
+          }
+        }
+      ]
+    },
+    "special_attack.default": {
+      "semanticAction": "special_attack",
+      "kind": "one-shot",
+      "frames": [
+        {
+          "atlasFrame": "fairy_healer.special_attack.0",
+          "durationMs": 100,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9375
+          },
+          "anchors": {
+            "root": {
+              "x": 0.5,
+              "y": 0.9375
+            }
+          }
+        },
+        {
+          "atlasFrame": "fairy_healer.special_attack.1",
+          "durationMs": 100,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9375
+          },
+          "anchors": {
+            "root": {
+              "x": 0.5,
+              "y": 0.9375
+            }
+          }
+        },
+        {
+          "atlasFrame": "fairy_healer.special_attack.2",
+          "durationMs": 100,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9375
+          },
+          "anchors": {
+            "root": {
+              "x": 0.5,
+              "y": 0.9375
+            }
+          }
+        },
+        {
+          "atlasFrame": "fairy_healer.special_attack.3",
+          "durationMs": 100,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9375
+          },
+          "anchors": {
+            "root": {
+              "x": 0.5,
+              "y": 0.9375
+            }
+          }
+        },
+        {
+          "atlasFrame": "fairy_healer.special_attack.4",
+          "durationMs": 100,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9375
+          },
+          "anchors": {
+            "root": {
+              "x": 0.5,
+              "y": 0.9375
+            }
+          }
+        },
+        {
+          "atlasFrame": "fairy_healer.special_attack.5",
+          "durationMs": 100,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9375
+          },
+          "anchors": {
+            "root": {
+              "x": 0.5,
+              "y": 0.9375
+            }
+          }
+        }
+      ]
+    },
+    "guard.default": {
+      "semanticAction": "guard",
+      "kind": "loop",
+      "frames": [
+        {
+          "atlasFrame": "fairy_healer.guard.0",
+          "durationMs": 100,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9375
+          },
+          "anchors": {
+            "root": {
+              "x": 0.5,
+              "y": 0.9375
+            }
+          }
+        },
+        {
+          "atlasFrame": "fairy_healer.guard.1",
+          "durationMs": 100,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9375
+          },
+          "anchors": {
+            "root": {
+              "x": 0.5,
+              "y": 0.9375
+            }
+          }
+        },
+        {
+          "atlasFrame": "fairy_healer.guard.2",
+          "durationMs": 100,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9375
+          },
+          "anchors": {
+            "root": {
+              "x": 0.5,
+              "y": 0.9375
+            }
+          }
+        }
+      ]
+    },
+    "evade.default": {
+      "semanticAction": "evade",
+      "kind": "one-shot",
+      "frames": [
+        {
+          "atlasFrame": "fairy_healer.evade.0",
+          "durationMs": 100,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9375
+          },
+          "anchors": {
+            "root": {
+              "x": 0.5,
+              "y": 0.9375
+            }
+          }
+        },
+        {
+          "atlasFrame": "fairy_healer.evade.1",
+          "durationMs": 100,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9375
+          },
+          "anchors": {
+            "root": {
+              "x": 0.5,
+              "y": 0.9375
+            }
+          }
+        },
+        {
+          "atlasFrame": "fairy_healer.evade.2",
+          "durationMs": 100,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9375
+          },
+          "anchors": {
+            "root": {
+              "x": 0.5,
+              "y": 0.9375
+            }
+          }
+        },
+        {
+          "atlasFrame": "fairy_healer.evade.3",
+          "durationMs": 100,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9375
+          },
+          "anchors": {
+            "root": {
+              "x": 0.5,
+              "y": 0.9375
+            }
+          }
+        },
+        {
+          "atlasFrame": "fairy_healer.evade.4",
+          "durationMs": 100,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9375
+          },
+          "anchors": {
+            "root": {
+              "x": 0.5,
+              "y": 0.9375
+            }
+          }
+        },
+        {
+          "atlasFrame": "fairy_healer.evade.5",
+          "durationMs": 100,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9375
+          },
+          "anchors": {
+            "root": {
+              "x": 0.5,
+              "y": 0.9375
+            }
+          }
+        },
+        {
+          "atlasFrame": "fairy_healer.evade.6",
+          "durationMs": 100,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9375
+          },
+          "anchors": {
+            "root": {
+              "x": 0.5,
+              "y": 0.9375
+            }
+          }
+        },
+        {
+          "atlasFrame": "fairy_healer.evade.7",
+          "durationMs": 100,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9375
+          },
+          "anchors": {
+            "root": {
+              "x": 0.5,
+              "y": 0.9375
+            }
+          }
+        }
+      ]
+    },
+    "hit.default": {
+      "semanticAction": "hit",
+      "kind": "one-shot",
+      "frames": [
+        {
+          "atlasFrame": "fairy_healer.hit.0",
+          "durationMs": 100,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9375
+          },
+          "anchors": {
+            "root": {
+              "x": 0.5,
+              "y": 0.9375
+            }
+          }
+        },
+        {
+          "atlasFrame": "fairy_healer.hit.1",
+          "durationMs": 100,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9375
+          },
+          "anchors": {
+            "root": {
+              "x": 0.5,
+              "y": 0.9375
+            }
+          }
+        },
+        {
+          "atlasFrame": "fairy_healer.hit.2",
+          "durationMs": 100,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9375
+          },
+          "anchors": {
+            "root": {
+              "x": 0.5,
+              "y": 0.9375
+            }
+          }
+        },
+        {
+          "atlasFrame": "fairy_healer.hit.3",
+          "durationMs": 100,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9375
+          },
+          "anchors": {
+            "root": {
+              "x": 0.5,
+              "y": 0.9375
+            }
+          }
+        },
+        {
+          "atlasFrame": "fairy_healer.hit.4",
+          "durationMs": 100,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9375
+          },
+          "anchors": {
+            "root": {
+              "x": 0.5,
+              "y": 0.9375
+            }
+          }
+        },
+        {
+          "atlasFrame": "fairy_healer.hit.5",
+          "durationMs": 100,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9375
+          },
+          "anchors": {
+            "root": {
+              "x": 0.5,
+              "y": 0.9375
+            }
+          }
+        }
+      ]
+    },
+    "defeat.default": {
+      "semanticAction": "defeat",
+      "kind": "one-shot",
+      "frames": [
+        {
+          "atlasFrame": "fairy_healer.defeat.0",
+          "durationMs": 100,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9375
+          },
+          "anchors": {
+            "root": {
+              "x": 0.5,
+              "y": 0.9375
+            }
+          }
+        },
+        {
+          "atlasFrame": "fairy_healer.defeat.1",
+          "durationMs": 100,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9375
+          },
+          "anchors": {
+            "root": {
+              "x": 0.5,
+              "y": 0.9375
+            }
+          }
+        },
+        {
+          "atlasFrame": "fairy_healer.defeat.2",
+          "durationMs": 100,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9375
+          },
+          "anchors": {
+            "root": {
+              "x": 0.5,
+              "y": 0.9375
+            }
+          }
+        },
+        {
+          "atlasFrame": "fairy_healer.defeat.3",
+          "durationMs": 100,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9375
+          },
+          "anchors": {
+            "root": {
+              "x": 0.5,
+              "y": 0.9375
+            }
+          }
+        },
+        {
+          "atlasFrame": "fairy_healer.defeat.4",
+          "durationMs": 100,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9375
+          },
+          "anchors": {
+            "root": {
+              "x": 0.5,
+              "y": 0.9375
+            }
+          }
+        },
+        {
+          "atlasFrame": "fairy_healer.defeat.5",
+          "durationMs": 100,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9375
+          },
+          "anchors": {
+            "root": {
+              "x": 0.5,
+              "y": 0.9375
+            }
+          }
+        },
+        {
+          "atlasFrame": "fairy_healer.defeat.6",
+          "durationMs": 100,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9375
+          },
+          "anchors": {
+            "root": {
+              "x": 0.5,
+              "y": 0.9375
+            }
+          }
+        },
+        {
+          "atlasFrame": "fairy_healer.defeat.7",
+          "durationMs": 100,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9375
+          },
+          "anchors": {
+            "root": {
+              "x": 0.5,
+              "y": 0.9375
+            }
+          }
+        },
+        {
+          "atlasFrame": "fairy_healer.defeat.8",
+          "durationMs": 100,
+          "pivot": {
+            "x": 0.5,
+            "y": 0.9375
+          },
+          "anchors": {
+            "root": {
+              "x": 0.5,
+              "y": 0.9375
+            }
+          }
+        }
+      ]
+    }
+  }
+}

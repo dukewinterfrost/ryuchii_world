@@ -35,10 +35,14 @@ func run() -> void:
 			var floor_node: Node3D = scene.get_node("Floor")
 			check(is_equal_approx(rig.rotation_degrees.x, -30), "Shallower initial camera pitch")
 			check(camera.keep_aspect == Camera3D.KEEP_WIDTH, "Portrait keeps width")
-			check(floor_node.get_child_count() == 16, "Sixteen editable floor patches")
+			var sheer_floor := region == "green_shade" and layout == "battle"
+			check(floor_node.get_child_count() == (1 if sheer_floor else 16), "Editable sheer terrain or sixteen source floor patches")
 			var patch: MeshInstance3D = floor_node.get_child(0)
-			var other_patch: MeshInstance3D = floor_node.get_child(1)
-			check(patch.material_override != other_patch.material_override, "Patches have independent material resources")
+			if sheer_floor:
+				check(patch.material_override.resource_local_to_scene, "Battle terrain material stays local to its scene")
+			else:
+				var other_patch: MeshInstance3D = floor_node.get_child(1)
+				check(patch.material_override != other_patch.material_override, "Patches have independent material resources")
 			var cropped_floor := patch.material_override is ShaderMaterial
 			check(patch.material_override.get_shader_parameter("source_texture") != null if cropped_floor else patch.material_override.albedo_texture != null, "Imported external floor texture resolves")
 			var actor: AnimatedSprite3D = scene.get_node("Characters").get_child(0).get_node("AnimatedSprite3D")
@@ -49,7 +53,9 @@ func run() -> void:
 			rig.pitch_degrees = 24.0
 			rig.distance = 42.0
 			patch.position.y = 0.2
-			if cropped_floor:
+			if sheer_floor:
+				patch.ground_material.set_shader_parameter("source_detail", 0.27)
+			elif cropped_floor:
 				patch.material_override.set_shader_parameter("tile_meters", Vector2(7, 4))
 			else:
 				patch.material_override.uv1_offset = Vector3(0.17, 0.23, 0)
@@ -65,6 +71,8 @@ func run() -> void:
 			check(is_equal_approx(restored.get_node("CameraRig/Camera3D").position.z, 42), "Saved camera distance survives running")
 			var restored_patch: MeshInstance3D = restored.get_node("Floor").get_child(0)
 			var mapping_preserved: bool = restored_patch.material_override.get_shader_parameter("tile_meters") == Vector2(7, 4) if cropped_floor else restored_patch.material_override.uv1_offset.is_equal_approx(Vector3(0.17,0.23,0))
+			if sheer_floor:
+				mapping_preserved = is_equal_approx(float(restored_patch.material_override.get_shader_parameter("source_detail")),0.27)
 			check(is_equal_approx(restored_patch.position.y, 0.2) and mapping_preserved, "Saved floor placement and UV edits survive running")
 			restored.free()
 			current_scene = null

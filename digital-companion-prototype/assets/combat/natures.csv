@@ -1,0 +1,7 @@
+id,opening_tackle,approach_weight,circle_weight,retreat_weight,guard_weight,attack_weight
+Bold,true,55,25,10,10,90
+Gentle,false,30,35,25,30,60
+Jolly,false,35,45,15,10,75
+Calm,false,25,35,35,35,60
+Earnest,true,50,30,10,20,85
+Stubborn,true,60,20,5,15,95

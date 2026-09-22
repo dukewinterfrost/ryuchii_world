@@ -62,8 +62,17 @@ func _run() -> void:
 	battle_scene._notification(NOTIFICATION_APPLICATION_RESUMED)
 	battle_scene._process(10)
 	_check(battle_scene.playback.get_session().tick == replay_tick, "suspension between frames cannot fast-forward replay")
+	battle_scene._audio.played_events.clear()
+	for frame: int in 300:
+		battle_scene._process(1.0 / 30)
+		if not battle_scene._audio.played_events.is_empty():
+			break
+	_check(not battle_scene._audio.played_events.is_empty(), "normally advancing replay retains event audio")
+	var replay_sounds: Array = battle_scene._audio.played_events.duplicate()
 	battle_scene._cycle_speed()
 	battle_scene._skip()
+	_check(battle_scene._audio.played_events == replay_sounds, "Replay Skip adds no sounds for discarded history")
+	_check(battle_scene._audio._voices.all(func(voice: AudioStreamPlayer) -> bool: return voice.stream == null and not voice.playing), "Replay Skip stops every current cue")
 	_check(battle_scene.playback.is_complete() and battle_scene.playback.get_session().result == settled_result, "replay reaches identical recorded outcome")
 	_check(GameState.get_state() == settled_state and GameState.active_battle_result.result == settled_result, "replay cannot award again or alter live result")
 	var source_battle: Dictionary = battle_scene.battle
@@ -73,6 +82,7 @@ func _run() -> void:
 	_check(battle_scene.retry_button.visible and battle_scene.return_button.disabled, "pending save blocks return and exposes Retry Save")
 	battle_scene.battle = source_battle
 	battle_scene._show_result()
+	await _drain_audio(battle_scene._audio)
 	var runner_scene := get_tree().current_scene
 	get_tree().current_scene = battle_scene
 	battle_scene._return_to_care()
@@ -90,7 +100,7 @@ func _run() -> void:
 	_check(review.has_method("load_candidate") and GameState.isolated_mode, "asset review scene loads under isolated autoload")
 	review.free()
 	get_tree().root.content_scale_size = Vector2i(390, 844)
-	_test_render_rates(scene_resource, original_state)
+	await _test_render_rates(scene_resource, original_state)
 	GameState.state = original_state
 	print("%s: %d scene smoke checks" % ["PASS" if _failures == 0 else "FAIL", _checks])
 	get_tree().quit(0 if _failures == 0 else 1)
@@ -129,8 +139,23 @@ func _test_render_rates(scene_resource: PackedScene, original_state: Dictionary)
 			baseline = fingerprint
 		else:
 			_check(fingerprint == baseline, "actual scene %d FPS preserves exact command ticks, log and outcome" % fps)
+		await _drain_audio(scene._audio)
 		scene.free()
 	GameState.clear_active_battle()
+
+
+func _drain_audio(audio: BattleEventAudio) -> void:
+	# Whole bouts run synchronously here. A fixed timer does not establish that
+	# the audio mixer caught up, so track actual WAV ownership: every pending
+	# playback retains its WAV. Use wall time to bound the cleanup assertion.
+	var streams: Array = audio._tones.values().map(func(stream: AudioStreamWAV) -> WeakRef: return weakref(stream))
+	audio.stop_all()
+	audio._tones.clear()
+	var deadline := Time.get_ticks_msec() + 2000
+	while streams.any(func(stream: WeakRef) -> bool: return stream.get_ref() != null) and Time.get_ticks_msec() < deadline:
+		await get_tree().process_frame
+	var retained := streams.filter(func(stream: WeakRef) -> bool: return stream.get_ref() != null).size()
+	_check(retained == 0, "stopped battle audio releases all mixer references before scene teardown (%d WAVs retained)" % retained)
 
 
 func _check(condition: bool, message: String) -> void:

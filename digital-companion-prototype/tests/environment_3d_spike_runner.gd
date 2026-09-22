@@ -1,6 +1,7 @@
 extends Node
 
 const Sim = preload("res://scripts/battle/battle_simulator.gd")
+const FrozenV3 = preload("res://scripts/battle/battle_simulator_v3.gd")
 
 var _checks := 0
 var _failures := 0
@@ -118,6 +119,7 @@ func _run() -> void:
 
 	await _test_environment_arena_review(environment)
 	_test_battle_determinism(environment)
+	_test_battle_determinism(environment, true)
 	spike.queue_free()
 	await get_tree().process_frame
 	_finish()
@@ -271,11 +273,14 @@ func _test_environment_arena_review(environment: EnvironmentView3D) -> void:
 	await get_tree().process_frame
 
 
-func _test_battle_determinism(environment: EnvironmentView3D) -> void:
-	var player := Sim.make_snapshot("player", "Partner", "agumon", "Rookie", "Bold", {"hp": 110, "mp": 48, "offense": 10, "defense": 8, "speed": 8, "brains": 8})
-	var opponent := Sim.make_snapshot("opponent", "Training Agumon", "agumon", "Rookie", "Gentle", {"hp": 92, "mp": 48, "offense": 8, "defense": 7, "speed": 7, "brains": 7})
-	var baseline := Sim.simulate("3d-view-is-presentation-only", 731, player, opponent, 180)
-	var with_view_alive := Sim.create_session("3d-view-is-presentation-only", 731, player, opponent, {}, 180)
+func _test_battle_determinism(environment: EnvironmentView3D, historical_v3 := false) -> void:
+	# Keep the established checksum on its frozen simulator while independently
+	# exercising presentation purity against the current live simulator.
+	var simulator: GDScript = FrozenV3 if historical_v3 else Sim
+	var player: Dictionary = simulator.make_snapshot("player", "Partner", "agumon", "Rookie", "Bold", {"hp": 110, "mp": 48, "offense": 10, "defense": 8, "speed": 8, "brains": 8})
+	var opponent: Dictionary = simulator.make_snapshot("opponent", "Training Agumon", "agumon", "Rookie", "Gentle", {"hp": 92, "mp": 48, "offense": 8, "defense": 7, "speed": 7, "brains": 7})
+	var baseline: Dictionary = simulator.simulate("3d-view-is-presentation-only", 731, player, opponent, 180)
+	var with_view_alive: Dictionary = simulator.create_session("3d-view-is-presentation-only", 731, player, opponent, {}, 180)
 	var probes: Dictionary = {}
 	for fighter_id: String in with_view_alive.actors:
 		var probe := CompanionPresentation3D.new()
@@ -283,16 +288,17 @@ func _test_battle_determinism(environment: EnvironmentView3D) -> void:
 		probe.configure("agumon")
 		probes[fighter_id] = probe
 	while not with_view_alive.complete:
-		Sim.step(with_view_alive)
+		simulator.step(with_view_alive)
 		for fighter_id: String in probes:
 			var actor: Dictionary = with_view_alive.actors[fighter_id]
-			probes[fighter_id].set_ground_position(Sim.ground_position(actor))
+			probes[fighter_id].set_ground_position(simulator.ground_position(actor))
 			probes[fighter_id].render_battle(actor, 0.5)
 	var baseline_bytes := JSON.stringify(baseline)
-	_check(JSON.stringify(with_view_alive) == baseline_bytes, "interleaved AnimatedSprite3D rendering leaves battle state and replay inputs byte-identical")
-	var fingerprint := baseline_bytes.sha256_text()
-	print("  sprite-in-3D battle fingerprint: " + fingerprint)
-	_check(fingerprint == "66b5c883a5f54008b90ed07ba6d71fd62f11b43a6d65f764295ef3e9825d9484", "sprite-in-3D canonical simulation fingerprint remains established")
+	_check(JSON.stringify(with_view_alive) == baseline_bytes, "interleaved AnimatedSprite3D rendering leaves %s battle state and replay inputs byte-identical" % ["frozen-v3" if historical_v3 else "live-v4"])
+	if historical_v3:
+		var fingerprint := baseline_bytes.sha256_text()
+		print("  sprite-in-3D frozen-v3 battle fingerprint: " + fingerprint)
+		_check(fingerprint == "66b5c883a5f54008b90ed07ba6d71fd62f11b43a6d65f764295ef3e9825d9484", "sprite-in-3D canonical frozen-v3 simulation fingerprint remains established")
 	for probe: CompanionPresentation3D in probes.values():
 		probe.queue_free()
 

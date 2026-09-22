@@ -1,0 +1,4 @@
+interface:
+  display_name: "Game Feature Planning"
+  short_description: "Plan playable features, tuning, and placeholders"
+  default_prompt: "Use $game-feature-planning to turn this game idea into a testable feature brief and placeholder plan."

@@ -85,7 +85,7 @@ func render_combat(action: String, next_facing: String, action_tick: float, acti
 
 func render_battle(actor: Dictionary, interpolation: float = 1.0) -> void:
 	var tick := float(actor.get("action_tick", 0)) + clampf(interpolation, 0.0, 1.0)
-	render_combat(String(actor.get("action", "idle")), String(actor.get("facing", "e")), tick, float(actor.get("action_duration", 0)))
+	render_combat(BattlePresentationCues.animation(actor), String(actor.get("facing", "e")), tick, float(actor.get("action_duration", 0)))
 
 
 func _resolve_animation(action: String, requested_facing: String) -> String:

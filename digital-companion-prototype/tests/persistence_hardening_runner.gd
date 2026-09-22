@@ -119,9 +119,9 @@ func _test_v2_battle_migration() -> void:
 	var path := _unique_path("battle-migration")
 	var repository = SaveRepositoryScript.new(path)
 	repository.clear()
-	var legacy: Dictionary = CareRulesScript.make_new_state(1000.0)
-	legacy.erase("battle")
-	legacy["battle_profile"]["implementation_status"] = "reserved"
+	var legacy: Dictionary = _literal_v1_state()
+	legacy.care.poop_slots = [true, true, false]
+	legacy["battle_profile"] = {"hp": 100, "mp": 60, "offense": 8, "defense": 8, "speed": 8, "brains": 8, "implementation_status": "reserved"}
 	_check(_write(path, _encode(legacy, 2)), "schema-v2 care-only fixture is written")
 	var loaded: Dictionary = repository.load_state()
 	_check(bool(loaded["ok"]) and bool(loaded.get("migrated", false)), "schema v2 migrates into the battle-capable save contract")

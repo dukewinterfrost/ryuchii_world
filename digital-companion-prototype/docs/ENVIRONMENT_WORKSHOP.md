@@ -1,5 +1,12 @@
 # Edit the environments in Godot
 
+**September 17 update:** Rootbound Glade now has an open worn clearing, irregular
+woodland, and a sheer ledge. Native forest home uses the same flat-top/vertical
+drop geometry. See [the rework and review](ROOTBOUND_GLADE_REVIEW.md). For the
+first battle field, edit `Floor/ClearingTerrain → Ground Material`, not the old
+16 patches; its camera FOV is 32°. Other regional patch workflows below remain
+unchanged.
+
 **September 15 update:** sprite planes now stay camera-facing at every angle.
 The old upright/non-billboard working-scene rule is superseded. See
 [the current care-screen direction](CARE_REFERENCE_DIRECTION.md) for the native
@@ -32,7 +39,7 @@ Camera framing uses the loaded camera settings rather than the old hard-coded
 50-degree pitch. Replay geometry and immutable source pins are unchanged.
 
 Trees, foliage, buildings, and other landmarks are layered `Sprite3D` cards,
-not 3D models. Only the horizontal floor uses terrain meshes. Sprites remain
+not 3D models. The floor and sheer cliff faces use terrain meshes. Sprites remain
 camera-facing, nearest-filtered, and depth-tested. No new artwork was generated.
 
 These are explicitly **isolated, unpromoted field reviews**. The launcher/F6

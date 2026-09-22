@@ -18,6 +18,9 @@ Produce a coherent 3D presentation from pixel-art planes while keeping gameplay 
 
 ## Route the task
 
+- For native working-scene composition, parallax dressing or seam concealment,
+  also use [Scene Builder](../scene-builder/SKILL.md), which records the active
+  camera-facing care profile and its forest/beach authoring findings.
 - For one of the five DigimonUP biome kits, load the source inventory reference.
 - For slicing, plane stacks, presentation profiles, home/battle composition, or visual QA, load [references/depth-authoring-and-review.md](references/depth-authoring-and-review.md).
 - For schema and CLI details, read `docs/SPRITE_PIPELINE.md` and inspect `./tools/sprites <command> --help`; the checked-in CLI is authoritative.

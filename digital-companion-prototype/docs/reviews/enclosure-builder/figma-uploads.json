@@ -1,0 +1,26 @@
+[
+  {
+    "file": "build",
+    "success": true,
+    "imageHash": "8705fe8b3ed09092cb571f379a21494c2cadd113",
+    "sizeBytes": 114724,
+    "contentType": "image/png",
+    "placedOnNodeId": "168:150"
+  },
+  {
+    "file": "play",
+    "success": true,
+    "imageHash": "0c5da8e2d86771527a3291f6058456e4607a41e8",
+    "sizeBytes": 60641,
+    "contentType": "image/png",
+    "placedOnNodeId": "168:151"
+  },
+  {
+    "file": "fallback",
+    "success": true,
+    "imageHash": "a956530f92a1363e8d34e6c2738e2fc74c6849b5",
+    "sizeBytes": 130779,
+    "contentType": "image/png",
+    "placedOnNodeId": "168:152"
+  }
+]

@@ -1,309 +1,28 @@
-[gd_scene load_steps=49 format=3]
+[gd_scene format=3]
 
-[ext_resource type="Texture2D" path="res://assets/environment_workshop/forest-parallax/foliage.png" id="matching_foliage"]
-
-[ext_resource type="PackedScene" path="res://scenes/environment_workshop/forest_parallax.tscn" id="forest_parallax"]
-
-[ext_resource type="Script" path="res://scripts/environment/workshop_camera_rig.gd" id="1"]
-
-[ext_resource type="Script" path="res://scripts/environment/workshop_floor.gd" id="2"]
-
-[ext_resource type="Script" path="res://scripts/environment/workshop_actor.gd" id="3"]
-
-[ext_resource type="SpriteFrames" path="res://assets/environment_workshop/agumon/spriteframes.tres" id="4"]
-
-[ext_resource type="Texture2D" path="res://assets/environment_workshop/green-shade/ground.png" id="5"]
-
-[ext_resource type="Texture2D" path="res://assets/environment_workshop/forest-parallax/panorama.png" id="6"]
-
-[ext_resource type="Texture2D" path="res://assets/environment_workshop/green-shade/tree_canopy.png" id="7"]
-
-[ext_resource type="Texture2D" path="res://assets/environment_workshop/green-shade/tree_facade.png" id="8"]
-
-[ext_resource type="Texture2D" path="res://assets/environment_workshop/green-shade/tree_interior.png" id="9"]
+[ext_resource type="Texture2D" path="res://assets/environment_workshop/forest-parallax/foliage.png" id="1_rdbal"]
+[ext_resource type="Texture2D" path="res://assets/environment_workshop/green-shade/tree_interior.png" id="2_va3pd"]
+[ext_resource type="Texture2D" path="res://assets/environment_workshop/green-shade/tree_canopy.png" id="3_iih8g"]
+[ext_resource type="SpriteFrames" path="res://assets/environment_workshop/agumon/spriteframes.tres" id="4_la4qo"]
+[ext_resource type="Script" path="res://scripts/environment/workshop_actor.gd" id="5_nt45b"]
+[ext_resource type="Script" path="res://scripts/environment/workshop_camera_rig.gd" id="6_3ung1"]
+[ext_resource type="Shader" path="res://shaders/rootbound_ground.gdshader" id="7_20fpo"]
+[ext_resource type="Texture2D" path="res://assets/environment_workshop/forest-parallax/panorama.png" id="8_mq41q"]
+[ext_resource type="Script" path="res://scripts/environment/rootbound_ground.gd" id="9_wojyr"]
+[ext_resource type="Script" path="res://scripts/environment/forest_parallax.gd" id="10_mg8qf"]
+[ext_resource type="Shader" path="res://shaders/home_day_night_sky.gdshader" id="11_bsw32"]
+[ext_resource type="Texture2D" path="res://assets/environment_workshop/forest-bg1/distant.png" id="12_rnfb6"]
+[ext_resource type="Texture2D" path="res://assets/environment_workshop/forest-bg1/middle.png" id="13_jggnq"]
+[ext_resource type="Texture2D" path="res://assets/environment_workshop/forest-bg1/foreground.png" id="14_pjemc"]
 
 [sub_resource type="Environment" id="Resource1"]
 background_mode = 1
-background_color = Color(0.0784313725490196, 0.1843137254901961, 0.20784313725490197, 1)
-
-
-[sub_resource type="StandardMaterial3D" id="Resource2"]
-resource_local_to_scene = true
-shading_mode = 0
-cull_mode = 2
-texture_filter = 0
-albedo_texture = ExtResource("6")
-uv1_scale = Vector3(0.5625, 3.2820513, 1)
-uv1_offset = Vector3(-0.5, -2.625641, 0)
-
-
-[sub_resource type="PlaneMesh" id="Resource3"]
-resource_local_to_scene = true
-size = Vector2(18, 20)
-subdivide_width = 4
-subdivide_depth = 4
-
-
-[sub_resource type="StandardMaterial3D" id="Resource4"]
-resource_local_to_scene = true
-shading_mode = 0
-cull_mode = 2
-texture_filter = 0
-albedo_texture = ExtResource("6")
-uv1_scale = Vector3(0.5625, 3.2820513, 1)
-uv1_offset = Vector3(0.0625, -2.625641, 0)
-
-
-[sub_resource type="PlaneMesh" id="Resource5"]
-resource_local_to_scene = true
-size = Vector2(18, 20)
-subdivide_width = 4
-subdivide_depth = 4
-
-
-[sub_resource type="StandardMaterial3D" id="Resource6"]
-resource_local_to_scene = true
-shading_mode = 0
-cull_mode = 2
-texture_filter = 0
-albedo_texture = ExtResource("6")
-uv1_scale = Vector3(0.5625, 3.2820513, 1)
-uv1_offset = Vector3(0.625, -2.625641, 0)
-
-
-[sub_resource type="PlaneMesh" id="Resource7"]
-resource_local_to_scene = true
-size = Vector2(18, 20)
-subdivide_width = 4
-subdivide_depth = 4
-
-
-[sub_resource type="StandardMaterial3D" id="Resource8"]
-resource_local_to_scene = true
-shading_mode = 0
-cull_mode = 2
-texture_filter = 0
-albedo_texture = ExtResource("6")
-uv1_scale = Vector3(0.5625, 3.2820513, 1)
-uv1_offset = Vector3(1.1875, -2.625641, 0)
-
-
-[sub_resource type="PlaneMesh" id="Resource9"]
-resource_local_to_scene = true
-size = Vector2(18, 20)
-subdivide_width = 4
-subdivide_depth = 4
-
-
-[sub_resource type="StandardMaterial3D" id="Resource10"]
-resource_local_to_scene = true
-shading_mode = 0
-cull_mode = 2
-texture_filter = 0
-albedo_texture = ExtResource("6")
-uv1_scale = Vector3(0.5625, 3.2820513, 1)
-uv1_offset = Vector3(-0.5, 0.65641026, 0)
-
-
-[sub_resource type="PlaneMesh" id="Resource11"]
-resource_local_to_scene = true
-size = Vector2(18, 20)
-subdivide_width = 4
-subdivide_depth = 4
-
-
-[sub_resource type="StandardMaterial3D" id="Resource12"]
-resource_local_to_scene = true
-shading_mode = 0
-cull_mode = 2
-texture_filter = 0
-albedo_texture = ExtResource("6")
-uv1_scale = Vector3(0.5625, 3.2820513, 1)
-uv1_offset = Vector3(0.0625, 0.65641026, 0)
-
-
-[sub_resource type="PlaneMesh" id="Resource13"]
-resource_local_to_scene = true
-size = Vector2(18, 20)
-subdivide_width = 4
-subdivide_depth = 4
-
-
-[sub_resource type="StandardMaterial3D" id="Resource14"]
-resource_local_to_scene = true
-shading_mode = 0
-cull_mode = 2
-texture_filter = 0
-albedo_texture = ExtResource("6")
-uv1_scale = Vector3(0.5625, 3.2820513, 1)
-uv1_offset = Vector3(0.625, 0.65641026, 0)
-
-
-[sub_resource type="PlaneMesh" id="Resource15"]
-resource_local_to_scene = true
-size = Vector2(18, 20)
-subdivide_width = 4
-subdivide_depth = 4
-
-
-[sub_resource type="StandardMaterial3D" id="Resource16"]
-resource_local_to_scene = true
-shading_mode = 0
-cull_mode = 2
-texture_filter = 0
-albedo_texture = ExtResource("6")
-uv1_scale = Vector3(0.5625, 3.2820513, 1)
-uv1_offset = Vector3(1.1875, 0.65641026, 0)
-
-
-[sub_resource type="PlaneMesh" id="Resource17"]
-resource_local_to_scene = true
-size = Vector2(18, 20)
-subdivide_width = 4
-subdivide_depth = 4
-
-
-[sub_resource type="StandardMaterial3D" id="Resource18"]
-resource_local_to_scene = true
-shading_mode = 0
-cull_mode = 2
-texture_filter = 0
-albedo_texture = ExtResource("6")
-uv1_scale = Vector3(0.5625, 3.2820513, 1)
-uv1_offset = Vector3(-0.5, 3.9384615, 0)
-
-
-[sub_resource type="PlaneMesh" id="Resource19"]
-resource_local_to_scene = true
-size = Vector2(18, 20)
-subdivide_width = 4
-subdivide_depth = 4
-
-
-[sub_resource type="StandardMaterial3D" id="Resource20"]
-resource_local_to_scene = true
-shading_mode = 0
-cull_mode = 2
-texture_filter = 0
-albedo_texture = ExtResource("6")
-uv1_scale = Vector3(0.5625, 3.2820513, 1)
-uv1_offset = Vector3(0.0625, 3.9384615, 0)
-
-
-[sub_resource type="PlaneMesh" id="Resource21"]
-resource_local_to_scene = true
-size = Vector2(18, 20)
-subdivide_width = 4
-subdivide_depth = 4
-
-
-[sub_resource type="StandardMaterial3D" id="Resource22"]
-resource_local_to_scene = true
-shading_mode = 0
-cull_mode = 2
-texture_filter = 0
-albedo_texture = ExtResource("6")
-uv1_scale = Vector3(0.5625, 3.2820513, 1)
-uv1_offset = Vector3(0.625, 3.9384615, 0)
-
-
-[sub_resource type="PlaneMesh" id="Resource23"]
-resource_local_to_scene = true
-size = Vector2(18, 20)
-subdivide_width = 4
-subdivide_depth = 4
-
-
-[sub_resource type="StandardMaterial3D" id="Resource24"]
-resource_local_to_scene = true
-shading_mode = 0
-cull_mode = 2
-texture_filter = 0
-albedo_texture = ExtResource("6")
-uv1_scale = Vector3(0.5625, 3.2820513, 1)
-uv1_offset = Vector3(1.1875, 3.9384615, 0)
-
-
-[sub_resource type="PlaneMesh" id="Resource25"]
-resource_local_to_scene = true
-size = Vector2(18, 20)
-subdivide_width = 4
-subdivide_depth = 4
-
-
-[sub_resource type="StandardMaterial3D" id="Resource26"]
-resource_local_to_scene = true
-shading_mode = 0
-cull_mode = 2
-texture_filter = 0
-albedo_texture = ExtResource("6")
-uv1_scale = Vector3(0.5625, 3.2820513, 1)
-uv1_offset = Vector3(-0.5, 7.2205128, 0)
-
-
-[sub_resource type="PlaneMesh" id="Resource27"]
-resource_local_to_scene = true
-size = Vector2(18, 20)
-subdivide_width = 4
-subdivide_depth = 4
-
-
-[sub_resource type="StandardMaterial3D" id="Resource28"]
-resource_local_to_scene = true
-shading_mode = 0
-cull_mode = 2
-texture_filter = 0
-albedo_texture = ExtResource("6")
-uv1_scale = Vector3(0.5625, 3.2820513, 1)
-uv1_offset = Vector3(0.0625, 7.2205128, 0)
-
-
-[sub_resource type="PlaneMesh" id="Resource29"]
-resource_local_to_scene = true
-size = Vector2(18, 20)
-subdivide_width = 4
-subdivide_depth = 4
-
-
-[sub_resource type="StandardMaterial3D" id="Resource30"]
-resource_local_to_scene = true
-shading_mode = 0
-cull_mode = 2
-texture_filter = 0
-albedo_texture = ExtResource("6")
-uv1_scale = Vector3(0.5625, 3.2820513, 1)
-uv1_offset = Vector3(0.625, 7.2205128, 0)
-
-
-[sub_resource type="PlaneMesh" id="Resource31"]
-resource_local_to_scene = true
-size = Vector2(18, 20)
-subdivide_width = 4
-subdivide_depth = 4
-
-
-[sub_resource type="StandardMaterial3D" id="Resource32"]
-resource_local_to_scene = true
-shading_mode = 0
-cull_mode = 2
-texture_filter = 0
-albedo_texture = ExtResource("6")
-uv1_scale = Vector3(0.5625, 3.2820513, 1)
-uv1_offset = Vector3(1.1875, 7.2205128, 0)
-
-
-[sub_resource type="PlaneMesh" id="Resource33"]
-resource_local_to_scene = true
-size = Vector2(18, 20)
-subdivide_width = 4
-subdivide_depth = 4
-
+background_color = Color(0.078431375, 0.18431373, 0.20784314, 1)
 
 [sub_resource type="StandardMaterial3D" id="Resource34"]
-shading_mode = 0
 transparency = 1
+shading_mode = 0
 albedo_color = Color(0.08, 0.09, 0.08, 0.24)
-
 
 [sub_resource type="CylinderMesh" id="Resource35"]
 top_radius = 1.0
@@ -311,12 +30,10 @@ bottom_radius = 1.0
 height = 0.001
 radial_segments = 32
 
-
 [sub_resource type="StandardMaterial3D" id="Resource36"]
-shading_mode = 0
 transparency = 1
+shading_mode = 0
 albedo_color = Color(0.08, 0.09, 0.08, 0.24)
-
 
 [sub_resource type="CylinderMesh" id="Resource37"]
 top_radius = 1.0
@@ -324,266 +41,4101 @@ bottom_radius = 1.0
 height = 0.001
 radial_segments = 32
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_mx6dc"]
+resource_local_to_scene = true
+render_priority = 0
+shader = ExtResource("7_20fpo")
+shader_parameter/source_texture = ExtResource("8_mq41q")
+shader_parameter/source_region = Vector4(760, 700, 40, 22)
+shader_parameter/field_center = null
+shader_parameter/clearing_radii = null
+shader_parameter/grass_light = null
+shader_parameter/soil_color = null
+shader_parameter/source_detail = 0.18
+shader_parameter/lower_shadow_strength = 0.62
+shader_parameter/pixel_density = null
 
-[node name="RootboundGlade" type="Node3D"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_oag7q"]
+render_priority = 0
+shader = ExtResource("11_bsw32")
+shader_parameter/artwork = ExtResource("12_rnfb6")
+shader_parameter/is_panorama = null
+shader_parameter/preserve_artwork = true
+shader_parameter/scenery_tint = null
+shader_parameter/sky_top = Color(0.12549, 0.55294, 0.74118, 1)
+shader_parameter/sky_horizon = Color(0.70588, 0.88235, 0.85882, 1)
+shader_parameter/sun_position = null
+shader_parameter/moon_position = null
+shader_parameter/sun_visibility = null
+shader_parameter/moon_visibility = null
+shader_parameter/star_visibility = null
+
+[node name="RootboundGlade" type="Node3D" unique_id=146433545]
 metadata/workshop = true
 metadata/license = "private-prototype-only"
 metadata/source_manifest = "res://tests/fixtures/regions/green-shade/review/arena/arena.json"
 metadata/note = "Editable presentation study. Visual edits are saved here; gameplay footprints remain in the source manifest."
+metadata/layout_seed = 170927
+metadata/art_direction = "Rootbound Glade: worn open arena, irregular planted shoulder, lowered woodland, registered BG-1 skyline"
+metadata/source_sha256 = "ee0ed7a9f64646e8205801b671ba06591fa587f7dc79efc1ede5efb390c9743f"
+metadata/layout_sha256 = "3d87feab4501f27c30cbd4a8576655a7f2ed813a2f21db772564ccf7ba8af442"
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1208293753]
 environment = SubResource("Resource1")
 
-[node name="Floor" type="Node3D" parent="."]
-script = ExtResource("2")
-source_region = Rect2(760, 700, 40, 22)
-floor_texture = ExtResource("6")
-pixels_per_meter = 64.0
-metadata/edit_help = "Select a patch to replace its material texture, move it, or change UV1 scale/offset. Select Floor for global density."
+[node name="Landmarks" type="Node3D" parent="." unique_id=50688090]
 
-[node name="Patch_1_1" type="MeshInstance3D" parent="Floor"]
-position = Vector3(-7, 0, -6)
-mesh = SubResource("Resource3")
-material_override = SubResource("Resource2")
-
-
-[node name="Patch_1_2" type="MeshInstance3D" parent="Floor"]
-position = Vector3(11, 0, -6)
-mesh = SubResource("Resource5")
-material_override = SubResource("Resource4")
-
-
-[node name="Patch_1_3" type="MeshInstance3D" parent="Floor"]
-position = Vector3(29, 0, -6)
-mesh = SubResource("Resource7")
-material_override = SubResource("Resource6")
-
-
-[node name="Patch_1_4" type="MeshInstance3D" parent="Floor"]
-position = Vector3(47, 0, -6)
-mesh = SubResource("Resource9")
-material_override = SubResource("Resource8")
-
-
-[node name="Patch_2_1" type="MeshInstance3D" parent="Floor"]
-position = Vector3(-7, 0, 14)
-mesh = SubResource("Resource11")
-material_override = SubResource("Resource10")
-
-
-[node name="Patch_2_2" type="MeshInstance3D" parent="Floor"]
-position = Vector3(11, 0, 14)
-mesh = SubResource("Resource13")
-material_override = SubResource("Resource12")
-
-
-[node name="Patch_2_3" type="MeshInstance3D" parent="Floor"]
-position = Vector3(29, 0, 14)
-mesh = SubResource("Resource15")
-material_override = SubResource("Resource14")
-
-
-[node name="Patch_2_4" type="MeshInstance3D" parent="Floor"]
-position = Vector3(47, 0, 14)
-mesh = SubResource("Resource17")
-material_override = SubResource("Resource16")
-
-
-[node name="Patch_3_1" type="MeshInstance3D" parent="Floor"]
-position = Vector3(-7, 0, 34)
-mesh = SubResource("Resource19")
-material_override = SubResource("Resource18")
-
-
-[node name="Patch_3_2" type="MeshInstance3D" parent="Floor"]
-position = Vector3(11, 0, 34)
-mesh = SubResource("Resource21")
-material_override = SubResource("Resource20")
-
-
-[node name="Patch_3_3" type="MeshInstance3D" parent="Floor"]
-position = Vector3(29, 0, 34)
-mesh = SubResource("Resource23")
-material_override = SubResource("Resource22")
-
-
-[node name="Patch_3_4" type="MeshInstance3D" parent="Floor"]
-position = Vector3(47, 0, 34)
-mesh = SubResource("Resource25")
-material_override = SubResource("Resource24")
-
-
-[node name="Patch_4_1" type="MeshInstance3D" parent="Floor"]
-position = Vector3(-7, 0, 54)
-mesh = SubResource("Resource27")
-material_override = SubResource("Resource26")
-
-
-[node name="Patch_4_2" type="MeshInstance3D" parent="Floor"]
-position = Vector3(11, 0, 54)
-mesh = SubResource("Resource29")
-material_override = SubResource("Resource28")
-
-
-[node name="Patch_4_3" type="MeshInstance3D" parent="Floor"]
-position = Vector3(29, 0, 54)
-mesh = SubResource("Resource31")
-material_override = SubResource("Resource30")
-
-
-[node name="Patch_4_4" type="MeshInstance3D" parent="Floor"]
-position = Vector3(47, 0, 54)
-mesh = SubResource("Resource33")
-material_override = SubResource("Resource32")
-
-
-[node name="Landmarks" type="Node3D" parent="."]
-
-
-[node name="Landmark_1" type="Node3D" parent="Landmarks"]
-position = Vector3(15, 0, 9)
+[node name="Landmark_1" type="Node3D" parent="Landmarks" unique_id=1540947386]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0, 9)
 metadata/source_placement = "green-shade-landmark-arena"
+metadata/ground_footprint = Rect2(400, 240, 160, 96)
+metadata/edit_help = "This trunk is the existing combat blocker. Its ground root/footprint must stay synchronized; rim plants are outside gameplay."
 
-[node name="green_shade_tree_facade" type="Sprite3D" parent="Landmarks/Landmark_1"]
-texture = ExtResource("matching_foliage")
-position = Vector3(0, 0, 0.012)
-rotation = Vector3(0, 0, 0)
+[node name="green_shade_tree_facade" type="Sprite3D" parent="Landmarks/Landmark_1" unique_id=1561702518]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.012)
 offset = Vector2(-24, 268.5)
 pixel_size = 0.011
-texture_filter = 0
-shaded = false
 billboard = 1
 alpha_cut = 1
-render_priority = 0
+texture_filter = 0
+texture = ExtResource("1_rdbal")
 region_enabled = true
 region_rect = Rect2(0, 0, 627, 627)
 
-
-[node name="green_shade_tree_interior" type="Sprite3D" parent="Landmarks/Landmark_1"]
+[node name="green_shade_tree_interior" type="Sprite3D" parent="Landmarks/Landmark_1" unique_id=1068455515]
 visible = false
-texture = ExtResource("9")
-position = Vector3(0, 0, 0)
-rotation = Vector3(0, 0, 0)
 offset = Vector2(0, 128)
 pixel_size = 0.018
-texture_filter = 0
-shaded = false
 billboard = 1
 alpha_cut = 1
-render_priority = 0
+texture_filter = 0
+texture = ExtResource("2_va3pd")
 region_enabled = true
 region_rect = Rect2(0, 0, 256, 256)
 
-
-[node name="green_shade_tree_canopy" type="Sprite3D" parent="Landmarks/Landmark_1"]
+[node name="green_shade_tree_canopy" type="Sprite3D" parent="Landmarks/Landmark_1" unique_id=1649843813]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.012)
 visible = false
-texture = ExtResource("7")
-position = Vector3(0, 0, -0.012)
-rotation = Vector3(0, 0, 0)
 offset = Vector2(0, 128)
 pixel_size = 0.018
-texture_filter = 0
-shaded = false
 billboard = 1
 alpha_cut = 1
-render_priority = 0
-region_enabled = true
-region_rect = Rect2(0, 0, 256, 256)
-
-
-[node name="Ambient" type="Node3D" parent="."]
-visible = false
-
-[node name="ForestParallax" parent="." instance=ExtResource("forest_parallax")]
-
-
-[node name="green_shade_rear_foliage" type="Sprite3D" parent="Ambient"]
-texture = ExtResource("7")
-position = Vector3(18.5, 0, 18)
-rotation = Vector3(0, 0, 0)
-offset = Vector2(0, 128)
-pixel_size = 0.012
 texture_filter = 0
-shaded = false
-billboard = 1
-alpha_cut = 2
-render_priority = -12
+texture = ExtResource("3_iih8g")
 region_enabled = true
 region_rect = Rect2(0, 0, 256, 256)
 
+[node name="Characters" type="Node3D" parent="." unique_id=201819672]
 
-[node name="Characters" type="Node3D" parent="."]
-
-
-[node name="Opponent" type="Node3D" parent="Characters"]
-position = Vector3(25.5, 0, 17.5)
+[node name="Opponent" type="Node3D" parent="Characters" unique_id=549023968]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.5, 0, 17.5)
 metadata/edit_help = "Move this root on XZ. Scale this root to resize the character. AnimatedSprite3D exposes clips and Pixel Size."
 
-[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="Characters/Opponent"]
-position = Vector3(0, 0.02, 0)
-script = ExtResource("3")
-sprite_frames = ExtResource("4")
-animation = &"idle.default"
-pixel_size = 0.025
-texture_filter = 0
-alpha_cut = 1
-shaded = false
-billboard = 1
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="Characters/Opponent" unique_id=146401131]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.02, 0)
 flip_h = true
+pixel_size = 0.025
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+sprite_frames = ExtResource("4_la4qo")
+animation = &"idle.default"
+script = ExtResource("5_nt45b")
 
-
-[node name="ContactShadow" type="MeshInstance3D" parent="Characters/Opponent"]
-position = Vector3(0, 0.012, 0)
-scale = Vector3(1, 1, 0.45)
-mesh = SubResource("Resource35")
+[node name="ContactShadow" type="MeshInstance3D" parent="Characters/Opponent" unique_id=1521154051]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.45, 0, 0.012, 0)
 material_override = SubResource("Resource34")
+mesh = SubResource("Resource35")
 
-[node name="Player" type="Node3D" parent="Characters"]
-position = Vector3(4.5, 0, 17.5)
+[node name="Player" type="Node3D" parent="Characters" unique_id=1067910401]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.5, 0, 17.5)
 metadata/edit_help = "Move this root on XZ. Scale this root to resize the character. AnimatedSprite3D exposes clips and Pixel Size."
 
-[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="Characters/Player"]
-position = Vector3(0, 0.02, 0)
-script = ExtResource("3")
-sprite_frames = ExtResource("4")
-animation = &"idle.default"
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="Characters/Player" unique_id=2019390239]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.02, 0)
 pixel_size = 0.025
-texture_filter = 0
-alpha_cut = 1
-shaded = false
 billboard = 1
-flip_h = false
+alpha_cut = 1
+texture_filter = 0
+sprite_frames = ExtResource("4_la4qo")
+animation = &"idle.default"
+script = ExtResource("5_nt45b")
 
-
-[node name="ContactShadow" type="MeshInstance3D" parent="Characters/Player"]
-position = Vector3(0, 0.012, 0)
-scale = Vector3(1, 1, 0.45)
-mesh = SubResource("Resource37")
+[node name="ContactShadow" type="MeshInstance3D" parent="Characters/Player" unique_id=2122221182]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.45, 0, 0.012, 0)
 material_override = SubResource("Resource36")
+mesh = SubResource("Resource37")
 
-[node name="CameraRig" type="Node3D" parent="."]
-position = Vector3(15, 1.2, 13.25)
-rotation = Vector3(-0.52359878, 0, 0)
-script = ExtResource("1")
-pitch_degrees = 30.0
-distance = 60.16171400
+[node name="CameraRig" type="Node3D" parent="." unique_id=928794601]
+transform = Transform3D(1, 0, 0, 0, 0.8660254, 0.5, 0, -0.5, 0.8660254, 15, 0, 18)
+script = ExtResource("6_3ung1")
+distance = 128.0
 metadata/edit_help = "Pitch Degrees controls floor angle (30 default, previous 50). Distance zooms. Transform Position pans. Camera3D FOV is editable."
 
-[node name="Camera3D" type="Camera3D" parent="CameraRig"]
-position = Vector3(0, 0, 60.16171400)
-current = true
+[node name="Camera3D" type="Camera3D" parent="CameraRig" unique_id=486019694]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 128)
 keep_aspect = 0
-fov = 28.0
+current = true
+fov = 32.0
 near = 0.1
-far = 400.0
+far = 600.0
 
-
-[node name="LayoutGuides" type="Node3D" parent="."]
+[node name="LayoutGuides" type="Node3D" parent="." unique_id=92000835]
 visible = false
 metadata/edit_help = "Reference markers only, never physics. Source manifest remains authoritative for gameplay."
 
-[node name="OpponentSpawn" type="Marker3D" parent="LayoutGuides"]
-position = Vector3(25.5, 0, 17.5)
+[node name="OpponentSpawn" type="Marker3D" parent="LayoutGuides" unique_id=1100063778]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.5, 0, 17.5)
 
-[node name="PlayerSpawn" type="Marker3D" parent="LayoutGuides"]
-position = Vector3(4.5, 0, 17.5)
+[node name="PlayerSpawn" type="Marker3D" parent="LayoutGuides" unique_id=316846264]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.5, 0, 17.5)
+
+[node name="Floor" type="Node3D" parent="." unique_id=145240995]
+
+[node name="ClearingTerrain" type="MeshInstance3D" parent="Floor" unique_id=3223845]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0, 18)
+material_override = SubResource("ShaderMaterial_mx6dc")
+script = ExtResource("9_wojyr")
+ground_material = SubResource("ShaderMaterial_mx6dc")
+metadata/edit_help = "30x36 grid and two-unit apron remain flat. Edit Ground Material for soil/grass; rebuild terrain after geometry tuning. Re-ground outside cards with the same sampler."
+
+[node name="ForestParallax" type="Node3D" parent="." unique_id=1291225934]
+script = ExtResource("10_mg8qf")
+preview_motion = true
+
+[node name="Sky" type="Sprite3D" parent="ForestParallax" unique_id=1559657635]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, -25, -44)
+material_override = SubResource("ShaderMaterial_oag7q")
+offset = Vector2(0, 408)
+pixel_size = 0.1
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("12_rnfb6")
+metadata/parallax = 0.12
+
+[node name="ForestVista" type="Sprite3D" parent="ForestParallax" unique_id=927593685]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, -22.4, -38.55)
+offset = Vector2(0, 395.5)
+pixel_size = 0.095
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("13_jggnq")
+metadata/parallax = 0.06
+
+[node name="BackgroundMeadow" type="Sprite3D" parent="ForestParallax" unique_id=830661705]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, -19.8, -33.1)
+offset = Vector2(0, 186)
+pixel_size = 0.09
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("14_pjemc")
+metadata/parallax = 0.025
+
+[node name="Woodland" type="Node3D" parent="ForestParallax" unique_id=1715860]
+metadata/depth_layers = true
+
+[node name="RimPockets" type="Node3D" parent="ForestParallax/Woodland" unique_id=1541282696]
+
+[node name="Fern_000" type="Sprite3D" parent="ForestParallax/Woodland/RimPockets" unique_id=1914571989]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.035683, -12.3, -5.358854)
+offset = Vector2(-18, 217.5)
+modulate = Color(0.7055033, 0.8017083, 0.7055033, 1)
+pixel_size = 0.005497448
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+metadata/buried_root = 0.3
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "RimPockets"
+
+[node name="Bush_001" type="Sprite3D" parent="ForestParallax/Woodland/RimPockets" unique_id=1827704351]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.045038, -12.3, -6.0386915)
+offset = Vector2(22, 252.5)
+modulate = Color(0.70486706, 0.8009853, 0.70486706, 1)
+pixel_size = 0.006718874
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+metadata/buried_root = 0.3
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "RimPockets"
+
+[node name="Bush_002" type="Sprite3D" parent="ForestParallax/Woodland/RimPockets" unique_id=1501031026]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.492008, -12.3, -3.2283728)
+offset = Vector2(22, 252.5)
+modulate = Color(0.7398117, 0.84069514, 0.7398117, 1)
+pixel_size = 0.004511888
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+metadata/buried_root = 0.3
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "RimPockets"
+
+[node name="Fern_003" type="Sprite3D" parent="ForestParallax/Woodland/RimPockets" unique_id=812387874]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.717605, -0.03, -0.8432572)
+offset = Vector2(-18, 217.5)
+flip_h = true
+modulate = Color(0.6728004, 0.764546, 0.6728004, 1)
+pixel_size = 0.005860618
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+metadata/buried_root = 0.03
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "RimPockets"
+
+[node name="Bush_004" type="Sprite3D" parent="ForestParallax/Woodland/RimPockets" unique_id=1053787104]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.424037, -12.3, -3.587895)
+offset = Vector2(22, 252.5)
+modulate = Color(0.7010821, 0.7966842, 0.7010821, 1)
+pixel_size = 0.005108549
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+metadata/buried_root = 0.3
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "RimPockets"
+
+[node name="Bush_005" type="Sprite3D" parent="ForestParallax/Woodland/RimPockets" unique_id=1598709262]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.527423, -12.3, -3.7193995)
+offset = Vector2(22, 252.5)
+modulate = Color(0.6786241, 0.77116376, 0.6786241, 1)
+pixel_size = 0.0058448734
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+metadata/buried_root = 0.3
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "RimPockets"
+
+[node name="Fern_006" type="Sprite3D" parent="ForestParallax/Woodland/RimPockets" unique_id=564487356]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.303505, -12.3, 0.18331695)
+offset = Vector2(-18, 217.5)
+flip_h = true
+modulate = Color(0.769612, 0.8745591, 0.769612, 1)
+pixel_size = 0.006741576
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+metadata/buried_root = 0.3
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "RimPockets"
+
+[node name="Bush_007" type="Sprite3D" parent="ForestParallax/Woodland/RimPockets" unique_id=440404845]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.153071, -12.3, -6.048045)
+offset = Vector2(22, 252.5)
+modulate = Color(0.68254125, 0.77561504, 0.68254125, 1)
+pixel_size = 0.004565154
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+metadata/buried_root = 0.3
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "RimPockets"
+
+[node name="Bush_008" type="Sprite3D" parent="ForestParallax/Woodland/RimPockets" unique_id=1344524654]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.837482, -12.3, -3.32731)
+offset = Vector2(22, 252.5)
+modulate = Color(0.73396015, 0.8340456, 0.73396015, 1)
+pixel_size = 0.006469032
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+metadata/buried_root = 0.3
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "RimPockets"
+
+[node name="Fern_009" type="Sprite3D" parent="ForestParallax/Woodland/RimPockets" unique_id=775590291]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.996141, -0.03, -5.8924417)
+offset = Vector2(-18, 217.5)
+modulate = Color(0.7609634, 0.86473113, 0.7609634, 1)
+pixel_size = 0.006808053
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+metadata/buried_root = 0.03
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "RimPockets"
+
+[node name="Bush_010" type="Sprite3D" parent="ForestParallax/Woodland/RimPockets" unique_id=1040084979]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.6376615, -0.03, -7.6207137)
+offset = Vector2(22, 252.5)
+modulate = Color(0.6943148, 0.7889941, 0.6943148, 1)
+pixel_size = 0.004097756
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+metadata/buried_root = 0.03
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "RimPockets"
+
+[node name="Bush_011" type="Sprite3D" parent="ForestParallax/Woodland/RimPockets" unique_id=1443637006]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.17838502, -12.3, -8.527624)
+offset = Vector2(22, 252.5)
+flip_h = true
+modulate = Color(0.71419936, 0.8115902, 0.71419936, 1)
+pixel_size = 0.0042742263
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+metadata/buried_root = 0.3
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "RimPockets"
+
+[node name="Fern_012" type="Sprite3D" parent="ForestParallax/Woodland/RimPockets" unique_id=849718526]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.7913256, -0.03, -5.341407)
+offset = Vector2(-18, 217.5)
+flip_h = true
+modulate = Color(0.7359288, 0.83628273, 0.7359288, 1)
+pixel_size = 0.005317695
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+metadata/buried_root = 0.03
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "RimPockets"
+
+[node name="Bush_013" type="Sprite3D" parent="ForestParallax/Woodland/RimPockets" unique_id=1540201432]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.06569743, -12.3, -7.0470986)
+offset = Vector2(22, 252.5)
+flip_h = true
+modulate = Color(0.73470145, 0.83488804, 0.73470145, 1)
+pixel_size = 0.0065724887
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+metadata/buried_root = 0.3
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "RimPockets"
+
+[node name="Bush_014" type="Sprite3D" parent="ForestParallax/Woodland/RimPockets" unique_id=400497275]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5653977, -12.3, -7.6597915)
+offset = Vector2(22, 252.5)
+flip_h = true
+modulate = Color(0.6675064, 0.75852996, 0.6675064, 1)
+pixel_size = 0.0069919536
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+metadata/buried_root = 0.3
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "RimPockets"
+
+[node name="Fern_015" type="Sprite3D" parent="ForestParallax/Woodland/RimPockets" unique_id=1859482333]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.4859, -0.03, -5.4030585)
+offset = Vector2(-18, 217.5)
+modulate = Color(0.698413, 0.79365116, 0.698413, 1)
+pixel_size = 0.0049791215
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+metadata/buried_root = 0.03
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "RimPockets"
+
+[node name="Bush_016" type="Sprite3D" parent="ForestParallax/Woodland/RimPockets" unique_id=363776407]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.919436, -12.3, -7.7460756)
+offset = Vector2(22, 252.5)
+modulate = Color(0.764123, 0.8683216, 0.764123, 1)
+pixel_size = 0.0049675154
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+metadata/buried_root = 0.3
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "RimPockets"
+
+[node name="Bush_017" type="Sprite3D" parent="ForestParallax/Woodland/RimPockets" unique_id=2018896205]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.812172, -0.03, -4.154258)
+offset = Vector2(22, 252.5)
+flip_h = true
+modulate = Color(0.7735334, 0.8790152, 0.7735334, 1)
+pixel_size = 0.0041651153
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+metadata/buried_root = 0.03
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "RimPockets"
+
+[node name="Fern_018" type="Sprite3D" parent="ForestParallax/Woodland/RimPockets" unique_id=182249647]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.28995, -12.3, -6.4329553)
+offset = Vector2(-18, 217.5)
+modulate = Color(0.7173849, 0.8152101, 0.7173849, 1)
+pixel_size = 0.0066068396
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+metadata/buried_root = 0.3
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "RimPockets"
+
+[node name="Bush_019" type="Sprite3D" parent="ForestParallax/Woodland/RimPockets" unique_id=537558167]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.931913, -0.03, -7.0440507)
+offset = Vector2(22, 252.5)
+flip_h = true
+modulate = Color(0.6664395, 0.7573176, 0.6664395, 1)
+pixel_size = 0.006381518
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+metadata/buried_root = 0.03
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "RimPockets"
+
+[node name="Bush_020" type="Sprite3D" parent="ForestParallax/Woodland/RimPockets" unique_id=1294173337]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.899586, -0.03, -3.2762759)
+offset = Vector2(22, 252.5)
+modulate = Color(0.72410923, 0.8228514, 0.72410923, 1)
+pixel_size = 0.006178504
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+metadata/buried_root = 0.03
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "RimPockets"
+
+[node name="Fern_021" type="Sprite3D" parent="ForestParallax/Woodland/RimPockets" unique_id=1424300803]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.184353, -12.3, -7.6841145)
+offset = Vector2(-18, 217.5)
+modulate = Color(0.75930434, 0.86284584, 0.75930434, 1)
+pixel_size = 0.005426272
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+metadata/buried_root = 0.3
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "RimPockets"
+
+[node name="Bush_022" type="Sprite3D" parent="ForestParallax/Woodland/RimPockets" unique_id=220858785]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.491762, -0.03, -3.5419672)
+offset = Vector2(22, 252.5)
+modulate = Color(0.7461145, 0.84785736, 0.7461145, 1)
+pixel_size = 0.004833921
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+metadata/buried_root = 0.03
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "RimPockets"
+
+[node name="Bush_023" type="Sprite3D" parent="ForestParallax/Woodland/RimPockets" unique_id=1937880726]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.331953, -12.3, -8.026064)
+offset = Vector2(22, 252.5)
+modulate = Color(0.6775104, 0.7698981, 0.6775104, 1)
+pixel_size = 0.0048872996
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+metadata/buried_root = 0.3
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "RimPockets"
+
+[node name="Fern_024" type="Sprite3D" parent="ForestParallax/Woodland/RimPockets" unique_id=1807873018]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.591267, -12.3, -8.144325)
+offset = Vector2(-18, 217.5)
+flip_h = true
+modulate = Color(0.73167026, 0.8314435, 0.73167026, 1)
+pixel_size = 0.004493627
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+metadata/buried_root = 0.3
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "RimPockets"
+
+[node name="Bush_025" type="Sprite3D" parent="ForestParallax/Woodland/RimPockets" unique_id=205298691]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 33.07345, -12.3, -7.030262)
+offset = Vector2(22, 252.5)
+flip_h = true
+modulate = Color(0.75809675, 0.8614736, 0.75809675, 1)
+pixel_size = 0.005221073
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+metadata/buried_root = 0.3
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "RimPockets"
+
+[node name="Fern_026" type="Sprite3D" parent="ForestParallax/Woodland/RimPockets" unique_id=1055020408]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 43.643063, -0.03, 6.517206)
+offset = Vector2(-18, 217.5)
+modulate = Color(0.66679966, 0.7577269, 0.66679966, 1)
+pixel_size = 0.004025197
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+metadata/buried_root = 0.03
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "RimPockets"
+
+[node name="Bush_027" type="Sprite3D" parent="ForestParallax/Woodland/RimPockets" unique_id=943267621]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 44.674812, -12.3, 7.603715)
+offset = Vector2(22, 252.5)
+flip_h = true
+modulate = Color(0.7082119, 0.8047862, 0.7082119, 1)
+pixel_size = 0.0061068665
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+metadata/buried_root = 0.3
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "RimPockets"
+
+[node name="Bush_028" type="Sprite3D" parent="ForestParallax/Woodland/RimPockets" unique_id=1151841951]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 41.58541, -0.03, 5.792284)
+offset = Vector2(22, 252.5)
+flip_h = true
+modulate = Color(0.72912914, 0.8285559, 0.72912914, 1)
+pixel_size = 0.0052800057
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+metadata/buried_root = 0.03
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "RimPockets"
+
+[node name="Fern_029" type="Sprite3D" parent="ForestParallax/Woodland/RimPockets" unique_id=1152074634]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 44.72492, -12.3, 2.2896214)
+offset = Vector2(-18, 217.5)
+modulate = Color(0.6662534, 0.7571061, 0.6662534, 1)
+pixel_size = 0.0058194147
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+metadata/buried_root = 0.3
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "RimPockets"
+
+[node name="Bush_030" type="Sprite3D" parent="ForestParallax/Woodland/RimPockets" unique_id=751397421]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 39.17027, -0.03, 2.1900814)
+offset = Vector2(22, 252.5)
+flip_h = true
+modulate = Color(0.67701125, 0.769331, 0.67701125, 1)
+pixel_size = 0.005122404
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+metadata/buried_root = 0.03
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "RimPockets"
+
+[node name="Bush_031" type="Sprite3D" parent="ForestParallax/Woodland/RimPockets" unique_id=725913463]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 45.99059, -12.3, 6.556816)
+offset = Vector2(22, 252.5)
+modulate = Color(0.7706624, 0.87575275, 0.7706624, 1)
+pixel_size = 0.0066606672
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+metadata/buried_root = 0.3
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "RimPockets"
+
+[node name="Fern_032" type="Sprite3D" parent="ForestParallax/Woodland/RimPockets" unique_id=448435815]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37.530994, -0.03, 6.998538)
+offset = Vector2(-18, 217.5)
+modulate = Color(0.7314976, 0.83124727, 0.7314976, 1)
+pixel_size = 0.0069351057
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+metadata/buried_root = 0.03
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "RimPockets"
+
+[node name="Bush_033" type="Sprite3D" parent="ForestParallax/Woodland/RimPockets" unique_id=1223315337]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 42.363365, -0.03, 6.3166666)
+offset = Vector2(22, 252.5)
+flip_h = true
+modulate = Color(0.7367558, 0.8372225, 0.7367558, 1)
+pixel_size = 0.0041399836
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+metadata/buried_root = 0.03
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "RimPockets"
+
+[node name="Bush_034" type="Sprite3D" parent="ForestParallax/Woodland/RimPockets" unique_id=1278784954]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 44.437214, -12.3, 5.9872265)
+offset = Vector2(22, 252.5)
+modulate = Color(0.66873395, 0.75992495, 0.66873395, 1)
+pixel_size = 0.0047432818
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+metadata/buried_root = 0.3
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "RimPockets"
+
+[node name="Fern_035" type="Sprite3D" parent="ForestParallax/Woodland/RimPockets" unique_id=1891491408]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.1741066, -0.03, 20.291584)
+offset = Vector2(-18, 217.5)
+modulate = Color(0.6961186, 0.7910438, 0.6961186, 1)
+pixel_size = 0.0069815256
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+metadata/buried_root = 0.03
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "RimPockets"
+
+[node name="Bush_036" type="Sprite3D" parent="ForestParallax/Woodland/RimPockets" unique_id=1499000228]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.52618, -0.03, 17.30823)
+offset = Vector2(22, 252.5)
+flip_h = true
+modulate = Color(0.6649518, 0.7556271, 0.6649518, 1)
+pixel_size = 0.004863031
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+metadata/buried_root = 0.03
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "RimPockets"
+
+[node name="Bush_037" type="Sprite3D" parent="ForestParallax/Woodland/RimPockets" unique_id=1676555]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.528998, -0.03, 16.467789)
+offset = Vector2(22, 252.5)
+modulate = Color(0.7507201, 0.853091, 0.7507201, 1)
+pixel_size = 0.006022388
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+metadata/buried_root = 0.03
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "RimPockets"
+
+[node name="Fern_038" type="Sprite3D" parent="ForestParallax/Woodland/RimPockets" unique_id=329365276]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.84881, -0.03, 20.135328)
+offset = Vector2(-18, 217.5)
+flip_h = true
+modulate = Color(0.72924596, 0.8286886, 0.72924596, 1)
+pixel_size = 0.0046103275
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+metadata/buried_root = 0.03
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "RimPockets"
+
+[node name="Bush_039" type="Sprite3D" parent="ForestParallax/Woodland/RimPockets" unique_id=75920248]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.543348, -0.03, 21.805622)
+offset = Vector2(22, 252.5)
+modulate = Color(0.6887966, 0.78272337, 0.6887966, 1)
+pixel_size = 0.0064384174
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+metadata/buried_root = 0.03
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "RimPockets"
+
+[node name="Bush_040" type="Sprite3D" parent="ForestParallax/Woodland/RimPockets" unique_id=52240578]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.7173305, -0.03, 21.136515)
+offset = Vector2(22, 252.5)
+modulate = Color(0.76430786, 0.86853164, 0.76430786, 1)
+pixel_size = 0.006609611
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+metadata/buried_root = 0.03
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "RimPockets"
+
+[node name="Fern_041" type="Sprite3D" parent="ForestParallax/Woodland/RimPockets" unique_id=1018415490]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.872703, -0.03, 19.640465)
+offset = Vector2(-18, 217.5)
+modulate = Color(0.72431624, 0.8230866, 0.72431624, 1)
+pixel_size = 0.0060817385
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+metadata/buried_root = 0.03
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "RimPockets"
+
+[node name="Bush_042" type="Sprite3D" parent="ForestParallax/Woodland/RimPockets" unique_id=1624454995]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.128395, -0.03, 19.030996)
+offset = Vector2(22, 252.5)
+modulate = Color(0.69674474, 0.7917554, 0.69674474, 1)
+pixel_size = 0.0056093615
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+metadata/buried_root = 0.03
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "RimPockets"
+
+[node name="Bush_043" type="Sprite3D" parent="ForestParallax/Woodland/RimPockets" unique_id=1686278133]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.276727, -0.03, 20.468885)
+offset = Vector2(22, 252.5)
+modulate = Color(0.7328002, 0.8327275, 0.7328002, 1)
+pixel_size = 0.004064943
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+metadata/buried_root = 0.03
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "RimPockets"
+
+[node name="Fern_044" type="Sprite3D" parent="ForestParallax/Woodland/RimPockets" unique_id=437233470]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.20964, -0.03, 19.876562)
+offset = Vector2(-18, 217.5)
+flip_h = true
+modulate = Color(0.69662595, 0.79162043, 0.69662595, 1)
+pixel_size = 0.0063877767
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+metadata/buried_root = 0.03
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "RimPockets"
+
+[node name="Fern_045" type="Sprite3D" parent="ForestParallax/Woodland/RimPockets" unique_id=1731590501]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36.129066, -0.03, 28.426563)
+offset = Vector2(-18, 217.5)
+modulate = Color(0.7365043, 0.8369368, 0.7365043, 1)
+pixel_size = 0.005567889
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+metadata/buried_root = 0.03
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "RimPockets"
+
+[node name="Bush_046" type="Sprite3D" parent="ForestParallax/Woodland/RimPockets" unique_id=805540639]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 40.85902, -0.03, 26.743725)
+offset = Vector2(22, 252.5)
+modulate = Color(0.72098917, 0.8193059, 0.72098917, 1)
+pixel_size = 0.0041340906
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+metadata/buried_root = 0.03
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "RimPockets"
+
+[node name="Bush_047" type="Sprite3D" parent="ForestParallax/Woodland/RimPockets" unique_id=1755193852]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 40.288364, -0.03, 26.668808)
+offset = Vector2(22, 252.5)
+flip_h = true
+modulate = Color(0.6733204, 0.76513684, 0.6733204, 1)
+pixel_size = 0.0056468006
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+metadata/buried_root = 0.03
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "RimPockets"
+
+[node name="Fern_048" type="Sprite3D" parent="ForestParallax/Woodland/RimPockets" unique_id=895225692]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 39.78171, -0.03, 27.824142)
+offset = Vector2(-18, 217.5)
+modulate = Color(0.67882764, 0.771395, 0.67882764, 1)
+pixel_size = 0.006785308
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+metadata/buried_root = 0.03
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "RimPockets"
+
+[node name="Bush_049" type="Sprite3D" parent="ForestParallax/Woodland/RimPockets" unique_id=113410742]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 35.571514, -0.03, 25.948778)
+offset = Vector2(22, 252.5)
+flip_h = true
+modulate = Color(0.75239706, 0.8549966, 0.75239706, 1)
+pixel_size = 0.006013903
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+metadata/buried_root = 0.03
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "RimPockets"
+
+[node name="Bush_050" type="Sprite3D" parent="ForestParallax/Woodland/RimPockets" unique_id=616414925]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 40.093746, -0.03, 24.4435)
+offset = Vector2(22, 252.5)
+flip_h = true
+modulate = Color(0.72165483, 0.8200623, 0.72165483, 1)
+pixel_size = 0.0064279195
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+metadata/buried_root = 0.03
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "RimPockets"
+
+[node name="Fern_051" type="Sprite3D" parent="ForestParallax/Woodland/RimPockets" unique_id=2054775920]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38.78188, -0.03, 23.81481)
+offset = Vector2(-18, 217.5)
+flip_h = true
+modulate = Color(0.76126206, 0.8650705, 0.76126206, 1)
+pixel_size = 0.004003957
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+metadata/buried_root = 0.03
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "RimPockets"
+
+[node name="Fern_052" type="Sprite3D" parent="ForestParallax/Woodland/RimPockets" unique_id=751286230]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6935573, -0.03, 41.75379)
+offset = Vector2(-18, 217.5)
+modulate = Color(0.677743, 0.7701625, 0.677743, 1)
+pixel_size = 0.0045155766
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+metadata/buried_root = 0.03
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "RimPockets"
+
+[node name="Bush_053" type="Sprite3D" parent="ForestParallax/Woodland/RimPockets" unique_id=2113311462]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5799117, -0.03, 43.559692)
+offset = Vector2(22, 252.5)
+flip_h = true
+modulate = Color(0.7455663, 0.8472344, 0.7455663, 1)
+pixel_size = 0.0053227656
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+metadata/buried_root = 0.03
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "RimPockets"
+
+[node name="Bush_054" type="Sprite3D" parent="ForestParallax/Woodland/RimPockets" unique_id=1465470760]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.007893, -0.03, 38.80304)
+offset = Vector2(22, 252.5)
+flip_h = true
+modulate = Color(0.68102944, 0.7738971, 0.68102944, 1)
+pixel_size = 0.0058739204
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+metadata/buried_root = 0.03
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "RimPockets"
+
+[node name="Fern_055" type="Sprite3D" parent="ForestParallax/Woodland/RimPockets" unique_id=67979925]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.2697945, -12.3, 41.720947)
+offset = Vector2(-18, 217.5)
+flip_h = true
+modulate = Color(0.77326816, 0.87871385, 0.77326816, 1)
+pixel_size = 0.0050452882
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+metadata/buried_root = 0.3
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "RimPockets"
+
+[node name="Bush_056" type="Sprite3D" parent="ForestParallax/Woodland/RimPockets" unique_id=1091488480]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.3005242, -0.03, 40.631058)
+offset = Vector2(22, 252.5)
+modulate = Color(0.7515401, 0.85402286, 0.7515401, 1)
+pixel_size = 0.005786162
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+metadata/buried_root = 0.03
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "RimPockets"
+
+[node name="Bush_057" type="Sprite3D" parent="ForestParallax/Woodland/RimPockets" unique_id=608183348]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.092139, -0.03, 39.61515)
+offset = Vector2(22, 252.5)
+modulate = Color(0.7028898, 0.79873836, 0.7028898, 1)
+pixel_size = 0.005399441
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+metadata/buried_root = 0.03
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "RimPockets"
+
+[node name="Fern_058" type="Sprite3D" parent="ForestParallax/Woodland/RimPockets" unique_id=1778879540]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.046786785, -0.03, 39.11605)
+offset = Vector2(-18, 217.5)
+flip_h = true
+modulate = Color(0.7205725, 0.8188324, 0.7205725, 1)
+pixel_size = 0.0054612155
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+metadata/buried_root = 0.03
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "RimPockets"
+
+[node name="Bush_059" type="Sprite3D" parent="ForestParallax/Woodland/RimPockets" unique_id=1266654770]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.6103463, -12.3, 44.380886)
+offset = Vector2(22, 252.5)
+modulate = Color(0.75605243, 0.8591505, 0.75605243, 1)
+pixel_size = 0.0042241598
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+metadata/buried_root = 0.3
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "RimPockets"
+
+[node name="Bush_060" type="Sprite3D" parent="ForestParallax/Woodland/RimPockets" unique_id=182722836]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.1327229, -0.03, 41.812298)
+offset = Vector2(22, 252.5)
+modulate = Color(0.6833576, 0.77654266, 0.6833576, 1)
+pixel_size = 0.004801911
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+metadata/buried_root = 0.03
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "RimPockets"
+
+[node name="Fern_061" type="Sprite3D" parent="ForestParallax/Woodland/RimPockets" unique_id=2048843317]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.21211, -12.3, 42.818275)
+offset = Vector2(-18, 217.5)
+modulate = Color(0.75481117, 0.85774, 0.75481117, 1)
+pixel_size = 0.004854273
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+metadata/buried_root = 0.3
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "RimPockets"
+
+[node name="Bush_062" type="Sprite3D" parent="ForestParallax/Woodland/RimPockets" unique_id=1558527642]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.0231028, -12.3, 42.730225)
+offset = Vector2(22, 252.5)
+modulate = Color(0.7097, 0.80647725, 0.7097, 1)
+pixel_size = 0.0054211123
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+metadata/buried_root = 0.3
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "RimPockets"
+
+[node name="Fern_063" type="Sprite3D" parent="ForestParallax/Woodland/RimPockets" unique_id=1534440451]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.575483, -12.3, 44.92322)
+offset = Vector2(-18, 217.5)
+modulate = Color(0.73403424, 0.8341298, 0.73403424, 1)
+pixel_size = 0.006803255
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+metadata/buried_root = 0.3
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "RimPockets"
+
+[node name="Bush_064" type="Sprite3D" parent="ForestParallax/Woodland/RimPockets" unique_id=1746705570]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.023148, -12.3, 43.502354)
+offset = Vector2(22, 252.5)
+flip_h = true
+modulate = Color(0.75566465, 0.8587098, 0.75566465, 1)
+pixel_size = 0.0047394442
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+metadata/buried_root = 0.3
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "RimPockets"
+
+[node name="Bush_065" type="Sprite3D" parent="ForestParallax/Woodland/RimPockets" unique_id=107240040]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 35.242046, -12.3, 41.90347)
+offset = Vector2(22, 252.5)
+flip_h = true
+modulate = Color(0.6810996, 0.77397686, 0.6810996, 1)
+pixel_size = 0.0067204367
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+metadata/buried_root = 0.3
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "RimPockets"
+
+[node name="Fern_066" type="Sprite3D" parent="ForestParallax/Woodland/RimPockets" unique_id=750896988]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.82156, -12.3, 43.61885)
+offset = Vector2(-18, 217.5)
+flip_h = true
+modulate = Color(0.7610002, 0.864773, 0.7610002, 1)
+pixel_size = 0.006494635
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+metadata/buried_root = 0.3
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "RimPockets"
+
+[node name="Bush_067" type="Sprite3D" parent="ForestParallax/Woodland/RimPockets" unique_id=203994424]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.074593, -0.03, 40.13115)
+offset = Vector2(22, 252.5)
+flip_h = true
+modulate = Color(0.72364324, 0.8223219, 0.72364324, 1)
+pixel_size = 0.004278515
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+metadata/buried_root = 0.03
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "RimPockets"
+
+[node name="Bush_068" type="Sprite3D" parent="ForestParallax/Woodland/RimPockets" unique_id=656645995]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.587996, -12.3, 42.93572)
+offset = Vector2(22, 252.5)
+modulate = Color(0.69902897, 0.7943511, 0.69902897, 1)
+pixel_size = 0.005262616
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+metadata/buried_root = 0.3
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "RimPockets"
+
+[node name="Fern_069" type="Sprite3D" parent="ForestParallax/Woodland/RimPockets" unique_id=1586099498]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.63041, -12.3, 44.22969)
+offset = Vector2(-18, 217.5)
+flip_h = true
+modulate = Color(0.7143385, 0.81174827, 0.7143385, 1)
+pixel_size = 0.004769092
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+metadata/buried_root = 0.3
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "RimPockets"
+
+[node name="Bush_070" type="Sprite3D" parent="ForestParallax/Woodland/RimPockets" unique_id=1650937821]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 35.324318, -12.3, 43.77606)
+offset = Vector2(22, 252.5)
+flip_h = true
+modulate = Color(0.6682558, 0.7593816, 0.6682558, 1)
+pixel_size = 0.0066261953
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+metadata/buried_root = 0.3
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "RimPockets"
+
+[node name="Bush_071" type="Sprite3D" parent="ForestParallax/Woodland/RimPockets" unique_id=69723607]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.120792, -12.3, 46.188457)
+offset = Vector2(22, 252.5)
+flip_h = true
+modulate = Color(0.70606744, 0.8023494, 0.70606744, 1)
+pixel_size = 0.0063793403
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+metadata/buried_root = 0.3
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "RimPockets"
+
+[node name="Tree_072" type="Sprite3D" parent="ForestParallax/Woodland/RimPockets" unique_id=1222679377]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, -0.03, 1)
+offset = Vector2(-24, 268.5)
+flip_h = true
+modulate = Color(0.660087, 0.7500988, 0.660087, 1)
+pixel_size = 0.012385137
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+metadata/buried_root = 0.03
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "RimPockets"
+
+[node name="Tree_073" type="Sprite3D" parent="ForestParallax/Woodland/RimPockets" unique_id=212978594]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36, -0.03, 2)
+offset = Vector2(-24, 268.5)
+modulate = Color(0.6759762, 0.7681548, 0.6759762, 1)
+pixel_size = 0.010749672
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+metadata/buried_root = 0.03
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "RimPockets"
+
+[node name="Tree_074" type="Sprite3D" parent="ForestParallax/Woodland/RimPockets" unique_id=620802345]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, -0.03, 25)
+offset = Vector2(-24, 268.5)
+modulate = Color(0.66692615, 0.7578706, 0.66692615, 1)
+pixel_size = 0.010204327
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+metadata/buried_root = 0.03
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "RimPockets"
+
+[node name="Tree_075" type="Sprite3D" parent="ForestParallax/Woodland/RimPockets" unique_id=1920275594]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 40, -0.03, 31)
+offset = Vector2(-24, 268.5)
+flip_h = true
+modulate = Color(0.6921595, 0.78654486, 0.6921595, 1)
+pixel_size = 0.011768321
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+metadata/buried_root = 0.03
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "RimPockets"
+
+[node name="Tree_076" type="Sprite3D" parent="ForestParallax/Woodland/RimPockets" unique_id=1493434659]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, -0.03, -7)
+offset = Vector2(-24, 268.5)
+modulate = Color(0.7451493, 0.8467606, 0.7451493, 1)
+pixel_size = 0.011590087
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+metadata/buried_root = 0.03
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "RimPockets"
+
+[node name="Tree_077" type="Sprite3D" parent="ForestParallax/Woodland/RimPockets" unique_id=2052673773]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26, -0.03, 43)
+offset = Vector2(-24, 268.5)
+flip_h = true
+modulate = Color(0.7643623, 0.8685935, 0.7643623, 1)
+pixel_size = 0.013958782
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+metadata/buried_root = 0.03
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "RimPockets"
+
+[node name="RearGrove" type="Node3D" parent="ForestParallax/Woodland" unique_id=454385512]
+metadata/parallax = 0.018
+
+[node name="Tree_078" type="Sprite3D" parent="ForestParallax/Woodland/RearGrove" unique_id=1018518499]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -43.998207, -12.3, -25.058052)
+offset = Vector2(-24, 268.5)
+flip_h = true
+modulate = Color(0.42133203, 0.47878638, 0.42133203, 1)
+pixel_size = 0.020946024
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+metadata/buried_root = 0.3
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "RearGrove"
+
+[node name="Bush_079" type="Sprite3D" parent="ForestParallax/Woodland/RearGrove" unique_id=1743060679]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -43.845673, -12.3, -21.058052)
+offset = Vector2(22, 252.5)
+flip_h = true
+modulate = Color(0.4302396, 0.48890862, 0.4302396, 1)
+pixel_size = 0.010337736
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+metadata/buried_root = 0.3
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "RearGrove"
+
+[node name="Tree_080" type="Sprite3D" parent="ForestParallax/Woodland/RearGrove" unique_id=1472041248]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -37.9822, -12.3, -27.119392)
+offset = Vector2(-24, 268.5)
+modulate = Color(0.4142795, 0.47077215, 0.4142795, 1)
+pixel_size = 0.020821117
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+metadata/buried_root = 0.3
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "RearGrove"
+
+[node name="Bush_081" type="Sprite3D" parent="ForestParallax/Woodland/RearGrove" unique_id=1527539614]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -36.845013, -12.3, -23.119392)
+offset = Vector2(22, 252.5)
+flip_h = true
+modulate = Color(0.38199696, 0.43408746, 0.38199696, 1)
+pixel_size = 0.012744597
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+metadata/buried_root = 0.3
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "RearGrove"
+
+[node name="Tree_082" type="Sprite3D" parent="ForestParallax/Woodland/RearGrove" unique_id=1210650337]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30.611425, -12.3, -28.338879)
+offset = Vector2(-24, 268.5)
+modulate = Color(0.4213753, 0.47883555, 0.4213753, 1)
+pixel_size = 0.024595637
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+metadata/buried_root = 0.3
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "RearGrove"
+
+[node name="Bush_083" type="Sprite3D" parent="ForestParallax/Woodland/RearGrove" unique_id=2086709284]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -33.024586, -12.3, -24.338879)
+offset = Vector2(22, 252.5)
+modulate = Color(0.39326486, 0.44689187, 0.39326486, 1)
+pixel_size = 0.009627335
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+metadata/buried_root = 0.3
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "RearGrove"
+
+[node name="Tree_084" type="Sprite3D" parent="ForestParallax/Woodland/RearGrove" unique_id=1511985290]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.804443, -12.3, -24.444405)
+offset = Vector2(-24, 268.5)
+modulate = Color(0.40013283, 0.4546964, 0.40013283, 1)
+pixel_size = 0.025684658
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+metadata/buried_root = 0.3
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "RearGrove"
+
+[node name="Bush_085" type="Sprite3D" parent="ForestParallax/Woodland/RearGrove" unique_id=1972686973]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.870249, -12.3, -20.444405)
+offset = Vector2(22, 252.5)
+modulate = Color(0.3990141, 0.4534251, 0.3990141, 1)
+pixel_size = 0.009791231
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+metadata/buried_root = 0.3
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "RearGrove"
+
+[node name="Tree_086" type="Sprite3D" parent="ForestParallax/Woodland/RearGrove" unique_id=2075508145]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.843112, -12.3, -28.710821)
+offset = Vector2(-24, 268.5)
+flip_h = true
+modulate = Color(0.3984761, 0.45281374, 0.3984761, 1)
+pixel_size = 0.01889207
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+metadata/buried_root = 0.3
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "RearGrove"
+
+[node name="Bush_087" type="Sprite3D" parent="ForestParallax/Woodland/RearGrove" unique_id=1785658721]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.932106, -12.3, -24.710821)
+offset = Vector2(22, 252.5)
+flip_h = true
+modulate = Color(0.38473028, 0.4371935, 0.38473028, 1)
+pixel_size = 0.011544365
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+metadata/buried_root = 0.3
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "RearGrove"
+
+[node name="Tree_088" type="Sprite3D" parent="ForestParallax/Woodland/RearGrove" unique_id=1135344615]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.327045, -12.3, -24.368092)
+offset = Vector2(-24, 268.5)
+flip_h = true
+modulate = Color(0.40797558, 0.46360862, 0.40797558, 1)
+pixel_size = 0.023034796
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+metadata/buried_root = 0.3
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "RearGrove"
+
+[node name="Bush_089" type="Sprite3D" parent="ForestParallax/Woodland/RearGrove" unique_id=1032831136]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.199751, -12.3, -20.368092)
+offset = Vector2(22, 252.5)
+modulate = Color(0.38473034, 0.43719357, 0.38473034, 1)
+pixel_size = 0.012438854
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+metadata/buried_root = 0.3
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "RearGrove"
+
+[node name="Tree_090" type="Sprite3D" parent="ForestParallax/Woodland/RearGrove" unique_id=218885402]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.7492094, -12.3, -30.852259)
+offset = Vector2(-24, 268.5)
+modulate = Color(0.38732213, 0.4401388, 0.38732213, 1)
+pixel_size = 0.020146932
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+metadata/buried_root = 0.3
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "RearGrove"
+
+[node name="Bush_091" type="Sprite3D" parent="ForestParallax/Woodland/RearGrove" unique_id=1163823513]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.1225514, -12.3, -26.852259)
+offset = Vector2(22, 252.5)
+flip_h = true
+modulate = Color(0.38935533, 0.44244924, 0.38935533, 1)
+pixel_size = 0.008810315
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+metadata/buried_root = 0.3
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "RearGrove"
+
+[node name="Tree_092" type="Sprite3D" parent="ForestParallax/Woodland/RearGrove" unique_id=2045759916]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.384209, -12.3, -26.79628)
+offset = Vector2(-24, 268.5)
+flip_h = true
+modulate = Color(0.40676367, 0.46223146, 0.40676367, 1)
+pixel_size = 0.019765284
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+metadata/buried_root = 0.3
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "RearGrove"
+
+[node name="Bush_093" type="Sprite3D" parent="ForestParallax/Woodland/RearGrove" unique_id=1785625588]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.01096, -12.3, -22.79628)
+offset = Vector2(22, 252.5)
+modulate = Color(0.3780235, 0.42957217, 0.3780235, 1)
+pixel_size = 0.009976211
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+metadata/buried_root = 0.3
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "RearGrove"
+
+[node name="Tree_094" type="Sprite3D" parent="ForestParallax/Woodland/RearGrove" unique_id=110992314]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.858286, -12.3, -28.155596)
+offset = Vector2(-24, 268.5)
+modulate = Color(0.38543037, 0.43798906, 0.38543037, 1)
+pixel_size = 0.020035094
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+metadata/buried_root = 0.3
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "RearGrove"
+
+[node name="Bush_095" type="Sprite3D" parent="ForestParallax/Woodland/RearGrove" unique_id=1906763102]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.389366, -12.3, -24.155596)
+offset = Vector2(22, 252.5)
+modulate = Color(0.38212216, 0.43422973, 0.38212216, 1)
+pixel_size = 0.011017583
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+metadata/buried_root = 0.3
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "RearGrove"
+
+[node name="Tree_096" type="Sprite3D" parent="ForestParallax/Woodland/RearGrove" unique_id=383094866]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.629194, -12.3, -30.42772)
+offset = Vector2(-24, 268.5)
+flip_h = true
+modulate = Color(0.43483764, 0.49413368, 0.43483764, 1)
+pixel_size = 0.018651595
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+metadata/buried_root = 0.3
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "RearGrove"
+
+[node name="Bush_097" type="Sprite3D" parent="ForestParallax/Woodland/RearGrove" unique_id=885941599]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.655499, -12.3, -26.42772)
+offset = Vector2(22, 252.5)
+modulate = Color(0.37998956, 0.43180633, 0.37998956, 1)
+pixel_size = 0.012671489
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+metadata/buried_root = 0.3
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "RearGrove"
+
+[node name="Tree_098" type="Sprite3D" parent="ForestParallax/Woodland/RearGrove" unique_id=1377540257]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.759176, -12.3, -22.142109)
+offset = Vector2(-24, 268.5)
+modulate = Color(0.41169712, 0.46783763, 0.41169712, 1)
+pixel_size = 0.01879235
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+metadata/buried_root = 0.3
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "RearGrove"
+
+[node name="Bush_099" type="Sprite3D" parent="ForestParallax/Woodland/RearGrove" unique_id=1263300906]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.414356, -12.3, -18.142109)
+offset = Vector2(22, 252.5)
+modulate = Color(0.41990113, 0.47716036, 0.41990113, 1)
+pixel_size = 0.00813894
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+metadata/buried_root = 0.3
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "RearGrove"
+
+[node name="Tree_100" type="Sprite3D" parent="ForestParallax/Woodland/RearGrove" unique_id=348918969]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 40.156467, -12.3, -24.61554)
+offset = Vector2(-24, 268.5)
+flip_h = true
+modulate = Color(0.38809514, 0.4410172, 0.38809514, 1)
+pixel_size = 0.02189715
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+metadata/buried_root = 0.3
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "RearGrove"
+
+[node name="Bush_101" type="Sprite3D" parent="ForestParallax/Woodland/RearGrove" unique_id=1531427634]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 41.65925, -12.3, -20.61554)
+offset = Vector2(22, 252.5)
+modulate = Color(0.39730805, 0.45148644, 0.39730805, 1)
+pixel_size = 0.011627134
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+metadata/buried_root = 0.3
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "RearGrove"
+
+[node name="Tree_102" type="Sprite3D" parent="ForestParallax/Woodland/RearGrove" unique_id=209465981]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 45.59862, -12.3, -30.231956)
+offset = Vector2(-24, 268.5)
+modulate = Color(0.4195567, 0.476769, 0.4195567, 1)
+pixel_size = 0.022630425
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+metadata/buried_root = 0.3
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "RearGrove"
+
+[node name="Bush_103" type="Sprite3D" parent="ForestParallax/Woodland/RearGrove" unique_id=1710077774]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 48.898464, -12.3, -26.231956)
+offset = Vector2(22, 252.5)
+flip_h = true
+modulate = Color(0.43573055, 0.49514833, 0.43573055, 1)
+pixel_size = 0.008261455
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+metadata/buried_root = 0.3
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "RearGrove"
+
+[node name="Tree_104" type="Sprite3D" parent="ForestParallax/Woodland/RearGrove" unique_id=1324717841]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 55.749203, -12.3, -23.17513)
+offset = Vector2(-24, 268.5)
+flip_h = true
+modulate = Color(0.39242795, 0.44594085, 0.39242795, 1)
+pixel_size = 0.025394453
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+metadata/buried_root = 0.3
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "RearGrove"
+
+[node name="Bush_105" type="Sprite3D" parent="ForestParallax/Woodland/RearGrove" unique_id=1751999725]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 58.547424, -12.3, -19.17513)
+offset = Vector2(22, 252.5)
+flip_h = true
+modulate = Color(0.41912773, 0.4762815, 0.41912773, 1)
+pixel_size = 0.009387591
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+metadata/buried_root = 0.3
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "RearGrove"
+
+[node name="Tree_106" type="Sprite3D" parent="ForestParallax/Woodland/RearGrove" unique_id=1148808725]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 61.099064, -12.3, -27.505932)
+offset = Vector2(-24, 268.5)
+flip_h = true
+modulate = Color(0.39215556, 0.44563133, 0.39215556, 1)
+pixel_size = 0.025067743
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+metadata/buried_root = 0.3
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "RearGrove"
+
+[node name="Bush_107" type="Sprite3D" parent="ForestParallax/Woodland/RearGrove" unique_id=557340397]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 61.977947, -12.3, -23.505932)
+offset = Vector2(22, 252.5)
+modulate = Color(0.3921456, 0.44562, 0.3921456, 1)
+pixel_size = 0.010860301
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+metadata/buried_root = 0.3
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "RearGrove"
+
+[node name="Tree_108" type="Sprite3D" parent="ForestParallax/Woodland/RearGrove" unique_id=1605582337]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 70.74191, -12.3, -24.995876)
+offset = Vector2(-24, 268.5)
+modulate = Color(0.43854293, 0.49834424, 0.43854293, 1)
+pixel_size = 0.024879504
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+metadata/buried_root = 0.3
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "RearGrove"
+
+[node name="Bush_109" type="Sprite3D" parent="ForestParallax/Woodland/RearGrove" unique_id=2071958979]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 73.40501, -12.3, -20.995876)
+offset = Vector2(22, 252.5)
+flip_h = true
+modulate = Color(0.3815367, 0.43356442, 0.3815367, 1)
+pixel_size = 0.008198146
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+metadata/buried_root = 0.3
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "RearGrove"
+
+[node name="SideValleys" type="Node3D" parent="ForestParallax/Woodland" unique_id=579451954]
+
+[node name="Tree_110" type="Sprite3D" parent="ForestParallax/Woodland/SideValleys" unique_id=633803895]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.644798, -12.3, -11.228466)
+offset = Vector2(-24, 268.5)
+flip_h = true
+modulate = Color(0.34043875, 0.38686222, 0.34043875, 1)
+pixel_size = 0.014507638
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+metadata/buried_root = 0.3
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "SideValleys"
+
+[node name="Bush_111" type="Sprite3D" parent="ForestParallax/Woodland/SideValleys" unique_id=2067415832]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.244247, -12.3, -13.973013)
+offset = Vector2(22, 252.5)
+flip_h = true
+modulate = Color(0.41425556, 0.47074497, 0.41425556, 1)
+pixel_size = 0.006669574
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+metadata/buried_root = 0.3
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "SideValleys"
+
+[node name="Fern_112" type="Sprite3D" parent="ForestParallax/Woodland/SideValleys" unique_id=35123482]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.458189, -12.3, -12.143099)
+offset = Vector2(-18, 217.5)
+flip_h = true
+modulate = Color(0.38611346, 0.4387653, 0.38611346, 1)
+pixel_size = 0.009880825
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+metadata/buried_root = 0.3
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "SideValleys"
+
+[node name="Tree_113" type="Sprite3D" parent="ForestParallax/Woodland/SideValleys" unique_id=1740251772]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.856716, -12.3, -3.8058038)
+offset = Vector2(-24, 268.5)
+flip_h = true
+modulate = Color(0.3593022, 0.40829793, 0.3593022, 1)
+pixel_size = 0.018795274
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+metadata/buried_root = 0.3
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "SideValleys"
+
+[node name="Bush_114" type="Sprite3D" parent="ForestParallax/Woodland/SideValleys" unique_id=1791589724]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.980751, -12.3, -7.7365074)
+offset = Vector2(22, 252.5)
+flip_h = true
+modulate = Color(0.3653137, 0.4151292, 0.3653137, 1)
+pixel_size = 0.007865423
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+metadata/buried_root = 0.3
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "SideValleys"
+
+[node name="Fern_115" type="Sprite3D" parent="ForestParallax/Woodland/SideValleys" unique_id=1387475215]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27.430359, -12.3, -6.172374)
+offset = Vector2(-18, 217.5)
+modulate = Color(0.414341, 0.47084206, 0.414341, 1)
+pixel_size = 0.008082096
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+metadata/buried_root = 0.3
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "SideValleys"
+
+[node name="Tree_116" type="Sprite3D" parent="ForestParallax/Woodland/SideValleys" unique_id=637566740]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.184399, -12.3, 1.4183624)
+offset = Vector2(-24, 268.5)
+modulate = Color(0.32178706, 0.3656671, 0.32178706, 1)
+pixel_size = 0.014698751
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+metadata/buried_root = 0.3
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "SideValleys"
+
+[node name="Bush_117" type="Sprite3D" parent="ForestParallax/Woodland/SideValleys" unique_id=1232069047]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.377455, -12.3, 2.1843035)
+offset = Vector2(22, 252.5)
+modulate = Color(0.36967894, 0.4200897, 0.36967894, 1)
+pixel_size = 0.008685989
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+metadata/buried_root = 0.3
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "SideValleys"
+
+[node name="Fern_118" type="Sprite3D" parent="ForestParallax/Woodland/SideValleys" unique_id=2090582436]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.94302, -12.3, 1.0302908)
+offset = Vector2(-18, 217.5)
+modulate = Color(0.3714135, 0.4220608, 0.3714135, 1)
+pixel_size = 0.0076135127
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+metadata/buried_root = 0.3
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "SideValleys"
+
+[node name="Tree_119" type="Sprite3D" parent="ForestParallax/Woodland/SideValleys" unique_id=730235203]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.369492, -12.3, 9.433974)
+offset = Vector2(-24, 268.5)
+modulate = Color(0.32250375, 0.36648154, 0.32250375, 1)
+pixel_size = 0.01665328
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+metadata/buried_root = 0.3
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "SideValleys"
+
+[node name="Bush_120" type="Sprite3D" parent="ForestParallax/Woodland/SideValleys" unique_id=253971947]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.353817, -12.3, 8.299691)
+offset = Vector2(22, 252.5)
+modulate = Color(0.39819333, 0.45249242, 0.39819333, 1)
+pixel_size = 0.009661168
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+metadata/buried_root = 0.3
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "SideValleys"
+
+[node name="Fern_121" type="Sprite3D" parent="ForestParallax/Woodland/SideValleys" unique_id=1628852329]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.30258, -12.3, 10.731189)
+offset = Vector2(-18, 217.5)
+modulate = Color(0.37726238, 0.42870724, 0.37726238, 1)
+pixel_size = 0.007449952
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+metadata/buried_root = 0.3
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "SideValleys"
+
+[node name="Tree_122" type="Sprite3D" parent="ForestParallax/Woodland/SideValleys" unique_id=253617066]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.73299, -12.3, 20.498016)
+offset = Vector2(-24, 268.5)
+flip_h = true
+modulate = Color(0.34751517, 0.3949036, 0.34751517, 1)
+pixel_size = 0.01971965
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+metadata/buried_root = 0.3
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "SideValleys"
+
+[node name="Bush_123" type="Sprite3D" parent="ForestParallax/Woodland/SideValleys" unique_id=1412899195]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28.800526, -12.3, 23.822132)
+offset = Vector2(22, 252.5)
+modulate = Color(0.3798843, 0.4316867, 0.3798843, 1)
+pixel_size = 0.0064482903
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+metadata/buried_root = 0.3
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "SideValleys"
+
+[node name="Fern_124" type="Sprite3D" parent="ForestParallax/Woodland/SideValleys" unique_id=1564177047]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.283815, -12.3, 23.49738)
+offset = Vector2(-18, 217.5)
+flip_h = true
+modulate = Color(0.364031, 0.41367158, 0.364031, 1)
+pixel_size = 0.010603117
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+metadata/buried_root = 0.3
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "SideValleys"
+
+[node name="Tree_125" type="Sprite3D" parent="ForestParallax/Woodland/SideValleys" unique_id=1993161224]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.85397, -12.3, 27.668306)
+offset = Vector2(-24, 268.5)
+modulate = Color(0.35748398, 0.40623182, 0.35748398, 1)
+pixel_size = 0.018981736
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+metadata/buried_root = 0.3
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "SideValleys"
+
+[node name="Bush_126" type="Sprite3D" parent="ForestParallax/Woodland/SideValleys" unique_id=1848525209]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.640009, -12.3, 26.9742)
+offset = Vector2(22, 252.5)
+modulate = Color(0.37779513, 0.42931265, 0.37779513, 1)
+pixel_size = 0.009820357
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+metadata/buried_root = 0.3
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "SideValleys"
+
+[node name="Fern_127" type="Sprite3D" parent="ForestParallax/Woodland/SideValleys" unique_id=421095801]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.150871, -12.3, 30.663538)
+offset = Vector2(-18, 217.5)
+modulate = Color(0.39134026, 0.44470483, 0.39134026, 1)
+pixel_size = 0.009660173
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+metadata/buried_root = 0.3
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "SideValleys"
+
+[node name="Tree_128" type="Sprite3D" parent="ForestParallax/Woodland/SideValleys" unique_id=698490102]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.811909, -12.3, 30.92948)
+offset = Vector2(-24, 268.5)
+flip_h = true
+modulate = Color(0.35347673, 0.4016781, 0.35347673, 1)
+pixel_size = 0.014730826
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+metadata/buried_root = 0.3
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "SideValleys"
+
+[node name="Bush_129" type="Sprite3D" parent="ForestParallax/Woodland/SideValleys" unique_id=1252813505]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.59343, -12.3, 33.588764)
+offset = Vector2(22, 252.5)
+modulate = Color(0.38337556, 0.43565404, 0.38337556, 1)
+pixel_size = 0.0078242235
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+metadata/buried_root = 0.3
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "SideValleys"
+
+[node name="Fern_130" type="Sprite3D" parent="ForestParallax/Woodland/SideValleys" unique_id=1771157819]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.507658, -12.3, 28.141855)
+offset = Vector2(-18, 217.5)
+flip_h = true
+modulate = Color(0.36773926, 0.41788554, 0.36773926, 1)
+pixel_size = 0.010484686
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+metadata/buried_root = 0.3
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "SideValleys"
+
+[node name="Tree_131" type="Sprite3D" parent="ForestParallax/Woodland/SideValleys" unique_id=499178651]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27.51947, -12.3, 36.499214)
+offset = Vector2(-24, 268.5)
+modulate = Color(0.35398027, 0.40225032, 0.35398027, 1)
+pixel_size = 0.01779237
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+metadata/buried_root = 0.3
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "SideValleys"
+
+[node name="Bush_132" type="Sprite3D" parent="ForestParallax/Woodland/SideValleys" unique_id=1576823409]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.180758, -12.3, 37.45625)
+offset = Vector2(22, 252.5)
+modulate = Color(0.41260248, 0.46886644, 0.41260248, 1)
+pixel_size = 0.0074203396
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+metadata/buried_root = 0.3
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "SideValleys"
+
+[node name="Fern_133" type="Sprite3D" parent="ForestParallax/Woodland/SideValleys" unique_id=314459445]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.153378, -12.3, 35.817917)
+offset = Vector2(-18, 217.5)
+modulate = Color(0.40717155, 0.46269494, 0.40717155, 1)
+pixel_size = 0.0068170605
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+metadata/buried_root = 0.3
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "SideValleys"
+
+[node name="Tree_134" type="Sprite3D" parent="ForestParallax/Woodland/SideValleys" unique_id=572472272]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.0714, -12.3, 45.78765)
+offset = Vector2(-24, 268.5)
+modulate = Color(0.3255598, 0.3699543, 0.3255598, 1)
+pixel_size = 0.017532982
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+metadata/buried_root = 0.3
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "SideValleys"
+
+[node name="Bush_135" type="Sprite3D" parent="ForestParallax/Woodland/SideValleys" unique_id=1038046104]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.520351, -12.3, 43.81373)
+offset = Vector2(22, 252.5)
+flip_h = true
+modulate = Color(0.4164943, 0.47328898, 0.4164943, 1)
+pixel_size = 0.008937242
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+metadata/buried_root = 0.3
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "SideValleys"
+
+[node name="Fern_136" type="Sprite3D" parent="ForestParallax/Woodland/SideValleys" unique_id=1967766567]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.900387, -12.3, 45.53653)
+offset = Vector2(-18, 217.5)
+flip_h = true
+modulate = Color(0.37858388, 0.43020895, 0.37858388, 1)
+pixel_size = 0.0067902533
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+metadata/buried_root = 0.3
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "SideValleys"
+
+[node name="Tree_137" type="Sprite3D" parent="ForestParallax/Woodland/SideValleys" unique_id=902639773]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.802727, -12.3, 50.376587)
+offset = Vector2(-24, 268.5)
+flip_h = true
+modulate = Color(0.33030584, 0.37534752, 0.33030584, 1)
+pixel_size = 0.020450259
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+metadata/buried_root = 0.3
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "SideValleys"
+
+[node name="Bush_138" type="Sprite3D" parent="ForestParallax/Woodland/SideValleys" unique_id=815956847]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.173828, -12.3, 49.83286)
+offset = Vector2(22, 252.5)
+modulate = Color(0.36050352, 0.40966308, 0.36050352, 1)
+pixel_size = 0.0092280395
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+metadata/buried_root = 0.3
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "SideValleys"
+
+[node name="Fern_139" type="Sprite3D" parent="ForestParallax/Woodland/SideValleys" unique_id=1899587678]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.816088, -12.3, 48.630108)
+offset = Vector2(-18, 217.5)
+modulate = Color(0.3688744, 0.41917548, 0.3688744, 1)
+pixel_size = 0.0060259462
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+metadata/buried_root = 0.3
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "SideValleys"
+
+[node name="Tree_140" type="Sprite3D" parent="ForestParallax/Woodland/SideValleys" unique_id=1449283725]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 51.283722, -12.3, -9.95042)
+offset = Vector2(-24, 268.5)
+flip_h = true
+modulate = Color(0.35038868, 0.39816895, 0.35038868, 1)
+pixel_size = 0.01964904
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+metadata/buried_root = 0.3
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "SideValleys"
+
+[node name="Bush_141" type="Sprite3D" parent="ForestParallax/Woodland/SideValleys" unique_id=1897600839]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 49.04877, -12.3, -10.729889)
+offset = Vector2(22, 252.5)
+flip_h = true
+modulate = Color(0.38393888, 0.43629417, 0.38393888, 1)
+pixel_size = 0.008820992
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+metadata/buried_root = 0.3
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "SideValleys"
+
+[node name="Fern_142" type="Sprite3D" parent="ForestParallax/Woodland/SideValleys" unique_id=2078256037]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 51.525616, -12.3, -10.906569)
+offset = Vector2(-18, 217.5)
+flip_h = true
+modulate = Color(0.4070321, 0.46253648, 0.4070321, 1)
+pixel_size = 0.010416377
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+metadata/buried_root = 0.3
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "SideValleys"
+
+[node name="Tree_143" type="Sprite3D" parent="ForestParallax/Woodland/SideValleys" unique_id=26687314]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 49.961697, -12.3, -5.169534)
+offset = Vector2(-24, 268.5)
+flip_h = true
+modulate = Color(0.3508014, 0.39863795, 0.3508014, 1)
+pixel_size = 0.020972833
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+metadata/buried_root = 0.3
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "SideValleys"
+
+[node name="Bush_144" type="Sprite3D" parent="ForestParallax/Woodland/SideValleys" unique_id=1143092076]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 52.506367, -12.3, -5.043956)
+offset = Vector2(22, 252.5)
+flip_h = true
+modulate = Color(0.41642055, 0.47320518, 0.41642055, 1)
+pixel_size = 0.009938721
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+metadata/buried_root = 0.3
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "SideValleys"
+
+[node name="Fern_145" type="Sprite3D" parent="ForestParallax/Woodland/SideValleys" unique_id=986889998]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 50.760624, -12.3, -3.9178991)
+offset = Vector2(-18, 217.5)
+modulate = Color(0.41045445, 0.46642554, 0.41045445, 1)
+pixel_size = 0.010623495
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+metadata/buried_root = 0.3
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "SideValleys"
+
+[node name="Tree_146" type="Sprite3D" parent="ForestParallax/Woodland/SideValleys" unique_id=1073770659]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 50.39158, -12.3, 4.5581055)
+offset = Vector2(-24, 268.5)
+flip_h = true
+modulate = Color(0.33030802, 0.37535003, 0.33030802, 1)
+pixel_size = 0.014689828
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+metadata/buried_root = 0.3
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "SideValleys"
+
+[node name="Bush_147" type="Sprite3D" parent="ForestParallax/Woodland/SideValleys" unique_id=472881383]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 51.165813, -12.3, 4.027298)
+offset = Vector2(22, 252.5)
+modulate = Color(0.40035686, 0.454951, 0.40035686, 1)
+pixel_size = 0.007549462
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+metadata/buried_root = 0.3
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "SideValleys"
+
+[node name="Fern_148" type="Sprite3D" parent="ForestParallax/Woodland/SideValleys" unique_id=656746728]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 47.85124, -12.3, 5.0354133)
+offset = Vector2(-18, 217.5)
+flip_h = true
+modulate = Color(0.41974893, 0.47698742, 0.41974893, 1)
+pixel_size = 0.009770237
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+metadata/buried_root = 0.3
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "SideValleys"
+
+[node name="Tree_149" type="Sprite3D" parent="ForestParallax/Woodland/SideValleys" unique_id=599874392]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 53.233532, -12.3, 8.307339)
+offset = Vector2(-24, 268.5)
+modulate = Color(0.32046652, 0.3641665, 0.32046652, 1)
+pixel_size = 0.014321084
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+metadata/buried_root = 0.3
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "SideValleys"
+
+[node name="Bush_150" type="Sprite3D" parent="ForestParallax/Woodland/SideValleys" unique_id=996840804]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 49.351624, -12.3, 10.182359)
+offset = Vector2(22, 252.5)
+flip_h = true
+modulate = Color(0.36727357, 0.41735634, 0.36727357, 1)
+pixel_size = 0.0102149295
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+metadata/buried_root = 0.3
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "SideValleys"
+
+[node name="Fern_151" type="Sprite3D" parent="ForestParallax/Woodland/SideValleys" unique_id=196584992]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 50.384277, -12.3, 10.421896)
+offset = Vector2(-18, 217.5)
+modulate = Color(0.36994997, 0.4203977, 0.36994997, 1)
+pixel_size = 0.009546778
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+metadata/buried_root = 0.3
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "SideValleys"
+
+[node name="Tree_152" type="Sprite3D" parent="ForestParallax/Woodland/SideValleys" unique_id=1654796480]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 55.673744, -12.3, 20.52528)
+offset = Vector2(-24, 268.5)
+modulate = Color(0.32024634, 0.3639163, 0.32024634, 1)
+pixel_size = 0.018660046
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+metadata/buried_root = 0.3
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "SideValleys"
+
+[node name="Bush_153" type="Sprite3D" parent="ForestParallax/Woodland/SideValleys" unique_id=1791683713]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 56.669537, -12.3, 22.581526)
+offset = Vector2(22, 252.5)
+modulate = Color(0.3853618, 0.43791112, 0.3853618, 1)
+pixel_size = 0.009497775
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+metadata/buried_root = 0.3
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "SideValleys"
+
+[node name="Fern_154" type="Sprite3D" parent="ForestParallax/Woodland/SideValleys" unique_id=1551169184]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 55.471146, -12.3, 20.291887)
+offset = Vector2(-18, 217.5)
+flip_h = true
+modulate = Color(0.39435282, 0.4481282, 0.39435282, 1)
+pixel_size = 0.009771673
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+metadata/buried_root = 0.3
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "SideValleys"
+
+[node name="Tree_155" type="Sprite3D" parent="ForestParallax/Woodland/SideValleys" unique_id=1368284118]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 56.752876, -12.3, 24.706926)
+offset = Vector2(-24, 268.5)
+flip_h = true
+modulate = Color(0.36322728, 0.41275826, 0.36322728, 1)
+pixel_size = 0.017369315
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+metadata/buried_root = 0.3
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "SideValleys"
+
+[node name="Bush_156" type="Sprite3D" parent="ForestParallax/Woodland/SideValleys" unique_id=1126814779]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 55.114708, -12.3, 26.104267)
+offset = Vector2(22, 252.5)
+modulate = Color(0.3745336, 0.42560637, 0.3745336, 1)
+pixel_size = 0.009735091
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+metadata/buried_root = 0.3
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "SideValleys"
+
+[node name="Fern_157" type="Sprite3D" parent="ForestParallax/Woodland/SideValleys" unique_id=624598221]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 59.530014, -12.3, 26.754921)
+offset = Vector2(-18, 217.5)
+modulate = Color(0.3804251, 0.43230122, 0.3804251, 1)
+pixel_size = 0.0073202243
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+metadata/buried_root = 0.3
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "SideValleys"
+
+[node name="Tree_158" type="Sprite3D" parent="ForestParallax/Woodland/SideValleys" unique_id=1774133197]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 57.766186, -12.3, 33.093056)
+offset = Vector2(-24, 268.5)
+flip_h = true
+modulate = Color(0.34434202, 0.39129776, 0.34434202, 1)
+pixel_size = 0.016428608
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+metadata/buried_root = 0.3
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "SideValleys"
+
+[node name="Bush_159" type="Sprite3D" parent="ForestParallax/Woodland/SideValleys" unique_id=13197923]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 58.099342, -12.3, 36.45325)
+offset = Vector2(22, 252.5)
+flip_h = true
+modulate = Color(0.36080855, 0.4100097, 0.36080855, 1)
+pixel_size = 0.010299334
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+metadata/buried_root = 0.3
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "SideValleys"
+
+[node name="Fern_160" type="Sprite3D" parent="ForestParallax/Woodland/SideValleys" unique_id=1168587404]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 57.835777, -12.3, 34.153885)
+offset = Vector2(-18, 217.5)
+flip_h = true
+modulate = Color(0.4007848, 0.45543727, 0.4007848, 1)
+pixel_size = 0.008660273
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+metadata/buried_root = 0.3
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "SideValleys"
+
+[node name="Tree_161" type="Sprite3D" parent="ForestParallax/Woodland/SideValleys" unique_id=1773854920]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 51.295418, -12.3, 38.38193)
+offset = Vector2(-24, 268.5)
+flip_h = true
+modulate = Color(0.33113134, 0.3762856, 0.33113134, 1)
+pixel_size = 0.01621401
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+metadata/buried_root = 0.3
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "SideValleys"
+
+[node name="Bush_162" type="Sprite3D" parent="ForestParallax/Woodland/SideValleys" unique_id=1926965537]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 52.58606, -12.3, 41.8629)
+offset = Vector2(22, 252.5)
+modulate = Color(0.41929513, 0.47647175, 0.41929513, 1)
+pixel_size = 0.009590497
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+metadata/buried_root = 0.3
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "SideValleys"
+
+[node name="Fern_163" type="Sprite3D" parent="ForestParallax/Woodland/SideValleys" unique_id=635118420]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 49.571884, -12.3, 37.23766)
+offset = Vector2(-18, 217.5)
+flip_h = true
+modulate = Color(0.40485713, 0.46006495, 0.40485713, 1)
+pixel_size = 0.008303633
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+metadata/buried_root = 0.3
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "SideValleys"
+
+[node name="Tree_164" type="Sprite3D" parent="ForestParallax/Woodland/SideValleys" unique_id=1954104790]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 51.899185, -12.3, 45.677265)
+offset = Vector2(-24, 268.5)
+flip_h = true
+modulate = Color(0.32065347, 0.36437896, 0.32065347, 1)
+pixel_size = 0.019594016
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+metadata/buried_root = 0.3
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "SideValleys"
+
+[node name="Bush_165" type="Sprite3D" parent="ForestParallax/Woodland/SideValleys" unique_id=1784687672]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 55.822144, -12.3, 44.643616)
+offset = Vector2(22, 252.5)
+flip_h = true
+modulate = Color(0.36715862, 0.41722572, 0.36715862, 1)
+pixel_size = 0.00808882
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+metadata/buried_root = 0.3
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "SideValleys"
+
+[node name="Fern_166" type="Sprite3D" parent="ForestParallax/Woodland/SideValleys" unique_id=1155642778]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 51.493435, -12.3, 48.1797)
+offset = Vector2(-18, 217.5)
+modulate = Color(0.3778605, 0.4293869, 0.3778605, 1)
+pixel_size = 0.009425926
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+metadata/buried_root = 0.3
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "SideValleys"
+
+[node name="Tree_167" type="Sprite3D" parent="ForestParallax/Woodland/SideValleys" unique_id=1614716967]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 54.597076, -12.3, 51.18435)
+offset = Vector2(-24, 268.5)
+modulate = Color(0.3508566, 0.39870068, 0.3508566, 1)
+pixel_size = 0.015214005
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+metadata/buried_root = 0.3
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "SideValleys"
+
+[node name="Bush_168" type="Sprite3D" parent="ForestParallax/Woodland/SideValleys" unique_id=1374067516]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 55.79543, -12.3, 52.23256)
+offset = Vector2(22, 252.5)
+flip_h = true
+modulate = Color(0.3777588, 0.42927134, 0.3777588, 1)
+pixel_size = 0.009512704
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+metadata/buried_root = 0.3
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "SideValleys"
+
+[node name="Fern_169" type="Sprite3D" parent="ForestParallax/Woodland/SideValleys" unique_id=402101218]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 55.79987, -12.3, 47.55403)
+offset = Vector2(-18, 217.5)
+modulate = Color(0.393196, 0.4468136, 0.393196, 1)
+pixel_size = 0.009117462
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+metadata/buried_root = 0.3
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "SideValleys"
+
+[node name="FrontBasin" type="Node3D" parent="ForestParallax/Woodland" unique_id=2080133785]
+
+[node name="Bush_170" type="Sprite3D" parent="ForestParallax/Woodland/FrontBasin" unique_id=1399496793]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.852367, -12.3, 61.782234)
+offset = Vector2(22, 252.5)
+modulate = Color(0.3257027, 0.3701167, 0.3257027, 1)
+pixel_size = 0.017244807
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+metadata/buried_root = 0.3
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "FrontBasin"
+
+[node name="Bush_171" type="Sprite3D" parent="ForestParallax/Woodland/FrontBasin" unique_id=1109318232]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.310568, -12.3, 58.782234)
+offset = Vector2(22, 252.5)
+modulate = Color(0.3632685, 0.41280508, 0.3632685, 1)
+pixel_size = 0.00933222
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+metadata/buried_root = 0.3
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "FrontBasin"
+
+[node name="Tree_172" type="Sprite3D" parent="ForestParallax/Woodland/FrontBasin" unique_id=1051306819]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.00111, -12.3, 53.105244)
+offset = Vector2(-24, 268.5)
+flip_h = true
+modulate = Color(0.28991458, 0.3294484, 0.28991458, 1)
+pixel_size = 0.014107016
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+metadata/buried_root = 0.3
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "FrontBasin"
+
+[node name="Fern_173" type="Sprite3D" parent="ForestParallax/Woodland/FrontBasin" unique_id=1744074214]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.789473, -12.3, 50.105244)
+offset = Vector2(-18, 217.5)
+flip_h = true
+modulate = Color(0.38924396, 0.44232267, 0.38924396, 1)
+pixel_size = 0.01026438
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+metadata/buried_root = 0.3
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "FrontBasin"
+
+[node name="Tree_174" type="Sprite3D" parent="ForestParallax/Woodland/FrontBasin" unique_id=219393570]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.151373, -12.3, 62.3965)
+offset = Vector2(-24, 268.5)
+flip_h = true
+modulate = Color(0.31419381, 0.3570384, 0.31419381, 1)
+pixel_size = 0.02031092
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+metadata/buried_root = 0.3
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "FrontBasin"
+
+[node name="Bush_175" type="Sprite3D" parent="ForestParallax/Woodland/FrontBasin" unique_id=2030169310]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.7960463, -12.3, 59.3965)
+offset = Vector2(22, 252.5)
+modulate = Color(0.35784942, 0.40664706, 0.35784942, 1)
+pixel_size = 0.009547025
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+metadata/buried_root = 0.3
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "FrontBasin"
+
+[node name="Bush_176" type="Sprite3D" parent="ForestParallax/Woodland/FrontBasin" unique_id=830435343]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.40094, -12.3, 54.181282)
+offset = Vector2(22, 252.5)
+flip_h = true
+modulate = Color(0.28534976, 0.3242611, 0.28534976, 1)
+pixel_size = 0.018242288
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+metadata/buried_root = 0.3
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "FrontBasin"
+
+[node name="Fern_177" type="Sprite3D" parent="ForestParallax/Woodland/FrontBasin" unique_id=336089212]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.836954, -12.3, 51.181282)
+offset = Vector2(-18, 217.5)
+modulate = Color(0.36392337, 0.41354927, 0.36392337, 1)
+pixel_size = 0.0075623933
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+metadata/buried_root = 0.3
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "FrontBasin"
+
+[node name="Tree_178" type="Sprite3D" parent="ForestParallax/Woodland/FrontBasin" unique_id=986612096]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.2890177, -12.3, 62.643147)
+offset = Vector2(-24, 268.5)
+modulate = Color(0.32104743, 0.36482662, 0.32104743, 1)
+pixel_size = 0.018622883
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+metadata/buried_root = 0.3
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "FrontBasin"
+
+[node name="Bush_179" type="Sprite3D" parent="ForestParallax/Woodland/FrontBasin" unique_id=1173503766]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.845308, -12.3, 59.643147)
+offset = Vector2(22, 252.5)
+flip_h = true
+modulate = Color(0.3476311, 0.39503536, 0.3476311, 1)
+pixel_size = 0.009242896
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+metadata/buried_root = 0.3
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "FrontBasin"
+
+[node name="Tree_180" type="Sprite3D" parent="ForestParallax/Woodland/FrontBasin" unique_id=1484776579]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.888006, -12.3, 56.390965)
+offset = Vector2(-24, 268.5)
+flip_h = true
+modulate = Color(0.30206943, 0.3432607, 0.30206943, 1)
+pixel_size = 0.015137154
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+metadata/buried_root = 0.3
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "FrontBasin"
+
+[node name="Fern_181" type="Sprite3D" parent="ForestParallax/Woodland/FrontBasin" unique_id=1455794365]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.243599, -12.3, 53.390965)
+offset = Vector2(-18, 217.5)
+modulate = Color(0.38451922, 0.43695363, 0.38451922, 1)
+pixel_size = 0.008459815
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+metadata/buried_root = 0.3
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "FrontBasin"
+
+[node name="Bush_182" type="Sprite3D" parent="ForestParallax/Woodland/FrontBasin" unique_id=1768062328]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.403143, -12.3, 60.230694)
+offset = Vector2(22, 252.5)
+flip_h = true
+modulate = Color(0.30163422, 0.34276617, 0.30163422, 1)
+pixel_size = 0.018315718
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+metadata/buried_root = 0.3
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "FrontBasin"
+
+[node name="Bush_183" type="Sprite3D" parent="ForestParallax/Woodland/FrontBasin" unique_id=1421835953]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.33248, -12.3, 57.230694)
+offset = Vector2(22, 252.5)
+modulate = Color(0.38355818, 0.43586156, 0.38355818, 1)
+pixel_size = 0.010593319
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+metadata/buried_root = 0.3
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "FrontBasin"
+
+[node name="Tree_184" type="Sprite3D" parent="ForestParallax/Woodland/FrontBasin" unique_id=1525570866]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 34.405453, -12.3, 54.567886)
+offset = Vector2(-24, 268.5)
+flip_h = true
+modulate = Color(0.3006789, 0.3416806, 0.3006789, 1)
+pixel_size = 0.020221416
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+metadata/buried_root = 0.3
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "FrontBasin"
+
+[node name="Fern_185" type="Sprite3D" parent="ForestParallax/Woodland/FrontBasin" unique_id=788513928]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 33.79885, -12.3, 51.567886)
+offset = Vector2(-18, 217.5)
+modulate = Color(0.37216398, 0.4229136, 0.37216398, 1)
+pixel_size = 0.006694706
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+metadata/buried_root = 0.3
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "FrontBasin"
+
+[node name="Tree_186" type="Sprite3D" parent="ForestParallax/Woodland/FrontBasin" unique_id=1740408851]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 39.216812, -12.3, 54.563183)
+offset = Vector2(-24, 268.5)
+flip_h = true
+modulate = Color(0.28822863, 0.32753256, 0.28822863, 1)
+pixel_size = 0.015684826
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+metadata/buried_root = 0.3
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "FrontBasin"
+
+[node name="Bush_187" type="Sprite3D" parent="ForestParallax/Woodland/FrontBasin" unique_id=1860892719]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 40.256123, -12.3, 51.563183)
+offset = Vector2(22, 252.5)
+flip_h = true
+modulate = Color(0.34801057, 0.39546657, 0.34801057, 1)
+pixel_size = 0.010673684
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+metadata/buried_root = 0.3
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "FrontBasin"
+
+[node name="Bush_188" type="Sprite3D" parent="ForestParallax/Woodland/FrontBasin" unique_id=1541540529]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46.431595, -12.3, 58.253754)
+offset = Vector2(22, 252.5)
+flip_h = true
+modulate = Color(0.29501143, 0.33524024, 0.29501143, 1)
+pixel_size = 0.017247342
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+metadata/buried_root = 0.3
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "FrontBasin"
+
+[node name="Fern_189" type="Sprite3D" parent="ForestParallax/Woodland/FrontBasin" unique_id=161130241]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 48.934364, -12.3, 55.253754)
+offset = Vector2(-18, 217.5)
+modulate = Color(0.363198, 0.412725, 0.363198, 1)
+pixel_size = 0.009310042
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+metadata/buried_root = 0.3
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "FrontBasin"
+
+[node name="Tree_190" type="Sprite3D" parent="ForestParallax/Woodland/FrontBasin" unique_id=1634824462]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 53.400684, -12.3, 53.06908)
+offset = Vector2(-24, 268.5)
+flip_h = true
+modulate = Color(0.31624842, 0.3593732, 0.31624842, 1)
+pixel_size = 0.020652007
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+metadata/buried_root = 0.3
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "FrontBasin"
+
+[node name="Bush_191" type="Sprite3D" parent="ForestParallax/Woodland/FrontBasin" unique_id=1928769322]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 53.984394, -12.3, 50.06908)
+offset = Vector2(22, 252.5)
+flip_h = true
+modulate = Color(0.35831395, 0.40717494, 0.35831395, 1)
+pixel_size = 0.009016439
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+metadata/buried_root = 0.3
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "FrontBasin"
+
+[node name="Tree_192" type="Sprite3D" parent="ForestParallax/Woodland/FrontBasin" unique_id=42142829]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.984192, -12.3, 77.59642)
+offset = Vector2(-24, 268.5)
+modulate = Color(0.28363454, 0.322312, 0.28363454, 1)
+pixel_size = 0.01721454
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+metadata/buried_root = 0.3
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "FrontBasin"
+
+[node name="Fern_193" type="Sprite3D" parent="ForestParallax/Woodland/FrontBasin" unique_id=501704294]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.517838, -12.3, 74.59642)
+offset = Vector2(-18, 217.5)
+modulate = Color(0.37550274, 0.42670766, 0.37550274, 1)
+pixel_size = 0.007498972
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+metadata/buried_root = 0.3
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "FrontBasin"
+
+[node name="Bush_194" type="Sprite3D" parent="ForestParallax/Woodland/FrontBasin" unique_id=742480644]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.066677, -12.3, 71.06857)
+offset = Vector2(22, 252.5)
+flip_h = true
+modulate = Color(0.3139, 0.35670456, 0.3139, 1)
+pixel_size = 0.018944101
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+metadata/buried_root = 0.3
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "FrontBasin"
+
+[node name="Bush_195" type="Sprite3D" parent="ForestParallax/Woodland/FrontBasin" unique_id=270339476]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.317186, -12.3, 68.06857)
+offset = Vector2(22, 252.5)
+flip_h = true
+modulate = Color(0.3680387, 0.41822582, 0.3680387, 1)
+pixel_size = 0.00769437
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+metadata/buried_root = 0.3
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "FrontBasin"
+
+[node name="Tree_196" type="Sprite3D" parent="ForestParallax/Woodland/FrontBasin" unique_id=931648295]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.4861684, -12.3, 71.75641)
+offset = Vector2(-24, 268.5)
+modulate = Color(0.31443417, 0.35731155, 0.31443417, 1)
+pixel_size = 0.015707828
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+metadata/buried_root = 0.3
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "FrontBasin"
+
+[node name="Fern_197" type="Sprite3D" parent="ForestParallax/Woodland/FrontBasin" unique_id=27902081]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.1213193, -12.3, 68.75641)
+offset = Vector2(-18, 217.5)
+flip_h = true
+modulate = Color(0.36589897, 0.41579428, 0.36589897, 1)
+pixel_size = 0.009532416
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+metadata/buried_root = 0.3
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "FrontBasin"
+
+[node name="Tree_198" type="Sprite3D" parent="ForestParallax/Woodland/FrontBasin" unique_id=1976519056]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.7549572, -12.3, 70.78213)
+offset = Vector2(-24, 268.5)
+modulate = Color(0.29728302, 0.33782163, 0.29728302, 1)
+pixel_size = 0.018418748
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+metadata/buried_root = 0.3
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "FrontBasin"
+
+[node name="Bush_199" type="Sprite3D" parent="ForestParallax/Woodland/FrontBasin" unique_id=704703268]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.33353353, -12.3, 67.78213)
+offset = Vector2(22, 252.5)
+flip_h = true
+modulate = Color(0.35114926, 0.39903325, 0.35114926, 1)
+pixel_size = 0.010793835
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+metadata/buried_root = 0.3
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "FrontBasin"
+
+[node name="Bush_200" type="Sprite3D" parent="ForestParallax/Woodland/FrontBasin" unique_id=681486022]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.354535, -12.3, 69.62296)
+offset = Vector2(22, 252.5)
+flip_h = true
+modulate = Color(0.282443, 0.32095793, 0.282443, 1)
+pixel_size = 0.018009033
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+metadata/buried_root = 0.3
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "FrontBasin"
+
+[node name="Fern_201" type="Sprite3D" parent="ForestParallax/Woodland/FrontBasin" unique_id=1228365585]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.570537, -12.3, 66.62296)
+offset = Vector2(-18, 217.5)
+modulate = Color(0.371001, 0.42159206, 0.371001, 1)
+pixel_size = 0.008063227
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+metadata/buried_root = 0.3
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "FrontBasin"
+
+[node name="Tree_202" type="Sprite3D" parent="ForestParallax/Woodland/FrontBasin" unique_id=133481273]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.858423, -12.3, 69.06593)
+offset = Vector2(-24, 268.5)
+flip_h = true
+modulate = Color(0.3183961, 0.36181372, 0.3183961, 1)
+pixel_size = 0.018540882
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+metadata/buried_root = 0.3
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "FrontBasin"
+
+[node name="Bush_203" type="Sprite3D" parent="ForestParallax/Woodland/FrontBasin" unique_id=318319735]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.664292, -12.3, 66.06593)
+offset = Vector2(22, 252.5)
+flip_h = true
+modulate = Color(0.37485707, 0.42597395, 0.37485707, 1)
+pixel_size = 0.009302328
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+metadata/buried_root = 0.3
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "FrontBasin"
+
+[node name="Tree_204" type="Sprite3D" parent="ForestParallax/Woodland/FrontBasin" unique_id=280761093]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.418818, -12.3, 75.52947)
+offset = Vector2(-24, 268.5)
+flip_h = true
+modulate = Color(0.30391324, 0.34535596, 0.30391324, 1)
+pixel_size = 0.016154787
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+metadata/buried_root = 0.3
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "FrontBasin"
+
+[node name="Fern_205" type="Sprite3D" parent="ForestParallax/Woodland/FrontBasin" unique_id=879398100]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.533031, -12.3, 72.52947)
+offset = Vector2(-18, 217.5)
+flip_h = true
+modulate = Color(0.3873239, 0.44014075, 0.3873239, 1)
+pixel_size = 0.0068505667
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+metadata/buried_root = 0.3
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "FrontBasin"
+
+[node name="Bush_206" type="Sprite3D" parent="ForestParallax/Woodland/FrontBasin" unique_id=2096354461]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.299828, -12.3, 73.738205)
+offset = Vector2(22, 252.5)
+modulate = Color(0.28145847, 0.31983918, 0.28145847, 1)
+pixel_size = 0.0163008
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+metadata/buried_root = 0.3
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "FrontBasin"
+
+[node name="Bush_207" type="Sprite3D" parent="ForestParallax/Woodland/FrontBasin" unique_id=1655885378]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.48696, -12.3, 70.738205)
+offset = Vector2(22, 252.5)
+modulate = Color(0.35625735, 0.4048379, 0.35625735, 1)
+pixel_size = 0.01099357
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+metadata/buried_root = 0.3
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "FrontBasin"
+
+[node name="Tree_208" type="Sprite3D" parent="ForestParallax/Woodland/FrontBasin" unique_id=1522175801]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 40.049675, -12.3, 74.104385)
+offset = Vector2(-24, 268.5)
+modulate = Color(0.28389528, 0.3226083, 0.28389528, 1)
+pixel_size = 0.014713799
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+metadata/buried_root = 0.3
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "FrontBasin"
+
+[node name="Fern_209" type="Sprite3D" parent="ForestParallax/Woodland/FrontBasin" unique_id=398493098]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36.55222, -12.3, 71.104385)
+offset = Vector2(-18, 217.5)
+flip_h = true
+modulate = Color(0.34588096, 0.39304656, 0.34588096, 1)
+pixel_size = 0.006161665
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+metadata/buried_root = 0.3
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "FrontBasin"
+
+[node name="Tree_210" type="Sprite3D" parent="ForestParallax/Woodland/FrontBasin" unique_id=1779371565]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 45.68889, -12.3, 77.13733)
+offset = Vector2(-24, 268.5)
+flip_h = true
+modulate = Color(0.30053118, 0.3415127, 0.30053118, 1)
+pixel_size = 0.0161467
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(0, 0, 627, 627)
+metadata/buried_root = 0.3
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "FrontBasin"
+
+[node name="Bush_211" type="Sprite3D" parent="ForestParallax/Woodland/FrontBasin" unique_id=452865537]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46.68792, -12.3, 74.13733)
+offset = Vector2(22, 252.5)
+modulate = Color(0.37151492, 0.42217606, 0.37151492, 1)
+pixel_size = 0.0073286127
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+metadata/buried_root = 0.3
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "FrontBasin"
+
+[node name="Bush_212" type="Sprite3D" parent="ForestParallax/Woodland/FrontBasin" unique_id=433204131]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 53.02911, -12.3, 73.75381)
+offset = Vector2(22, 252.5)
+flip_h = true
+modulate = Color(0.31832972, 0.36173832, 0.31832972, 1)
+pixel_size = 0.018685635
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(627, 0, 627, 627)
+metadata/buried_root = 0.3
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "FrontBasin"
+
+[node name="Fern_213" type="Sprite3D" parent="ForestParallax/Woodland/FrontBasin" unique_id=1343455126]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 54.25188, -12.3, 70.75381)
+offset = Vector2(-18, 217.5)
+modulate = Color(0.38837865, 0.4413394, 0.38837865, 1)
+pixel_size = 0.0085258875
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+metadata/buried_root = 0.3
+metadata/outside_gameplay = true
+metadata/camera_clearance = true
+metadata/depth_role = "FrontBasin"
+
+[node name="LowGrass" type="Node3D" parent="ForestParallax/Woodland" unique_id=1384836132]
+
+[node name="Fern_214" type="Sprite3D" parent="ForestParallax/Woodland/LowGrass" unique_id=922272139]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.6829114, -0.03, 29.078463)
+offset = Vector2(-18, 217.5)
+modulate = Color(0.8325001, 0.94602287, 0.8325001, 1)
+pixel_size = 0.0011161263
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+metadata/buried_root = 0.03
+metadata/outside_gameplay = false
+metadata/camera_clearance = false
+metadata/depth_role = "LowGrass"
+
+[node name="Fern_215" type="Sprite3D" parent="ForestParallax/Woodland/LowGrass" unique_id=1359804021]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.2781277, -0.03, 8.751862)
+offset = Vector2(-18, 217.5)
+modulate = Color(0.7719068, 0.8771668, 0.7719068, 1)
+pixel_size = 0.0011633462
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+metadata/buried_root = 0.03
+metadata/outside_gameplay = false
+metadata/camera_clearance = false
+metadata/depth_role = "LowGrass"
+
+[node name="Fern_216" type="Sprite3D" parent="ForestParallax/Woodland/LowGrass" unique_id=626760893]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.3438687, -0.03, 10.620262)
+offset = Vector2(-18, 217.5)
+modulate = Color(0.7813204, 0.88786405, 0.7813204, 1)
+pixel_size = 0.0010209186
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+metadata/buried_root = 0.03
+metadata/outside_gameplay = false
+metadata/camera_clearance = false
+metadata/depth_role = "LowGrass"
+
+[node name="Fern_217" type="Sprite3D" parent="ForestParallax/Woodland/LowGrass" unique_id=1741094371]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.561657, -0.03, 9.16372)
+offset = Vector2(-18, 217.5)
+modulate = Color(0.7930933, 0.9012424, 0.7930933, 1)
+pixel_size = 0.00077081355
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+metadata/buried_root = 0.03
+metadata/outside_gameplay = false
+metadata/camera_clearance = false
+metadata/depth_role = "LowGrass"
+
+[node name="Fern_218" type="Sprite3D" parent="ForestParallax/Woodland/LowGrass" unique_id=769985837]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.088095, -0.03, 26.225182)
+offset = Vector2(-18, 217.5)
+modulate = Color(0.7577667, 0.8610985, 0.7577667, 1)
+pixel_size = 0.0010315952
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+metadata/buried_root = 0.03
+metadata/outside_gameplay = false
+metadata/camera_clearance = false
+metadata/depth_role = "LowGrass"
+
+[node name="Fern_219" type="Sprite3D" parent="ForestParallax/Woodland/LowGrass" unique_id=1451603980]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.8829243, -0.03, 4.9055853)
+offset = Vector2(-18, 217.5)
+modulate = Color(0.8391514, 0.9535811, 0.8391514, 1)
+pixel_size = 0.0010406097
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+metadata/buried_root = 0.03
+metadata/outside_gameplay = false
+metadata/camera_clearance = false
+metadata/depth_role = "LowGrass"
+
+[node name="Fern_220" type="Sprite3D" parent="ForestParallax/Woodland/LowGrass" unique_id=2124726622]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.513624, -0.03, 6.55892)
+offset = Vector2(-18, 217.5)
+flip_h = true
+modulate = Color(0.75508434, 0.85805035, 0.75508434, 1)
+pixel_size = 0.00079186744
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+metadata/buried_root = 0.03
+metadata/outside_gameplay = false
+metadata/camera_clearance = false
+metadata/depth_role = "LowGrass"
+
+[node name="Fern_221" type="Sprite3D" parent="ForestParallax/Woodland/LowGrass" unique_id=333183279]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.349184, -0.03, 9.396544)
+offset = Vector2(-18, 217.5)
+modulate = Color(0.8105465, 0.92107564, 0.8105465, 1)
+pixel_size = 0.001118907
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+metadata/buried_root = 0.03
+metadata/outside_gameplay = false
+metadata/camera_clearance = false
+metadata/depth_role = "LowGrass"
+
+[node name="Fern_222" type="Sprite3D" parent="ForestParallax/Woodland/LowGrass" unique_id=286621955]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.306093, -0.03, 7.853802)
+offset = Vector2(-18, 217.5)
+flip_h = true
+modulate = Color(0.7517228, 0.85423046, 0.7517228, 1)
+pixel_size = 0.0009738845
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+metadata/buried_root = 0.03
+metadata/outside_gameplay = false
+metadata/camera_clearance = false
+metadata/depth_role = "LowGrass"
+
+[node name="Fern_223" type="Sprite3D" parent="ForestParallax/Woodland/LowGrass" unique_id=709146546]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.1219845, -0.03, 3.2767756)
+offset = Vector2(-18, 217.5)
+modulate = Color(0.731025, 0.8307102, 0.731025, 1)
+pixel_size = 0.0011997872
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+metadata/buried_root = 0.03
+metadata/outside_gameplay = false
+metadata/camera_clearance = false
+metadata/depth_role = "LowGrass"
+
+[node name="Fern_224" type="Sprite3D" parent="ForestParallax/Woodland/LowGrass" unique_id=397169754]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.777887, -0.03, 9.869804)
+offset = Vector2(-18, 217.5)
+flip_h = true
+modulate = Color(0.81005114, 0.9205127, 0.81005114, 1)
+pixel_size = 0.000778883
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+metadata/buried_root = 0.03
+metadata/outside_gameplay = false
+metadata/camera_clearance = false
+metadata/depth_role = "LowGrass"
+
+[node name="Fern_225" type="Sprite3D" parent="ForestParallax/Woodland/LowGrass" unique_id=1679385602]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.91611, -0.03, 33.684895)
+offset = Vector2(-18, 217.5)
+modulate = Color(0.77554053, 0.88129604, 0.77554053, 1)
+pixel_size = 0.0009562246
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+metadata/buried_root = 0.03
+metadata/outside_gameplay = false
+metadata/camera_clearance = false
+metadata/depth_role = "LowGrass"
+
+[node name="Fern_226" type="Sprite3D" parent="ForestParallax/Woodland/LowGrass" unique_id=182824531]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.163678, -0.03, 33.62676)
+offset = Vector2(-18, 217.5)
+flip_h = true
+modulate = Color(0.78874856, 0.8963052, 0.78874856, 1)
+pixel_size = 0.00081413175
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+metadata/buried_root = 0.03
+metadata/outside_gameplay = false
+metadata/camera_clearance = false
+metadata/depth_role = "LowGrass"
+
+[node name="Fern_227" type="Sprite3D" parent="ForestParallax/Woodland/LowGrass" unique_id=333936230]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.527645, -0.03, 10.666568)
+offset = Vector2(-18, 217.5)
+flip_h = true
+modulate = Color(0.7834179, 0.8902476, 0.7834179, 1)
+pixel_size = 0.0011073544
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+metadata/buried_root = 0.03
+metadata/outside_gameplay = false
+metadata/camera_clearance = false
+metadata/depth_role = "LowGrass"
+
+[node name="Fern_228" type="Sprite3D" parent="ForestParallax/Woodland/LowGrass" unique_id=565572790]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.947611, -0.03, 29.797232)
+offset = Vector2(-18, 217.5)
+flip_h = true
+modulate = Color(0.8165408, 0.92788726, 0.8165408, 1)
+pixel_size = 0.0007713418
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+metadata/buried_root = 0.03
+metadata/outside_gameplay = false
+metadata/camera_clearance = false
+metadata/depth_role = "LowGrass"
+
+[node name="Fern_229" type="Sprite3D" parent="ForestParallax/Woodland/LowGrass" unique_id=804641250]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.249254, -0.03, 11.005601)
+offset = Vector2(-18, 217.5)
+flip_h = true
+modulate = Color(0.7255076, 0.8244405, 0.7255076, 1)
+pixel_size = 0.00096570444
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+metadata/buried_root = 0.03
+metadata/outside_gameplay = false
+metadata/camera_clearance = false
+metadata/depth_role = "LowGrass"
+
+[node name="Fern_230" type="Sprite3D" parent="ForestParallax/Woodland/LowGrass" unique_id=985828553]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.75451, -0.03, 9.815823)
+offset = Vector2(-18, 217.5)
+flip_h = true
+modulate = Color(0.7615714, 0.865422, 0.7615714, 1)
+pixel_size = 0.00096913683
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+metadata/buried_root = 0.03
+metadata/outside_gameplay = false
+metadata/camera_clearance = false
+metadata/depth_role = "LowGrass"
+
+[node name="Fern_231" type="Sprite3D" parent="ForestParallax/Woodland/LowGrass" unique_id=784602153]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.8248825, -0.03, 32.044395)
+offset = Vector2(-18, 217.5)
+modulate = Color(0.8214252, 0.9334377, 0.8214252, 1)
+pixel_size = 0.0012367318
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+metadata/buried_root = 0.03
+metadata/outside_gameplay = false
+metadata/camera_clearance = false
+metadata/depth_role = "LowGrass"
+
+[node name="Fern_232" type="Sprite3D" parent="ForestParallax/Woodland/LowGrass" unique_id=1816352624]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.20572, -0.03, 2.9245741)
+offset = Vector2(-18, 217.5)
+flip_h = true
+modulate = Color(0.7368316, 0.83730865, 0.7368316, 1)
+pixel_size = 0.0009311452
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+metadata/buried_root = 0.03
+metadata/outside_gameplay = false
+metadata/camera_clearance = false
+metadata/depth_role = "LowGrass"
+
+[node name="Fern_233" type="Sprite3D" parent="ForestParallax/Woodland/LowGrass" unique_id=1670407878]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.337286, -0.03, 2.2119179)
+offset = Vector2(-18, 217.5)
+modulate = Color(0.78367835, 0.8905436, 0.78367835, 1)
+pixel_size = 0.0007996826
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+metadata/buried_root = 0.03
+metadata/outside_gameplay = false
+metadata/camera_clearance = false
+metadata/depth_role = "LowGrass"
+
+[node name="Fern_234" type="Sprite3D" parent="ForestParallax/Woodland/LowGrass" unique_id=1411959219]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.2910385, -0.03, 29.847513)
+offset = Vector2(-18, 217.5)
+flip_h = true
+modulate = Color(0.7387248, 0.83946, 0.7387248, 1)
+pixel_size = 0.0012150744
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+metadata/buried_root = 0.03
+metadata/outside_gameplay = false
+metadata/camera_clearance = false
+metadata/depth_role = "LowGrass"
+
+[node name="Fern_235" type="Sprite3D" parent="ForestParallax/Woodland/LowGrass" unique_id=147436434]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.68047, -0.03, 8.505262)
+offset = Vector2(-18, 217.5)
+flip_h = true
+modulate = Color(0.79788375, 0.9066861, 0.79788375, 1)
+pixel_size = 0.0010794445
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_rdbal")
+region_enabled = true
+region_rect = Rect2(0, 627, 627, 627)
+metadata/buried_root = 0.03
+metadata/outside_gameplay = false
+metadata/camera_clearance = false
+metadata/depth_role = "LowGrass"

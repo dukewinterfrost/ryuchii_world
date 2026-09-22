@@ -1,0 +1,1355 @@
+{
+  "structure": {
+    "schema": "game-balance-v1",
+    "tables": {},
+    "settings": {
+      "game_definitions.CARE_TUNING": {
+        "social_cooldown": null,
+        "pet": [
+          null,
+          null
+        ],
+        "praise": [
+          null,
+          null
+        ],
+        "scold": [
+          null,
+          null
+        ],
+        "potty_warning": null,
+        "potty_habit_required": null,
+        "potty_discipline_required": null
+      },
+      "game_definitions.TRAINING": {
+        "hp": {
+          "name": null,
+          "gain": null,
+          "cap": null
+        },
+        "mp": {
+          "name": null,
+          "gain": null,
+          "cap": null
+        },
+        "offense": {
+          "name": null,
+          "gain": null,
+          "cap": null
+        },
+        "defense": {
+          "name": null,
+          "gain": null,
+          "cap": null
+        },
+        "speed": {
+          "name": null,
+          "gain": null,
+          "cap": null
+        },
+        "brains": {
+          "name": null,
+          "gain": null,
+          "cap": null
+        }
+      },
+      "game_definitions.TRAINING_SECONDS": null,
+      "game_definitions.EVOLUTIONS": {
+        "botamon": [
+          {
+            "target": null,
+            "priority": null,
+            "stage": null,
+            "min_active_seconds": null,
+            "min_bond": null,
+            "required_actions": [
+              null,
+              null,
+              null
+            ],
+            "stats": {},
+            "care": {},
+            "learned_moves": []
+          }
+        ],
+        "koromon": [
+          {
+            "target": null,
+            "priority": null,
+            "stage": null,
+            "min_active_seconds": null,
+            "min_bond": null,
+            "required_actions": [
+              null,
+              null,
+              null
+            ],
+            "stats": {
+              "offense": null
+            },
+            "care": {
+              "discipline": null
+            },
+            "learned_moves": []
+          }
+        ]
+      },
+      "game_definitions.DECOR": {
+        "campfire": {
+          "name": "Campfire",
+          "size": [
+            5,
+            4
+          ],
+          "solid": true,
+          "entrance": [
+            2,
+            4
+          ],
+          "cost": {
+            "wood": null,
+            "stone": null
+          }
+        },
+        "pond": {
+          "name": "Pond",
+          "size": [
+            8,
+            6
+          ],
+          "solid": true,
+          "entrance": [
+            3,
+            6
+          ],
+          "cost": {
+            "stone": null,
+            "fiber": null
+          }
+        },
+        "digi_potty": {
+          "name": "Digi Potty",
+          "size": [
+            4,
+            4
+          ],
+          "solid": true,
+          "entrance": [
+            1,
+            4
+          ],
+          "cost": {
+            "wood": null,
+            "stone": null
+          }
+        },
+        "rug": {
+          "name": "Rug",
+          "size": [
+            5,
+            4
+          ],
+          "solid": false,
+          "cost": {
+            "fiber": null
+          }
+        },
+        "planter": {
+          "name": "Planter",
+          "size": [
+            2,
+            2
+          ],
+          "solid": true,
+          "cost": {
+            "wood": null,
+            "fiber": null
+          }
+        }
+      },
+      "care_rules.WIN_ITEM_REWARDS": {
+        "small_recovery": null,
+        "mp_recovery": null,
+        "barrier": null,
+        "haste": null
+      },
+      "care_rules.HUNGER_SECONDS_PER_POINT": null,
+      "care_rules.POOP_INTERVAL_SECONDS": null,
+      "care_rules.VIRUS_PER_DIRTY_HOUR": null,
+      "care_rules.HAPPINESS_LOSS_PER_DIRTY_HOUR": null,
+      "food_rules.DURATION": null,
+      "food_rules.MAX_FULLNESS": null,
+      "care_status_rules.TIRED": null,
+      "care_status_rules.SLEEPY": null,
+      "care_status_rules.SLEEP_SECONDS": null,
+      "care_status_rules.SICK_CHANCE": null,
+      "enclosure_rules.STARTER": {
+        "wood": null,
+        "stone": null,
+        "fiber": null,
+        "raw_meat": null,
+        "potato": null
+      },
+      "enclosure_rules.POND_RECOVERY": null,
+      "enclosure_rules.POND_COOLDOWN": null,
+      "player.initial_stats": {
+        "hp": null,
+        "mp": null,
+        "offense": null,
+        "defense": null,
+        "speed": null,
+        "brains": null
+      },
+      "inventory.starter_items": {
+        "small_recovery": null,
+        "mp_recovery": null,
+        "barrier": null,
+        "haste": null
+      },
+      "inventory.starter_decor": {
+        "campfire": null,
+        "pond": null,
+        "digi_potty": null,
+        "rug": null,
+        "planter": null
+      },
+      "care.rest_seconds_per_fatigue": null,
+      "care.hungry_threshold": null,
+      "care.hungry_happiness_seconds": null,
+      "care.pet_bond": null,
+      "food.full_threshold": null,
+      "food.hunger_gain": null,
+      "food.happiness_gain": null,
+      "food.favorite_happiness": null,
+      "food.craving_happiness": null,
+      "food.weight_gain": null,
+      "food.bond_gain": null,
+      "food.craving_bond": null,
+      "care.play_happiness": null,
+      "care.wish_play_happiness": null,
+      "care.play_discipline_cost": null,
+      "care.play_bond": null,
+      "care.wish_play_bond": null,
+      "care.chat_happiness": null,
+      "care.chat_bond": null,
+      "care.clean_virus_reduction": null,
+      "care.clean_happiness": null,
+      "care.clean_bond": null,
+      "care.repeat_multipliers": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "rewards.outcomes": {
+        "win": {
+          "bond": null,
+          "training_points": null
+        },
+        "draw": {
+          "bond": null,
+          "training_points": null
+        },
+        "loss": {
+          "bond": null,
+          "training_points": null
+        }
+      },
+      "training.wish_meter_bonus": null,
+      "training.wish_stat_bonus": null,
+      "training.fatigue_gain": null,
+      "training.discipline_gain": null,
+      "care.potty_habit_gain": null,
+      "food.initial_wait": null,
+      "food.wait_base": null,
+      "care.sleep_fatigue_recovery": null,
+      "care.sleep_need_seconds_per_point": null,
+      "care.wish_initial_wait": null,
+      "care.wish_duration": null,
+      "care.wish_wait_base": null,
+      "care.sleep_discipline_gain": null,
+      "building.pond_virus_recovery": null,
+      "care.initial": {
+        "hunger": null,
+        "happiness": null,
+        "discipline": null,
+        "weight": null
+      },
+      "training.min_fullness": null,
+      "training.max_fatigue": null,
+      "training.hunger_cost": null,
+      "training.happiness_cost": null,
+      "food.wait_jitter": null,
+      "care.wish_wait_jitter": null,
+      "building.cooking_ingredient_cost": null,
+      "building.cooking_wood_cost": null,
+      "food.favorites": {
+        "botamon": null,
+        "koromon": null,
+        "agumon": null
+      }
+    }
+  },
+  "tables": {
+    "creatures": {
+      "sheet": "Creatures",
+      "columns": [
+        "id",
+        "name",
+        "nature",
+        "hp",
+        "mp",
+        "offense",
+        "defense",
+        "speed",
+        "brains",
+        "moves",
+        "basic_move"
+      ],
+      "numeric": [
+        "hp",
+        "mp",
+        "offense",
+        "defense",
+        "speed",
+        "brains"
+      ]
+    },
+    "moves": {
+      "sheet": "Moves",
+      "columns": [
+        "id",
+        "name",
+        "species",
+        "equippable",
+        "kind",
+        "mp_cost",
+        "power_multiplier",
+        "damage_variance",
+        "cast_seconds",
+        "active_seconds",
+        "recovery_seconds",
+        "cooldown_seconds",
+        "range",
+        "melee_width",
+        "projectile_speed",
+        "projectile_radius",
+        "projectile_lifetime_seconds",
+        "movement_while_casting",
+        "rush_speed_multiplier",
+        "auto_weight",
+        "animation",
+        "effect",
+        "visual_scale",
+        "target",
+        "heal_percent",
+        "trigger_percent",
+        "barrier_amount",
+        "effect_seconds"
+      ],
+      "numeric": [
+        "mp_cost",
+        "power_multiplier",
+        "damage_variance",
+        "cast_seconds",
+        "active_seconds",
+        "recovery_seconds",
+        "cooldown_seconds",
+        "range",
+        "melee_width",
+        "projectile_speed",
+        "projectile_radius",
+        "projectile_lifetime_seconds",
+        "rush_speed_multiplier",
+        "auto_weight",
+        "visual_scale",
+        "heal_percent",
+        "trigger_percent",
+        "barrier_amount",
+        "effect_seconds"
+      ]
+    },
+    "encounters": {
+      "sheet": "Encounters",
+      "columns": [
+        "id",
+        "members"
+      ],
+      "numeric": []
+    },
+    "items": {
+      "sheet": "Items",
+      "columns": [
+        "id",
+        "name",
+        "effect",
+        "stat",
+        "amount",
+        "duration_seconds",
+        "movement_multiplier"
+      ],
+      "numeric": [
+        "amount",
+        "duration_seconds",
+        "movement_multiplier"
+      ]
+    },
+    "natures": {
+      "sheet": "AI",
+      "columns": [
+        "id",
+        "opening_tackle",
+        "approach_weight",
+        "circle_weight",
+        "retreat_weight",
+        "guard_weight",
+        "attack_weight"
+      ],
+      "numeric": [
+        "approach_weight",
+        "circle_weight",
+        "retreat_weight",
+        "guard_weight",
+        "attack_weight"
+      ]
+    },
+    "tuning": {
+      "sheet": "Combat tuning",
+      "columns": [
+        "id",
+        "value",
+        "unit"
+      ],
+      "numeric": [
+        "value"
+      ]
+    }
+  },
+  "settings": {
+    "game_definitions.CARE_TUNING/social_cooldown": {
+      "type": "number",
+      "min": 0,
+      "max": 100000,
+      "integer": false
+    },
+    "game_definitions.CARE_TUNING/pet/0": {
+      "type": "number",
+      "min": 0,
+      "max": 100000,
+      "integer": true
+    },
+    "game_definitions.CARE_TUNING/pet/1": {
+      "type": "number",
+      "min": 0,
+      "max": 100000,
+      "integer": true
+    },
+    "game_definitions.CARE_TUNING/praise/0": {
+      "type": "number",
+      "min": 0,
+      "max": 100000,
+      "integer": true
+    },
+    "game_definitions.CARE_TUNING/praise/1": {
+      "type": "number",
+      "min": -100,
+      "max": 100000,
+      "integer": true
+    },
+    "game_definitions.CARE_TUNING/scold/0": {
+      "type": "number",
+      "min": -100,
+      "max": 100000,
+      "integer": true
+    },
+    "game_definitions.CARE_TUNING/scold/1": {
+      "type": "number",
+      "min": 0,
+      "max": 100000,
+      "integer": true
+    },
+    "game_definitions.CARE_TUNING/potty_warning": {
+      "type": "number",
+      "min": 0,
+      "max": 100000,
+      "integer": true
+    },
+    "game_definitions.CARE_TUNING/potty_habit_required": {
+      "type": "number",
+      "min": 0,
+      "max": 100000,
+      "integer": true
+    },
+    "game_definitions.CARE_TUNING/potty_discipline_required": {
+      "type": "number",
+      "min": 0,
+      "max": 100,
+      "integer": true
+    },
+    "game_definitions.TRAINING/hp/name": {
+      "type": "text",
+      "min": 0,
+      "max": 100000,
+      "integer": false
+    },
+    "game_definitions.TRAINING/hp/gain": {
+      "type": "number",
+      "min": 0,
+      "max": 100000,
+      "integer": true
+    },
+    "game_definitions.TRAINING/hp/cap": {
+      "type": "number",
+      "min": 0,
+      "max": 9999,
+      "integer": true
+    },
+    "game_definitions.TRAINING/mp/name": {
+      "type": "text",
+      "min": 0,
+      "max": 100000,
+      "integer": false
+    },
+    "game_definitions.TRAINING/mp/gain": {
+      "type": "number",
+      "min": 0,
+      "max": 100000,
+      "integer": true
+    },
+    "game_definitions.TRAINING/mp/cap": {
+      "type": "number",
+      "min": 0,
+      "max": 9999,
+      "integer": true
+    },
+    "game_definitions.TRAINING/offense/name": {
+      "type": "text",
+      "min": 0,
+      "max": 100000,
+      "integer": false
+    },
+    "game_definitions.TRAINING/offense/gain": {
+      "type": "number",
+      "min": 0,
+      "max": 100000,
+      "integer": true
+    },
+    "game_definitions.TRAINING/offense/cap": {
+      "type": "number",
+      "min": 0,
+      "max": 999,
+      "integer": true
+    },
+    "game_definitions.TRAINING/defense/name": {
+      "type": "text",
+      "min": 0,
+      "max": 100000,
+      "integer": false
+    },
+    "game_definitions.TRAINING/defense/gain": {
+      "type": "number",
+      "min": 0,
+      "max": 100000,
+      "integer": true
+    },
+    "game_definitions.TRAINING/defense/cap": {
+      "type": "number",
+      "min": 0,
+      "max": 999,
+      "integer": true
+    },
+    "game_definitions.TRAINING/speed/name": {
+      "type": "text",
+      "min": 0,
+      "max": 100000,
+      "integer": false
+    },
+    "game_definitions.TRAINING/speed/gain": {
+      "type": "number",
+      "min": 0,
+      "max": 100000,
+      "integer": true
+    },
+    "game_definitions.TRAINING/speed/cap": {
+      "type": "number",
+      "min": 0,
+      "max": 999,
+      "integer": true
+    },
+    "game_definitions.TRAINING/brains/name": {
+      "type": "text",
+      "min": 0,
+      "max": 100000,
+      "integer": false
+    },
+    "game_definitions.TRAINING/brains/gain": {
+      "type": "number",
+      "min": 0,
+      "max": 100000,
+      "integer": true
+    },
+    "game_definitions.TRAINING/brains/cap": {
+      "type": "number",
+      "min": 0,
+      "max": 999,
+      "integer": true
+    },
+    "game_definitions.TRAINING_SECONDS": {
+      "type": "number",
+      "min": 0.033333,
+      "max": 100000,
+      "integer": false
+    },
+    "game_definitions.EVOLUTIONS/botamon/0/target": {
+      "type": "text",
+      "min": 0,
+      "max": 100000,
+      "integer": false
+    },
+    "game_definitions.EVOLUTIONS/botamon/0/priority": {
+      "type": "number",
+      "min": 0,
+      "max": 100000,
+      "integer": true
+    },
+    "game_definitions.EVOLUTIONS/botamon/0/stage": {
+      "type": "text",
+      "min": 0,
+      "max": 100000,
+      "integer": false
+    },
+    "game_definitions.EVOLUTIONS/botamon/0/min_active_seconds": {
+      "type": "number",
+      "min": 0,
+      "max": 100000,
+      "integer": false
+    },
+    "game_definitions.EVOLUTIONS/botamon/0/min_bond": {
+      "type": "number",
+      "min": 0,
+      "max": 100,
+      "integer": true
+    },
+    "game_definitions.EVOLUTIONS/botamon/0/required_actions/0": {
+      "type": "text",
+      "min": 0,
+      "max": 100000,
+      "integer": false
+    },
+    "game_definitions.EVOLUTIONS/botamon/0/required_actions/1": {
+      "type": "text",
+      "min": 0,
+      "max": 100000,
+      "integer": false
+    },
+    "game_definitions.EVOLUTIONS/botamon/0/required_actions/2": {
+      "type": "text",
+      "min": 0,
+      "max": 100000,
+      "integer": false
+    },
+    "game_definitions.EVOLUTIONS/koromon/0/target": {
+      "type": "text",
+      "min": 0,
+      "max": 100000,
+      "integer": false
+    },
+    "game_definitions.EVOLUTIONS/koromon/0/priority": {
+      "type": "number",
+      "min": 0,
+      "max": 100000,
+      "integer": true
+    },
+    "game_definitions.EVOLUTIONS/koromon/0/stage": {
+      "type": "text",
+      "min": 0,
+      "max": 100000,
+      "integer": false
+    },
+    "game_definitions.EVOLUTIONS/koromon/0/min_active_seconds": {
+      "type": "number",
+      "min": 0,
+      "max": 100000,
+      "integer": false
+    },
+    "game_definitions.EVOLUTIONS/koromon/0/min_bond": {
+      "type": "number",
+      "min": 0,
+      "max": 100,
+      "integer": true
+    },
+    "game_definitions.EVOLUTIONS/koromon/0/required_actions/0": {
+      "type": "text",
+      "min": 0,
+      "max": 100000,
+      "integer": false
+    },
+    "game_definitions.EVOLUTIONS/koromon/0/required_actions/1": {
+      "type": "text",
+      "min": 0,
+      "max": 100000,
+      "integer": false
+    },
+    "game_definitions.EVOLUTIONS/koromon/0/required_actions/2": {
+      "type": "text",
+      "min": 0,
+      "max": 100000,
+      "integer": false
+    },
+    "game_definitions.EVOLUTIONS/koromon/0/stats/offense": {
+      "type": "number",
+      "min": 0,
+      "max": 100000,
+      "integer": true
+    },
+    "game_definitions.EVOLUTIONS/koromon/0/care/discipline": {
+      "type": "number",
+      "min": 0,
+      "max": 100,
+      "integer": true
+    },
+    "game_definitions.DECOR/campfire/cost/wood": {
+      "type": "number",
+      "min": 0,
+      "max": 100000,
+      "integer": true
+    },
+    "game_definitions.DECOR/campfire/cost/stone": {
+      "type": "number",
+      "min": 0,
+      "max": 100000,
+      "integer": true
+    },
+    "game_definitions.DECOR/pond/cost/stone": {
+      "type": "number",
+      "min": 0,
+      "max": 100000,
+      "integer": true
+    },
+    "game_definitions.DECOR/pond/cost/fiber": {
+      "type": "number",
+      "min": 0,
+      "max": 100000,
+      "integer": true
+    },
+    "game_definitions.DECOR/digi_potty/cost/wood": {
+      "type": "number",
+      "min": 0,
+      "max": 100000,
+      "integer": true
+    },
+    "game_definitions.DECOR/digi_potty/cost/stone": {
+      "type": "number",
+      "min": 0,
+      "max": 100000,
+      "integer": true
+    },
+    "game_definitions.DECOR/rug/cost/fiber": {
+      "type": "number",
+      "min": 0,
+      "max": 100000,
+      "integer": true
+    },
+    "game_definitions.DECOR/planter/cost/wood": {
+      "type": "number",
+      "min": 0,
+      "max": 100000,
+      "integer": true
+    },
+    "game_definitions.DECOR/planter/cost/fiber": {
+      "type": "number",
+      "min": 0,
+      "max": 100000,
+      "integer": true
+    },
+    "care_rules.WIN_ITEM_REWARDS/small_recovery": {
+      "type": "number",
+      "min": 0,
+      "max": 100000,
+      "integer": true
+    },
+    "care_rules.WIN_ITEM_REWARDS/mp_recovery": {
+      "type": "number",
+      "min": 0,
+      "max": 100000,
+      "integer": true
+    },
+    "care_rules.WIN_ITEM_REWARDS/barrier": {
+      "type": "number",
+      "min": 0,
+      "max": 100000,
+      "integer": true
+    },
+    "care_rules.WIN_ITEM_REWARDS/haste": {
+      "type": "number",
+      "min": 0,
+      "max": 100000,
+      "integer": true
+    },
+    "care_rules.HUNGER_SECONDS_PER_POINT": {
+      "type": "number",
+      "min": 0.033333,
+      "max": 100000,
+      "integer": false
+    },
+    "care_rules.POOP_INTERVAL_SECONDS": {
+      "type": "number",
+      "min": 0.033333,
+      "max": 100000,
+      "integer": false
+    },
+    "care_rules.VIRUS_PER_DIRTY_HOUR": {
+      "type": "number",
+      "min": 0,
+      "max": 100000,
+      "integer": true
+    },
+    "care_rules.HAPPINESS_LOSS_PER_DIRTY_HOUR": {
+      "type": "number",
+      "min": 0,
+      "max": 100000,
+      "integer": true
+    },
+    "food_rules.DURATION": {
+      "type": "number",
+      "min": 0,
+      "max": 100000,
+      "integer": true
+    },
+    "food_rules.MAX_FULLNESS": {
+      "type": "number",
+      "min": 0,
+      "max": 100,
+      "integer": true
+    },
+    "care_status_rules.TIRED": {
+      "type": "number",
+      "min": 0,
+      "max": 100,
+      "integer": true
+    },
+    "care_status_rules.SLEEPY": {
+      "type": "number",
+      "min": 0,
+      "max": 100,
+      "integer": true
+    },
+    "care_status_rules.SLEEP_SECONDS": {
+      "type": "number",
+      "min": 0.033333,
+      "max": 3600,
+      "integer": false
+    },
+    "care_status_rules.SICK_CHANCE": {
+      "type": "number",
+      "min": 0,
+      "max": 100,
+      "integer": true
+    },
+    "enclosure_rules.STARTER/wood": {
+      "type": "number",
+      "min": 0,
+      "max": 100000,
+      "integer": true
+    },
+    "enclosure_rules.STARTER/stone": {
+      "type": "number",
+      "min": 0,
+      "max": 100000,
+      "integer": true
+    },
+    "enclosure_rules.STARTER/fiber": {
+      "type": "number",
+      "min": 0,
+      "max": 100000,
+      "integer": true
+    },
+    "enclosure_rules.STARTER/raw_meat": {
+      "type": "number",
+      "min": 0,
+      "max": 100000,
+      "integer": true
+    },
+    "enclosure_rules.STARTER/potato": {
+      "type": "number",
+      "min": 0,
+      "max": 100000,
+      "integer": true
+    },
+    "enclosure_rules.POND_RECOVERY": {
+      "type": "number",
+      "min": 0,
+      "max": 100000,
+      "integer": true
+    },
+    "enclosure_rules.POND_COOLDOWN": {
+      "type": "number",
+      "min": 0,
+      "max": 100000,
+      "integer": true
+    },
+    "player.initial_stats/hp": {
+      "type": "number",
+      "min": 1,
+      "max": 9999,
+      "integer": true
+    },
+    "player.initial_stats/mp": {
+      "type": "number",
+      "min": 0,
+      "max": 9999,
+      "integer": true
+    },
+    "player.initial_stats/offense": {
+      "type": "number",
+      "min": 0,
+      "max": 999,
+      "integer": true
+    },
+    "player.initial_stats/defense": {
+      "type": "number",
+      "min": 0,
+      "max": 999,
+      "integer": true
+    },
+    "player.initial_stats/speed": {
+      "type": "number",
+      "min": 0,
+      "max": 999,
+      "integer": true
+    },
+    "player.initial_stats/brains": {
+      "type": "number",
+      "min": 0,
+      "max": 999,
+      "integer": true
+    },
+    "inventory.starter_items/small_recovery": {
+      "type": "number",
+      "min": 0,
+      "max": 100000,
+      "integer": true
+    },
+    "inventory.starter_items/mp_recovery": {
+      "type": "number",
+      "min": 0,
+      "max": 100000,
+      "integer": true
+    },
+    "inventory.starter_items/barrier": {
+      "type": "number",
+      "min": 0,
+      "max": 100000,
+      "integer": true
+    },
+    "inventory.starter_items/haste": {
+      "type": "number",
+      "min": 0,
+      "max": 100000,
+      "integer": true
+    },
+    "inventory.starter_decor/campfire": {
+      "type": "number",
+      "min": 0,
+      "max": 100000,
+      "integer": true
+    },
+    "inventory.starter_decor/pond": {
+      "type": "number",
+      "min": 0,
+      "max": 100000,
+      "integer": true
+    },
+    "inventory.starter_decor/digi_potty": {
+      "type": "number",
+      "min": 0,
+      "max": 100000,
+      "integer": true
+    },
+    "inventory.starter_decor/rug": {
+      "type": "number",
+      "min": 0,
+      "max": 100000,
+      "integer": true
+    },
+    "inventory.starter_decor/planter": {
+      "type": "number",
+      "min": 0,
+      "max": 100000,
+      "integer": true
+    },
+    "care.rest_seconds_per_fatigue": {
+      "type": "number",
+      "min": 0.033333,
+      "max": 100000,
+      "integer": false
+    },
+    "care.hungry_threshold": {
+      "type": "number",
+      "min": 0,
+      "max": 100,
+      "integer": true
+    },
+    "care.hungry_happiness_seconds": {
+      "type": "number",
+      "min": 0,
+      "max": 100000,
+      "integer": false
+    },
+    "care.pet_bond": {
+      "type": "number",
+      "min": 0,
+      "max": 100000,
+      "integer": true
+    },
+    "food.full_threshold": {
+      "type": "number",
+      "min": 0,
+      "max": 100,
+      "integer": true
+    },
+    "food.hunger_gain": {
+      "type": "number",
+      "min": 0,
+      "max": 100000,
+      "integer": false
+    },
+    "food.happiness_gain": {
+      "type": "number",
+      "min": 0,
+      "max": 100,
+      "integer": false
+    },
+    "food.favorite_happiness": {
+      "type": "number",
+      "min": 0,
+      "max": 100,
+      "integer": true
+    },
+    "food.craving_happiness": {
+      "type": "number",
+      "min": 0,
+      "max": 100,
+      "integer": true
+    },
+    "food.weight_gain": {
+      "type": "number",
+      "min": 0,
+      "max": 100000,
+      "integer": false
+    },
+    "food.bond_gain": {
+      "type": "number",
+      "min": 0,
+      "max": 100000,
+      "integer": false
+    },
+    "food.craving_bond": {
+      "type": "number",
+      "min": 0,
+      "max": 100000,
+      "integer": true
+    },
+    "care.play_happiness": {
+      "type": "number",
+      "min": 0,
+      "max": 100,
+      "integer": true
+    },
+    "care.wish_play_happiness": {
+      "type": "number",
+      "min": 0,
+      "max": 100,
+      "integer": true
+    },
+    "care.play_discipline_cost": {
+      "type": "number",
+      "min": 0,
+      "max": 100,
+      "integer": true
+    },
+    "care.play_bond": {
+      "type": "number",
+      "min": 0,
+      "max": 100000,
+      "integer": true
+    },
+    "care.wish_play_bond": {
+      "type": "number",
+      "min": 0,
+      "max": 100000,
+      "integer": true
+    },
+    "care.chat_happiness": {
+      "type": "number",
+      "min": 0,
+      "max": 100,
+      "integer": true
+    },
+    "care.chat_bond": {
+      "type": "number",
+      "min": 0,
+      "max": 100000,
+      "integer": true
+    },
+    "care.clean_virus_reduction": {
+      "type": "number",
+      "min": 0,
+      "max": 100000,
+      "integer": true
+    },
+    "care.clean_happiness": {
+      "type": "number",
+      "min": 0,
+      "max": 100,
+      "integer": true
+    },
+    "care.clean_bond": {
+      "type": "number",
+      "min": 0,
+      "max": 100000,
+      "integer": true
+    },
+    "care.repeat_multipliers/0": {
+      "type": "number",
+      "min": 0,
+      "max": 100000,
+      "integer": false
+    },
+    "care.repeat_multipliers/1": {
+      "type": "number",
+      "min": 0,
+      "max": 100000,
+      "integer": false
+    },
+    "care.repeat_multipliers/2": {
+      "type": "number",
+      "min": 0,
+      "max": 100000,
+      "integer": false
+    },
+    "care.repeat_multipliers/3": {
+      "type": "number",
+      "min": 0,
+      "max": 100000,
+      "integer": false
+    },
+    "rewards.outcomes/win/bond": {
+      "type": "number",
+      "min": 0,
+      "max": 100000,
+      "integer": true
+    },
+    "rewards.outcomes/win/training_points": {
+      "type": "number",
+      "min": 0,
+      "max": 100000,
+      "integer": true
+    },
+    "rewards.outcomes/draw/bond": {
+      "type": "number",
+      "min": 0,
+      "max": 100000,
+      "integer": true
+    },
+    "rewards.outcomes/draw/training_points": {
+      "type": "number",
+      "min": 0,
+      "max": 100000,
+      "integer": true
+    },
+    "rewards.outcomes/loss/bond": {
+      "type": "number",
+      "min": 0,
+      "max": 100000,
+      "integer": true
+    },
+    "rewards.outcomes/loss/training_points": {
+      "type": "number",
+      "min": 0,
+      "max": 100000,
+      "integer": true
+    },
+    "training.wish_meter_bonus": {
+      "type": "number",
+      "min": 0,
+      "max": 100000,
+      "integer": true
+    },
+    "training.wish_stat_bonus": {
+      "type": "number",
+      "min": 0,
+      "max": 100000,
+      "integer": true
+    },
+    "training.fatigue_gain": {
+      "type": "number",
+      "min": 0,
+      "max": 100,
+      "integer": false
+    },
+    "training.discipline_gain": {
+      "type": "number",
+      "min": 0,
+      "max": 100,
+      "integer": false
+    },
+    "care.potty_habit_gain": {
+      "type": "number",
+      "min": 0,
+      "max": 100000,
+      "integer": false
+    },
+    "food.initial_wait": {
+      "type": "number",
+      "min": 0,
+      "max": 420,
+      "integer": false
+    },
+    "food.wait_base": {
+      "type": "number",
+      "min": 0,
+      "max": 240,
+      "integer": false
+    },
+    "care.sleep_fatigue_recovery": {
+      "type": "number",
+      "min": 0,
+      "max": 100,
+      "integer": false
+    },
+    "care.sleep_need_seconds_per_point": {
+      "type": "number",
+      "min": 0.033333,
+      "max": 100000,
+      "integer": false
+    },
+    "care.wish_initial_wait": {
+      "type": "number",
+      "min": 0,
+      "max": 420,
+      "integer": false
+    },
+    "care.wish_duration": {
+      "type": "number",
+      "min": 0,
+      "max": 100000,
+      "integer": false
+    },
+    "care.wish_wait_base": {
+      "type": "number",
+      "min": 0,
+      "max": 240,
+      "integer": false
+    },
+    "care.sleep_discipline_gain": {
+      "type": "number",
+      "min": 0,
+      "max": 100,
+      "integer": false
+    },
+    "building.pond_virus_recovery": {
+      "type": "number",
+      "min": 0,
+      "max": 100000,
+      "integer": false
+    },
+    "care.initial/hunger": {
+      "type": "number",
+      "min": 0,
+      "max": 100,
+      "integer": true
+    },
+    "care.initial/happiness": {
+      "type": "number",
+      "min": 0,
+      "max": 100,
+      "integer": true
+    },
+    "care.initial/discipline": {
+      "type": "number",
+      "min": 0,
+      "max": 100,
+      "integer": true
+    },
+    "care.initial/weight": {
+      "type": "number",
+      "min": 1,
+      "max": 99,
+      "integer": true
+    },
+    "training.min_fullness": {
+      "type": "number",
+      "min": 0,
+      "max": 100000,
+      "integer": true
+    },
+    "training.max_fatigue": {
+      "type": "number",
+      "min": 0,
+      "max": 100,
+      "integer": true
+    },
+    "training.hunger_cost": {
+      "type": "number",
+      "min": 0,
+      "max": 100000,
+      "integer": true
+    },
+    "training.happiness_cost": {
+      "type": "number",
+      "min": 0,
+      "max": 100,
+      "integer": true
+    },
+    "food.wait_jitter": {
+      "type": "number",
+      "min": 0,
+      "max": 180,
+      "integer": true
+    },
+    "care.wish_wait_jitter": {
+      "type": "number",
+      "min": 0,
+      "max": 180,
+      "integer": true
+    },
+    "building.cooking_ingredient_cost": {
+      "type": "number",
+      "min": 1,
+      "max": 100000,
+      "integer": true
+    },
+    "building.cooking_wood_cost": {
+      "type": "number",
+      "min": 1,
+      "max": 100000,
+      "integer": true
+    },
+    "food.favorites/botamon": {
+      "type": "text",
+      "min": 0,
+      "max": 100000,
+      "integer": false
+    },
+    "food.favorites/koromon": {
+      "type": "text",
+      "min": 0,
+      "max": 100000,
+      "integer": false
+    },
+    "food.favorites/agumon": {
+      "type": "text",
+      "min": 0,
+      "max": 100000,
+      "integer": false
+    }
+  },
+  "settingSheets": [
+    "Care",
+    "Training",
+    "Progression",
+    "Economy",
+    "Player"
+  ]
+}

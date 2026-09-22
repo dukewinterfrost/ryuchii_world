@@ -1,6 +1,7 @@
 extends Node
 
 const FIXTURE := "res://tests/fixtures/regions/green-shade/environment/environment.json"
+const FrozenV3 = preload("res://scripts/battle/battle_simulator_v3.gd")
 
 var checks := 0
 var failures := 0
@@ -54,6 +55,7 @@ func _test_world_presentation_and_determinism() -> void:
 	check(view.configure_battle(arena, package), "battle presentation consumes a complete pinned Environment package")
 	var session_a := _session(arena)
 	var session_b := _session(arena)
+	var historical := _session(arena, "", true)
 	check(session_a.ok and session_a.content_revisions.environment == arena.environment, "battle session records the full immutable environment pin")
 	check(view.configure_fighters(session_a), "two AnimatedSprite3D fighters attach to the environment viewport")
 	check(view.fighter_presentations.size() == 2 and view.fighter_vfx.size() == 2, "two fighters and reusable world-space hit VFX are active")
@@ -79,8 +81,10 @@ func _test_world_presentation_and_determinism() -> void:
 		BattleSimulator.step(session_a)
 		view.render_session(session_a, float(tick % 3) / 2.0)
 		BattleSimulator.step(session_b)
+		FrozenV3.step(historical)
+		view.render_session(historical, float(tick % 3) / 2.0)
 	check(JSON.stringify(session_a) == JSON.stringify(session_b), "interleaved 3D rendering cannot alter deterministic battle state")
-	check(JSON.stringify(session_a).sha256_text() == "9100a95c41de8c760b1570e6797c23394b581f606e640d9e70507fbbdfd0fe38", "interleaved presentation preserves the established deterministic checksum")
+	check(JSON.stringify(historical).sha256_text() == "9100a95c41de8c760b1570e6797c23394b581f606e640d9e70507fbbdfd0fe38", "interleaved presentation preserves the established frozen-v3 deterministic checksum")
 	check(pristine != JSON.stringify(session_a), "determinism regression exercised advancing simulation")
 	var display := session_a.duplicate(true)
 	display.projectiles = [{"id": 999, "owner_id": "player", "move_id": "pepper_breath",
@@ -295,7 +299,7 @@ func _test_playable_workshop_fields() -> void:
 			var layers: Node3D = stage.get_node("ForestParallax")
 			var sky: Sprite3D = layers.get_node("Sky")
 			var vista: Sprite3D = layers.get_node("ForestVista")
-			var plant: Sprite3D = layers.get_node("Undergrowth_L_0")
+			var plant: Sprite3D = layers.get_node("Woodland/RimPockets").get_child(0)
 			layers.apply_focus(layers.reference_focus, false)
 			var sky_base := sky.position
 			var vista_base := vista.position
@@ -345,7 +349,7 @@ func _test_playable_workshop_fields() -> void:
 				scene._zoom_fit.pressed.emit()
 				check(is_equal_approx(view._camera_ground_distance, fit_distance) and view.camera_contains_world_points(view.last_framing_world_points), "Fit button restores both fighters")
 			if "--capture-fields" in OS.get_cmdline_user_args():
-				await RenderingServer.frame_post_draw
+				RenderingServer.force_draw(false)
 				check(get_viewport().get_texture().get_image().save_png("/tmp/battle-field-%s-%dx%d.png" % [region,target.x,target.y]) == OK, region + " capture")
 				if region == "green-shade":
 					var saved_focus := view._camera_focus_ground
@@ -355,7 +359,7 @@ func _test_playable_workshop_fields() -> void:
 						view._camera_focus_ground = saved_focus + Vector2(-192 if direction == "left" else (192 if direction == "right" else 0), 0)
 						view._camera_ground_distance = saved_distance * (0.75 if direction == "near" else (1.25 if direction == "far" else 1.0))
 						view._apply_camera_transform()
-						await RenderingServer.frame_post_draw
+						RenderingServer.force_draw(false)
 						check(get_viewport().get_texture().get_image().save_png("/tmp/forest-%s-%dx%d.png" % [direction,target.x,target.y]) == OK, "forest " + direction + " depth review capture")
 					view._camera_focus_ground = saved_focus
 					view._camera_ground_distance = saved_distance
@@ -388,16 +392,19 @@ func _arena() -> Dictionary:
 	return arena
 
 
-func _session(arena: Dictionary, encounter_id := "") -> Dictionary:
-	var first := BattleSimulator.training_opponent(8181)
+func _session(arena: Dictionary, encounter_id := "", historical_v3 := false) -> Dictionary:
+	var first := FrozenV3.training_opponent(8181) if historical_v3 else BattleSimulator.training_opponent(8181)
 	first.fighter_id = "player"
 	first.display_name = "Player"
-	var second := BattleSimulator.training_opponent(8181)
+	var second := FrozenV3.training_opponent(8181) if historical_v3 else BattleSimulator.training_opponent(8181)
 	# A historical replay checksum must pin its historical art identity; the
 	# current runtime catalog is independently allowed to promote new artwork.
 	var library := CompanionAssetLibrary.build_folder("res://assets/companions/agumon/")
 	var pins := {"player": {"assetId": library.asset_id, "revision": library.revision},
 		"training_opponent": {"assetId": library.asset_id, "revision": library.revision}}
+	if historical_v3:
+		return FrozenV3.create_session("battle-3d-test", 8181, first, second, arena, 90, pins, {}, {}, encounter_id,
+			String(arena.get("contentSha256", "")))
 	return BattleSimulator.create_session("battle-3d-test", 8181, first, second, arena, 90, pins, {}, {}, encounter_id,
 		String(arena.get("contentSha256", "")))
 

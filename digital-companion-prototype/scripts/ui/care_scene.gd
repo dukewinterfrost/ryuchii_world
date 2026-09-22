@@ -24,6 +24,9 @@ var _exploring_map := false
 var _food_buttons: Dictionary = {}
 var _food_note: Label
 var _craving_bubble: CravingBubble
+var _rest_note: Label
+var _sleep_button: Button
+var _wake_button: Button
 var _edit_panel: PanelContainer
 var _modal: ColorRect
 var _pages := {}
@@ -48,6 +51,7 @@ var _zoom: Label
 var _mute: CheckButton
 var _motion: CheckButton
 var _edit_note: Label
+var _material_note: Label
 var _decor_buttons := {}
 var _region_buttons := {}
 var _environment_note: Label
@@ -77,6 +81,7 @@ func _ready() -> void:
 	avatar = habitat.avatar
 	habitat.creature_cell_changed.connect(_on_creature_cell_changed)
 	habitat.route_completed.connect(_arrived)
+	habitat.facility_arrived.connect(_complete_facility_action)
 	habitat.waste_selected.connect(_on_poop_selected)
 	habitat.camera_changed.connect(func(zoom: float, follow: bool) -> void:
 		_feedback(GameState.set_habitat_camera(zoom, follow))
@@ -88,7 +93,7 @@ func _ready() -> void:
 	_build_pages()
 	_craving_bubble = CravingBubble.new()
 	_root.add_child(_craving_bubble)
-	_craving_bubble.pressed.connect(func() -> void: _open_page("Food"))
+	_craving_bubble.pressed.connect(_thought_pressed)
 	_build_edit()
 	if OS.is_debug_build():
 		_day_night_preview = DayNightPreview.new()
@@ -245,7 +250,7 @@ func _build_pages() -> void:
 		button.texture_filter = CanvasItem.TEXTURE_FILTER_NEAREST
 		_food_buttons[food_id] = button
 	page = _pages.Training
-	_label(page, "30 seconds per session. Requires Fullness ≥20 and Fatigue ≤70. Completion costs 5 Fullness and adds 15 Fatigue, +2 Discipline, −2 Happiness. Focus loss pauses; cancellation gives no reward.", 14)
+	_label(page, "30 seconds per session. Fullness ≥20, Fatigue ≤70. Costs 5 Fullness; adds 15 Fatigue, +2 Discipline, −2 Happiness. At 50+ Fatigue, completing training has a 35% sickness risk. A training wish gives +1 extra stat (+5 HP/MP). Focus loss pauses; cancellation gives no reward.", 14)
 	_training_note = _label(page, "Choose a session.", 16)
 	_training_progress = ProgressBar.new()
 	_training_progress.max_value = 30
@@ -259,12 +264,24 @@ func _build_pages() -> void:
 		)
 	_training_cancel = _button(page, "Cancel session · no reward", func() -> void: GameState.cancel_training())
 	page = _pages.Tools
+	_rest_note = _label(page, "", 16)
+	_sleep_button = _button(page, "Sleep · 2-minute rest", func() -> void: _modal.hide(); _care_action("sleep"))
+	_wake_button = _button(page, "Wake up early · no rest bonus", func() -> void: _modal.hide(); _care_action("wake"))
+	_button(page, "Play together", func() -> void: _modal.hide(); _care_action("play"))
+	_label(page, "A full sleep restores fatigue and clears sickness. If tired, sleepy or sick at bedtime, it also grants +2 Discipline. Play wishes give +5 extra Happiness and +3 base Bond. No penalty for missed wishes.", 14)
 	for action: String in ["Praise", "Scold"]:
 		_button(page, action, func() -> void: _modal.hide(); _care_action(action.to_lower()))
 	_label(page, "Pet +4 Happiness. Praise +5 Happiness / −2 Discipline. Scold +5 Discipline / −5 Happiness. These share a 30-second reward cooldown. Praise and Scold give no bond.", 14)
 	_button(page, "Pick up poop", _select_clean_tool)
 	_guide = _button(page, "Guide to potty", _guide_to_potty)
-	_button(page, "Decorate habitat", _begin_edit)
+	_button(page, "Build enclosure", _begin_edit)
+	_material_note = _label(page, "", 14)
+	_button(page, "Cook meat · 1 raw meat + 1 wood", func() -> void: _facility_action("cook_meat"))
+	_button(page, "Cook potato · 1 potato + 1 wood", func() -> void: _facility_action("cook_potato"))
+	_button(page, "Serve cooked meat", func() -> void: _serve_meal("steak"))
+	_button(page, "Serve cooked potato", func() -> void: _serve_meal("sweet_potato"))
+	_button(page, "Pond · Rinse and cool down", func() -> void: _facility_action("pond"))
+	_button(page, "Prototype: refill building supplies", func() -> void: GameState.refill_prototype_materials())
 	page = _pages.Inventory
 	_inventory = _label(page, "", 17)
 	_label(page, "Use recoveries in the running battle arena. Wins grant one of each. Decor counts show unplaced items.", 14)
@@ -317,21 +334,26 @@ func _build_pages() -> void:
 	_button(page, "Send", _send_chat)
 
 func _build_edit() -> void:
-	_edit_panel = _panel(-266, -8, true)
+	_edit_panel = _panel(-412, -8, true)
 	_edit_panel.hide()
 	var box := _stack(_edit_panel)
 	_edit_note = _label(box, "", 12, INK)
 	_edit_note.custom_minimum_size.y = 30
-	var row := _row(box)
+	var choices := GridContainer.new()
+	choices.columns = 2
+	choices.add_theme_constant_override("h_separation", 7)
+	choices.add_theme_constant_override("v_separation", 7)
+	box.add_child(choices)
 	for item: String in Definitions.DECOR:
-		_decor_buttons[item] = _button(row, "", func() -> void: habitat.place_item(item))
-	row = _row(box)
+		_decor_buttons[item] = _button(choices, "", func() -> void: habitat.place_item(item))
+		_decor_buttons[item].add_theme_font_size_override("font_size", 12)
+	var row := _row(box)
 	for entry: Array in [["←", Vector2i.LEFT], ["↑", Vector2i.UP], ["↓", Vector2i.DOWN], ["→", Vector2i.RIGHT]]:
 		_button(row, entry[0], func() -> void: habitat.nudge_selected(entry[1]), 44)
 	_button(row, "Rotate", func() -> void: habitat.rotate_selected())
 	_button(box, "Remove selected → inventory", func() -> void: habitat.remove_selected())
 	row = _row(box)
-	_apply = _button(row, "Apply layout", _apply_edit)
+	_apply = _button(row, "Build / Apply", _apply_edit)
 	_button(row, "Cancel", _end_edit)
 
 func _on_state_changed(snapshot: Dictionary) -> void:
@@ -354,7 +376,14 @@ func _on_state_changed(snapshot: Dictionary) -> void:
 	for food_id: String in _food_buttons:
 		_food_buttons[food_id].text = FoodRules.label(food_id) + (" · Favorite" if food_id == favorite else "") + (" · Craving" if food_id == craving else "")
 		_food_buttons[food_id].disabled = float(snapshot.care.hunger) >= 96.0
-	_craving_bubble.set_food(craving)
+	_craving_bubble.set_status(CareStatusRules.bubble(snapshot), craving)
+	_craving_bubble.reduced_motion = habitat.reduced_motion
+	var stock: Dictionary = snapshot.enclosure.materials
+	_material_note.text = "Supplies: %d wood · %d stone · %d fiber\nRaw meat %d · Potatoes %d\nCooked meat %d · Cooked potatoes %d" % [stock.wood, stock.stone, stock.fiber, stock.raw_meat, stock.potato, snapshot.enclosure.meals.steak, snapshot.enclosure.meals.sweet_potato]
+	var status: Dictionary = snapshot.care.status
+	_rest_note.text = "Fatigue: %d / 100 · Sleepiness: %d / 100%s%s" % [roundi(snapshot.care.fatigue), roundi(status.sleep_need), "\nSick — complete a full sleep to recover." if status.sick else "", "\nSleeping: %ds remaining" % ceili(status.sleep_remaining) if status.sleeping else ""]
+	_sleep_button.visible = not status.sleeping
+	_wake_button.visible = status.sleeping
 	status_label.text = "%s · %s\n%s · %s · %s" % [snapshot.identity.companion_name, snapshot.identity.species_name, snapshot.identity.stage, snapshot.identity.nature, HabitatRules.REGION_HOMES[region_id].name]
 	if is_instance_valid(_environment_note):
 		_environment_note.text = habitat.presentation_notice if not habitat.presentation_notice.is_empty() else "3D environment package active."
@@ -402,6 +431,7 @@ func _populate_stats() -> void:
 	lines.append("Age    %d days\nWeight    %.1f G\nActive time    %dm\nCare mistakes    %d lifetime / %d stage\nField waste    %d\nBattle record    %d W / %d L / %d D" % [stats.age_days, stats.weight, floori(float(stats.active_seconds) / 60), state.care.care_mistakes, state.care.stage_care_mistakes, state.care.poop_count, state.battle.wins, state.battle.losses, state.battle.draws])
 	_details.text = "\n".join(lines)
 	_details.text += "\nFavorite food    " + FoodRules.label(FoodRules.favorite(String(state.identity.species_id)))
+	_details.text += "\nSleepiness    %d / 100\nCondition    %s" % [roundi(state.care.status.sleep_need), "Sleeping" if state.care.status.sleeping else ("Sick — needs rest" if state.care.status.sick else ("Tired" if state.care.fatigue >= CareStatusRules.TIRED else "Well"))]
 	var readiness := CareRules.evolution_readiness(state)
 	lines.clear()
 	if readiness.has("target"):
@@ -428,7 +458,9 @@ func _refresh_skills(state: Dictionary) -> void:
 			selector.add_item("Empty slot")
 			selector.set_item_metadata(0, "")
 			for move: String in state.skills.learned:
-				selector.add_item("%s · %d MP" % [Definitions.MOVES[move].name, Definitions.MOVES[move].mp])
+				var metadata: Dictionary = Definitions.MOVES.get(move, Definitions.MOVE_IDENTITIES.get(move, {}))
+				var cost := "%d MP" % int(metadata.mp) if metadata.has("mp") else "table unavailable"
+				selector.add_item("%s · %s" % [metadata.get("name", move), cost])
 				selector.set_item_metadata(selector.item_count - 1, move)
 		var equipped: Dictionary = state.skills.equipped[index] if index < state.skills.equipped.size() else {}
 		for choice: int in selector.item_count:
@@ -474,8 +506,23 @@ func _update_training(status: Dictionary) -> void:
 	_training_cancel.visible = active
 	_training_note.text = "%s · %ds / 30s%s" % [String(status.get("stat", "")).capitalize(), floori(float(status.get("elapsed", 0))), " · Paused" if status.get("paused", false) else ""] if active else "Choose a session. Fatigue recovers 1 point per minute outside training."
 	var state := GameState.get_state()
+	if not active and state.care.fatigue >= CareStatusRules.TIRED:
+		_training_note.text = "Tired! Training now risks sickness (35%). Sleep in Tools first, or choose Train anyway."
+	elif not active and CareStatusRules.wish(state) == "train":
+		_training_note.text = "Motivated! Start a session now for +1 extra stat (+5 HP/MP)."
+	elif not active and (state.care.status.sick or state.care.status.sleeping):
+		_training_note.text = "Rest first. A full sleep clears sickness."
 	for stat: String in _training_buttons:
 		_training_buttons[stat].disabled = active or not bool(CareRules.training_readiness(state, stat).ok)
+		var definition: Dictionary = Definitions.TRAINING[stat]
+		_training_buttons[stat].text = ("Train anyway · " if state.care.fatigue >= CareStatusRules.TIRED else "") + "%s · +%d %s" % [definition.name, definition.gain, stat.to_upper()]
+
+func _thought_pressed() -> void:
+	match _craving_bubble.status_kind:
+		"food": _open_page("Food")
+		"play": _care_action("play")
+		"train": _open_page("Training")
+		_: _open_page("Tools")
 
 func _care_action(action: String, payload: String = "") -> void:
 	var result := GameState.execute_command(action, payload)
@@ -489,7 +536,7 @@ func _care_action(action: String, payload: String = "") -> void:
 func _update_craving_bubble() -> void:
 	if not is_instance_valid(_craving_bubble):
 		return
-	_craving_bubble.visible = not _craving_bubble.food_id.is_empty() and not habitat.editing and not _modal.visible and not stats_overlay.visible and not evolution_overlay.visible
+	_craving_bubble.visible = not _craving_bubble.status_kind.is_empty() and not habitat.editing and not _modal.visible and not stats_overlay.visible and not evolution_overlay.visible
 	if not _craving_bubble.visible:
 		return
 	var head := Vector2.ZERO
@@ -601,18 +648,53 @@ func _begin_edit() -> void:
 
 func _refresh_edit() -> void:
 	if not habitat.editing: return
-	var valid := habitat.draft_validity()
+	var valid := GameState.quote_habitat_layout(habitat.draft)
 	_apply.disabled = not bool(valid.ok)
-	_edit_note.text = "Drag or use arrows. Yellow dot marks the potty entrance." if bool(valid.ok) else String(valid.error)
 	var state := GameState.get_state()
+	var stock: Dictionary = state.enclosure.materials
+	_edit_note.text = "Wood %d · Stone %d · Fiber %d\n" % [stock.wood, stock.stone, stock.fiber]
+	if valid.ok:
+		_edit_note.text += "Cost: %d wood · %d stone · %d fiber\nDrag / arrows · Rotate · Green = ready" % [valid.cost.wood, valid.cost.stone, valid.cost.fiber]
+	else: _edit_note.text += String(valid.error)
 	for item: String in _decor_buttons:
 		var available := int(state.inventory.decor[item])
 		for placed: Dictionary in state.habitat.items:
 			if placed.item_id == item: available += 1
 		for placed: Dictionary in habitat.draft.items:
 			if placed.item_id == item: available -= 1
-		_decor_buttons[item].text = "%s ×%d" % ["Potty" if item == "digi_potty" else item.capitalize(), available]
-		_decor_buttons[item].disabled = available <= 0
+		var d: Dictionary = Definitions.DECOR[item]
+		var costs: Array[String] = []
+		for material: String in d.cost: costs.append("%d %s" % [d.cost[material], material])
+		_decor_buttons[item].text = "%s · %d×%d\n%s" % [d.name, d.size[0], d.size[1], "Stored ×%d" % available if available > 0 else " + ".join(costs)]
+		_decor_buttons[item].disabled = false
+
+func _facility_action(action: String) -> void:
+	var state := GameState.get_state()
+	if state.care.status.sleeping or GameState.get_training_status().active:
+		dialogue_label.text = "Finish resting or training first."
+		_modal.hide()
+		return
+	var kind := "pond" if action == "pond" else "campfire"
+	var path := HabitatRules.path_to_facility(state.habitat, kind, habitat.habitat_manifest)
+	_modal.hide()
+	if path.is_empty():
+		dialogue_label.text = "Build a reachable %s first." % kind
+		return
+	GameState.cancel_potty_guidance()
+	habitat.begin_facility_route(path, action)
+	dialogue_label.text = "Heading to the %s…" % kind
+
+func _complete_facility_action(action: String) -> void:
+	var result := GameState.use_enclosure_facility(action)
+	dialogue_label.text = String(result.get("message", result.get("error", "")))
+	_modal.hide()
+	if result.ok: habitat.play_action("happy")
+
+func _serve_meal(meal: String) -> void:
+	var result := GameState.serve_cooked_meal(meal)
+	dialogue_label.text = String(result.get("message", result.get("error", "")))
+	_modal.hide()
+	if result.ok: habitat.play_action("eat")
 
 func _apply_edit() -> void:
 	var result := GameState.apply_habitat_layout(habitat.draft)
